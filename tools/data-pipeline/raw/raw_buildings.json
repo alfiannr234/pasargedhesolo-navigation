@@ -1,0 +1,65 @@
+{
+  "success": true,
+  "data": [
+    {
+      "id": "pasar-gede",
+      "name": "Pasar Gede",
+      "description": "Pasar legendaris di pusat Kota Solo yang menjadi pusat aktivitas belanja masyarakat. Di sini tersedia berbagai kebutuhan harian, jajanan tradisional, rempah, pakaian, hingga oleh-oleh khas Solo.",
+      "icon": "https://maps.pasargedesolo.com/storage/buildings/Ah9AT6Ub0f9kduEvTYyx0VI9UpEce4Xdt6FIAzKt.webp",
+      "images": [
+        "https://maps.pasargedesolo.com/storage/buildings/BbXqj5U54KzvYT8Zp48ePxgahNCx9qBNlnvlWrcc.png"
+      ],
+      "lat": -7.5693566,
+      "lng": 110.8288697,
+      "city": "",
+      "floor_layouts": [
+        {
+          "id": "9ee89e88-2140-40c9-9f99-54d7ec058959",
+          "level": 0,
+          "floor": "1",
+          "image_svg": "https://maps.pasargedesolo.com/storage/maps/y96aq0hmUoS4lrPc4WEs5cSHP9DZBmeu.svg",
+          "image_walkable": "https://maps.pasargedesolo.com/storage/maps/jMmcga3nOSVWjwBV0HUFiKYlZU77NEDC.png",
+          "image_area": "https://maps.pasargedesolo.com/storage/maps/y96aq0hmUoS4lrPc4WEs5cSHP9DZBmeu_pin.png"
+        },
+        {
+          "id": "9ee8a0e4-4edd-46c8-8091-f4009cc47355",
+          "level": 1,
+          "floor": "2",
+          "image_svg": "https://maps.pasargedesolo.com/storage/maps/8h58BXWoYDgZYnx3eV4Ssjp4gdShg2xh.svg",
+          "image_walkable": "https://maps.pasargedesolo.com/storage/maps/bYJw6GxOjv4o30Xnt4tSjQ4c6pFPff4U.png",
+          "image_area": "https://maps.pasargedesolo.com/storage/maps/8h58BXWoYDgZYnx3eV4Ssjp4gdShg2xh_pin.png"
+        }
+      ]
+    },
+    {
+      "id": "pasar-buah",
+      "name": "Pasar Buah",
+      "description": "Terletak di sisi timur Pasar Gede, pasar ini khusus menjual aneka buah segar lokal maupun impor. Di lantai dua, tersedia area foodcourt dengan berbagai pilihan makanan dan tempat duduk untuk bersantai.",
+      "icon": "https://maps.pasargedesolo.com/storage/buildings/WRBZ4EmWjP7P7oQkAWTLIXtalBl9hIKQchqISXmr.jpg",
+      "images": [
+        "https://maps.pasargedesolo.com/storage/buildings/cKFzYxdWIG1nuuCqB3UzLddbYvgn7QrG8sWBlZ4n.jpg"
+      ],
+      "lat": -7.5689733,
+      "lng": 110.8290774,
+      "city": "Solo",
+      "floor_layouts": [
+        {
+          "id": "9ee8a4fc-e73c-466f-bd71-b14f5f535f90",
+          "level": 0,
+          "floor": "1",
+          "image_svg": "https://maps.pasargedesolo.com/storage/maps/bW6N19BVvgxn1bPNLCf33w4qp0NHl0V6.svg",
+          "image_walkable": "https://maps.pasargedesolo.com/storage/maps/LqnNQTUGLLeGOLOvh9jfXTY03lC1Wgaz.png",
+          "image_area": "https://maps.pasargedesolo.com/storage/maps/bW6N19BVvgxn1bPNLCf33w4qp0NHl0V6_pin.png"
+        },
+        {
+          "id": "9ee8a526-7027-47f6-b9ea-c03b24db39c0",
+          "level": 1,
+          "floor": "2",
+          "image_svg": "https://maps.pasargedesolo.com/storage/maps/B0q9M4szcOz0kA7ULNnlyfPCXS7nIs3h.svg",
+          "image_walkable": "https://maps.pasargedesolo.com/storage/maps/TtCQhtXwYcjoINUrwrJS98YeNOaHz3FT.png",
+          "image_area": "https://maps.pasargedesolo.com/storage/maps/B0q9M4szcOz0kA7ULNnlyfPCXS7nIs3h_pin.png"
+        }
+      ]
+    }
+  ]
+}

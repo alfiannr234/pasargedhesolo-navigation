@@ -1,0 +1,1446 @@
+{
+  "success": true,
+  "data": {
+    "id": "9ee8a0e4-4edd-46c8-8091-f4009cc47355",
+    "level": 1,
+    "label": "2",
+    "image_svg": "https://maps.pasargedesolo.com/storage/maps/8h58BXWoYDgZYnx3eV4Ssjp4gdShg2xh.svg",
+    "image_walkable": "https://maps.pasargedesolo.com/storage/maps/bYJw6GxOjv4o30Xnt4tSjQ4c6pFPff4U.png",
+    "image_area": "https://maps.pasargedesolo.com/storage/maps/8h58BXWoYDgZYnx3eV4Ssjp4gdShg2xh_pin.png",
+    "map_placement_initial": "center",
+    "slots": [
+      {
+        "id": "9eec6afb-a7a3-4e69-98b7-20ea6ed1e149",
+        "type": "Store",
+        "label": "Warung Makan Mbak Tariza 2",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef22cc0-ee76-4111-af56-a26523aedd89",
+          "name": "Warung Makan Mbak Tariza 2",
+          "description": "Warung Makan Mbak Tariza adalah warung makan spesialisasi masakan rumahan yang berada di Lantai 2 Pasar Gede.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/N0XSPBxI8pCg3mGSfvrF5N2qPdC5sn0u.jpeg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/N0XSPBxI8pCg3mGSfvrF5N2qPdC5sn0u_xs.jpeg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/N0XSPBxI8pCg3mGSfvrF5N2qPdC5sn0u.jpeg"
+          ],
+          "category": {
+            "id": "kuliner",
+            "label": "Kuliner",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/dHf3JxQGoNxu18k2KQpfnYHXuewgx1aG.svg"
+          },
+          "entries": [
+            {
+              "x": 549,
+              "y": 211
+            }
+          ]
+        },
+        "location_x": 534,
+        "location_y": 216,
+        "sub_label": ""
+      },
+      {
+        "id": "9f04975a-0937-4a20-8abc-3963d05c9e6a",
+        "type": "Store",
+        "label": "Los Slamet Ayam",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9f046866-7af9-4634-ac82-668f9bf57ec8",
+          "name": "Los Slamet Ayam",
+          "description": "Los Slamet Ayam merupakan salah satu los yang ada di lantai 2 Pasar Gede yang menjual spesialis ayam kampun dan ayam potong",
+          "image": "https://maps.pasargedesolo.com/storage/stores/RNB0sosShePHPioAfCoNWbozNys1LuKW.jpg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/RNB0sosShePHPioAfCoNWbozNys1LuKW_xs.jpg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/RNB0sosShePHPioAfCoNWbozNys1LuKW.jpg"
+          ],
+          "category": {
+            "id": "daging-unggas",
+            "label": "Daging Unggas",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/eNVqhnmJ4auWcDyj3h5vkwOdhviDypPG.svg"
+          },
+          "entries": [
+            {
+              "x": 293,
+              "y": 167
+            }
+          ]
+        },
+        "location_x": 288,
+        "location_y": 152,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec0edd-49dd-438d-82f8-e25c57d5403e",
+        "type": "Store",
+        "label": "Kios Mbak Rani",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eea57cc-da76-45c9-b5c7-011c58b5eae8",
+          "name": "Kios Mbak Rani",
+          "description": "Kios Mbak Rani merupakan kios supplier bunga dekorasi yang ada di Pasar Gede dengan menyediakan beragam bunga krisan dengan berbagai macam warna",
+          "image": "https://maps.pasargedesolo.com/storage/stores/LdxSMIFZNX0CI3DthBIPvQ5vqEfBDLG8.jpg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/LdxSMIFZNX0CI3DthBIPvQ5vqEfBDLG8_xs.jpg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/LdxSMIFZNX0CI3DthBIPvQ5vqEfBDLG8.jpg",
+            "https://maps.pasargedesolo.com/storage/locations/nC06USgOeVvaZ58n3vYS2WFOjOLwy618YFqkMztb.jpg"
+          ],
+          "category": {
+            "id": "florist",
+            "label": "Florist",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/vBUt1CG03C5wXXrdzPfeD6FGuNycAC7E.svg"
+          },
+          "entries": [
+            {
+              "x": 567,
+              "y": 888
+            }
+          ]
+        },
+        "location_x": 566,
+        "location_y": 897,
+        "sub_label": ""
+      },
+      {
+        "id": "9f04980d-5b62-4cc9-a09c-2acc0910f0cb",
+        "type": "Store",
+        "label": "Los Ayam Kampung Mbak Niken",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eec3875-9532-4790-976f-d1e8e3938c86",
+          "name": "Los Ayam Kampung Mbak Niken",
+          "description": "Ayam Kampung Mbak Niken adalah tenant yang menjual ayam kampung dan ayam boiler utuh maupun potong yang berada di lantai 2 Pasar Gede",
+          "image": "https://maps.pasargedesolo.com/storage/stores/6Vyow41xUqGe63dXgJ8rLBQ1fhn5U5AG.jpg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/6Vyow41xUqGe63dXgJ8rLBQ1fhn5U5AG_xs.jpg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/6Vyow41xUqGe63dXgJ8rLBQ1fhn5U5AG.jpg",
+            "https://maps.pasargedesolo.com/storage/locations/l8uopAim8Z6OrA23GWzXB9SHSeWMSsGds6O7Ltnx.jpg"
+          ],
+          "category": {
+            "id": "daging-unggas",
+            "label": "Daging Unggas",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/eNVqhnmJ4auWcDyj3h5vkwOdhviDypPG.svg"
+          },
+          "entries": [
+            {
+              "x": 331,
+              "y": 240
+            }
+          ]
+        },
+        "location_x": 365,
+        "location_y": 235,
+        "sub_label": ""
+      },
+      {
+        "id": "9f04a0a9-a037-4496-8fd1-a603db23a05e",
+        "type": "Store",
+        "label": "Los Daging Babi Pak Tomy",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef493c3-2887-4503-9e22-0e78bd239d29",
+          "name": "Los Daging Babi Pak Tomy",
+          "description": "Los Daging Babi Pak Tomy merupakan salah satu los yang ada di Pasar Gede yang menjual spesialis daging babi dan usus babi",
+          "image": "https://maps.pasargedesolo.com/storage/stores/9Vm8xavYQCywq663FQU3Gq6Zt04STSI6.jpg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/9Vm8xavYQCywq663FQU3Gq6Zt04STSI6_xs.jpg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/9Vm8xavYQCywq663FQU3Gq6Zt04STSI6.jpg",
+            "https://maps.pasargedesolo.com/storage/locations/Poy7fc5Dilj5OO01yXApfpTL5LXe6AaCjnfuSoKH.jpg"
+          ],
+          "category": {
+            "id": "daging-merah",
+            "label": "Daging Merah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/rCAuqHoCdYty6W28ewHwXHpn0E1IPXx5.svg"
+          },
+          "entries": [
+            {
+              "x": 302,
+              "y": 356
+            }
+          ]
+        },
+        "location_x": 264,
+        "location_y": 353,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec6a19-c635-4bee-a825-27fabcfa9a2b",
+        "type": "Store",
+        "label": "Mie Ayam Lumayan 1",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9f82f978-275f-4073-b426-29f0c380019f",
+          "name": "Mie Ayam Lumayan 1",
+          "description": "Mie Ayam Lumayan adalah warung makan spesialisasi mie ayam yang berada di Lantai 2 Pasar Gede.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/GeXEXoRIUwdO0MaUDQe2OwSNfPtsRucc.jpeg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/GeXEXoRIUwdO0MaUDQe2OwSNfPtsRucc_xs.jpeg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/GeXEXoRIUwdO0MaUDQe2OwSNfPtsRucc.jpeg"
+          ],
+          "category": {
+            "id": "kuliner",
+            "label": "Kuliner",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/dHf3JxQGoNxu18k2KQpfnYHXuewgx1aG.svg"
+          },
+          "entries": [
+            {
+              "x": 669,
+              "y": 246
+            }
+          ]
+        },
+        "location_x": 684,
+        "location_y": 241,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec6bb5-98a6-42af-aa54-1336290fbd58",
+        "type": "Store",
+        "label": "Ayam Kampung Hidup Bu Welas",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eec378a-f555-4823-9802-d5905a2c853c",
+          "name": "Ayam Kampung Hidup Bu Welas",
+          "description": "Ayam Kampung Hidup Bu Welas adalah tenant yang menerima pesanan dan potong ayam dan ayam kampung di lantai 2 Pasar Gede",
+          "image": "https://maps.pasargedesolo.com/storage/stores/z0btOWSbHPcZ8jLMWVaoMDeBh0m04lYR.jpg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/z0btOWSbHPcZ8jLMWVaoMDeBh0m04lYR_xs.jpg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/z0btOWSbHPcZ8jLMWVaoMDeBh0m04lYR.jpg"
+          ],
+          "category": {
+            "id": "daging-unggas",
+            "label": "Daging Unggas",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/eNVqhnmJ4auWcDyj3h5vkwOdhviDypPG.svg"
+          },
+          "entries": [
+            {
+              "x": 274,
+              "y": 182
+            }
+          ]
+        },
+        "location_x": 273,
+        "location_y": 164,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec6b58-fb41-4d20-9c7f-66bb58e3fb41",
+        "type": "Store",
+        "label": "Warung Makan Bu Sri",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eec3b91-e9a3-49ad-8c16-2e5be3f46161",
+          "name": "Warung Makan Bu Sri",
+          "description": "Warung Makan Bu Sri adalah warung makan yang menjual spesialis aneka masakan jawa yang berada di Lantai 2 Pasar Gede",
+          "image": "https://maps.pasargedesolo.com/storage/stores/euWt937fIOJwdk72xAvZzzyZNiYzp8X3.jpeg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/euWt937fIOJwdk72xAvZzzyZNiYzp8X3_xs.jpeg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/euWt937fIOJwdk72xAvZzzyZNiYzp8X3.jpeg"
+          ],
+          "category": {
+            "id": "kuliner",
+            "label": "Kuliner",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/dHf3JxQGoNxu18k2KQpfnYHXuewgx1aG.svg"
+          },
+          "entries": [
+            {
+              "x": 657,
+              "y": 705
+            }
+          ]
+        },
+        "location_x": 647,
+        "location_y": 714,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec69c7-f1d2-4a7a-b017-4b24037319a8",
+        "type": "Store",
+        "label": "Bakso Daging Sapi Asli Pak Wahyu Juventus",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eec3e81-95dc-4fa6-bd9d-78132015d4a2",
+          "name": "Bakso Daging Sapi Asli Pak Wahyu Juventus",
+          "description": "Bakso Daging Sapi Asli Pak Wahyu Juventus adalah warung makan spesialisasi bakso daging sapi asli yang berada di Lantai 2 Pasar Gede.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/gTeAhR3ECidAwvnptFnrEXYzrLa9acka.jpeg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/gTeAhR3ECidAwvnptFnrEXYzrLa9acka_xs.jpeg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/gTeAhR3ECidAwvnptFnrEXYzrLa9acka.jpeg"
+          ],
+          "category": {
+            "id": "kuliner",
+            "label": "Kuliner",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/dHf3JxQGoNxu18k2KQpfnYHXuewgx1aG.svg"
+          },
+          "entries": [
+            {
+              "x": 668,
+              "y": 300
+            }
+          ]
+        },
+        "location_x": 682,
+        "location_y": 288,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec6a4f-2f2a-4373-a021-f57f540a9f68",
+        "type": "Store",
+        "label": "Mie Ayam Lumayan 2",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eec3fea-f0d8-4c23-b35c-bc7bea0cfc1c",
+          "name": "Mie Ayam Lumayan 2",
+          "description": "Mie Ayam Lumayan adalah warung makan spesialisasi mie ayam yang berada di Lantai 2 Pasar Gede.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/JTwysqn4eri01orEivSBQ0JuryHmjTQJ.jpeg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/JTwysqn4eri01orEivSBQ0JuryHmjTQJ_xs.jpeg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/JTwysqn4eri01orEivSBQ0JuryHmjTQJ.jpeg",
+            "https://maps.pasargedesolo.com/storage/locations/HBjVBuLfX4d1sapgCKssPXhJX9dHGgKKong6rzbi.jpg"
+          ],
+          "category": {
+            "id": "kuliner",
+            "label": "Kuliner",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/dHf3JxQGoNxu18k2KQpfnYHXuewgx1aG.svg"
+          },
+          "entries": [
+            {
+              "x": 651,
+              "y": 300
+            }
+          ]
+        },
+        "location_x": 645,
+        "location_y": 275,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec6ac6-6003-44fa-bdff-e01dfe82fe6f",
+        "type": "Store",
+        "label": "Warung Makan Mbak Tariza 1",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eec3d4e-82a9-4c15-bf85-d742499c318e",
+          "name": "Warung Makan Mbak Tariza 1",
+          "description": "Warung Makan Mbak Tariza adalah warung makan spesialisasi masakan rumahan yang berada di Lantai 2 Pasar Gede.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/HDNOImzczXMBK0ysJfDSYM7sllxebLid.jpeg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/HDNOImzczXMBK0ysJfDSYM7sllxebLid_xs.jpeg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/HDNOImzczXMBK0ysJfDSYM7sllxebLid.jpeg"
+          ],
+          "category": {
+            "id": "kuliner",
+            "label": "Kuliner",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/dHf3JxQGoNxu18k2KQpfnYHXuewgx1aG.svg"
+          },
+          "entries": [
+            {
+              "x": 623,
+              "y": 211
+            }
+          ]
+        },
+        "location_x": 607,
+        "location_y": 216,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec6cd2-5803-4835-b361-d22831c4c613",
+        "type": "Store",
+        "label": "Bakso dan Soto Pasar Gede",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eec4ff0-596d-44ab-9682-ec2c8c909357",
+          "name": "Bakso dan Soto Pasar Gede",
+          "description": "Bakso dan Soto Pasar Gede adalah warung makan yang menjual bakso dan Soto yang berada di Lantai 2 Pasar Gede",
+          "image": "https://maps.pasargedesolo.com/storage/stores/9PGJRzsdVIMqqwIoUNxqhmYDMK5tT8YD.jpeg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/9PGJRzsdVIMqqwIoUNxqhmYDMK5tT8YD_xs.jpeg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/9PGJRzsdVIMqqwIoUNxqhmYDMK5tT8YD.jpeg",
+            "https://maps.pasargedesolo.com/storage/locations/urCOvifRZ5uikZtTamvVqyRlZqPa8CSrtzRStv3X.jpg"
+          ],
+          "category": {
+            "id": "kuliner",
+            "label": "Kuliner",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/dHf3JxQGoNxu18k2KQpfnYHXuewgx1aG.svg"
+          },
+          "entries": [
+            {
+              "x": 502,
+              "y": 192
+            }
+          ]
+        },
+        "location_x": 521,
+        "location_y": 184,
+        "sub_label": ""
+      },
+      {
+        "id": "9f049976-ebfc-4646-91a4-881ca68f8fb5",
+        "type": "Store",
+        "label": "Los 1 Cik Ing",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef61fef-16f9-4649-b08a-1be5e215d253",
+          "name": "Los 1 Cik Ing",
+          "description": "Los 1 Cik Ing merupakan salah satu los yang berada di Pasar Gede yang menjual aneka ikan laut dan ikan air tawar",
+          "image": "https://maps.pasargedesolo.com/storage/stores/7tHzRaodfMPauyAO5u1q4ZiiaSazyqkM.jpg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/7tHzRaodfMPauyAO5u1q4ZiiaSazyqkM_xs.jpg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/7tHzRaodfMPauyAO5u1q4ZiiaSazyqkM.jpg",
+            "https://maps.pasargedesolo.com/storage/locations/Q81HlDtXj32SLN6rwBf967Lm2yNmoc9IoqfEP2d7.jpg"
+          ],
+          "category": {
+            "id": "seafood",
+            "label": "Seafood",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/dSvwONkbJ7L0RxWH6GoyeSgfSUrFOt80.svg"
+          },
+          "entries": [
+            {
+              "x": 330,
+              "y": 278
+            }
+          ]
+        },
+        "location_x": 363,
+        "location_y": 274,
+        "sub_label": ""
+      },
+      {
+        "id": "9f04a113-f905-4fac-8ecf-46f7ded9f0b7",
+        "type": "Store",
+        "label": "Los Daging Babi Pak Wawan",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef473b4-17f0-45a4-bdb2-a1e39f4793f9",
+          "name": "Los Daging Babi Pak Wawan",
+          "description": "Los Daging Babi Pak Wawan merupakan los yang ada di lantai 2 Pasar Gede yang menjual spesialis daging babi",
+          "image": "https://maps.pasargedesolo.com/storage/stores/MoExmCOLcnYTRIkwlkApKQ7AfMrThSWe.jpg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/MoExmCOLcnYTRIkwlkApKQ7AfMrThSWe_xs.jpg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/MoExmCOLcnYTRIkwlkApKQ7AfMrThSWe.jpg",
+            "https://maps.pasargedesolo.com/storage/locations/H9YDU4x4xvXWiJVvFMlk1J8VeJv1bnNGn3Tu8zHw.jpg"
+          ],
+          "category": {
+            "id": "daging-merah",
+            "label": "Daging Merah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/rCAuqHoCdYty6W28ewHwXHpn0E1IPXx5.svg"
+          },
+          "entries": [
+            {
+              "x": 330,
+              "y": 357
+            }
+          ]
+        },
+        "location_x": 364,
+        "location_y": 354,
+        "sub_label": ""
+      },
+      {
+        "id": "9ef1f61d-e4f4-448b-b61a-f4136ee22f9c",
+        "type": "Store",
+        "label": "Warung Makan Bu Ndari",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eea17b6-f29f-4e82-818d-7c7b1197f276",
+          "name": "Warung Makan Bu Ndari",
+          "description": "Warung Makan Bu Ndari merupakan salah satu warung makan yang ada di dalam Pasar Gede yang menyediakan spesialis masakan babi dan masakan jawa yang setiap hari menunya berbeda",
+          "image": "https://maps.pasargedesolo.com/storage/stores/tYcUJzQLcZ7LC7drDFBGR6w7Dmw42HwJ.jpg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/tYcUJzQLcZ7LC7drDFBGR6w7Dmw42HwJ_xs.jpg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/tYcUJzQLcZ7LC7drDFBGR6w7Dmw42HwJ.jpg",
+            "https://maps.pasargedesolo.com/storage/locations/R3i6rnJmIlGVoF2zSlNfhpWpDvt29nxte6CEscNJ.jpg"
+          ],
+          "category": {
+            "id": "kuliner",
+            "label": "Kuliner",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/dHf3JxQGoNxu18k2KQpfnYHXuewgx1aG.svg"
+          },
+          "entries": [
+            {
+              "x": 605,
+              "y": 831
+            }
+          ]
+        },
+        "location_x": 609,
+        "location_y": 817,
+        "sub_label": ""
+      },
+      {
+        "id": "9f049a3d-d617-4f83-ac7f-7f81eec72a1b",
+        "type": "Store",
+        "label": "Los Elly Ikan Laut 1",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eec3a4a-e238-410b-9244-a90895d14601",
+          "name": "Los Elly Ikan Laut 1",
+          "description": "Los Elly Ikan Laut adalah supplier udang, cumi, kepiting dan ikan laut selain melayani pembelian grosir juga melayani pembelian kiloan yang berada di lantai 2 Pasar Gede",
+          "image": "https://maps.pasargedesolo.com/storage/stores/OYMkpdx1HI5zaYB63ql7mXjNBtXtL7aj.jpg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/OYMkpdx1HI5zaYB63ql7mXjNBtXtL7aj_xs.jpg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/OYMkpdx1HI5zaYB63ql7mXjNBtXtL7aj.jpg",
+            "https://maps.pasargedesolo.com/storage/locations/QxN6BPtw2jMoHmOMEL44tKdsJ3XB7jsmsAlx2euJ.jpg"
+          ],
+          "category": {
+            "id": "seafood",
+            "label": "Seafood",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/dSvwONkbJ7L0RxWH6GoyeSgfSUrFOt80.svg"
+          },
+          "entries": [
+            {
+              "x": 302,
+              "y": 279
+            }
+          ]
+        },
+        "location_x": 263,
+        "location_y": 276,
+        "sub_label": ""
+      },
+      {
+        "id": "9f0498b6-2816-499e-9ed8-5a2a16c2c660",
+        "type": "Store",
+        "label": "Los 2 Cik Ing",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef60d69-d3a7-41f7-9a17-28c1465ff269",
+          "name": "Los 2 Cik Ing",
+          "description": "Los 2 Cik Ing merupakan salah satu los yang berada di Pasar Gede yang menjual aneka ikan laut dan ikan air tawar",
+          "image": "https://maps.pasargedesolo.com/storage/stores/QK3gV68BGGBhL2EElkOL9wR61q0nUdV6.jpg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/QK3gV68BGGBhL2EElkOL9wR61q0nUdV6_xs.jpg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/QK3gV68BGGBhL2EElkOL9wR61q0nUdV6.jpg",
+            "https://maps.pasargedesolo.com/storage/locations/CIkWW77XcGQQQv2bSqG7pGteWwENab7XGagmT8Xj.jpg"
+          ],
+          "category": {
+            "id": "seafood",
+            "label": "Seafood",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/dSvwONkbJ7L0RxWH6GoyeSgfSUrFOt80.svg"
+          },
+          "entries": [
+            {
+              "x": 302,
+              "y": 259
+            }
+          ]
+        },
+        "location_x": 262,
+        "location_y": 254,
+        "sub_label": ""
+      },
+      {
+        "id": "9f04a177-700b-49fa-afbd-4b63f143984c",
+        "type": "Store",
+        "label": "Los Daging Babi Pak Caidi",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef4961e-346e-45ea-86cb-3fe146b197cd",
+          "name": "Los Daging Babi Pak Caidi",
+          "description": "Los Daging Babi Pak Caidi merupakan salah satu los yang ada di Pasar Gede yang menjual spesialis daging babi dan tulang babi",
+          "image": "https://maps.pasargedesolo.com/storage/stores/LgaDHYb65w2TsN5nUHrUmklLNuTWutvo.jpg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/LgaDHYb65w2TsN5nUHrUmklLNuTWutvo_xs.jpg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/LgaDHYb65w2TsN5nUHrUmklLNuTWutvo.jpg",
+            "https://maps.pasargedesolo.com/storage/locations/NWiU1PiQJZ5Ih9HQxCEL9Jn11NICB9zm4K4earVc.jpg"
+          ],
+          "category": {
+            "id": "daging-merah",
+            "label": "Daging Merah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/rCAuqHoCdYty6W28ewHwXHpn0E1IPXx5.svg"
+          },
+          "entries": [
+            {
+              "x": 303,
+              "y": 402
+            }
+          ]
+        },
+        "location_x": 267,
+        "location_y": 398,
+        "sub_label": ""
+      },
+      {
+        "id": "9f04a6ca-1c7a-49ed-ad91-f76b7aa5cc95",
+        "type": "Store",
+        "label": "Los Daging Babi Pak Sarjono",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef63710-65b2-46c6-8d21-52f66f1cc07e",
+          "name": "Los Daging Babi Pak Sarjono",
+          "description": "Los Daging Babi Pak Sarjono merupakan salah satu los yang ada di lantai 2 Pasar Gede yang menjual spesialis sosis babi, samcan dan daging babi",
+          "image": "https://maps.pasargedesolo.com/storage/stores/t1XpXcP7oUrswE50zKPnhE0gfuhuxBfh.jpg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/t1XpXcP7oUrswE50zKPnhE0gfuhuxBfh_xs.jpg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/t1XpXcP7oUrswE50zKPnhE0gfuhuxBfh.jpg",
+            "https://maps.pasargedesolo.com/storage/locations/hbJqS4Jrl4J7feFoNDAVTbtpskPnYoFY0eVKpv3r.jpg"
+          ],
+          "category": {
+            "id": "daging-merah",
+            "label": "Daging Merah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/rCAuqHoCdYty6W28ewHwXHpn0E1IPXx5.svg"
+          },
+          "entries": [
+            {
+              "x": 302,
+              "y": 492
+            }
+          ]
+        },
+        "location_x": 265,
+        "location_y": 482,
+        "sub_label": ""
+      },
+      {
+        "id": "9f049ce2-7c93-4730-888c-195a747d22e9",
+        "type": "Store",
+        "label": "Los 1 Mbak Yatmini Ikan Laut",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef62333-b61e-4acf-85d5-76bc421726a0",
+          "name": "Los 1 Mbak Yatmini Ikan Laut",
+          "description": "Los Mbak Yatmini Ikan Laut merupakan salah satu los yang ada di lantai 2 Pasar Gede yang menjual berbagai macam ikan laut dan ikan air tawar",
+          "image": "https://maps.pasargedesolo.com/storage/stores/lAgwF1aCFqp1SUD9kh8M969JwiWKmp5g.jpg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/lAgwF1aCFqp1SUD9kh8M969JwiWKmp5g_xs.jpg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/lAgwF1aCFqp1SUD9kh8M969JwiWKmp5g.jpg"
+          ],
+          "category": {
+            "id": "seafood",
+            "label": "Seafood",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/dSvwONkbJ7L0RxWH6GoyeSgfSUrFOt80.svg"
+          },
+          "entries": [
+            {
+              "x": 330,
+              "y": 299
+            }
+          ]
+        },
+        "location_x": 362,
+        "location_y": 293,
+        "sub_label": ""
+      },
+      {
+        "id": "9f04a95a-ee6f-43da-bbe1-7ea4f9caafe6",
+        "type": "Store",
+        "label": "Los Daging Sapi Bu Sumarni",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9f04906c-c288-43de-a55c-529aa4fc78e3",
+          "name": "Los Daging Sapi Bu Sumarni",
+          "description": "Los Daging Sapi Bu Sumarni merupakan salah satu los yang berada di lantai 2 Pasar Gede yang menjual spesialis dendeng sapi dan tulang sekengkel",
+          "image": "https://maps.pasargedesolo.com/storage/stores/SzHreIggV1URThyBKnfVsD9UcMrJjBKG.jpg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/SzHreIggV1URThyBKnfVsD9UcMrJjBKG_xs.jpg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/SzHreIggV1URThyBKnfVsD9UcMrJjBKG.jpg",
+            "https://maps.pasargedesolo.com/storage/locations/zqXB8teOtF2OUwpjIHTsdeONhhyo73wKJl52eNDk.jpg"
+          ],
+          "category": {
+            "id": "daging-merah",
+            "label": "Daging Merah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/rCAuqHoCdYty6W28ewHwXHpn0E1IPXx5.svg"
+          },
+          "entries": [
+            {
+              "x": 331,
+              "y": 583
+            }
+          ]
+        },
+        "location_x": 359,
+        "location_y": 576,
+        "sub_label": ""
+      },
+      {
+        "id": "9f04a1f7-f165-4c82-9fc1-fce8471add60",
+        "type": "Store",
+        "label": "Los Daging Babi Pak Paino",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef63434-01f0-426f-8c10-f874e8f15d34",
+          "name": "Los Daging Babi Pak Paino",
+          "description": "Los Daging Babi Pak Paino merupakan salah satu los yang ada di lantai 2 Pasar Gede yang menjual spesialis kaki babi, iga babi, dan daging babi",
+          "image": "https://maps.pasargedesolo.com/storage/stores/ZwdD6DQyUq4gcP0ATFY463WVG10fUFzX.jpg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/ZwdD6DQyUq4gcP0ATFY463WVG10fUFzX_xs.jpg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/ZwdD6DQyUq4gcP0ATFY463WVG10fUFzX.jpg",
+            "https://maps.pasargedesolo.com/storage/locations/utm4tpbpaEurjqlMV2nb21zqgsZH7aglbqyi4KcB.jpg"
+          ],
+          "category": {
+            "id": "daging-merah",
+            "label": "Daging Merah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/rCAuqHoCdYty6W28ewHwXHpn0E1IPXx5.svg"
+          },
+          "entries": [
+            {
+              "x": 331,
+              "y": 403
+            }
+          ]
+        },
+        "location_x": 360,
+        "location_y": 390,
+        "sub_label": ""
+      },
+      {
+        "id": "9ef48d41-2b49-47e3-bf0f-dbf0358dd45e",
+        "type": "Store",
+        "label": "Toilet",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef1f850-7955-478e-89a2-c71d105ccd4f",
+          "name": "Toilet",
+          "description": "Fasilitas toilet yang berada di Pasar Gede",
+          "image": "",
+          "image_thumb": "",
+          "images": [],
+          "category": {
+            "id": "fasilitas-umum",
+            "label": "Fasilitas Umum",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/DhR2azyaRB6ATAi5y9PLFiCNp8qn85nd.jpeg"
+          },
+          "entries": [
+            {
+              "x": 710,
+              "y": 172
+            }
+          ]
+        },
+        "location_x": 720,
+        "location_y": 169,
+        "sub_label": ""
+      },
+      {
+        "id": "9f049e0c-f04a-48cd-abaf-0cbc639fd2cc",
+        "type": "Store",
+        "label": "Los 2 Mbak Yatmini Ikan Laut",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9f04705e-dcb5-449f-bf09-3c3fccd97c62",
+          "name": "Los 2 Mbak Yatmini Ikan Laut",
+          "description": "Los Mbak Yatmini Ikan Laut merupakan salah satu los yang ada di lantai 2 Pasar Gede yang menjual berbagai macam ikan laut dan ikan air tawar",
+          "image": "https://maps.pasargedesolo.com/storage/stores/KX5JnSYICSCUOzrkKrKZlItMJ7Lj6cWm.jpg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/KX5JnSYICSCUOzrkKrKZlItMJ7Lj6cWm_xs.jpg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/KX5JnSYICSCUOzrkKrKZlItMJ7Lj6cWm.jpg"
+          ],
+          "category": {
+            "id": "seafood",
+            "label": "Seafood",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/dSvwONkbJ7L0RxWH6GoyeSgfSUrFOt80.svg"
+          },
+          "entries": [
+            {
+              "x": 331,
+              "y": 316
+            }
+          ]
+        },
+        "location_x": 362,
+        "location_y": 311,
+        "sub_label": ""
+      },
+      {
+        "id": "9f04a31f-5b94-4c0b-b600-df6046cccbaa",
+        "type": "Store",
+        "label": "Los Daging Babi Pak Prapto",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef4a0da-358c-46c2-9f0f-6e3892689c9e",
+          "name": "Los Daging Babi Pak Prapto",
+          "description": "Los Daging Babi Pak Prapto merupakan salah satu los yang ada di Pasar Gede yang menjual spesialis kaki babi, hati babi dan daging babi",
+          "image": "https://maps.pasargedesolo.com/storage/stores/SYzQTu4eHeXIic4WLc767lqfS583s9mn.jpg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/SYzQTu4eHeXIic4WLc767lqfS583s9mn_xs.jpg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/SYzQTu4eHeXIic4WLc767lqfS583s9mn.jpg",
+            "https://maps.pasargedesolo.com/storage/locations/RwvQvStX4HqTvAHJmiXr6Qzh0CW5dfegTX2H1ckf.jpg"
+          ],
+          "category": {
+            "id": "daging-merah",
+            "label": "Daging Merah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/rCAuqHoCdYty6W28ewHwXHpn0E1IPXx5.svg"
+          },
+          "entries": [
+            {
+              "x": 303,
+              "y": 439
+            }
+          ]
+        },
+        "location_x": 265,
+        "location_y": 433,
+        "sub_label": ""
+      },
+      {
+        "id": "9ef496b3-91cb-4db9-ac96-c746921e122b",
+        "type": "Tangga",
+        "label": "Tangga lt 2.1",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/tTHfn881yaHYu4UoCUELmBQRIo6b4r2Q.svg",
+        "store": null,
+        "location_x": 708,
+        "location_y": 782,
+        "links": [
+          {
+            "id": "9ef496b8-20fc-4b8c-a8d0-497f94d9212b",
+            "type": "Tangga",
+            "label": "Tangga lt 1.1",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/tTHfn881yaHYu4UoCUELmBQRIo6b4r2Q.svg",
+            "location_x": 332,
+            "location_y": 273,
+            "floor_id": "9ee89e88-2140-40c9-9f99-54d7ec058959"
+          }
+        ]
+      },
+      {
+        "id": "9f04a7c9-29f6-4c68-85f9-b6347f03c70d",
+        "type": "Store",
+        "label": "Los Daging Babi Pak Belong",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef63c69-763d-4d75-8183-1b8c64c3b3a5",
+          "name": "Los Daging Babi Pak Belong",
+          "description": "Los Daging Babi Pak Belong merupakan salah satu los yang ada di lantai 2 Pasar Gede yang menjual spesialis kaki babi dan daging babi",
+          "image": "https://maps.pasargedesolo.com/storage/stores/0VNJgwGZDuTxsxuaap6YuEKDgfOeqw2H.jpg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/0VNJgwGZDuTxsxuaap6YuEKDgfOeqw2H_xs.jpg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/0VNJgwGZDuTxsxuaap6YuEKDgfOeqw2H.jpg",
+            "https://maps.pasargedesolo.com/storage/locations/dnOuFWVmgPp8ErJDjBteBhdsfnazgHzxR8zZY3tc.jpg"
+          ],
+          "category": {
+            "id": "daging-merah",
+            "label": "Daging Merah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/rCAuqHoCdYty6W28ewHwXHpn0E1IPXx5.svg"
+          },
+          "entries": [
+            {
+              "x": 331,
+              "y": 494
+            }
+          ]
+        },
+        "location_x": 361,
+        "location_y": 485,
+        "sub_label": ""
+      },
+      {
+        "id": "9ef49889-df5e-4811-9a3d-bb117f07a279",
+        "type": "Tangga",
+        "label": "Tangga lt 2.2",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/tTHfn881yaHYu4UoCUELmBQRIo6b4r2Q.svg",
+        "store": null,
+        "location_x": 644,
+        "location_y": 851,
+        "links": [
+          {
+            "id": "9ef49846-fc66-442b-b42a-2c15f7eb65dc",
+            "type": "Tangga",
+            "label": "Tangga lt 1.2",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/tTHfn881yaHYu4UoCUELmBQRIo6b4r2Q.svg",
+            "location_x": 352,
+            "location_y": 212,
+            "floor_id": "9ee89e88-2140-40c9-9f99-54d7ec058959"
+          }
+        ]
+      },
+      {
+        "id": "9ef499cd-6dc9-4c9a-93a4-a83c40338eec",
+        "type": "Tangga",
+        "label": "Tangga lt 2.3",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/tTHfn881yaHYu4UoCUELmBQRIo6b4r2Q.svg",
+        "store": null,
+        "location_x": 641,
+        "location_y": 232,
+        "links": [
+          {
+            "id": "9ef49989-6e58-4ac9-893d-11a5de7fa4ed",
+            "type": "Tangga",
+            "label": "Tangga lt 1.3",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/tTHfn881yaHYu4UoCUELmBQRIo6b4r2Q.svg",
+            "location_x": 320,
+            "location_y": 870,
+            "floor_id": "9ee89e88-2140-40c9-9f99-54d7ec058959"
+          }
+        ]
+      },
+      {
+        "id": "9ef49ab9-5872-4559-9335-918f1400e167",
+        "type": "Tangga",
+        "label": "Tangga lt 2.4",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/tTHfn881yaHYu4UoCUELmBQRIo6b4r2Q.svg",
+        "store": null,
+        "location_x": 511,
+        "location_y": 816,
+        "links": [
+          {
+            "id": "9ef49a6b-7eea-4afa-b6db-8f3155843e27",
+            "type": "Tangga",
+            "label": "Tangga lt 1.4",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/tTHfn881yaHYu4UoCUELmBQRIo6b4r2Q.svg",
+            "location_x": 488,
+            "location_y": 163,
+            "floor_id": "9ee89e88-2140-40c9-9f99-54d7ec058959"
+          }
+        ]
+      },
+      {
+        "id": "9f04ab45-cc90-4838-93ec-420fca235d3b",
+        "type": "Store",
+        "label": "Los Daging Sapi Bu Yayuk",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9f048bee-867b-44da-8b49-2a51be2ecea6",
+          "name": "Los Daging Sapi Bu Yayuk",
+          "description": "Los Daging Sapi Bu Yayuk merupakan salah satu los yang ada di lantai 2 Pasar Gede yang menjual spesialis jerohan sapi dan tulang sumsum",
+          "image": "https://maps.pasargedesolo.com/storage/stores/hCHQrPWcR9lQ7ik7hCRBLqUFYZbN00cs.jpg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/hCHQrPWcR9lQ7ik7hCRBLqUFYZbN00cs_xs.jpg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/hCHQrPWcR9lQ7ik7hCRBLqUFYZbN00cs.jpg",
+            "https://maps.pasargedesolo.com/storage/locations/q0NW3bTnZNQCV8f7d9FQKx44lMMo2cgw9NFYrdpC.jpg"
+          ],
+          "category": {
+            "id": "daging-merah",
+            "label": "Daging Merah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/rCAuqHoCdYty6W28ewHwXHpn0E1IPXx5.svg"
+          },
+          "entries": [
+            {
+              "x": 303,
+              "y": 580
+            }
+          ]
+        },
+        "location_x": 263,
+        "location_y": 578,
+        "sub_label": ""
+      },
+      {
+        "id": "9ef49b98-0d91-484a-9874-4517d444aaba",
+        "type": "Tangga",
+        "label": "Tangga lt 2.5",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/tTHfn881yaHYu4UoCUELmBQRIo6b4r2Q.svg",
+        "store": null,
+        "location_x": 642,
+        "location_y": 390,
+        "links": [
+          {
+            "id": "9ef49b56-c410-4339-a1e8-92fe2228b6e1",
+            "type": "Tangga",
+            "label": "Tangga lt 1.5",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/tTHfn881yaHYu4UoCUELmBQRIo6b4r2Q.svg",
+            "location_x": 307,
+            "location_y": 513,
+            "floor_id": "9ee89e88-2140-40c9-9f99-54d7ec058959"
+          }
+        ]
+      },
+      {
+        "id": "9ef5fae9-7343-42a9-9c58-cb3b356f509c",
+        "type": "Store",
+        "label": "Mushola",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef49059-2c7a-4685-810e-eff0dd6dc09f",
+          "name": "Mushola",
+          "description": "Mushola adalah tempat ibadah umat Islam yang berukuran lebih kecil dari masjid. Mushola biasanya digunakan untuk salat fardu berjamaah dalam lingkup yang lebih terbatas seperti di rumah, kantor, sekolah, atau fasilitas umum.",
+          "image": "",
+          "image_thumb": "",
+          "images": [],
+          "category": {
+            "id": "tempat-ibadah",
+            "label": "Tempat Ibadah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/8ohVqJc3GJvOGFZQJ7PeFlcC30PKCkgN.svg"
+          },
+          "entries": [
+            {
+              "x": 267,
+              "y": 866
+            }
+          ]
+        },
+        "location_x": 260,
+        "location_y": 870,
+        "sub_label": ""
+      },
+      {
+        "id": "9f049e71-96a9-4ddb-a40c-d1e461c7fb4f",
+        "type": "Store",
+        "label": "Los 3 Mbak Yatmini Ikan Laut",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9f047088-1e45-472e-a50e-93c5af76adca",
+          "name": "Los 3 Mbak Yatmini Ikan Laut",
+          "description": "Los Mbak Yatmini Ikan Laut merupakan salah satu los yang ada di lantai 2 Pasar Gede yang menjual berbagai macam ikan laut dan ikan air tawar",
+          "image": "https://maps.pasargedesolo.com/storage/stores/o9jYWlzQsqw9OYZgdfAeCEGXP6AuNY8Y.jpg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/o9jYWlzQsqw9OYZgdfAeCEGXP6AuNY8Y_xs.jpg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/o9jYWlzQsqw9OYZgdfAeCEGXP6AuNY8Y.jpg"
+          ],
+          "category": {
+            "id": "seafood",
+            "label": "Seafood",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/dSvwONkbJ7L0RxWH6GoyeSgfSUrFOt80.svg"
+          },
+          "entries": [
+            {
+              "x": 330,
+              "y": 334
+            }
+          ]
+        },
+        "location_x": 363,
+        "location_y": 331,
+        "sub_label": ""
+      },
+      {
+        "id": "9f04a47c-2dd6-4d11-9299-fe4f0b5c6690",
+        "type": "Store",
+        "label": "Los Daging Babi Pak Topo",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef48dc2-eb98-499f-8392-132c7ea1417e",
+          "name": "Los Daging Babi Pak Topo",
+          "description": "Daging Babi Pak Topo merupakan salah satu los yang ada di Pasar Gede yang menjual spesialis Daging Babi dan Lemak Babi",
+          "image": "https://maps.pasargedesolo.com/storage/stores/Hueslo4OA6ORqSGV5zouWKvNPdYv5Cef.jpg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/Hueslo4OA6ORqSGV5zouWKvNPdYv5Cef_xs.jpg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/Hueslo4OA6ORqSGV5zouWKvNPdYv5Cef.jpg",
+            "https://maps.pasargedesolo.com/storage/locations/KZnHsebxE7Q6SwAazWfh3n7pF71FlbriMAnYnXhr.jpg"
+          ],
+          "category": {
+            "id": "daging-merah",
+            "label": "Daging Merah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/rCAuqHoCdYty6W28ewHwXHpn0E1IPXx5.svg"
+          },
+          "entries": [
+            {
+              "x": 331,
+              "y": 441
+            }
+          ]
+        },
+        "location_x": 360,
+        "location_y": 435,
+        "sub_label": ""
+      },
+      {
+        "id": "9ef5fa31-15d1-4210-8086-0e5d61329213",
+        "type": "Tangga",
+        "label": "Tangga lt 2.6",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/tTHfn881yaHYu4UoCUELmBQRIo6b4r2Q.svg",
+        "store": null,
+        "location_x": 497,
+        "location_y": 220,
+        "links": [
+          {
+            "id": "9ef5f9fd-67e0-409c-b039-c84fc8c030c8",
+            "type": "Tangga",
+            "label": "Tangga lt 1.6",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/tTHfn881yaHYu4UoCUELmBQRIo6b4r2Q.svg",
+            "location_x": 479,
+            "location_y": 859,
+            "floor_id": "9ee89e88-2140-40c9-9f99-54d7ec058959"
+          }
+        ]
+      },
+      {
+        "id": "9f04a834-bee5-4a41-a0af-cc24df403140",
+        "type": "Store",
+        "label": "Los Daging Babi Bu Yensen",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef49150-451d-4519-b2bf-c29c33fd963d",
+          "name": "Los Daging Babi Bu Yensen",
+          "description": "Los Daging Babi Bu Yensen merupakan salah satu los yang ada di Pasar Gede yang menjual spesialis Daging Babi, Kaki Babi, Sawi Asin",
+          "image": "https://maps.pasargedesolo.com/storage/stores/7XiCD5o4PGUAi4onhwnHYYOEdy8W7MAY.jpg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/7XiCD5o4PGUAi4onhwnHYYOEdy8W7MAY_xs.jpg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/7XiCD5o4PGUAi4onhwnHYYOEdy8W7MAY.jpg",
+            "https://maps.pasargedesolo.com/storage/locations/EYeiykhE0kz2vqf2m0r3ILeubJ05NgWMEKEj93pX.jpg"
+          ],
+          "category": {
+            "id": "daging-merah",
+            "label": "Daging Merah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/rCAuqHoCdYty6W28ewHwXHpn0E1IPXx5.svg"
+          },
+          "entries": [
+            {
+              "x": 331,
+              "y": 514
+            }
+          ]
+        },
+        "location_x": 360,
+        "location_y": 508,
+        "sub_label": ""
+      },
+      {
+        "id": "9ef5fde3-dc44-44eb-a7a4-91b92a0703d0",
+        "type": "Store",
+        "label": "TWK Tedjo Fruit",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef5fd56-c452-479b-b84e-0eb1be63fb3c",
+          "name": "TWK Tedjo Fruit",
+          "description": "TWK Tedjo Fruit merupakan salah satu los yang ada di lantai 2 Pasar Gede yang menjual spesialis buah jeruk grosir",
+          "image": "https://maps.pasargedesolo.com/storage/stores/xmv854N1GH3H6i89b3eH55isZNXCPxye.jpg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/xmv854N1GH3H6i89b3eH55isZNXCPxye_xs.jpg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/xmv854N1GH3H6i89b3eH55isZNXCPxye.jpg",
+            "https://maps.pasargedesolo.com/storage/locations/FQ3wcKl7nBwcXS2dJU7V2evi8IUK6vFyup6i74yD.jpg"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 302,
+              "y": 612
+            }
+          ]
+        },
+        "location_x": 274,
+        "location_y": 609,
+        "sub_label": ""
+      },
+      {
+        "id": "9ef64093-3490-4df0-9689-2c0545c9dd24",
+        "type": "Store",
+        "label": "Pia-Pia dan Kompia Liling/Yohanes",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eea6161-a700-4e63-9e66-091b8745a92d",
+          "name": "Pia-Pia dan Kompia Liling/Yohanes",
+          "description": "Pia-Pia dan Kompia Liling/Yohanes merupakan salah satu makanan legend di Solo yang berada di Pasar Gede yang menjual spesialis kompia dan pia-pia dengan beragam isian",
+          "image": "https://maps.pasargedesolo.com/storage/stores/Oe512LIa47etjWBpsCdYmLskN1WV2A2A.jpg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/Oe512LIa47etjWBpsCdYmLskN1WV2A2A_xs.jpg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/Oe512LIa47etjWBpsCdYmLskN1WV2A2A.jpg",
+            "https://maps.pasargedesolo.com/storage/locations/w7X2bTB0bh70Rt1mCnFii8vOHMqRhG8rIF05Erdm.jpg"
+          ],
+          "category": {
+            "id": "kuliner",
+            "label": "Kuliner",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/dHf3JxQGoNxu18k2KQpfnYHXuewgx1aG.svg"
+          },
+          "entries": [
+            {
+              "x": 331,
+              "y": 609
+            }
+          ]
+        },
+        "location_x": 358,
+        "location_y": 603,
+        "sub_label": ""
+      },
+      {
+        "id": "9ef64e4b-ca66-49a1-a98d-25a2c424592b",
+        "type": "Store",
+        "label": "Kios Gilingan Daging",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eec4fc5-e9a3-4e6f-9115-57dc6e92ec38",
+          "name": "Kios Gilingan Daging",
+          "description": "Kios Gilingan Daging adalah kios yang melayani jasa gilingan daging kasar dan halus yang berada di Lantai 2 Pasar Gede",
+          "image": "https://maps.pasargedesolo.com/storage/stores/jaGtKCKr5oE34TGjOZgAaS9yaktbsNJk.jpg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/jaGtKCKr5oE34TGjOZgAaS9yaktbsNJk_xs.jpg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/jaGtKCKr5oE34TGjOZgAaS9yaktbsNJk.jpg"
+          ],
+          "category": {
+            "id": "service-others",
+            "label": "Service & Others",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/e1dvdYY2FTfHQmoDSSQaeOaXXZbEMd40.svg"
+          },
+          "entries": [
+            {
+              "x": 505,
+              "y": 137
+            }
+          ]
+        },
+        "location_x": 518,
+        "location_y": 120,
+        "sub_label": ""
+      },
+      {
+        "id": "9f049c6f-8c21-491b-98c0-b55ff962e861",
+        "type": "Store",
+        "label": "Los Elly Ikan Laut 2",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef614dd-487f-4c43-967a-3e483fd1e73c",
+          "name": "Los Elly Ikan Laut 2",
+          "description": "Los Elly Ikan Laut adalah supplier udang, cumi, kepiting dan ikan laut selain melayani pembelian grosir juga melayani pembelian kiloan yang berada di lantai 2 Pasar Gede",
+          "image": "https://maps.pasargedesolo.com/storage/stores/D4DlYLNitgecwXwfO2o1L52erLUXa48s.jpg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/D4DlYLNitgecwXwfO2o1L52erLUXa48s_xs.jpg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/D4DlYLNitgecwXwfO2o1L52erLUXa48s.jpg",
+            "https://maps.pasargedesolo.com/storage/locations/lGaJG77Rcsvw1Jik9KyZ7wv9B2ZTTkCbY3U22REP.jpg"
+          ],
+          "category": {
+            "id": "seafood",
+            "label": "Seafood",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/dSvwONkbJ7L0RxWH6GoyeSgfSUrFOt80.svg"
+          },
+          "entries": [
+            {
+              "x": 302,
+              "y": 297
+            }
+          ]
+        },
+        "location_x": 264,
+        "location_y": 293,
+        "sub_label": ""
+      },
+      {
+        "id": "9f04a508-0822-409b-b172-37e426d1e2ef",
+        "type": "Store",
+        "label": "Los Daging Babi Bu Tatik",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef6303f-74a6-4b9f-992c-0061823c9996",
+          "name": "Los Daging Babi Bu Tatik",
+          "description": "Los Daging Babi Bu Tatik merupakan salah satu los yang ada di lantai 2 Pasar Gede yang menyediakan spesialis Daging Babi dan Iga Babi",
+          "image": "https://maps.pasargedesolo.com/storage/stores/F5CEtkjsh3bZkHAq1LtOoNjvwDSJY467.jpg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/F5CEtkjsh3bZkHAq1LtOoNjvwDSJY467_xs.jpg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/F5CEtkjsh3bZkHAq1LtOoNjvwDSJY467.jpg"
+          ],
+          "category": {
+            "id": "daging-merah",
+            "label": "Daging Merah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/rCAuqHoCdYty6W28ewHwXHpn0E1IPXx5.svg"
+          },
+          "entries": [
+            {
+              "x": 302,
+              "y": 462
+            }
+          ]
+        },
+        "location_x": 265,
+        "location_y": 458,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec6979-b1b4-456f-b2f0-c744ea3553db",
+        "type": "Store",
+        "label": "Soto Senggol Bu Tutik",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eec3c8d-f97c-4cd9-a288-8529696f918b",
+          "name": "Soto Senggol Bu Tutik",
+          "description": "Soto Senggol Bu Tutik adalah warung makan spesialisasi soto yang berada di Lantai 2 Pasar Gede.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/vBdCJXSk34m0JlJMLuFZSHKB1Aetl5Xm.jpg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/vBdCJXSk34m0JlJMLuFZSHKB1Aetl5Xm_xs.jpg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/vBdCJXSk34m0JlJMLuFZSHKB1Aetl5Xm.jpg",
+            "https://maps.pasargedesolo.com/storage/locations/WeQxttfUNDcnmOD2JSnlOtrU2GNQfCCLZD1ilKc0.jpg"
+          ],
+          "category": {
+            "id": "kuliner",
+            "label": "Kuliner",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/dHf3JxQGoNxu18k2KQpfnYHXuewgx1aG.svg"
+          },
+          "entries": [
+            {
+              "x": 667,
+              "y": 352
+            }
+          ]
+        },
+        "location_x": 684,
+        "location_y": 341,
+        "sub_label": ""
+      },
+      {
+        "id": "9f049f25-f553-4ab6-9306-533bbdfb1824",
+        "type": "Store",
+        "label": "Los Andreas 1",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eec3b28-4112-4a96-9c4d-0a5cb2cd7a7a",
+          "name": "Los Andreas 1",
+          "description": "Los Andreas adalah tenant menjual aneka ikan laut, ikan air tawar dan udang yang berada di lantai 2 Pasar Gede",
+          "image": "https://maps.pasargedesolo.com/storage/stores/FlqUvmlpuTSmbDxTiaMMCy2fRPs7jbmP.jpg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/FlqUvmlpuTSmbDxTiaMMCy2fRPs7jbmP_xs.jpg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/FlqUvmlpuTSmbDxTiaMMCy2fRPs7jbmP.jpg"
+          ],
+          "category": {
+            "id": "seafood",
+            "label": "Seafood",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/dSvwONkbJ7L0RxWH6GoyeSgfSUrFOt80.svg"
+          },
+          "entries": [
+            {
+              "x": 302,
+              "y": 315
+            }
+          ]
+        },
+        "location_x": 264,
+        "location_y": 311,
+        "sub_label": ""
+      },
+      {
+        "id": "9f049fb1-0f51-4bf5-be07-1211adf43fb7",
+        "type": "Store",
+        "label": "Los Andreas 2",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef61a3d-f0c0-46f0-9b0c-1baeb7a8281e",
+          "name": "Los Andreas 2",
+          "description": "Los Andreas adalah tenant menjual aneka ikan laut, ikan air tawar dan udang yang berada di lantai 2 Pasar Gede",
+          "image": "https://maps.pasargedesolo.com/storage/stores/umeavEAXLmV6vRe6go4fgc0ZXyBNkHy3.jpg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/umeavEAXLmV6vRe6go4fgc0ZXyBNkHy3_xs.jpg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/umeavEAXLmV6vRe6go4fgc0ZXyBNkHy3.jpg"
+          ],
+          "category": {
+            "id": "seafood",
+            "label": "Seafood",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/dSvwONkbJ7L0RxWH6GoyeSgfSUrFOt80.svg"
+          },
+          "entries": [
+            {
+              "x": 302,
+              "y": 333
+            }
+          ]
+        },
+        "location_x": 264,
+        "location_y": 329,
+        "sub_label": ""
+      },
+      {
+        "id": "9f04a64c-2859-44eb-9f40-4b30ed5a6387",
+        "type": "Store",
+        "label": "Los Daging Babi Pak Agus",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9f04a617-0458-44d4-a09a-50ff0df081d5",
+          "name": "Los Daging Babi Pak Agus",
+          "description": "Los Daging Babi Pak Agus merupakan salah satu los yang ada di lantai 2 Pasar Gede yang menjual spesialis Daging Babi",
+          "image": "https://maps.pasargedesolo.com/storage/stores/cSWMxUelcfVov4yDxdlxSTCCZleQWuMX.jpg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/cSWMxUelcfVov4yDxdlxSTCCZleQWuMX_xs.jpg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/cSWMxUelcfVov4yDxdlxSTCCZleQWuMX.jpg"
+          ],
+          "category": {
+            "id": "daging-merah",
+            "label": "Daging Merah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/rCAuqHoCdYty6W28ewHwXHpn0E1IPXx5.svg"
+          },
+          "entries": [
+            {
+              "x": 330,
+              "y": 465
+            }
+          ]
+        },
+        "location_x": 360,
+        "location_y": 461,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec0e6e-21e8-426e-8d2a-2ae350959afa",
+        "type": "Store",
+        "label": "Kios Tari Bunga",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eea64ef-7299-4da2-ab08-ceb2b5f6fd28",
+          "name": "Kios Tari Bunga",
+          "description": "Kios Tari Bunga merupakan kios yang ada di Pasar Gede yang menyediakan beragam bunga dengan berbagai macam jenis rangkaian dan jenis bunga",
+          "image": "https://maps.pasargedesolo.com/storage/stores/5g0PxK6AT2FyK66WHR6uTR8JFMo6aTnL.jpg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/5g0PxK6AT2FyK66WHR6uTR8JFMo6aTnL_xs.jpg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/5g0PxK6AT2FyK66WHR6uTR8JFMo6aTnL.jpg",
+            "https://maps.pasargedesolo.com/storage/locations/Zud3H6oouzEcCtQRVxfh6KO23Q4niz69HUkaI0Zr.jpg"
+          ],
+          "category": {
+            "id": "florist",
+            "label": "Florist",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/vBUt1CG03C5wXXrdzPfeD6FGuNycAC7E.svg"
+          },
+          "entries": [
+            {
+              "x": 475,
+              "y": 888
+            }
+          ]
+        },
+        "location_x": 478,
+        "location_y": 897,
+        "sub_label": ""
+      },
+      {
+        "id": "9ef47632-a296-4da6-a001-937c7e7211ea",
+        "type": "Store",
+        "label": "Kios JR Fresh Fruits",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eea1988-276a-41c5-bf17-5bd87e35c01d",
+          "name": "Kios JR Fresh Fruits",
+          "description": "Kios JR Fresh Fruits merupakan salah satu kios yang ada di lantai 2 Pasar Gede yang menyediakan grosir buah dengan berbagai macam jenis buah dan spesialis buah kesemek",
+          "image": "https://maps.pasargedesolo.com/storage/stores/a1Z5x2n6n7IoF6Gv2sFpt9UoB00jYeKp.jpg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/a1Z5x2n6n7IoF6Gv2sFpt9UoB00jYeKp_xs.jpg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/a1Z5x2n6n7IoF6Gv2sFpt9UoB00jYeKp.jpg",
+            "https://maps.pasargedesolo.com/storage/locations/BCmN17mQ6LY9pey6UP437cCy6RwBNUPUyULWtrbT.jpg"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 672,
+              "y": 888
+            }
+          ]
+        },
+        "location_x": 672,
+        "location_y": 899,
+        "sub_label": ""
+      },
+      {
+        "id": "9f04a8ec-d01a-440c-9c2b-ff3aa192ea7a",
+        "type": "Store",
+        "label": "Los Daging Sapi Bu Tatik",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9f048ac8-dac1-4713-a339-6da2061382ab",
+          "name": "Los Daging Sapi Bu Tatik",
+          "description": "Los Daging Sapi Bu Tatik merupakan salah satu los yang ada di lantai 2 Pasar Gede yang menjual spesialis daging sapi dan iga sapi yang setiap pembelian dibungkus menggunakan daun jati",
+          "image": "https://maps.pasargedesolo.com/storage/stores/woPEMN9GNooOIjIoxRVMi37xCEXDF2Mv.jpg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/woPEMN9GNooOIjIoxRVMi37xCEXDF2Mv_xs.jpg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/woPEMN9GNooOIjIoxRVMi37xCEXDF2Mv.jpg",
+            "https://maps.pasargedesolo.com/storage/locations/aC33paOzo6VdhLmiewsuZStECcEB6AaTERVGJSu3.jpg"
+          ],
+          "category": {
+            "id": "daging-merah",
+            "label": "Daging Merah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/rCAuqHoCdYty6W28ewHwXHpn0E1IPXx5.svg"
+          },
+          "entries": [
+            {
+              "x": 331,
+              "y": 556
+            }
+          ]
+        },
+        "location_x": 359,
+        "location_y": 551,
+        "sub_label": ""
+      }
+    ]
+  }
+}

@@ -1,0 +1,3025 @@
+{
+  "success": true,
+  "data": {
+    "id": "9ee8a4fc-e73c-466f-bd71-b14f5f535f90",
+    "level": 0,
+    "label": "1",
+    "image_svg": "https://maps.pasargedesolo.com/storage/maps/bW6N19BVvgxn1bPNLCf33w4qp0NHl0V6.svg",
+    "image_walkable": "https://maps.pasargedesolo.com/storage/maps/LqnNQTUGLLeGOLOvh9jfXTY03lC1Wgaz.png",
+    "image_area": "https://maps.pasargedesolo.com/storage/maps/bW6N19BVvgxn1bPNLCf33w4qp0NHl0V6_pin.png",
+    "map_placement_initial": "center",
+    "slots": [
+      {
+        "id": "9eec724e-484e-4623-a440-885d0a47aa1b",
+        "type": "Store",
+        "label": "Phe-Te 1",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eea2525-966b-43c6-b0cf-767e3fc90714",
+          "name": "Phe-Te 1",
+          "description": "Phe-Te adalah kios penjual buah yang menerima layanan pembuatan hampers buah atau parcel buah di Pasar Gede Barat atau Pasar Buah di Pasar Gede.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/abqsQGfUhTh8KryiPHDEYJRrJ3Fdcl6p.jpg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/abqsQGfUhTh8KryiPHDEYJRrJ3Fdcl6p_xs.jpg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/abqsQGfUhTh8KryiPHDEYJRrJ3Fdcl6p.jpg",
+            "https://maps.pasargedesolo.com/storage/locations/XguiGsVjlNlWz4xJ4KD77Lo9SVu5lIgmCsBc9qWB.jpg",
+            "https://maps.pasargedesolo.com/storage/locations/mJAJD2jAAOzof3HLH9pzexVEAvcvV2dJOZdVSEBL.jpg"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 601,
+              "y": 159
+            }
+          ]
+        },
+        "location_x": 588,
+        "location_y": 157,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec6fc9-7571-48ed-820a-788abbe99bde",
+        "type": "Store",
+        "label": "Bu Poniyem",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eea1a39-6456-455a-955e-1e598135fe6f",
+          "name": "Bu Poniyem",
+          "description": "Bu Poniyem adalah kios penjual buah di Pasar Gede Barat atau Pasar Buah di Pasar Gede.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/zjGn0woO5dX3d6n0HxBbi0FGLMOm6UlK.jpg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/zjGn0woO5dX3d6n0HxBbi0FGLMOm6UlK_xs.jpg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/zjGn0woO5dX3d6n0HxBbi0FGLMOm6UlK.jpg",
+            "https://maps.pasargedesolo.com/storage/locations/CjDZOCFVyskHktMdSRSKE7wi80iRRPseFTyBVHhA.jpg"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 362,
+              "y": 188
+            }
+          ]
+        },
+        "location_x": 343,
+        "location_y": 184,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec7166-b510-4352-942b-3607561bbe34",
+        "type": "Store",
+        "label": "Mas Wandi 1",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eea0f8f-568c-484c-95b4-464cd8567da4",
+          "name": "Mas Wandi 1",
+          "description": "Mas Wandi adalah kios buah gosir yang berada di Pasar Gede Barat atau Pasar Buah Pasar Gede yang menjual buah musiman seperti jeruk dan mangga",
+          "image": "https://maps.pasargedesolo.com/storage/stores/4QybhqPHaStCe144kf4DEmgMm6GRf2hi.png",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/4QybhqPHaStCe144kf4DEmgMm6GRf2hi_xs.png",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/4QybhqPHaStCe144kf4DEmgMm6GRf2hi.png",
+            "https://maps.pasargedesolo.com/storage/locations/wm6RCTqft8tPL9dnDpD8qoDuI5pMyM9yPHcZR9tb.jpg",
+            "https://maps.pasargedesolo.com/storage/locations/9JERWv4qgZxOBAXSLSsp9yN4PySxYJ2hxgzm88z9.jpg"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 413,
+              "y": 182
+            },
+            {
+              "x": 171,
+              "y": 277
+            }
+          ]
+        },
+        "location_x": 177,
+        "location_y": 289,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec6f54-9608-417f-b2f5-9e1823ce7e9e",
+        "type": "Store",
+        "label": "Paino",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eea1f1f-86a4-4fc0-8471-8fc640e710a2",
+          "name": "Paino",
+          "description": "Paino adalah kios buah di Pasar Gede Barat atau Pasar Buah di Pasar Gede.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/mu43IF44TnrnYL8HuCA5x9T0TpnShf3a.png",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/mu43IF44TnrnYL8HuCA5x9T0TpnShf3a_xs.png",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/mu43IF44TnrnYL8HuCA5x9T0TpnShf3a.png"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 363,
+              "y": 159
+            }
+          ]
+        },
+        "location_x": 345,
+        "location_y": 156,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec71d2-9f98-4e7b-8c78-b195370e92d9",
+        "type": "Store",
+        "label": "Mas Wandi",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eea0f8f-568c-484c-95b4-464cd8567da4",
+          "name": "Mas Wandi 1",
+          "description": "Mas Wandi adalah kios buah gosir yang berada di Pasar Gede Barat atau Pasar Buah Pasar Gede yang menjual buah musiman seperti jeruk dan mangga",
+          "image": "https://maps.pasargedesolo.com/storage/stores/4QybhqPHaStCe144kf4DEmgMm6GRf2hi.png",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/4QybhqPHaStCe144kf4DEmgMm6GRf2hi_xs.png",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/4QybhqPHaStCe144kf4DEmgMm6GRf2hi.png",
+            "https://maps.pasargedesolo.com/storage/locations/ktfzQJX3uMCeWxGlhnfeJefTLaGOfEdrOGHqbd4L.jpg",
+            "https://maps.pasargedesolo.com/storage/locations/F0XWjJWykf77u0ckyx14eULtIJK14jna0Yte7uyt.jpg"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          }
+        },
+        "location_x": 427,
+        "location_y": 179,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec7312-a674-4ef8-88d3-ec2ee6d39cc9",
+        "type": "Store",
+        "label": "WD",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eea0df0-a61e-4eb9-988d-9c0b4bb70147",
+          "name": "WD",
+          "description": "WD adalah kios buah grosir di Pasar Gede Barat atau Pasar Buah Pasar Gede yang menjual berbagai buah musiman seperti Jeruk Bali",
+          "image": "https://maps.pasargedesolo.com/storage/stores/ceq5oroaEn5dG5Suw3xiQEcQAU5YAx26.jpeg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/ceq5oroaEn5dG5Suw3xiQEcQAU5YAx26_xs.jpeg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/ceq5oroaEn5dG5Suw3xiQEcQAU5YAx26.jpeg",
+            "https://maps.pasargedesolo.com/storage/locations/JHTRzpHsnFMAGmfAXsiPW5p27XaZ6RkZF0Q3upJU.jpg"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 335,
+              "y": 413
+            }
+          ]
+        },
+        "location_x": 336,
+        "location_y": 425,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec79bf-8e02-432f-b1e2-30b29fe42dcc",
+        "type": "Store",
+        "label": "Mangga Segar Pak Gepeng 4",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef21fa2-5b20-4cd8-8938-e3deda6d586f",
+          "name": "Mangga Segar Pak Gepeng 4",
+          "description": "Mangga Segar Pak Gepeng adalah kios buah yang spesialisasi menjual mangga grosir dan ecer di Pasar Gede Barat atau Pasar Buah Pasar Gede.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/QWzqTO0TZcKjjQDw9q2Sjd7AVlrTS0aQ.jpeg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/QWzqTO0TZcKjjQDw9q2Sjd7AVlrTS0aQ_xs.jpeg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/QWzqTO0TZcKjjQDw9q2Sjd7AVlrTS0aQ.jpeg",
+            "https://maps.pasargedesolo.com/storage/locations/xsKzUSEHGimr7FcB0I8l6FmEKwZkVSlz0aWUh2vb.jpg"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 294,
+              "y": 538
+            }
+          ]
+        },
+        "location_x": 290,
+        "location_y": 524,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec779b-099f-4958-95e9-f07f89487c6d",
+        "type": "Store",
+        "label": "Mangga Segar Pak Gepeng 1",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eea0741-bcc9-4a4e-83d6-7cb40ce6f950",
+          "name": "Mangga Segar Pak Gepeng 1",
+          "description": "Mangga Segar Pak Gepeng adalah kios buah yang spesialisasi menjual mangga grosir dan ecer di Pasar Gede Barat atau Pasar Buah Pasar Gede.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/EkzgmsZ2yPcJLSi5m7c8JbEuBAdh0gBo.jpeg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/EkzgmsZ2yPcJLSi5m7c8JbEuBAdh0gBo_xs.jpeg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/EkzgmsZ2yPcJLSi5m7c8JbEuBAdh0gBo.jpeg",
+            "https://maps.pasargedesolo.com/storage/locations/7209mgIjDqZmKSwpD9XF8wDQWOIe3fJc7rjsj2qQ.jpg"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 219,
+              "y": 487
+            }
+          ]
+        },
+        "location_x": 227,
+        "location_y": 499,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec781c-53e5-41ff-84b7-3a72efb17a06",
+        "type": "Store",
+        "label": "Sumber Buah",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eea0907-953b-4e5f-87ad-d7e927b459af",
+          "name": "Sumber Buah",
+          "description": "Sumber Buah adalah kios penjual buah grosir dan ecer lokal yang berada di Pasar Gede Barat atau Pasar Buah Pasar Gede.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/hV2E3RbT4fphXfUEyjt1hkafrQKQPNz1.png",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/hV2E3RbT4fphXfUEyjt1hkafrQKQPNz1_xs.png",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/hV2E3RbT4fphXfUEyjt1hkafrQKQPNz1.png"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 342,
+              "y": 486
+            }
+          ]
+        },
+        "location_x": 341,
+        "location_y": 499,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec7c35-df71-4ab2-b35b-2af55185009a",
+        "type": "Store",
+        "label": "Mahkota Buah 4",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef21ba3-8de3-455e-bac3-535c106edd85",
+          "name": "Mahkota Buah 4",
+          "description": "Mahkota Buah adalah kios penjual buah grosir lokal yang berada di Pasar Gede Barat atau Pasar Buah Pasar Gede.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/5LVayrEvMFO8oV15ync7EEytccrOMHuv.png",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/5LVayrEvMFO8oV15ync7EEytccrOMHuv_xs.png",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/5LVayrEvMFO8oV15ync7EEytccrOMHuv.png",
+            "https://maps.pasargedesolo.com/storage/locations/V5USK34SOvWt3odaElds1X0sE9bbTBf3fb4xnLVr.jpg"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 316,
+              "y": 636
+            }
+          ]
+        },
+        "location_x": 320,
+        "location_y": 648,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec7b93-e713-4e6d-853c-d4ece2b56690",
+        "type": "Store",
+        "label": "Mahkota Buah 6",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef21ca5-28b8-40d9-a456-4fab6379b66c",
+          "name": "Mahkota Buah 6",
+          "description": "Mahkota Buah adalah kios penjual buah grosir lokal yang berada di Pasar Gede Barat atau Pasar Buah Pasar Gede.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/oMYlRg5dxAYTD3sKTjPVPsLMwPIPX9TT.png",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/oMYlRg5dxAYTD3sKTjPVPsLMwPIPX9TT_xs.png",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/oMYlRg5dxAYTD3sKTjPVPsLMwPIPX9TT.png",
+            "https://maps.pasargedesolo.com/storage/locations/KzIIPKzwvZwW6D4Y1yG41CuHOX3GZiLJQ4z4h1qi.jpg"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 371,
+              "y": 610
+            }
+          ]
+        },
+        "location_x": 364,
+        "location_y": 599,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec7a6e-6209-4dac-995f-2a331361fbdf",
+        "type": "Store",
+        "label": "Mahkota Buah 7",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef21d0f-fb4d-4aca-9231-50c8ab546b56",
+          "name": "Mahkota Buah 7",
+          "description": "Mahkota Buah adalah kios penjual buah grosir lokal yang berada di Pasar Gede Barat atau Pasar Buah Pasar Gede.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/HgdxFhW2SjTwHkNGq1X4GZ44h3kOqHds.png",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/HgdxFhW2SjTwHkNGq1X4GZ44h3kOqHds_xs.png",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/HgdxFhW2SjTwHkNGq1X4GZ44h3kOqHds.png",
+            "https://maps.pasargedesolo.com/storage/locations/aJ5dSEGVJQ4fhQNw1olx91UQptN6jZjJZ3EFDhQ2.jpg"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 311,
+              "y": 560
+            }
+          ]
+        },
+        "location_x": 316,
+        "location_y": 573,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec7b13-fda4-44c5-953a-dd36c58efcc8",
+        "type": "Store",
+        "label": "Mahkota Buah 9",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef21d38-193f-47d3-a8fe-a806085cf7a2",
+          "name": "Mahkota Buah 9",
+          "description": "Mahkota Buah adalah kios penjual buah grosir lokal yang berada di Pasar Gede Barat atau Pasar Buah Pasar Gede.",
+          "image": "https://maps.pasargedesolo.com/storage/locations/apiyg9bRVEmNFrvuqeGOSTi3HmrcI5hG5zxkXkug.jpg",
+          "image_thumb": "",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/locations/apiyg9bRVEmNFrvuqeGOSTi3HmrcI5hG5zxkXkug.jpg"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 411,
+              "y": 572
+            }
+          ]
+        },
+        "location_x": 399,
+        "location_y": 570,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec772d-17a6-4cde-a235-77763ff5bcf4",
+        "type": "Store",
+        "label": "Mangga Segar Pak Gepeng 2",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef21f41-a6aa-4d6b-be0b-06825b531ced",
+          "name": "Mangga Segar Pak Gepeng 2",
+          "description": "Mangga Segar Pak Gepeng adalah kios buah yang spesialisasi menjual mangga grosir dan ecer di Pasar Gede Barat atau Pasar Buah Pasar Gede.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/0XblStulMZlGLmV06tUaebUExuIPFcZX.jpeg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/0XblStulMZlGLmV06tUaebUExuIPFcZX_xs.jpeg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/0XblStulMZlGLmV06tUaebUExuIPFcZX.jpeg",
+            "https://maps.pasargedesolo.com/storage/locations/MpbeyXvKeVWdWNGBn89aNRUUBH7r7qtm5NkMlYT5.jpg"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 288,
+              "y": 488
+            }
+          ]
+        },
+        "location_x": 292,
+        "location_y": 497,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec79e5-16b7-46f3-8d81-b05bb78ab888",
+        "type": "Store",
+        "label": "Mangga Segar Pak Gepeng 3",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef21f81-a2ee-4d72-a04b-24b35b26ff36",
+          "name": "Mangga Segar Pak Gepeng 3",
+          "description": "Mangga Segar Pak Gepeng adalah kios buah yang spesialisasi menjual mangga grosir dan ecer di Pasar Gede Barat atau Pasar Buah Pasar Gede.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/0pXVQAsJDA4SzAoP45sEZmqHsu71Lk5e.jpeg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/0pXVQAsJDA4SzAoP45sEZmqHsu71Lk5e_xs.jpeg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/0pXVQAsJDA4SzAoP45sEZmqHsu71Lk5e.jpeg",
+            "https://maps.pasargedesolo.com/storage/locations/2Nban0KDmeybU5xkrcrGIGT2JefJws1Vs6KwNP33.jpg"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 332,
+              "y": 537
+            }
+          ]
+        },
+        "location_x": 342,
+        "location_y": 522,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec7c8a-42c1-43a2-840a-a17f4a1538cf",
+        "type": "Store",
+        "label": "Mahkota Buah 2",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef21b35-bada-43f9-8353-da25a9d12b72",
+          "name": "Mahkota Buah 2",
+          "description": "Mahkota Buah adalah kios penjual buah grosir lokal yang berada di Pasar Gede Barat atau Pasar Buah Pasar Gede.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/UThtuD1yC5KVKxHJ7cFtu7RH2IytwVpU.png",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/UThtuD1yC5KVKxHJ7cFtu7RH2IytwVpU_xs.png",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/UThtuD1yC5KVKxHJ7cFtu7RH2IytwVpU.png",
+            "https://maps.pasargedesolo.com/storage/locations/VQIHjfjt2xcLzOjLJd4vcbEttmdWgOdxnw0EYHGo.jpg"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 370,
+              "y": 686
+            }
+          ]
+        },
+        "location_x": 368,
+        "location_y": 671,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec82ba-42d5-4c46-a9b6-b678bbf2f825",
+        "type": "Store",
+        "label": "Pak Ratno",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eec7c6a-5930-49c3-90a5-025eae43a595",
+          "name": "Pak Ratno",
+          "description": "Pak Ratno adalah kios buah yang menawarkan berbagai macam buah segar lokal dan impor dan melayani pembuatan parsel dengan harga terjangkau di Pasar Gede Barat atau Pasar Buah Pasar Gede.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/QZVsWAZhQ7BYQx98KYJsKpEguTJuMk6F.png",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/QZVsWAZhQ7BYQx98KYJsKpEguTJuMk6F_xs.png",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/QZVsWAZhQ7BYQx98KYJsKpEguTJuMk6F.png",
+            "https://maps.pasargedesolo.com/storage/locations/invU992ezXU0FaGkewP3Sk5NOEPZ6xzaLpYSxpkn.jpg",
+            "https://maps.pasargedesolo.com/storage/locations/FNU95nVRNkXOiysBplzN3uztwBO4RbTzbEFMH83m.jpg"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 379,
+              "y": 369
+            },
+            {
+              "x": 379,
+              "y": 369
+            }
+          ]
+        },
+        "location_x": 360,
+        "location_y": 371,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec8142-bb2b-45d6-9d4d-07b7f4ae937b",
+        "type": "Store",
+        "label": "Sumadi Buah Murni 4",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef21145-7819-43d4-a52d-cf79f883c26c",
+          "name": "Sumadi Buah Murni 4",
+          "description": "Sumadi Buah Murni adalah kios buah grosir di Pasar Gede Barat atau Pasar Buah Pasar Gede.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/3uLfa7nBroiY6OdLg16E1MIohE6FSba3.png",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/3uLfa7nBroiY6OdLg16E1MIohE6FSba3_xs.png",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/3uLfa7nBroiY6OdLg16E1MIohE6FSba3.png",
+            "https://maps.pasargedesolo.com/storage/locations/PddiYZ48BoOIQvswrZSmhh9v8sMh4QxzQrJ17hYX.jpg",
+            "https://maps.pasargedesolo.com/storage/locations/aeuehsbja5JmyyF6ZTyt6BMie6D8XhpdzM4fXLLm.jpg"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 216,
+              "y": 327
+            }
+          ]
+        },
+        "location_x": 209,
+        "location_y": 314,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec830c-6b6c-4bef-8ce4-7e0061f0987e",
+        "type": "Store",
+        "label": "Sumadi Buah Murni 2",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef21106-a5eb-4e8e-a054-64ec4a6cbf92",
+          "name": "Sumadi Buah Murni 2",
+          "description": "Sumadi Buah Murni adalah kios buah grosir di Pasar Gede Barat atau Pasar Buah Pasar Gede.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/XbuXyAuiCqgNn8vGbOfmuxWQyD4Z6joq.png",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/XbuXyAuiCqgNn8vGbOfmuxWQyD4Z6joq_xs.png",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/XbuXyAuiCqgNn8vGbOfmuxWQyD4Z6joq.png",
+            "https://maps.pasargedesolo.com/storage/locations/d88wXA29fbTfzW3EkpTutr84B28jz5X1EuMBTjzZ.jpg",
+            "https://maps.pasargedesolo.com/storage/locations/O0IqlBt2mG4KAnKW7f6CryJ9LQqcc0MVyjdYNc07.jpg"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 247,
+              "y": 347
+            }
+          ]
+        },
+        "location_x": 252,
+        "location_y": 359,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec82e5-4201-47d4-869a-ec3ed752c271",
+        "type": "Store",
+        "label": "Sumadi Buah Murni 3",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef2112b-ba9d-4d48-8da2-c6fb79571356",
+          "name": "Sumadi Buah Murni 3",
+          "description": "Sumadi Buah Murni adalah kios buah grosir di Pasar Gede Barat atau Pasar Buah Pasar Gede.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/IVUr6GyHHQvqepqFY4MDHzbIjotujyl9.png",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/IVUr6GyHHQvqepqFY4MDHzbIjotujyl9_xs.png",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/IVUr6GyHHQvqepqFY4MDHzbIjotujyl9.png",
+            "https://maps.pasargedesolo.com/storage/locations/2vBZZlpWzQhndUBFcLq6cTkMSKgjqvqTlcEI0xlq.jpg",
+            "https://maps.pasargedesolo.com/storage/locations/HOycA1kfM1cLmYB0JbAWbQP97hzS7XiWwYI8hYQj.jpg"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 310,
+              "y": 347
+            }
+          ]
+        },
+        "location_x": 312,
+        "location_y": 357,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec7e0e-89eb-4c13-8eb0-21b58e2fa968",
+        "type": "Store",
+        "label": "Mbak Marthi",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eea2bb5-d1b8-4a08-8089-d16ace1d2ce0",
+          "name": "Mbak Marthi",
+          "description": "Mbak Marthi atau Kios Buah Iik Mbak Marthi adalah kios buah lokal dan import yang berada di Pasar Gede Barat atau Pasar Buah Pasar Gede yang menerima layanan pembuatan hampers atau parcel buah",
+          "image": "https://maps.pasargedesolo.com/storage/stores/hOEGI9ZMZylnenp5SAZnxrYzwKf2CGpv.jpg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/hOEGI9ZMZylnenp5SAZnxrYzwKf2CGpv_xs.jpg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/hOEGI9ZMZylnenp5SAZnxrYzwKf2CGpv.jpg",
+            "https://maps.pasargedesolo.com/storage/locations/YBrFzP0vWCXrK9bofxDSwTbBAL6kovEcQLnwWJwl.jpg",
+            "https://maps.pasargedesolo.com/storage/locations/C7meZFj9xYvd53aN0Fqn85b97qhhq8XfwebuyX4U.jpg"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 512,
+              "y": 291
+            }
+          ]
+        },
+        "location_x": 512,
+        "location_y": 269,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec7cb0-919d-4bec-8125-94a3cc9dbc6f",
+        "type": "Store",
+        "label": "Mahkota Buah 1",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eea0495-c886-47e5-8acb-4ff4f5d70336",
+          "name": "Mahkota Buah 1",
+          "description": "Mahkota Buah adalah kios penjual buah grosir lokal yang berada di Pasar Gede Barat atau Pasar Buah Pasar Gede.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/MuEf1tY7aX5rGejZxFsGvGzIWpftWxCt.png",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/MuEf1tY7aX5rGejZxFsGvGzIWpftWxCt_xs.png",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/MuEf1tY7aX5rGejZxFsGvGzIWpftWxCt.png",
+            "https://maps.pasargedesolo.com/storage/locations/VnmS1dbQfJ5OApRY4pxXwpF7AaXRUzv3FNEevPxE.jpg"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 381,
+              "y": 704
+            }
+          ]
+        },
+        "location_x": 386,
+        "location_y": 717,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec8ea0-a78f-4419-8d74-ee523e0d906e",
+        "type": "Store",
+        "label": "Kios Buah Bu Wahyem atau Mas Bono",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eec7f3c-6356-4d5c-b762-31765c1b7873",
+          "name": "Kios Buah Bu Wahyem atau Mas Bono",
+          "description": "Kios Buah Bu Wahyem atau Mas Bono adalah kios yang menjual buah segar spesialisasi buah pisang",
+          "image": "https://maps.pasargedesolo.com/storage/stores/FUI18aojBx6XVen6qkowckH4ACLGYKqs.jpg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/FUI18aojBx6XVen6qkowckH4ACLGYKqs_xs.jpg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/FUI18aojBx6XVen6qkowckH4ACLGYKqs.jpg"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 525,
+              "y": 559
+            }
+          ]
+        },
+        "location_x": 522,
+        "location_y": 573,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec8776-f642-49cd-80f2-04db0504d9ee",
+        "type": "Store",
+        "label": "Kios Buah Bu Parman 2",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef2221a-703e-41c4-a533-e8dc498ab20a",
+          "name": "Kios Buah Bu Parman 2",
+          "description": "Kios Buah Bu Parman adalah kios penjual buah grosir dan eceran yang berada di Pasar Gede Barat atau Pasar Buah Pasar Gede.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/syBljiZnzzkUGPgL8AFPbrEEuXWpFT0M.png",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/syBljiZnzzkUGPgL8AFPbrEEuXWpFT0M_xs.png",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/syBljiZnzzkUGPgL8AFPbrEEuXWpFT0M.png"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 631,
+              "y": 703
+            }
+          ]
+        },
+        "location_x": 634,
+        "location_y": 716,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec6e73-bb14-4acd-854d-ee2b0e528107",
+        "type": "Store",
+        "label": "Berkah Buah 1",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eea1367-d389-4e84-8a30-08959f19b16f",
+          "name": "Berkah Buah 1",
+          "description": "Berkah Buah adalah kios penjual buah yang menerima pembelian secara grosir dan ecer di Pasar Gede Barat atau Pasar Buah di Pasar Gede.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/nMIuqN7MNDoZ9bIjEJiHJhUbFRMMRKja.png",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/nMIuqN7MNDoZ9bIjEJiHJhUbFRMMRKja_xs.png",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/nMIuqN7MNDoZ9bIjEJiHJhUbFRMMRKja.png"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 259,
+              "y": 187
+            }
+          ]
+        },
+        "location_x": 234,
+        "location_y": 187,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec851e-4632-4e43-aa60-fc29301bd33a",
+        "type": "Store",
+        "label": "Restu Buah 1",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eea27fa-9a94-4fd0-b626-bac236e27c76",
+          "name": "Restu Buah 1",
+          "description": "Restu Buah adalah kios buah yang menerima layanan pembuatan hampers buah atau parcel buah di Pasar Gede Barat atau Pasar Buah di Pasar Gede.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/KELxKj2a995isZeiE1Wz9XKPFqHETrtb.jpg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/KELxKj2a995isZeiE1Wz9XKPFqHETrtb_xs.jpg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/KELxKj2a995isZeiE1Wz9XKPFqHETrtb.jpg"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 750,
+              "y": 163
+            }
+          ]
+        },
+        "location_x": 725,
+        "location_y": 160,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec8553-fd7d-45f2-acba-b0eb3ead2475",
+        "type": "Store",
+        "label": "Restu Buah 2",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef223c2-4cec-4062-9408-7a443c21b303",
+          "name": "Restu Buah 2",
+          "description": "Restu Buah adalah kios buah yang menerima layanan pembuatan hampers buah atau parcel buah di Pasar Gede Barat atau Pasar Buah di Pasar Gede.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/LLOzQ4CDPHpGMKgvmvOGMEiTrKMcTxxm.jpg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/LLOzQ4CDPHpGMKgvmvOGMEiTrKMcTxxm_xs.jpg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/LLOzQ4CDPHpGMKgvmvOGMEiTrKMcTxxm.jpg"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 790,
+              "y": 242
+            }
+          ]
+        },
+        "location_x": 812,
+        "location_y": 236,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec9476-8c85-490e-85b9-71b1e19c9a90",
+        "type": "Store",
+        "label": "Kios Buah Lestari",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eec7848-86b3-4b13-a10f-ea3f368c10a5",
+          "name": "Kios Buah Lestari",
+          "description": "Kios Buah Lestari adalah toko yang menjual berbagai macam buah lokal yang dapat dibeli dalam jumlah eceran maupun grosir",
+          "image": "https://maps.pasargedesolo.com/storage/stores/6iCxT1Eo7g7dL9N9dVhMtZQu4bVSD6a8.png",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/6iCxT1Eo7g7dL9N9dVhMtZQu4bVSD6a8_xs.png",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/6iCxT1Eo7g7dL9N9dVhMtZQu4bVSD6a8.png"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 789,
+              "y": 486
+            }
+          ]
+        },
+        "location_x": 789,
+        "location_y": 501,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec8fcb-024f-4d9c-abe5-5abf959c75c6",
+        "type": "Store",
+        "label": "Kios Sari Buah 2",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef213ed-2c15-4e0a-a041-8a7f2709c63c",
+          "name": "Kios Sari Buah 2",
+          "description": "Kios Sari Buah adalah toko buah segar menawarkan berbagai macam buah lokal dan impor dengan kualitas unggul, serta menyediakan layanan parcel buah yang dapat disesuaikan dengan kebutuhan pelanggan.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/zziajYvoPOHjChx0SnXYtF8YCGKJCMkX.jpeg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/zziajYvoPOHjChx0SnXYtF8YCGKJCMkX_xs.jpeg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/zziajYvoPOHjChx0SnXYtF8YCGKJCMkX.jpeg",
+            "https://maps.pasargedesolo.com/storage/locations/nRTS3aQICDtq2jEifc5iWyZ5jxtiGoq1SSlsyzAF.jpg"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 733,
+              "y": 327
+            }
+          ]
+        },
+        "location_x": 745,
+        "location_y": 313,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec90e5-1bca-4126-a080-d6e513a0c54a",
+        "type": "Store",
+        "label": "Kios Sari Buah 5",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef2147c-fb75-45b1-bbea-744945d61b7a",
+          "name": "Kios Sari Buah 5",
+          "description": "Kios Sari Buah adalah toko buah segar menawarkan berbagai macam buah lokal dan impor dengan kualitas unggul, serta menyediakan layanan parcel buah yang dapat disesuaikan dengan kebutuhan pelanggan.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/hyTvVMIWZv3me8XAOp75UlvaUZMSUZFC.jpeg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/hyTvVMIWZv3me8XAOp75UlvaUZMSUZFC_xs.jpeg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/hyTvVMIWZv3me8XAOp75UlvaUZMSUZFC.jpeg",
+            "https://maps.pasargedesolo.com/storage/locations/tCdgSfdayEpX44Sz3mKi7mbsXiUeQSw9ikHWvgKU.jpg"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 715,
+              "y": 415
+            }
+          ]
+        },
+        "location_x": 721,
+        "location_y": 426,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec9315-957f-4996-974a-3e8eaf80fd78",
+        "type": "Store",
+        "label": "Kios Pisang Mbak Pur 2",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef22592-109c-4a2e-8714-1640dac8cf1a",
+          "name": "Kios Pisang Mbak Pur 2",
+          "description": "Kios Pisang Mbak Pur adalah kios buah spesialisasi pisang yang berada di Pasar Gede Barat atau Pasar Buah di Pasar Gede.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/BtEP8WQ7SybgBEUvWL5fQwV2zoQhzCoM.png",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/BtEP8WQ7SybgBEUvWL5fQwV2zoQhzCoM_xs.png",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/BtEP8WQ7SybgBEUvWL5fQwV2zoQhzCoM.png",
+            "https://maps.pasargedesolo.com/storage/locations/sBjKv6SnqLuc5BS1o5DvlbBJOLBOI2MXMmzxVwHM.jpg"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 662,
+              "y": 276
+            }
+          ]
+        },
+        "location_x": 666,
+        "location_y": 289,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec9052-76c2-45a4-aa02-fc70ad17a2f5",
+        "type": "Store",
+        "label": "Kios Sari Buah 4",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef21431-b844-4451-84a0-befbdab394e5",
+          "name": "Kios Sari Buah 4",
+          "description": "Kios Sari Buah adalah toko buah segar menawarkan berbagai macam buah lokal dan impor dengan kualitas unggul, serta menyediakan layanan parcel buah yang dapat disesuaikan dengan kebutuhan pelanggan.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/tGLb4q8lsU7TYd3qbTw7H2wTGMLhBg6d.jpeg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/tGLb4q8lsU7TYd3qbTw7H2wTGMLhBg6d_xs.jpeg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/tGLb4q8lsU7TYd3qbTw7H2wTGMLhBg6d.jpeg",
+            "https://maps.pasargedesolo.com/storage/locations/BsgK9D6PALedVHNFpv6M67aw3UANgJAaiZbAxQQ4.jpg"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 720,
+              "y": 346
+            }
+          ]
+        },
+        "location_x": 723,
+        "location_y": 359,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec9145-d147-4605-8b74-b61ed00c1c80",
+        "type": "Store",
+        "label": "Kios Buah Bu Djurwasih 1",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eec738d-6a32-4012-84c8-ef728d390558",
+          "name": "Kios Buah Bu Djurwasih 1",
+          "description": "Kios Buah Bu Djurwasih adalah kios yang terletak di Pasar Gede Barat, menjual berbagai macam buah segar lokal",
+          "image": "https://maps.pasargedesolo.com/storage/stores/QZYU5mkU5WPU65O6d2flNIQOWVCzoNVb.png",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/QZYU5mkU5WPU65O6d2flNIQOWVCzoNVb_xs.png",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/QZYU5mkU5WPU65O6d2flNIQOWVCzoNVb.png",
+            "https://maps.pasargedesolo.com/storage/locations/rFd4qpMgBms6DXHU78SQphiCrmGVEI5tAkZeW5HA.png"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 797,
+              "y": 414
+            }
+          ]
+        },
+        "location_x": 796,
+        "location_y": 429,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec922b-e398-42ff-9e6f-b749914d7ea5",
+        "type": "Store",
+        "label": "Kios Buah Bu Parman 3",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef22232-4dbf-4e19-b745-08f35b2d8728",
+          "name": "Kios Buah Bu Parman 3",
+          "description": "Kios Buah Bu Parman adalah kios penjual buah grosir dan eceran yang berada di Pasar Gede Barat atau Pasar Buah Pasar Gede.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/IRW5k2jHngtqfbsWV9lcfcFG7iNIvRlu.png",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/IRW5k2jHngtqfbsWV9lcfcFG7iNIvRlu_xs.png",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/IRW5k2jHngtqfbsWV9lcfcFG7iNIvRlu.png"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 721,
+              "y": 610
+            }
+          ]
+        },
+        "location_x": 718,
+        "location_y": 595,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec9258-7571-427a-a72c-8d608c95a042",
+        "type": "Store",
+        "label": "Kios Buah Bu Parman 4",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef2224e-7bb9-449d-9fbb-76dca05e6235",
+          "name": "Kios Buah Bu Parman 4",
+          "description": "Kios Buah Bu Parman adalah kios penjual buah grosir dan eceran yang berada di Pasar Gede Barat atau Pasar Buah Pasar Gede.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/gImPYrEOzmeRxBeZYwVy2qt9czigERGu.png",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/gImPYrEOzmeRxBeZYwVy2qt9czigERGu_xs.png",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/gImPYrEOzmeRxBeZYwVy2qt9czigERGu.png"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 695,
+              "y": 560
+            }
+          ]
+        },
+        "location_x": 698,
+        "location_y": 572,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec9177-1334-4d68-a062-00018ba4812d",
+        "type": "Store",
+        "label": "Kios Buah Bu Djurwasih 2",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef224d6-6f5c-4b63-a123-e75be33df46e",
+          "name": "Kios Buah Bu Djurwasih 2",
+          "description": "Kios Buah Bu Djurwasih adalah kios yang terletak di Pasar Gede Barat, menjual berbagai macam buah segar lokal",
+          "image": "https://maps.pasargedesolo.com/storage/stores/Xjh13VIkwC7nRKSb3dBQEXafFNTg17bU.png",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/Xjh13VIkwC7nRKSb3dBQEXafFNTg17bU_xs.png",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/Xjh13VIkwC7nRKSb3dBQEXafFNTg17bU.png",
+            "https://maps.pasargedesolo.com/storage/locations/VV7uSIyA1Mb5QWeq5IMSn1nmyBwWLS5INbtVQXSn.png"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 797,
+              "y": 467
+            }
+          ]
+        },
+        "location_x": 815,
+        "location_y": 455,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec99e0-c558-46d6-b667-99a4bd5a8bf2",
+        "type": "Store",
+        "label": "Kios Dien Buah 2",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9f83391a-f36c-4f17-a5e2-47c964070f41",
+          "name": "Kios Dien Buah 2",
+          "description": "Kios Dien Buah adalah toko yang menawarkan berbagai macam buah lokal dan impor dengan kualitas unggul, serta melayani pembelian buah secara langsung maupun dalam bentuk parcel untuk berbagai keperluan.",
+          "image": "",
+          "image_thumb": "",
+          "images": [],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 606,
+              "y": 440
+            }
+          ]
+        },
+        "location_x": 614,
+        "location_y": 440,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec9a20-92f9-485b-8071-f32ad10bab10",
+        "type": "Store",
+        "label": "Kios Dien Buah 1",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eec7eac-b623-4d70-8144-8e8dd219ce65",
+          "name": "Kios Dien Buah 1",
+          "description": "Kios Dien Buah  adalah toko yang menawarkan berbagai macam buah lokal dan impor dengan kualitas unggul, serta melayani pembelian buah secara langsung maupun dalam bentuk parcel untuk berbagai keperluan.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/NOzg0zjLPRKleOTiG2l3P0FjX64OK45Y.jpeg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/NOzg0zjLPRKleOTiG2l3P0FjX64OK45Y_xs.jpeg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/NOzg0zjLPRKleOTiG2l3P0FjX64OK45Y.jpeg",
+            "https://maps.pasargedesolo.com/storage/locations/HZkzp0uk5zCvVtrRGJElWhWrKHLOI2g19tQvamId.jpg"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 565,
+              "y": 512
+            }
+          ]
+        },
+        "location_x": 532,
+        "location_y": 506,
+        "sub_label": ""
+      },
+      {
+        "id": "9ef20d4a-df34-4fdb-bd3a-ee040ac75d27",
+        "type": "Store",
+        "label": "Berkah Buah 2",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef20cfc-66dd-4b82-a1c9-c7e2a957aa88",
+          "name": "Berkah Buah 2",
+          "description": "Berkah Buah adalah kios penjual buah yang menerima pembelian secara grosir dan ecer di Pasar Gede Barat atau Pasar Buah di Pasar Gede.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/vMrwytjdwzCKqpVcuBB8yFNWptnsTAJQ.png",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/vMrwytjdwzCKqpVcuBB8yFNWptnsTAJQ_xs.png",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/vMrwytjdwzCKqpVcuBB8yFNWptnsTAJQ.png"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 260,
+              "y": 138
+            }
+          ]
+        },
+        "location_x": 234,
+        "location_y": 136,
+        "sub_label": ""
+      },
+      {
+        "id": "9ef20e8d-63fb-49e2-b422-6fc379ed7230",
+        "type": "Store",
+        "label": "Berkah Buah 3",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef20db3-7f1f-4aa0-8b5d-08756c761632",
+          "name": "Berkah Buah 3",
+          "description": "Berkah Buah adalah kios penjual buah yang menerima pembelian secara grosir dan ecer di Pasar Gede Barat atau Pasar Buah di Pasar Gede.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/QiSci1cIjVYN9tgo8gCW0CiGVeF5gp0O.png",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/QiSci1cIjVYN9tgo8gCW0CiGVeF5gp0O_xs.png",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/QiSci1cIjVYN9tgo8gCW0CiGVeF5gp0O.png"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 293,
+              "y": 153
+            }
+          ]
+        },
+        "location_x": 311,
+        "location_y": 150,
+        "sub_label": ""
+      },
+      {
+        "id": "9ef24f24-43ee-47f9-bb32-518366849ad1",
+        "type": "Store",
+        "label": "Toilet Pasar Buah",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef1f850-7955-478e-89a2-c71d105ccd4f",
+          "name": "Toilet",
+          "description": "Fasilitas toilet yang berada di Pasar Gede",
+          "image": "",
+          "image_thumb": "",
+          "images": [],
+          "category": {
+            "id": "fasilitas-umum",
+            "label": "Fasilitas Umum",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/DhR2azyaRB6ATAi5y9PLFiCNp8qn85nd.jpeg"
+          },
+          "entries": [
+            {
+              "x": 200,
+              "y": 220
+            }
+          ]
+        },
+        "location_x": 154,
+        "location_y": 213,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec91cc-165d-4468-a191-721e5ae47b6b",
+        "type": "Store",
+        "label": "Kios Sari Buah 6",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef21499-1411-46b7-b44c-b414fca10466",
+          "name": "Kios Sari Buah 6",
+          "description": "Kios Sari Buah adalah toko buah segar menawarkan berbagai macam buah lokal dan impor dengan kualitas unggul, serta menyediakan layanan parcel buah yang dapat disesuaikan dengan kebutuhan pelanggan.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/NkRnVCB76f7lGnu2bRVbbVeLL8xhM40i.jpeg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/NkRnVCB76f7lGnu2bRVbbVeLL8xhM40i_xs.jpeg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/NkRnVCB76f7lGnu2bRVbbVeLL8xhM40i.jpeg",
+            "https://maps.pasargedesolo.com/storage/locations/sjhDusqVNIrXdeW1fBNznNEIELVLzJCI2kHJxdue.jpg"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 649,
+              "y": 537
+            }
+          ]
+        },
+        "location_x": 640,
+        "location_y": 524,
+        "sub_label": ""
+      },
+      {
+        "id": "9ef4519a-b909-447a-9625-3c054c0d1d3f",
+        "type": "Store",
+        "label": "Mbak Parmi",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eea2cfe-3140-4ed7-bec9-aeca7358ebaf",
+          "name": "Mbak Parmi",
+          "description": "Mbak Parmi adalah kios buah yang menerima layanan pembuatan hampers buah atau parcel buah dan berada di Pasar Gede Barat atau Pasar Buah di Pasar Gede.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/pGEkgwNnsVQgMvh954DZCWHf4NKBoFwL.jpg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/pGEkgwNnsVQgMvh954DZCWHf4NKBoFwL_xs.jpg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/pGEkgwNnsVQgMvh954DZCWHf4NKBoFwL.jpg"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 817,
+              "y": 345
+            }
+          ]
+        },
+        "location_x": 816,
+        "location_y": 358,
+        "sub_label": ""
+      },
+      {
+        "id": "9ef44f96-1daa-4da8-9f38-9d92ae22bf16",
+        "type": "Store",
+        "label": "Kios Mbak Sri-Tami",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eea25c9-4846-4e24-b871-2c53e1a3da6b",
+          "name": "Kios Mbak Sri-Tami",
+          "description": "Kios Mbak Sri-Tami adalah kios penjual buah di Pasar Gede Barat atau Pasar Buah di Pasar Gede.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/NDNuAe4WtDluTqITGAhvCH6JsURNZoDr.jpg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/NDNuAe4WtDluTqITGAhvCH6JsURNZoDr_xs.jpg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/NDNuAe4WtDluTqITGAhvCH6JsURNZoDr.jpg",
+            "https://maps.pasargedesolo.com/storage/locations/TrG013FqLxuvV7R6IcZiYMFV2ibpQqbZItBmCYEH.jpg",
+            "https://maps.pasargedesolo.com/storage/locations/Z6lkSRCeHLa8cD9MyjyhL88HpvT4hgL5fEliXojI.jpg"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 660,
+              "y": 190
+            }
+          ]
+        },
+        "location_x": 684,
+        "location_y": 188,
+        "sub_label": ""
+      },
+      {
+        "id": "9ef450f5-fca0-4a8f-b2e2-8add6ec21215",
+        "type": "Store",
+        "label": "Kios Sari Buah 8",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef45041-6df8-43c0-a4d9-4e1035539207",
+          "name": "Kios Sari Buah 8",
+          "description": "Kios Sari Buah adalah toko buah segar menawarkan berbagai macam buah lokal dan impor dengan kualitas unggul, serta menyediakan layanan parcel buah yang dapat disesuaikan dengan kebutuhan pelanggan.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/lVEpy6w0vNM4xOcG2gDymZZhOLpAQH57.jpeg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/lVEpy6w0vNM4xOcG2gDymZZhOLpAQH57_xs.jpeg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/lVEpy6w0vNM4xOcG2gDymZZhOLpAQH57.jpeg",
+            "https://maps.pasargedesolo.com/storage/locations/3RTC7z61akIfUHQDsStBFQGWhzIS8LedSSF1WXqc.jpg",
+            "https://maps.pasargedesolo.com/storage/locations/eGgB8cW4NcBSvnzMPXLLqtur5uWwKbl0TFL4CRr4.jpg"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 660,
+              "y": 136
+            }
+          ]
+        },
+        "location_x": 684,
+        "location_y": 134,
+        "sub_label": ""
+      },
+      {
+        "id": "9ef45e9b-e880-4a71-9cf6-ae8a97c9e47d",
+        "type": "Store",
+        "label": "Pintu Pasar Buah Kiri 1",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef45c4d-bf23-4a7b-a80d-5c21b9e225a2",
+          "name": "Pintu Pasar Buah Kiri 1",
+          "description": "Pintu Pasar Buah Sisi Kiri Depan",
+          "image": "https://maps.pasargedesolo.com/storage/stores/D9938RcS7s9rlKdxio5HIvZM24vgLcij.jpeg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/D9938RcS7s9rlKdxio5HIvZM24vgLcij_xs.jpeg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/D9938RcS7s9rlKdxio5HIvZM24vgLcij.jpeg"
+          ],
+          "category": {
+            "id": "pintu-akses",
+            "label": "Pintu Akses",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/jvY7vpq5qXiKwRoSqA3xcKE1P0TA33Yh.svg"
+          },
+          "entries": [
+            {
+              "x": 289,
+              "y": 865
+            }
+          ]
+        },
+        "location_x": 287,
+        "location_y": 866,
+        "sub_label": ""
+      },
+      {
+        "id": "9ef46466-5f04-40c1-93e3-1ad0db0e47a6",
+        "type": "Store",
+        "label": "Pinitu Pasar Buah Kanan 2",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef46202-8b6f-4c8f-82bc-68fd3bb81bf6",
+          "name": "Pintu Pasar Buah Kanan 2",
+          "description": "",
+          "image": "",
+          "image_thumb": "",
+          "images": [],
+          "category": {
+            "id": "pintu-akses",
+            "label": "Pintu Akses",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/jvY7vpq5qXiKwRoSqA3xcKE1P0TA33Yh.svg"
+          },
+          "entries": [
+            {
+              "x": 739,
+              "y": 825
+            }
+          ]
+        },
+        "location_x": 740,
+        "location_y": 827,
+        "sub_label": ""
+      },
+      {
+        "id": "9ef46029-4126-4fbd-aeda-d61fdcf8164c",
+        "type": "Store",
+        "label": "Pintu Pasar Buah Kiri 2",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef45c9a-4821-409e-a9bf-bdfa5f482aea",
+          "name": "Pintu Pasar Buah Kiri 2",
+          "description": "Pintu Pasar Buah Sisi Kiri Depan",
+          "image": "https://maps.pasargedesolo.com/storage/stores/xwuOzgL2CAEpmqjx004O0IrwusiGm90t.jpeg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/xwuOzgL2CAEpmqjx004O0IrwusiGm90t_xs.jpeg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/xwuOzgL2CAEpmqjx004O0IrwusiGm90t.jpeg"
+          ],
+          "category": {
+            "id": "pintu-akses",
+            "label": "Pintu Akses",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/jvY7vpq5qXiKwRoSqA3xcKE1P0TA33Yh.svg"
+          },
+          "entries": [
+            {
+              "x": 278,
+              "y": 828
+            }
+          ]
+        },
+        "location_x": 277,
+        "location_y": 830,
+        "sub_label": ""
+      },
+      {
+        "id": "9ef4633d-97c8-4b8b-9370-1098123268b1",
+        "type": "Store",
+        "label": "Pinitu Pasar Buah Kanan 1",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef461f1-9e59-449a-a194-87ccda1f1393",
+          "name": "Pintu Pasar Buah Kanan 1",
+          "description": "",
+          "image": "",
+          "image_thumb": "",
+          "images": [],
+          "category": {
+            "id": "pintu-akses",
+            "label": "Pintu Akses",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/jvY7vpq5qXiKwRoSqA3xcKE1P0TA33Yh.svg"
+          },
+          "entries": [
+            {
+              "x": 727,
+              "y": 865
+            }
+          ]
+        },
+        "location_x": 729,
+        "location_y": 869,
+        "sub_label": ""
+      },
+      {
+        "id": "9ef46411-a1a7-476f-b09f-a8dacb525674",
+        "type": "Store",
+        "label": "Pintu Pasar Buah Kiri 3",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef45ddd-8788-4797-afb9-84d26f7b83c2",
+          "name": "Pintu Pasar Buah Kiri 3",
+          "description": "Pintu Pasar Buah Sisi Kiri Depan",
+          "image": "https://maps.pasargedesolo.com/storage/stores/SEhlNdQmaqYVOto8O3WzFGnyM0ILG65m.jpeg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/SEhlNdQmaqYVOto8O3WzFGnyM0ILG65m_xs.jpeg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/SEhlNdQmaqYVOto8O3WzFGnyM0ILG65m.jpeg"
+          ],
+          "category": {
+            "id": "pintu-akses",
+            "label": "Pintu Akses",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/jvY7vpq5qXiKwRoSqA3xcKE1P0TA33Yh.svg"
+          },
+          "entries": [
+            {
+              "x": 270,
+              "y": 792
+            }
+          ]
+        },
+        "location_x": 267,
+        "location_y": 794,
+        "sub_label": ""
+      },
+      {
+        "id": "9ef464b9-ff7a-4def-af77-19496ce8fa45",
+        "type": "Store",
+        "label": "Pintu Pasar Buah Kiri 4",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef45e2a-f679-4163-9f0a-756a19d3a085",
+          "name": "Pintu Pasar Buah Kiri 4",
+          "description": "Pintu Pasar Buah Sisi Kiri",
+          "image": "https://maps.pasargedesolo.com/storage/stores/Jm2dfdqwMlMuenqfMtBQJNqQx28dVwh1.jpeg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/Jm2dfdqwMlMuenqfMtBQJNqQx28dVwh1_xs.jpeg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/Jm2dfdqwMlMuenqfMtBQJNqQx28dVwh1.jpeg"
+          ],
+          "category": {
+            "id": "pintu-akses",
+            "label": "Pintu Akses",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/jvY7vpq5qXiKwRoSqA3xcKE1P0TA33Yh.svg"
+          },
+          "entries": [
+            {
+              "x": 260,
+              "y": 750
+            }
+          ]
+        },
+        "location_x": 259,
+        "location_y": 750,
+        "sub_label": ""
+      },
+      {
+        "id": "9ef464f9-f61d-4f26-b8d2-62a92d57eb9d",
+        "type": "Store",
+        "label": "Pintu Pasar Buah Kiri 5",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef45f02-4560-48a6-8145-f3cff41a4553",
+          "name": "Pintu Pasar Buah Kiri 5",
+          "description": "Pintu Pasar Buah Sisi Kiri",
+          "image": "https://maps.pasargedesolo.com/storage/stores/Jbovs2HSUD3SZZ6DroWNBAT0XOJoPHZf.jpeg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/Jbovs2HSUD3SZZ6DroWNBAT0XOJoPHZf_xs.jpeg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/Jbovs2HSUD3SZZ6DroWNBAT0XOJoPHZf.jpeg"
+          ],
+          "category": {
+            "id": "pintu-akses",
+            "label": "Pintu Akses",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/jvY7vpq5qXiKwRoSqA3xcKE1P0TA33Yh.svg"
+          },
+          "entries": [
+            {
+              "x": 240,
+              "y": 694
+            }
+          ]
+        },
+        "location_x": 241,
+        "location_y": 694,
+        "sub_label": ""
+      },
+      {
+        "id": "9ef4652d-a825-4415-a362-8bdddf3ad3fb",
+        "type": "Store",
+        "label": "Pintu Pasar Buah Kiri 6",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef45f45-7c4f-4b42-b05e-d36622222009",
+          "name": "Pintu Pasar Buah Kiri 6",
+          "description": "Pintu Pasar Buah Sisi Kiri",
+          "image": "https://maps.pasargedesolo.com/storage/stores/oNVDcpNFXnrbT7zusTsf9vjpi6YdMYzr.jpeg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/oNVDcpNFXnrbT7zusTsf9vjpi6YdMYzr_xs.jpeg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/oNVDcpNFXnrbT7zusTsf9vjpi6YdMYzr.jpeg"
+          ],
+          "category": {
+            "id": "pintu-akses",
+            "label": "Pintu Akses",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/jvY7vpq5qXiKwRoSqA3xcKE1P0TA33Yh.svg"
+          },
+          "entries": [
+            {
+              "x": 222,
+              "y": 620
+            }
+          ]
+        },
+        "location_x": 221,
+        "location_y": 622,
+        "sub_label": ""
+      },
+      {
+        "id": "9ef46579-870a-4bc7-81eb-9f0294177938",
+        "type": "Store",
+        "label": "Pintu Pasar Buah Kiri 7",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef45f69-e548-482a-a42a-d086e3edf43e",
+          "name": "Pintu Pasar Buah Kiri 7",
+          "description": "Pintu Pasar Buah Sisi Kiri",
+          "image": "https://maps.pasargedesolo.com/storage/stores/vd4noo3f6PCD7NVlBNbgyTbjuNggGfdY.jpeg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/vd4noo3f6PCD7NVlBNbgyTbjuNggGfdY_xs.jpeg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/vd4noo3f6PCD7NVlBNbgyTbjuNggGfdY.jpeg"
+          ],
+          "category": {
+            "id": "pintu-akses",
+            "label": "Pintu Akses",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/jvY7vpq5qXiKwRoSqA3xcKE1P0TA33Yh.svg"
+          },
+          "entries": [
+            {
+              "x": 202,
+              "y": 546
+            }
+          ]
+        },
+        "location_x": 200,
+        "location_y": 547,
+        "sub_label": ""
+      },
+      {
+        "id": "9ef465c6-2726-4e9e-83b9-cd3fbd9edb45",
+        "type": "Store",
+        "label": "Pintu Pasar Buah Kiri 8",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef45f88-6be8-4047-95b0-31c4e9fa9e2b",
+          "name": "Pintu Pasar Buah Kiri 8",
+          "description": "Pintu Pasar Buah Sisi Kiri",
+          "image": "https://maps.pasargedesolo.com/storage/stores/e8nqYDXAlwAItwAMEL3VA7UYPfDT0LkH.jpeg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/e8nqYDXAlwAItwAMEL3VA7UYPfDT0LkH_xs.jpeg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/e8nqYDXAlwAItwAMEL3VA7UYPfDT0LkH.jpeg"
+          ],
+          "category": {
+            "id": "pintu-akses",
+            "label": "Pintu Akses",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/jvY7vpq5qXiKwRoSqA3xcKE1P0TA33Yh.svg"
+          },
+          "entries": [
+            {
+              "x": 183,
+              "y": 475
+            }
+          ]
+        },
+        "location_x": 182,
+        "location_y": 476,
+        "sub_label": ""
+      },
+      {
+        "id": "9ef46603-bd57-4a00-bdf6-3b79b3175376",
+        "type": "Store",
+        "label": "Pintu Pasar Buah Kiri 9",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef45f9c-c10b-4033-a00e-07fc059528b7",
+          "name": "Pintu Pasar Buah Kiri 9",
+          "description": "Pintu Pasar Buah Sisi Kiri",
+          "image": "https://maps.pasargedesolo.com/storage/stores/5lGi6XKcixKmyOybkRqUOEE4cHsELWFf.jpeg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/5lGi6XKcixKmyOybkRqUOEE4cHsELWFf_xs.jpeg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/5lGi6XKcixKmyOybkRqUOEE4cHsELWFf.jpeg"
+          ],
+          "category": {
+            "id": "pintu-akses",
+            "label": "Pintu Akses",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/jvY7vpq5qXiKwRoSqA3xcKE1P0TA33Yh.svg"
+          },
+          "entries": [
+            {
+              "x": 162,
+              "y": 405
+            }
+          ]
+        },
+        "location_x": 161,
+        "location_y": 406,
+        "sub_label": ""
+      },
+      {
+        "id": "9ef46649-62eb-4a47-aa8a-40fc1ab5d311",
+        "type": "Store",
+        "label": "Pintu Pasar Buah Kiri 10",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef45fc9-d956-4e14-9040-cc1a615f1665",
+          "name": "Pintu Pasar Buah Kiri 10",
+          "description": "Pintu Pasar Buah Sisi Kiri",
+          "image": "https://maps.pasargedesolo.com/storage/stores/CaYiOuDeamaPHoQIUEqC6UL2gcb9c7za.jpeg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/CaYiOuDeamaPHoQIUEqC6UL2gcb9c7za_xs.jpeg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/CaYiOuDeamaPHoQIUEqC6UL2gcb9c7za.jpeg"
+          ],
+          "category": {
+            "id": "pintu-akses",
+            "label": "Pintu Akses",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/jvY7vpq5qXiKwRoSqA3xcKE1P0TA33Yh.svg"
+          },
+          "entries": [
+            {
+              "x": 144,
+              "y": 335
+            }
+          ]
+        },
+        "location_x": 144,
+        "location_y": 336,
+        "sub_label": ""
+      },
+      {
+        "id": "9ef4667a-e72b-49e9-8985-3c1085a67866",
+        "type": "Store",
+        "label": "Pintu Pasar Buah Kiri 11",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef45fdf-3c0a-477d-806c-ee4e82343a34",
+          "name": "Pintu Pasar Buah Kiri 11",
+          "description": "Pintu Pasar Buah Sisi Kiri",
+          "image": "https://maps.pasargedesolo.com/storage/stores/Hz06DKR1rVUDqnQ6uyEndJrKt9bfBPOJ.jpeg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/Hz06DKR1rVUDqnQ6uyEndJrKt9bfBPOJ_xs.jpeg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/Hz06DKR1rVUDqnQ6uyEndJrKt9bfBPOJ.jpeg"
+          ],
+          "category": {
+            "id": "pintu-akses",
+            "label": "Pintu Akses",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/jvY7vpq5qXiKwRoSqA3xcKE1P0TA33Yh.svg"
+          },
+          "entries": [
+            {
+              "x": 125,
+              "y": 262
+            }
+          ]
+        },
+        "location_x": 124,
+        "location_y": 263,
+        "sub_label": ""
+      },
+      {
+        "id": "9ef46728-1456-470e-b273-8f2f32de3921",
+        "type": "Store",
+        "label": "Pintu Pasar Buah Depan 1",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef466cc-7380-4a52-9176-617274308f7d",
+          "name": "Pintu Pasar Buah Depan 1",
+          "description": "Pintu Pasar Buah Sisi Depan",
+          "image": "",
+          "image_thumb": "",
+          "images": [],
+          "category": {
+            "id": "pintu-akses",
+            "label": "Pintu Akses",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/jvY7vpq5qXiKwRoSqA3xcKE1P0TA33Yh.svg"
+          },
+          "entries": [
+            {
+              "x": 391,
+              "y": 903
+            }
+          ]
+        },
+        "location_x": 391,
+        "location_y": 906,
+        "sub_label": ""
+      },
+      {
+        "id": "9ef46756-84f4-461e-af73-74b9fd4fce4f",
+        "type": "Store",
+        "label": "Pintu Pasar Buah Depan 2",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef466dc-a856-49c0-9664-a9863002f296",
+          "name": "Pintu Pasar Buah Depan 2",
+          "description": "Pintu Pasar Buah Sisi Depan",
+          "image": "",
+          "image_thumb": "",
+          "images": [],
+          "category": {
+            "id": "pintu-akses",
+            "label": "Pintu Akses",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/jvY7vpq5qXiKwRoSqA3xcKE1P0TA33Yh.svg"
+          },
+          "entries": [
+            {
+              "x": 513,
+              "y": 903
+            }
+          ]
+        },
+        "location_x": 512,
+        "location_y": 904,
+        "sub_label": ""
+      },
+      {
+        "id": "9ef46780-9dba-4bac-b681-f69e3f8e0f85",
+        "type": "Store",
+        "label": "Pintu Pasar Buah Depan 3",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef466ef-929f-4df9-a387-b7bf3537188c",
+          "name": "Pintu Pasar Buah Depan 3",
+          "description": "Pintu Pasar Buah Sisi Depan",
+          "image": "",
+          "image_thumb": "",
+          "images": [],
+          "category": {
+            "id": "pintu-akses",
+            "label": "Pintu Akses",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/jvY7vpq5qXiKwRoSqA3xcKE1P0TA33Yh.svg"
+          },
+          "entries": [
+            {
+              "x": 635,
+              "y": 903
+            }
+          ]
+        },
+        "location_x": 634,
+        "location_y": 905,
+        "sub_label": ""
+      },
+      {
+        "id": "9ef4686a-fa45-4528-b91f-f7905f17e2f2",
+        "type": "Store",
+        "label": "Pintu Pasar Buah Belakang 1",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef467c6-c7dd-4eae-946a-b4f7e8cfa9a5",
+          "name": "Pintu Pasar Buah Belakang 1",
+          "description": "Pintu Pasar Buah Sisi Belakang",
+          "image": "",
+          "image_thumb": "",
+          "images": [],
+          "category": {
+            "id": "pintu-akses",
+            "label": "Pintu Akses",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/jvY7vpq5qXiKwRoSqA3xcKE1P0TA33Yh.svg"
+          },
+          "entries": [
+            {
+              "x": 277,
+              "y": 116
+            }
+          ]
+        },
+        "location_x": 277,
+        "location_y": 117,
+        "sub_label": ""
+      },
+      {
+        "id": "9ef468a0-8404-4c7b-8162-aebdada0e880",
+        "type": "Store",
+        "label": "Pintu Pasar Buah Belakang 2",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef467e7-6840-4bdb-8610-1849df8c13a0",
+          "name": "Pintu Pasar Buah Belakang 2",
+          "description": "Pintu Pasar Buah Sisi Belakang",
+          "image": "",
+          "image_thumb": "",
+          "images": [],
+          "category": {
+            "id": "pintu-akses",
+            "label": "Pintu Akses",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/jvY7vpq5qXiKwRoSqA3xcKE1P0TA33Yh.svg"
+          },
+          "entries": [
+            {
+              "x": 390,
+              "y": 117
+            }
+          ]
+        },
+        "location_x": 389,
+        "location_y": 117,
+        "sub_label": ""
+      },
+      {
+        "id": "9ef468d0-cd97-47bc-8ab7-8383dbdea4f6",
+        "type": "Store",
+        "label": "Pintu Pasar Buah Belakang 3",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef467fe-ca2b-4ab1-9c23-86c8f47dc77a",
+          "name": "Pintu Pasar Buah Belakang 3",
+          "description": "Pintu Pasar Buah Sisi Belakang",
+          "image": "",
+          "image_thumb": "",
+          "images": [],
+          "category": {
+            "id": "pintu-akses",
+            "label": "Pintu Akses",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/jvY7vpq5qXiKwRoSqA3xcKE1P0TA33Yh.svg"
+          },
+          "entries": [
+            {
+              "x": 633,
+              "y": 117
+            }
+          ]
+        },
+        "location_x": 632,
+        "location_y": 117,
+        "sub_label": ""
+      },
+      {
+        "id": "9ef468ff-6dda-4df2-890f-485bd7fc727a",
+        "type": "Store",
+        "label": "Pintu Pasar Buah Belakang 4",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef4680f-dea1-4f80-8a44-02f276b12eda",
+          "name": "Pintu Pasar Buah Belakang 4",
+          "description": "Pintu Pasar Buah Sisi Belakang",
+          "image": "",
+          "image_thumb": "",
+          "images": [],
+          "category": {
+            "id": "pintu-akses",
+            "label": "Pintu Akses",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/jvY7vpq5qXiKwRoSqA3xcKE1P0TA33Yh.svg"
+          },
+          "entries": [
+            {
+              "x": 772,
+              "y": 118
+            }
+          ]
+        },
+        "location_x": 771,
+        "location_y": 117,
+        "sub_label": ""
+      },
+      {
+        "id": "9ef48bb8-a5d1-4588-8cdd-59100c003935",
+        "type": "Store",
+        "label": "Pintu Pasar Buah Kanan 3",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef46214-5936-4b07-8682-ebd1d1b584e6",
+          "name": "Pintu Pasar Buah Kanan 3",
+          "description": "",
+          "image": "",
+          "image_thumb": "",
+          "images": [],
+          "category": {
+            "id": "pintu-akses",
+            "label": "Pintu Akses",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/jvY7vpq5qXiKwRoSqA3xcKE1P0TA33Yh.svg"
+          },
+          "entries": [
+            {
+              "x": 759,
+              "y": 743
+            }
+          ]
+        },
+        "location_x": 758,
+        "location_y": 745,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec8335-a3d8-4734-a3a0-6f00bd388072",
+        "type": "Store",
+        "label": "Sumadi Buah Murni 1",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eea0c02-8a68-4281-9d3b-592386663e74",
+          "name": "Sumadi Buah Murni 1",
+          "description": "Sumadi Buah Murni adalah kios buah grosir di Pasar Gede Barat atau Pasar Buah Pasar Gede.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/U5WXFrw1Jlf5HPaqsKyLDDB7Dl9Kvbph.png",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/U5WXFrw1Jlf5HPaqsKyLDDB7Dl9Kvbph_xs.png",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/U5WXFrw1Jlf5HPaqsKyLDDB7Dl9Kvbph.png",
+            "https://maps.pasargedesolo.com/storage/locations/ndIZvsUuYi1EsOmEZHmxmdKJUNstRK64CIEajeAL.jpg",
+            "https://maps.pasargedesolo.com/storage/locations/EUHIaxJ7WrYxZiyqAouVKLMj7QcvV2EgjVhpjoLn.jpg"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 180,
+              "y": 347
+            }
+          ]
+        },
+        "location_x": 186,
+        "location_y": 359,
+        "sub_label": ""
+      },
+      {
+        "id": "9f02834e-c66b-43b8-afdd-997eed7ee5ee",
+        "type": "Store",
+        "label": "Mbak Ni",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9efa9d41-1bf9-46e0-a402-662413017e95",
+          "name": "Mbak Ni",
+          "description": "Mbak Ni adalah kios penjual buah grosir dan ecer di Pasar Buah yang menerima layanan pembuatan hampers buah atau parcel buah untuk jenguk orang sakit, hadiah, oleh-oleh, dan lain-lain.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/qQQLm91MLkFubK3UVOW9pSPvpReNxwKr.jpeg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/qQQLm91MLkFubK3UVOW9pSPvpReNxwKr_xs.jpeg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/qQQLm91MLkFubK3UVOW9pSPvpReNxwKr.jpeg",
+            "https://maps.pasargedesolo.com/storage/locations/dkWfjbWvQ9m6Ryl9Z56f8vFaDGnqCV2vdfBqukmt.jpg"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 474,
+              "y": 454
+            }
+          ]
+        },
+        "location_x": 492,
+        "location_y": 439,
+        "sub_label": ""
+      },
+      {
+        "id": "9ef48c07-67a3-423b-8c93-5f7e7649cc61",
+        "type": "Store",
+        "label": "Pintu Pasar Buah Kanan 4",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef4622e-713c-4ad2-8016-da3371196557",
+          "name": "Pintu Pasar Buah Kanan 4",
+          "description": "",
+          "image": "",
+          "image_thumb": "",
+          "images": [],
+          "category": {
+            "id": "pintu-akses",
+            "label": "Pintu Akses",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/jvY7vpq5qXiKwRoSqA3xcKE1P0TA33Yh.svg"
+          }
+        },
+        "location_x": 773,
+        "location_y": 696,
+        "sub_label": ""
+      },
+      {
+        "id": "9ef48cb7-97da-41b1-a4a2-a1bceecca23b",
+        "type": "Store",
+        "label": "Pintu Pasar Buah Kanan 5",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef4623e-4dcb-4c68-9446-f8834ff4d3af",
+          "name": "Pintu Pasar Buah Kanan 5",
+          "description": "",
+          "image": "",
+          "image_thumb": "",
+          "images": [],
+          "category": {
+            "id": "pintu-akses",
+            "label": "Pintu Akses",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/jvY7vpq5qXiKwRoSqA3xcKE1P0TA33Yh.svg"
+          },
+          "entries": [
+            {
+              "x": 793,
+              "y": 621
+            }
+          ]
+        },
+        "location_x": 793,
+        "location_y": 626,
+        "sub_label": ""
+      },
+      {
+        "id": "9ef48d14-4523-4894-8703-594c0f0916ae",
+        "type": "Store",
+        "label": "Pintu Pasar Buah Kanan 6",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef46250-7673-435c-a9d3-7b8a7d350a15",
+          "name": "Pintu Pasar Buah Kanan 6",
+          "description": "",
+          "image": "",
+          "image_thumb": "",
+          "images": [],
+          "category": {
+            "id": "pintu-akses",
+            "label": "Pintu Akses",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/jvY7vpq5qXiKwRoSqA3xcKE1P0TA33Yh.svg"
+          },
+          "entries": [
+            {
+              "x": 814,
+              "y": 549
+            }
+          ]
+        },
+        "location_x": 812,
+        "location_y": 553,
+        "sub_label": ""
+      },
+      {
+        "id": "9ef48d69-aba6-41da-8822-9d0e84986e23",
+        "type": "Store",
+        "label": "Pintu Pasar Buah Kanan 7",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef46262-ba03-4ae9-b393-33a587819223",
+          "name": "Pintu Pasar Buah Kanan 7",
+          "description": "",
+          "image": "",
+          "image_thumb": "",
+          "images": [],
+          "category": {
+            "id": "pintu-akses",
+            "label": "Pintu Akses",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/jvY7vpq5qXiKwRoSqA3xcKE1P0TA33Yh.svg"
+          },
+          "entries": [
+            {
+              "x": 832,
+              "y": 477
+            }
+          ]
+        },
+        "location_x": 830,
+        "location_y": 483,
+        "sub_label": ""
+      },
+      {
+        "id": "9ef48dd5-1f7b-418c-9d90-1c314a2d1981",
+        "type": "Store",
+        "label": "Pintu Pasar Buah Kanan 8",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef46279-5b05-4883-8844-373c5117068d",
+          "name": "Pintu Pasar Buah Kanan 8",
+          "description": "",
+          "image": "",
+          "image_thumb": "",
+          "images": [],
+          "category": {
+            "id": "pintu-akses",
+            "label": "Pintu Akses",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/jvY7vpq5qXiKwRoSqA3xcKE1P0TA33Yh.svg"
+          },
+          "entries": [
+            {
+              "x": 852,
+              "y": 405
+            }
+          ]
+        },
+        "location_x": 851,
+        "location_y": 407,
+        "sub_label": ""
+      },
+      {
+        "id": "9ef48e98-f3b8-4658-a55d-480e77997455",
+        "type": "Store",
+        "label": "Pintu Pasar Buah Kanan 9",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef4628a-75ae-4893-8e0e-428a8a375b66",
+          "name": "Pintu Pasar Buah Kanan 9",
+          "description": "",
+          "image": "",
+          "image_thumb": "",
+          "images": [],
+          "category": {
+            "id": "pintu-akses",
+            "label": "Pintu Akses",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/jvY7vpq5qXiKwRoSqA3xcKE1P0TA33Yh.svg"
+          },
+          "entries": [
+            {
+              "x": 871,
+              "y": 336
+            }
+          ]
+        },
+        "location_x": 872,
+        "location_y": 341,
+        "sub_label": ""
+      },
+      {
+        "id": "9ef48f75-d517-4e36-9331-6128a84825a7",
+        "type": "Store",
+        "label": "Pintu Pasar Buah Kanan 10",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef48f07-c8b9-4246-8808-b6a90692e921",
+          "name": "Pintu Pasar Buah Kanan 10",
+          "description": "",
+          "image": "",
+          "image_thumb": "",
+          "images": [],
+          "category": {
+            "id": "pintu-akses",
+            "label": "Pintu Akses",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/jvY7vpq5qXiKwRoSqA3xcKE1P0TA33Yh.svg"
+          },
+          "entries": [
+            {
+              "x": 885,
+              "y": 266
+            }
+          ]
+        },
+        "location_x": 890,
+        "location_y": 273,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec70e9-2b54-4e3d-a5cb-0f79726c890c",
+        "type": "Store",
+        "label": "Kios Buah Wandi",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eea2a2d-8a84-4a62-9a1c-1d2168ff755f",
+          "name": "Kios Buah Wandi 1",
+          "description": "Kios Buah Wandi adalah kios buah grosir di Pasar Gede Barat atau Pasar Buah Pasar Gede yang menjual jeruk, mangga, dan jeruk bali",
+          "image": "https://maps.pasargedesolo.com/storage/stores/u5LMR2MqeXq6beU4wSmyWNoLZyOErgsJ.jpeg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/u5LMR2MqeXq6beU4wSmyWNoLZyOErgsJ_xs.jpeg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/u5LMR2MqeXq6beU4wSmyWNoLZyOErgsJ.jpeg",
+            "https://maps.pasargedesolo.com/storage/locations/W4AfkgSJ5WN9UNbrvOfQ5dChadcjhirRPmB6P4Am.jpg",
+            "https://maps.pasargedesolo.com/storage/locations/vNQRkb2Yi0iYJIaw21iZICgXQrAP7XMAAaCQE3sk.jpg"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 254,
+              "y": 276
+            }
+          ]
+        },
+        "location_x": 253,
+        "location_y": 289,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec7599-eb9d-49bb-9f51-6ef347cade9d",
+        "type": "Store",
+        "label": "Pak Daliman",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eea0b18-2743-4fb4-b680-5a18f792274c",
+          "name": "Pak Daliman",
+          "description": "Pak Daliman adalah Kios penjual buah eceran dan grosir di Pasar Gede Barat atau Pasar Buah Pasar Gede.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/8YAZS4wzOaVSGue8ROQZz4YVznnhdYPh.jpeg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/8YAZS4wzOaVSGue8ROQZz4YVznnhdYPh_xs.jpeg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/8YAZS4wzOaVSGue8ROQZz4YVznnhdYPh.jpeg",
+            "https://maps.pasargedesolo.com/storage/locations/1cdZJSSvQL73rFRHozXc6uLFO4lDVli5DlnDmIcc.jpg"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 277,
+              "y": 466
+            }
+          ]
+        },
+        "location_x": 273,
+        "location_y": 452,
+        "sub_label": ""
+      },
+      {
+        "id": "9ef49e93-f78c-4e70-8caf-3c0f52386f87",
+        "type": "Tangga",
+        "label": "Tangga lt 1.3",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/tTHfn881yaHYu4UoCUELmBQRIo6b4r2Q.svg",
+        "store": null,
+        "location_x": 876,
+        "location_y": 185,
+        "links": [
+          {
+            "id": "9eec0bd3-c8dc-4026-a5bb-8467e4e820a1",
+            "type": "Tangga",
+            "label": "Tangga Naik Turun Pasar Buah 3",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/tTHfn881yaHYu4UoCUELmBQRIo6b4r2Q.svg",
+            "location_x": 805,
+            "location_y": 238,
+            "floor_id": "9ee8a526-7027-47f6-b9ea-c03b24db39c0"
+          }
+        ]
+      },
+      {
+        "id": "9ef49ed1-cd82-4787-a3c2-cee71937dd17",
+        "type": "Tangga",
+        "label": "Tangga lt 1.4",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/tTHfn881yaHYu4UoCUELmBQRIo6b4r2Q.svg",
+        "store": null,
+        "location_x": 215,
+        "location_y": 200,
+        "links": [
+          {
+            "id": "9eec0c15-0184-41b5-9bba-f0581b28174c",
+            "type": "Tangga",
+            "label": "Tangga Naik Turun Pasar Buah 4",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/tTHfn881yaHYu4UoCUELmBQRIo6b4r2Q.svg",
+            "location_x": 179,
+            "location_y": 159,
+            "floor_id": "9ee8a526-7027-47f6-b9ea-c03b24db39c0"
+          }
+        ]
+      },
+      {
+        "id": "9ef49e10-b3f4-4fb1-9afa-cd2ac7bae336",
+        "type": "Tangga",
+        "label": "Tangga lt 1.1",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/tTHfn881yaHYu4UoCUELmBQRIo6b4r2Q.svg",
+        "store": null,
+        "location_x": 502,
+        "location_y": 673,
+        "links": [
+          {
+            "id": "9eec0b55-2fc3-4dcd-a7c9-54989062dad0",
+            "type": "Tangga",
+            "label": "Tangga Naik Turun Pasar Buah 1",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/tTHfn881yaHYu4UoCUELmBQRIo6b4r2Q.svg",
+            "location_x": 470,
+            "location_y": 624,
+            "floor_id": "9ee8a526-7027-47f6-b9ea-c03b24db39c0"
+          }
+        ]
+      },
+      {
+        "id": "9ef49dee-e4b2-4e01-9963-0c6f4be6f493",
+        "type": "Tangga",
+        "label": "Tangga lt 1.2",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/tTHfn881yaHYu4UoCUELmBQRIo6b4r2Q.svg",
+        "store": null,
+        "location_x": 540,
+        "location_y": 766,
+        "links": [
+          {
+            "id": "9eec0b8a-15f9-4358-85c5-46133cf330b5",
+            "type": "Tangga",
+            "label": "Tangga Naik Turun Pasar Buah 2",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/tTHfn881yaHYu4UoCUELmBQRIo6b4r2Q.svg",
+            "location_x": 459,
+            "location_y": 831,
+            "floor_id": "9ee8a526-7027-47f6-b9ea-c03b24db39c0"
+          }
+        ]
+      },
+      {
+        "id": "9f0847a3-a536-412b-aa0f-5c9f0b92b373",
+        "type": "Store",
+        "label": "Kios Buah Wandi 2",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9f084496-281f-476a-97e3-64b71621e8e6",
+          "name": "Kios Buah Wandi 2",
+          "description": "Kios Buah Wandi adalah kios buah grosir di Pasar Gede Barat atau Pasar Buah Pasar Gede yang menjual jeruk, mangga, dan jeruk bali",
+          "image": "https://maps.pasargedesolo.com/storage/stores/3Ky40lNb0lbVsCIdF4Lw4s5lPhVpEX8P.jpeg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/3Ky40lNb0lbVsCIdF4Lw4s5lPhVpEX8P_xs.jpeg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/3Ky40lNb0lbVsCIdF4Lw4s5lPhVpEX8P.jpeg",
+            "https://maps.pasargedesolo.com/storage/locations/ooYQfdyqDBs95hPZsqTuU3WTdAIK30XHdRo7sXay.jpg"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 320,
+              "y": 277
+            }
+          ]
+        },
+        "location_x": 324,
+        "location_y": 290,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec7b70-7128-48d1-b3b4-53d44866b07e",
+        "type": "Store",
+        "label": "Mahkota Buah 5",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef21c5f-f19c-45fc-8b11-5a7e876a7c6a",
+          "name": "Mahkota Buah 5",
+          "description": "Mahkota Buah adalah kios penjual buah grosir lokal yang berada di Pasar Gede Barat atau Pasar Buah Pasar Gede.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/bD1mvKJLTO32VAJ64DIBzGuq6MSscJp8.png",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/bD1mvKJLTO32VAJ64DIBzGuq6MSscJp8_xs.png",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/bD1mvKJLTO32VAJ64DIBzGuq6MSscJp8.png",
+            "https://maps.pasargedesolo.com/storage/locations/oWduKUKxnssfONCPnR1P775p141FdaO4jaYnWnAs.jpg"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 319,
+              "y": 610
+            }
+          ]
+        },
+        "location_x": 315,
+        "location_y": 596,
+        "sub_label": ""
+      },
+      {
+        "id": "9ef456a5-7fd1-497d-a063-f864a78359bc",
+        "type": "Store",
+        "label": "Kios Buah Bu Parman 5",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef45670-96d0-45d7-b2ef-5e15bdbec16f",
+          "name": "Kios Buah Bu Parman 5",
+          "description": "Kios Buah Bu Parman adalah kios penjual buah grosir dan eceran yang berada di Pasar Gede Barat atau Pasar Buah Pasar Gede.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/I8d8sm8iKDCFhbZsn0au9O5H6dcjQkCR.png",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/I8d8sm8iKDCFhbZsn0au9O5H6dcjQkCR_xs.png",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/I8d8sm8iKDCFhbZsn0au9O5H6dcjQkCR.png",
+            "https://maps.pasargedesolo.com/storage/locations/qx6pIgPBmarvwbatV1Xeaoy652KJmVa9uQhzxnK0.jpg",
+            "https://maps.pasargedesolo.com/storage/locations/E61Ou2Th2ejjvlv9MksZyAeCCZUZd7ac3DNIkVWo.jpg"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 648,
+              "y": 891
+            }
+          ]
+        },
+        "location_x": 685,
+        "location_y": 888,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec92b6-c184-459b-b63f-1d1ac451a95e",
+        "type": "Store",
+        "label": "Kios Pisang Mbak Pur 1",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eea2b10-7d22-4d01-9cf8-14b33c1c36be",
+          "name": "Kios Pisang Mbak Pur 1",
+          "description": "Kios Pisang Mbak Pur adalah kios buah spesialisasi pisang yang berada di Pasar Gede Barat atau Pasar Buah di Pasar Gede.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/srOJvbiSqpBhDa14rVOINpqaV3AR42XB.jpg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/srOJvbiSqpBhDa14rVOINpqaV3AR42XB_xs.jpg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/srOJvbiSqpBhDa14rVOINpqaV3AR42XB.jpg"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 547,
+              "y": 229
+            }
+          ]
+        },
+        "location_x": 553,
+        "location_y": 242,
+        "sub_label": ""
+      },
+      {
+        "id": "9ef60cc7-3a6f-4da3-8d7d-860ae546bf6a",
+        "type": "Store",
+        "label": "Mushola Pasar Gede Barat",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef49059-2c7a-4685-810e-eff0dd6dc09f",
+          "name": "Mushola",
+          "description": "Mushola adalah tempat ibadah umat Islam yang berukuran lebih kecil dari masjid. Mushola biasanya digunakan untuk salat fardu berjamaah dalam lingkup yang lebih terbatas seperti di rumah, kantor, sekolah, atau fasilitas umum.",
+          "image": "",
+          "image_thumb": "",
+          "images": [],
+          "category": {
+            "id": "tempat-ibadah",
+            "label": "Tempat Ibadah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/8ohVqJc3GJvOGFZQJ7PeFlcC30PKCkgN.svg"
+          },
+          "entries": [
+            {
+              "x": 543,
+              "y": 200
+            }
+          ]
+        },
+        "location_x": 507,
+        "location_y": 166,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec8174-f3c5-4e80-ae9e-f7286bd54a42",
+        "type": "Store",
+        "label": "Sumadi Buah Murni 5",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef2115c-e17f-4096-ad0a-8db4ea837cf2",
+          "name": "Sumadi Buah Murni 5",
+          "description": "Sumadi Buah Murni adalah kios buah grosir di Pasar Gede Barat atau Pasar Buah Pasar Gede.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/W6dbDhdbCXuL0m6POOlYZbbz6skYyKdt.png",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/W6dbDhdbCXuL0m6POOlYZbbz6skYyKdt_xs.png",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/W6dbDhdbCXuL0m6POOlYZbbz6skYyKdt.png",
+            "https://maps.pasargedesolo.com/storage/locations/koLdPE1iqP3opRyteSaJ7QDK3m0CrEDrrrhiRhDc.jpg",
+            "https://maps.pasargedesolo.com/storage/locations/mDZcjKbaSRnTHiDmSVYvsE5uI9IsXqlT0ISVfLPj.jpg"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 275,
+              "y": 328
+            }
+          ]
+        },
+        "location_x": 270,
+        "location_y": 312,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec7ac6-d026-4157-a076-998b718a7658",
+        "type": "Store",
+        "label": "Mahkota Buah 8",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef21d32-7d74-48ee-9142-853329f98bec",
+          "name": "Mahkota Buah 8",
+          "description": "Mahkota Buah adalah kios penjual buah grosir lokal yang berada di Pasar Gede Barat atau Pasar Buah Pasar Gede.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/5OYXINDkoizAvBIb5HReYjuJj6NEPOS0.png",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/5OYXINDkoizAvBIb5HReYjuJj6NEPOS0_xs.png",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/5OYXINDkoizAvBIb5HReYjuJj6NEPOS0.png",
+            "https://maps.pasargedesolo.com/storage/locations/Xh4WTi8ObPGTGuONveVWO05mvcrCqyJUmdzeORMU.jpg"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 360,
+              "y": 560
+            }
+          ]
+        },
+        "location_x": 365,
+        "location_y": 572,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec7c5b-a7c4-40e6-9b3a-fecc8b6fe4b7",
+        "type": "Store",
+        "label": "Mahkota Buah 3",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef21b8a-86f1-4af0-9d0f-5ae8e35bdbe8",
+          "name": "Mahkota Buah 3",
+          "description": "Mahkota Buah adalah kios penjual buah grosir lokal yang berada di Pasar Gede Barat atau Pasar Buah Pasar Gede.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/dYjVj3F3veVHhexmxdAxshMiUKPObUwx.png",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/dYjVj3F3veVHhexmxdAxshMiUKPObUwx_xs.png",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/dYjVj3F3veVHhexmxdAxshMiUKPObUwx.png",
+            "https://maps.pasargedesolo.com/storage/locations/zPofZj5qpQXANMIMk9SnT9JRtHsyp2XhirkQjp68.jpg"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 327,
+              "y": 687
+            }
+          ]
+        },
+        "location_x": 322,
+        "location_y": 674,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec9380-623e-44a0-a9e2-6eb5aa776221",
+        "type": "Store",
+        "label": "Kios Sari Buah 7",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef2179e-afdb-43c8-9a76-5c865e983d49",
+          "name": "Kios Sari Buah 7",
+          "description": "Kios Sari Buah adalah toko buah segar menawarkan berbagai macam buah lokal dan impor dengan kualitas unggul, serta menyediakan layanan parcel buah yang dapat disesuaikan dengan kebutuhan pelanggan.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/v5EHmtXtWzqpaxYlBIJEIVHdA2mx2TRc.jpeg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/v5EHmtXtWzqpaxYlBIJEIVHdA2mx2TRc_xs.jpeg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/v5EHmtXtWzqpaxYlBIJEIVHdA2mx2TRc.jpeg",
+            "https://maps.pasargedesolo.com/storage/locations/pX8rIPiBtImBwAmWF4VfwaiT7hhEly07yNX2wNFK.jpg"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 574,
+              "y": 438
+            }
+          ]
+        },
+        "location_x": 562,
+        "location_y": 439,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec7ec5-272e-47de-b295-2b37fe0500ad",
+        "type": "Store",
+        "label": "Kios Sari Buah 1",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eec7715-2dcc-4c0f-9071-e35c79a34668",
+          "name": "Kios Sari Buah 1",
+          "description": "Kios Sari Buah adalah toko buah segar menawarkan berbagai macam buah lokal dan impor dengan kualitas unggul, serta menyediakan layanan parcel buah yang dapat disesuaikan dengan kebutuhan pelanggan.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/7QGRp3iUvmBeDLMl52EhWxgnB6xuy2D2.jpeg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/7QGRp3iUvmBeDLMl52EhWxgnB6xuy2D2_xs.jpeg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/7QGRp3iUvmBeDLMl52EhWxgnB6xuy2D2.jpeg",
+            "https://maps.pasargedesolo.com/storage/locations/CFoSkzbynGBeB9lFRCzUW3W57EInQSwuKHprEfuG.jpg"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 216,
+              "y": 466
+            }
+          ]
+        },
+        "location_x": 210,
+        "location_y": 453,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec154b-d1bc-467c-b96c-33156ea1b448",
+        "type": "Store",
+        "label": "Phe-Te 2",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef22351-d9e4-49e0-bc29-ae059eaebc81",
+          "name": "Phe-Te 2",
+          "description": "Phe-Te adalah kios penjual buah yang menerima layanan pembuatan hampers buah atau parcel buah di Pasar Gede Barat atau Pasar Buah di Pasar Gede.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/0PX2QFGZfwkQ9PLfy9G9faVLQaQUzBrd.jpg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/0PX2QFGZfwkQ9PLfy9G9faVLQaQUzBrd_xs.jpg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/0PX2QFGZfwkQ9PLfy9G9faVLQaQUzBrd.jpg",
+            "https://maps.pasargedesolo.com/storage/locations/RPdiJVJhpxOgIeOZzOxeJdHbaTq2D3cHe5cupYG0.jpg"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 661,
+              "y": 169
+            }
+          ]
+        },
+        "location_x": 682,
+        "location_y": 163,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec78e9-ce63-4b04-8fd6-3da85b833c71",
+        "type": "Store",
+        "label": "Kios Buah Bu Parman 1",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eea062a-bfac-473a-b977-539bd876bc17",
+          "name": "Kios Buah Bu Parman 1",
+          "description": "Kios Buah Bu Parman adalah kios penjual buah grosir dan eceran yang berada di Pasar Gede Barat atau Pasar Buah Pasar Gede.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/kz7FgcyqO4IoW1yCR9uAi14mPBDrK96Z.png",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/kz7FgcyqO4IoW1yCR9uAi14mPBDrK96Z_xs.png",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/kz7FgcyqO4IoW1yCR9uAi14mPBDrK96Z.png",
+            "https://maps.pasargedesolo.com/storage/locations/P5cywtoACRzRD0FZkPtNk9nSBzGvVH1YHQQJP4Od.jpg"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 235,
+              "y": 537
+            }
+          ]
+        },
+        "location_x": 230,
+        "location_y": 524,
+        "sub_label": ""
+      },
+      {
+        "id": "9f0284fa-c5b9-46c2-9328-35629efcc80b",
+        "type": "Store",
+        "label": "Kios Dien Buah 3",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9f0284c5-7923-467b-af05-a665e11d8682",
+          "name": "Kios Dien Buah 3",
+          "description": "Dien Buah adalah kios yang menawarkan berbagai macam buah lokal dan impor dengan kualitas unggul, serta melayani pembelian buah secara langsung maupun dalam bentuk parcel untuk berbagai keperluan.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/jeYdAX0hhf8FaM4eVm1duPe9dbaDUU9G.jpeg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/jeYdAX0hhf8FaM4eVm1duPe9dbaDUU9G_xs.jpeg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/jeYdAX0hhf8FaM4eVm1duPe9dbaDUU9G.jpeg",
+            "https://maps.pasargedesolo.com/storage/locations/WuxOjvw3dKtLspNIbogOoKWQR4Yro2yNr8buqU22.jpg"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 434,
+              "y": 291
+            }
+          ]
+        },
+        "location_x": 434,
+        "location_y": 271,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec8e26-ec53-453f-a413-3aea21a9ba95",
+        "type": "Store",
+        "label": "Mahkota Buah 10",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef21d84-3572-4624-8053-c9d86e80ab18",
+          "name": "Mahkota Buah 10",
+          "description": "Mahkota Buah adalah kios penjual buah grosir lokal yang berada di Pasar Gede Barat atau Pasar Buah Pasar Gede.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/7QV9YJQfyZMjdHRh6tItX4diid9Ct9St.png",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/7QV9YJQfyZMjdHRh6tItX4diid9Ct9St_xs.png",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/7QV9YJQfyZMjdHRh6tItX4diid9Ct9St.png",
+            "https://maps.pasargedesolo.com/storage/locations/EGblR4dGzn72wFXnzdSazF9uIJeOdziWI2HmlRtR.jpg"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 468,
+              "y": 561
+            }
+          ]
+        },
+        "location_x": 475,
+        "location_y": 572,
+        "sub_label": ""
+      },
+      {
+        "id": "9f028861-5207-4748-98ca-2d2a9a7bdb89",
+        "type": "Store",
+        "label": "Mbak Dinda",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9f0287ad-0fe3-4d16-b26a-b15ec9f44f84",
+          "name": "Mbak Dinda",
+          "description": "Mbak Dinda adalah kios buah import dan lokal secara ecer maupun grosir yang menerima layanan pembuatan hampers buah atau parcel buah untuk jenguk orang sakit, hadiah, oleh-oleh, dan lain-lain",
+          "image": "https://maps.pasargedesolo.com/storage/stores/AwL7NSrbeA3ykNeUXAz9xKD8fQLCOXcE.jpeg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/AwL7NSrbeA3ykNeUXAz9xKD8fQLCOXcE_xs.jpeg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/AwL7NSrbeA3ykNeUXAz9xKD8fQLCOXcE.jpeg",
+            "https://maps.pasargedesolo.com/storage/locations/NX4cFtuYYvGOmQhZIyJalzdnYXLWJWRbRJlLUb6N.jpg"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 437,
+              "y": 510
+            }
+          ]
+        },
+        "location_x": 470,
+        "location_y": 506,
+        "sub_label": ""
+      },
+      {
+        "id": "9f028447-3ba9-4ccf-8b4b-05daa93f76b0",
+        "type": "Store",
+        "label": "Mbak Karti",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eea10b9-72d8-48da-a12c-bdf5a4f31f34",
+          "name": "Mbak Karti",
+          "description": "Mbak Karti adalah Kios Buah yang menerima layanan pembuatan hampers buah atau parcel buah dan berada di Pasar Gede Barat atau Pasar Buah Pasar Gede.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/X8wKHoRwuBU22NzsbeH8mrzeQQHO4LZr.jpeg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/X8wKHoRwuBU22NzsbeH8mrzeQQHO4LZr_xs.jpeg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/X8wKHoRwuBU22NzsbeH8mrzeQQHO4LZr.jpeg",
+            "https://maps.pasargedesolo.com/storage/locations/JnMH5GM7Fh8pcJPOyUTmYOvNgG9d0MRyAafKpWVs.jpg"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 498,
+              "y": 390
+            }
+          ]
+        },
+        "location_x": 497,
+        "location_y": 412,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec94c8-a304-46c1-8ffe-06c5bb3408f1",
+        "type": "Store",
+        "label": "Min Pisang",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ee9ffa1-ada4-4edc-8c54-56102136f562",
+          "name": "Min Pisang",
+          "description": "Min Pisang adalah kios penjual buah spesialisasi pisang yang berada di Pasar Gede Barat atau Pasar Buah di Pasar Gede",
+          "image": "https://maps.pasargedesolo.com/storage/stores/uohXBxKPWmq6Gx2u6a6Cozid11wAfpq8.jpg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/uohXBxKPWmq6Gx2u6a6Cozid11wAfpq8_xs.jpg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/uohXBxKPWmq6Gx2u6a6Cozid11wAfpq8.jpg"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 817,
+              "y": 328
+            }
+          ]
+        },
+        "location_x": 832,
+        "location_y": 312,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec810c-3e3c-4aa2-a703-19085935167d",
+        "type": "Store",
+        "label": "Mas Wandi 3",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef20f4f-7460-49e7-b484-a4452f7795e7",
+          "name": "Mas Wandi 3",
+          "description": "Mas Wandi adalah kios buah gosir yang berada di Pasar Gede Barat atau Pasar Buah Pasar Gede yang menjual buah musiman seperti jeruk dan mangga8j",
+          "image": "https://maps.pasargedesolo.com/storage/stores/iwGZGe7JoOqomOm2pU7JaPsM2fJdqVjY.png",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/iwGZGe7JoOqomOm2pU7JaPsM2fJdqVjY_xs.png",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/iwGZGe7JoOqomOm2pU7JaPsM2fJdqVjY.png",
+            "https://maps.pasargedesolo.com/storage/locations/JkRd9hIzr4YC8bjLK4L3Q1N2I0VrZJ7CxpQ0Wv6h.jpg",
+            "https://maps.pasargedesolo.com/storage/locations/eqMZAe3B0VkucgMYIVzh9j2NVD9rddGmzqcs33Q9.jpg"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 166,
+              "y": 327
+            }
+          ]
+        },
+        "location_x": 160,
+        "location_y": 315,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec6e28-1824-434a-b4f9-78b9294d8850",
+        "type": "Store",
+        "label": "Pur Sastro",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eea15b1-8521-411e-bbd1-ca404a966508",
+          "name": "Pur Sastro",
+          "description": "Pur Sastro adalah kios buah grosir yang berada di Pasar Gede Barat atau Pasar Buah di Pasar Gede yang menjual buah musiman seperti jeruk dan jeruk bali",
+          "image": "https://maps.pasargedesolo.com/storage/stores/gbD3drP3CrMGjuX7T64dUB1WYZ0s62Ri.jpeg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/gbD3drP3CrMGjuX7T64dUB1WYZ0s62Ri_xs.jpeg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/gbD3drP3CrMGjuX7T64dUB1WYZ0s62Ri.jpeg",
+            "https://maps.pasargedesolo.com/storage/locations/2bHWfVaXVGGUyPPljumwZhehLnAaAGTakTrDQzVr.jpg"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 260,
+              "y": 164
+            }
+          ]
+        },
+        "location_x": 234,
+        "location_y": 164,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec9019-b87e-46fd-93ea-3a7601c17c03",
+        "type": "Store",
+        "label": "Kios Sari Buah 3",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef21418-2dd5-44c7-bb1d-3a1c9ff923ba",
+          "name": "Kios Sari Buah 3",
+          "description": "Kios Sari Buah adalah toko buah segar menawarkan berbagai macam buah lokal dan impor dengan kualitas unggul, serta menyediakan layanan parcel buah yang dapat disesuaikan dengan kebutuhan pelanggan.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/VtfvkSIX6VnCzqDc5cRKn7mKvLW4xDUp.jpeg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/VtfvkSIX6VnCzqDc5cRKn7mKvLW4xDUp_xs.jpeg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/VtfvkSIX6VnCzqDc5cRKn7mKvLW4xDUp.jpeg",
+            "https://maps.pasargedesolo.com/storage/locations/DU7JvzTC015jmvW4nkeDv8X5OylhPLPD6I7sD7ql.jpg"
+          ],
+          "category": {
+            "id": "buah",
+            "label": "Buah",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/RzNpYW21rfVB89QkNkRRX0CbeFV8KYDf.svg"
+          },
+          "entries": [
+            {
+              "x": 655,
+              "y": 346
+            }
+          ]
+        },
+        "location_x": 660,
+        "location_y": 359,
+        "sub_label": ""
+      }
+    ]
+  }
+}

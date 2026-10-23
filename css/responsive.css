@@ -1,0 +1,162 @@
+/* ============================================
+   RESPONSIVE STYLES
+   ============================================ */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    :root {
+        --sidebar-width: 320px;
+    }
+    
+    .search-container {
+        width: 220px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    :root {
+        --header-height: 56px;
+        --sidebar-width: 100%;
+    }
+    
+    .app-header {
+        padding: 0 12px;
+    }
+    
+    .header-subtitle {
+        display: none;
+    }
+    
+    .search-container {
+        width: 160px;
+    }
+    
+    .search-input {
+        padding: 8px 12px 8px 36px;
+        font-size: 0.8rem;
+    }
+    
+    .sidebar {
+        position: fixed;
+        top: var(--header-height);
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        z-index: 950;
+        transform: translateY(100%);
+        transition: transform var(--transition-normal);
+        border-right: none;
+        border-top: 1px solid var(--gray-200);
+    }
+    
+    .sidebar.open {
+        transform: translateY(0);
+    }
+    
+    .sidebar.collapsed {
+        transform: translateY(100%);
+        width: 100%;
+    }
+    
+    .map-controls {
+        right: 12px;
+        bottom: 70px;
+    }
+    
+    .floor-indicator {
+        left: 12px;
+        bottom: 70px;
+    }
+    
+    .detail-panel {
+        width: 100%;
+        top: auto;
+        bottom: 0;
+        height: 60%;
+        border-radius: var(--border-radius) var(--border-radius) 0 0;
+    }
+    
+    .modal-content {
+        max-height: 90vh;
+        margin: 10px;
+        border-radius: var(--border-radius-sm);
+    }
+    
+    .header-title {
+        font-size: 0.95rem;
+    }
+    
+    .btn-route-toggle span {
+        display: none;
+    }
+
+    .btn-route-toggle {
+        width: 40px;
+        padding: 0;
+        justify-content: center;
+    }
+
+    .route-popup {
+        width: calc(100vw - 20px);
+        top: calc(var(--header-height) + 6px);
+        max-height: calc(100vh - var(--header-height) - 16px);
+    }
+
+    .a11y-status {
+        bottom: 70px;
+        font-size: 0.75rem;
+        padding: 8px 14px;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .search-container {
+        width: 110px;
+    }
+    
+    .btn-icon:last-child {
+        display: none;
+    }
+    
+    .route-mode-selector {
+        flex-direction: column;
+    }
+    
+    .route-mode-btn {
+        flex-direction: row;
+        gap: 8px;
+        padding: 8px 12px;
+    }
+}
+
+/* Desktop large */
+@media (min-width: 1440px) {
+    :root {
+        --sidebar-width: 380px;
+    }
+    
+    .search-container {
+        width: 340px;
+    }
+}
+
+/* Print */
+@media print {
+    .app-header,
+    .sidebar,
+    .map-controls,
+    .floor-indicator,
+    .a11y-status,
+    .detail-panel {
+        display: none !important;
+    }
+    
+    .map-area {
+        position: static;
+        width: 100%;
+        height: 100vh;
+    }
+}

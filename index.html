@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peta Navigasi Pasar Gedhe Solo</title>
+    <meta name="description" content="Peta interaktif dan navigasi indoor Pasar Gedhe Hardjonagoro Solo. Temukan kios, pedagang, kuliner legendaris, dan rute aksesibel ramah disabilitas.">
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/legend.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/accessibility.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Skip Navigation for Screen Readers -->
+    <a href="#map-container" class="skip-link" aria-label="Langsung ke peta">Langsung ke Peta</a>
+
+    <!-- Header -->
+    <header class="app-header" role="banner">
+        <div class="header-left">
+            <button class="sidebar-toggle" id="sidebarToggle" aria-label="Buka/Tutup Menu" aria-expanded="false">
+                <i data-lucide="menu" aria-hidden="true"></i>
+            </button>
+            <div class="header-brand">
+                <h1 class="header-title">
+                    <i data-lucide="map-pin" class="brand-icon" aria-hidden="true"></i>
+                    Peta Pasar Gedhe Solo
+                </h1>
+                <span class="header-subtitle" id="headerSubtitle">Pasar Gede (Utama) · Lantai 1</span>
+            </div>
+        </div>
+        <div class="header-right">
+            <div class="search-container">
+                <i data-lucide="search" class="search-icon" aria-hidden="true"></i>
+                <input type="search" id="searchInput" class="search-input" placeholder="Cari kios, kuliner, pedagang..." aria-label="Cari di peta" autocomplete="off">
+                <div class="search-results" id="searchResults" role="listbox" aria-label="Hasil pencarian"></div>
+            </div>
+            <button class="btn-route-toggle" id="btnRouteToggle" aria-label="Buka Navigasi Rute" title="Navigasi Rute" aria-expanded="false">
+                <i data-lucide="navigation" aria-hidden="true"></i>
+                <span>Rute</span>
+            </button>
+            <button class="btn-icon" id="btnInfo" aria-label="Informasi" title="Informasi Pasar">
+                <i data-lucide="info" aria-hidden="true"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content Layout -->
+    <div class="app-content">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar" role="navigation" aria-label="Menu navigasi">
+            
+            <!-- Building Selector -->
+            <div class="sidebar-section">
+                <h2 class="section-title">
+                    <i data-lucide="building-2" aria-hidden="true"></i>
+                    Pilih Gedung
+                </h2>
+                <div class="building-selector" role="tablist" aria-label="Pilih gedung pasar">
+                    <button class="building-btn active" data-building="pasar-gede" role="tab" aria-selected="true">
+                        <i data-lucide="store" aria-hidden="true"></i>
+                        <div>
+                            <strong>Pasar Gede (Utama)</strong>
+                            <small>Pasar Basah & Kuliner Legendaris</small>
+                        </div>
+                    </button>
+                    <button class="building-btn" data-building="pasar-buah" role="tab" aria-selected="false">
+                        <i data-lucide="apple" aria-hidden="true"></i>
+                        <div>
+                            <strong>Pasar Buah (Timur)</strong>
+                            <small>Sentra Buah & Foodcourt</small>
+                        </div>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Floor Selector -->
+            <div class="sidebar-section">
+                <h2 class="section-title">
+                    <i data-lucide="layers" aria-hidden="true"></i>
+                    Pilih Lantai
+                </h2>
+                <div class="floor-selector" role="tablist" aria-label="Pilih lantai">
+                    <button class="floor-btn active" data-floor="1" role="tab" aria-selected="true" aria-controls="floor-1-panel">
+                        <i data-lucide="store" aria-hidden="true"></i>
+                        <div>
+                            <span>Lantai 1</span>
+                            <small id="floor1Subtitle">Pasar Basah, Buah & Sembako</small>
+                        </div>
+                    </button>
+                    <button class="floor-btn" data-floor="2" role="tab" aria-selected="false" aria-controls="floor-2-panel">
+                        <i data-lucide="utensils" aria-hidden="true"></i>
+                        <div>
+                            <span>Lantai 2</span>
+                            <small id="floor2Subtitle">Sentra Kuliner Legendaris</small>
+                        </div>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Legend (Filters) -->
+            <div class="sidebar-section">
+                <h2 class="section-title">
+                    <i data-lucide="palette" aria-hidden="true"></i>
+                    Legenda & Filter Zona
+                </h2>
+                <div class="legend-container" id="legendContainer" role="group" aria-label="Legenda peta">
+                    <!-- Legend items dynamically generated -->
+                </div>
+            </div>
+
+        </aside>
+
+        <!-- Map Canvas Area -->
+        <main class="map-area" id="mapArea">
+            <div id="map-container" class="map-container" tabindex="0" role="application" aria-label="Peta interaktif Pasar Gedhe Solo"></div>
+            
+            <!-- Map Controls -->
+            <div class="map-controls">
+                <button class="map-ctrl-btn" id="zoomIn" aria-label="Perbesar peta" title="Perbesar">
+                    <i data-lucide="plus" aria-hidden="true"></i>
+                </button>
+                <button class="map-ctrl-btn" id="zoomOut" aria-label="Perkecil peta" title="Perkecil">
+                    <i data-lucide="minus" aria-hidden="true"></i>
+                </button>
+                <button class="map-ctrl-btn" id="resetView" aria-label="Reset tampilan peta" title="Pusatkan Peta">
+                    <i data-lucide="maximize-2" aria-hidden="true"></i>
+                </button>
+                <button class="map-ctrl-btn" id="fullscreen" aria-label="Mode layar penuh" title="Layar Penuh">
+                    <i data-lucide="maximize" aria-hidden="true"></i>
+                </button>
+            </div>
+
+            <!-- Floor Indicator Badge -->
+            <div class="floor-indicator" id="floorIndicator">
+                <span class="floor-indicator-text">Pasar Gede · Lantai 1</span>
+            </div>
+
+            <!-- Accessibility Status Notification -->
+            <div class="a11y-status" id="a11yStatus" role="status" aria-live="polite" style="display:none;">
+                <i data-lucide="accessibility" aria-hidden="true"></i>
+                <span id="a11yStatusText"></span>
+                <button class="a11y-status-close" id="a11yStatusClose" aria-label="Tutup status">
+                    <i data-lucide="x" aria-hidden="true"></i>
+                </button>
+            </div>
+        </main>
+    </div>
+
+    <!-- Route Popup Backdrop -->
+    <div class="route-popup-backdrop" id="routePopupBackdrop" style="display:none;"></div>
+
+    <!-- Route Popup (Top-Center Floating Modal) -->
+    <div class="route-popup" id="routePopup" role="dialog" aria-modal="true" aria-labelledby="routePopupTitle" style="display:none;">
+        <div class="route-popup-header">
+            <div class="route-popup-title-group">
+                <div class="route-popup-icon-badge">
+                    <i data-lucide="navigation" aria-hidden="true"></i>
+                </div>
+                <div>
+                    <h2 class="route-popup-title" id="routePopupTitle">Navigasi Rute</h2>
+                    <span class="route-popup-subtitle">Pasar Gedhe & Pasar Buah Solo</span>
+                </div>
+            </div>
+            <button class="route-popup-close" id="routePopupClose" aria-label="Tutup navigasi rute" title="Tutup">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+
+        <div class="route-popup-body">
+            <div class="nav-panel" id="navPanel">
+                <div class="nav-input-group">
+                    <label for="navFrom" class="nav-label">
+                        <i data-lucide="circle-dot" class="nav-icon-from" aria-hidden="true"></i>
+                        Titik Awal (Dari)
+                    </label>
+                    <div class="nav-input-wrapper">
+                        <input type="text" id="navFrom" class="nav-input" placeholder="Pilih atau cari kios awal..." aria-label="Titik awal navigasi" autocomplete="off">
+                        <button class="nav-locate-btn" id="navLocateFrom" aria-label="Pilih di peta" title="Pilih titik di peta">
+                            <i data-lucide="crosshair" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                    <div class="nav-suggestions" id="navFromSuggestions" role="listbox"></div>
+                </div>
+
+                <button class="nav-swap-btn" id="navSwap" aria-label="Tukar titik awal dan tujuan" title="Tukar arah">
+                    <i data-lucide="arrow-up-down" aria-hidden="true"></i>
+                </button>
+
+                <div class="nav-input-group">
+                    <label for="navTo" class="nav-label">
+                        <i data-lucide="map-pin" class="nav-icon-to" aria-hidden="true"></i>
+                        Tujuan (Ke)
+                    </label>
+                    <div class="nav-input-wrapper">
+                        <input type="text" id="navTo" class="nav-input" placeholder="Pilih atau cari kios tujuan..." aria-label="Tujuan navigasi" autocomplete="off">
+                        <button class="nav-locate-btn" id="navLocateTo" aria-label="Pilih di peta" title="Pilih titik di peta">
+                            <i data-lucide="crosshair" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                    <div class="nav-suggestions" id="navToSuggestions" role="listbox"></div>
+                </div>
+
+                <!-- Route Mode Selector -->
+                <div class="route-mode-selector" role="radiogroup" aria-label="Mode navigasi">
+                    <button class="route-mode-btn active" data-mode="normal" role="radio" aria-checked="true" title="Jalur jalan kaki normal">
+                        <i data-lucide="footprints" aria-hidden="true"></i>
+                        <span>Normal</span>
+                    </button>
+                    <button class="route-mode-btn" data-mode="wheelchair" role="radio" aria-checked="false" title="Khusus kursi roda: lewat ramp landai, bebas tangga">
+                        <i data-lucide="accessibility" aria-hidden="true"></i>
+                        <span>Kursi Roda</span>
+                    </button>
+                    <button class="route-mode-btn" data-mode="blind" role="radio" aria-checked="false" title="Khusus tunanetra: panduan suara audio dan ubin taktil">
+                        <i data-lucide="eye-off" aria-hidden="true"></i>
+                        <span>Tunanetra</span>
+                    </button>
+                </div>
+
+                <button class="btn-primary nav-go-btn" id="navGoBtn" disabled>
+                    <i data-lucide="route" aria-hidden="true"></i>
+                    Cari Rute
+                </button>
+
+                <!-- Route Result -->
+                <div class="route-result" id="routeResult" style="display:none;">
+                    <div class="route-summary" id="routeSummary"></div>
+                    <button class="btn-secondary" id="clearRoute">
+                        <i data-lucide="x" aria-hidden="true"></i>
+                        Hapus Rute
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Map Picking Banner (Active when picking location on map) -->
+    <div class="map-pick-banner" id="mapPickBanner" style="display:none;">
+        <div class="map-pick-content">
+            <i data-lucide="crosshair" class="map-pick-icon" aria-hidden="true"></i>
+            <span id="mapPickText">Sentuh kios di denah untuk memilih lokasi</span>
+        </div>
+        <button class="btn-secondary btn-small" id="mapPickCancel">Batal</button>
+    </div>
+
+    <!-- Detail Panel Backdrop for Mobile -->
+    <div class="detail-backdrop" id="detailBackdrop"></div>
+
+    <!-- Detail Panel (Fixed Right Drawer) -->
+    <div class="detail-panel" id="detailPanel" role="complementary" aria-label="Detail kios" style="display:none;">
+        <div class="detail-header">
+            <h3 id="detailTitle">Detail Kios</h3>
+            <button class="detail-close" id="detailClose" aria-label="Tutup panel detail" title="Tutup">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="detail-body" id="detailBody"></div>
+        <div class="detail-actions">
+            <button class="btn-secondary btn-nav-action" id="detailNavigateFrom">
+                <i data-lucide="circle-dot" aria-hidden="true"></i>
+                Navigasi dari Sini
+            </button>
+            <button class="btn-primary btn-nav-action" id="detailNavigate">
+                <i data-lucide="map-pin" aria-hidden="true"></i>
+                Navigasi ke Sini
+            </button>
+        </div>
+    </div>
+
+    <!-- Info Modal -->
+    <div class="modal-overlay" id="infoModal" role="dialog" aria-modal="true" aria-labelledby="infoModalTitle" style="display:none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="infoModalTitle">
+                    <i data-lucide="info" aria-hidden="true"></i>
+                    Tentang Pasar Gedhe Solo
+                </h2>
+                <button class="modal-close" id="infoModalClose" aria-label="Tutup modal">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="info-card">
+                    <h3>🏛️ Sejarah Pasar Gede Hardjonagoro</h3>
+                    <p>Pasar Gede Hardjonagoro didirikan pada masa pemerintahan Pakubuwono X dan dirancang oleh arsitek Belanda ternama Thomas Karsten pada tahun 1930. Menggabungkan kemegahan arsitektur kolonial Belanda dengan atap limasan tradisional Jawa.</p>
+                </div>
+                <div class="info-card">
+                    <h3>📍 Lokasi Dua Bangunan</h3>
+                    <p>Kompleks Pasar Gede terbagi menjadi dua bangunan yang dipisahkan oleh Jalan Urip Sumoharjo:</p>
+                    <ul>
+                        <li><strong>Pasar Gede (Utama):</strong> Sisi barat jalan, pusat pasar basah, bumbu rempah jamu, sembako, dan sentra kuliner legendaris di lantai 2.</li>
+                        <li><strong>Pasar Buah:</strong> Sisi timur jalan, sentra buah segar pilihan dan area foodcourt di lantai 2.</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h3>♿ Aksesibilitas Ramah Disabilitas</h3>
+                    <p>Aplikasi ini dirancang inklusif:</p>
+                    <ul>
+                        <li><strong>Mode Kursi Roda:</strong> Mengeliminasi tangga dan memilih jalur ramp landai (kemiringan 6-7%) serta koridor luas.</li>
+                        <li><strong>Mode Tunanetra:</strong> Dilengkapi Text-to-Speech audio berbahasa Indonesia dan prioritas rute di atas ubin pemandu taktil.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Screen Reader Announcements Live Region -->
+    <div id="srAnnounce" class="sr-only" role="status" aria-live="assertive" aria-atomic="true"></div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/data/market-data.js"></script>
+    <script src="js/data/navigation-graph.js"></script>
+    <script src="js/data/walkable-grids.js"></script>
+    <script src="js/utils/pathfinding.js"></script>
+    <script src="js/utils/accessibility.js"></script>
+    <script src="js/components/legend.js"></script>
+    <script src="js/components/search.js"></script>
+    <script src="js/components/navigation.js"></script>
+    <script src="js/components/detail-panel.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+/* ============================================
+   ACCESSIBILITY STYLES
+   ============================================ */
+
+/* Accessibility Mode Overlay/Badge */
+.a11y-mode-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    animation: slideUp var(--transition-normal) ease;
+}
+
+.a11y-mode-badge.wheelchair {
+    background: #D6EAF8;
+    color: var(--accent-blue);
+}
+
+.a11y-mode-badge.blind {
+    background: #E8DAEF;
+    color: var(--accent-purple);
+}
+
+/* Route line styles for accessibility modes */
+.route-wheelchair .leaflet-interactive {
+    stroke-dasharray: 8, 4;
+    stroke-width: 5;
+}
+
+.route-blind .leaflet-interactive {
+    stroke-dasharray: 4, 4;
+    stroke-width: 6;
+}
+
+/* Accessible route markers */
+.accessible-marker {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: white;
+    border: 3px solid var(--accent-blue);
+    box-shadow: var(--shadow-md);
+    font-size: 1rem;
+}
+
+.accessible-marker.ramp {
+    border-color: var(--accent-green);
+}
+
+.accessible-marker.elevator {
+    border-color: var(--accent-blue);
+}
+
+.accessible-marker.tactile {
+    border-color: var(--accent-purple);
+}
+
+/* Blind mode specific - enhanced text contrast & sizing */
+body.blind-mode .legend-label,
+body.blind-mode .nav-input,
+body.blind-mode .search-input {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+body.blind-mode .route-step-text {
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+/* Audio cue indicator */
+.audio-cue {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 6px;
+    background: var(--accent-purple);
+    color: white;
+    border-radius: 4px;
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Tactile path indicator on map */
+.tactile-path-indicator {
+    position: relative;
+}
+
+.tactile-path-indicator::before {
+    content: '●';
+    color: var(--accent-purple);
+    font-size: 0.5rem;
+    position: absolute;
+}
+
+/* Warning badges for accessibility */
+.a11y-warning {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    background: #FEF3CD;
+    border: 1px solid #FBBF24;
+    border-radius: var(--border-radius-xs);
+    font-size: 0.8rem;
+    color: #92400E;
+    margin-bottom: 10px;
+}
+
+.a11y-warning i,
+.a11y-warning svg {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+/* Ramp indicator */
+.ramp-info {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 10px;
+    background: #D1FAE5;
+    border-radius: var(--border-radius-xs);
+    font-size: 0.75rem;
+    color: #065F46;
+    margin-top: 6px;
+}
+
+/* Keyboard shortcuts helper (optional overlay) */
+.keyboard-shortcuts {
+    position: fixed;
+    bottom: 16px;
+    left: 16px;
+    background: white;
+    padding: 12px 16px;
+    border-radius: var(--border-radius-sm);
+    box-shadow: var(--shadow-lg);
+    font-size: 0.75rem;
+    z-index: 800;
+    max-width: 280px;
+    display: none;
+}
+
+.keyboard-shortcuts h4 {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--secondary);
+    margin-bottom: 8px;
+}
+
+.keyboard-shortcut-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 0;
+}
+
+.keyboard-shortcut-key {
+    padding: 2px 8px;
+    background: var(--gray-100);
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    font-family: monospace;
+}

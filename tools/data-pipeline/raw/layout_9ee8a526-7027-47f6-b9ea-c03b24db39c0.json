@@ -1,0 +1,1243 @@
+{
+  "success": true,
+  "data": {
+    "id": "9ee8a526-7027-47f6-b9ea-c03b24db39c0",
+    "level": 1,
+    "label": "2",
+    "image_svg": "https://maps.pasargedesolo.com/storage/maps/B0q9M4szcOz0kA7ULNnlyfPCXS7nIs3h.svg",
+    "image_walkable": "https://maps.pasargedesolo.com/storage/maps/TtCQhtXwYcjoINUrwrJS98YeNOaHz3FT.png",
+    "image_area": "https://maps.pasargedesolo.com/storage/maps/B0q9M4szcOz0kA7ULNnlyfPCXS7nIs3h_pin.png",
+    "map_placement_initial": "center",
+    "slots": [
+      {
+        "id": "9eebfe34-9390-40d9-8427-aff64657b9fe",
+        "type": "Store",
+        "label": "Brawijaya Steak",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eea3608-ee8d-4062-a2eb-b4c2227d6314",
+          "name": "Brawijaya Steak",
+          "description": "Brawijaya Steak adalah kedai makanan spesialisasi steak yang berada di Lantai 2 Pasar Gede Barat atau Gedung Pasar Buah di Pasar Gede",
+          "image": "https://maps.pasargedesolo.com/storage/stores/x722wXQGmK0rHpQ28C0pe5Mae4hxIvrw.jpeg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/x722wXQGmK0rHpQ28C0pe5Mae4hxIvrw_xs.jpeg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/x722wXQGmK0rHpQ28C0pe5Mae4hxIvrw.jpeg"
+          ],
+          "category": {
+            "id": "kuliner",
+            "label": "Kuliner",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/dHf3JxQGoNxu18k2KQpfnYHXuewgx1aG.svg"
+          },
+          "entries": [
+            {
+              "x": 340,
+              "y": 551
+            }
+          ]
+        },
+        "location_x": 318,
+        "location_y": 554,
+        "sub_label": ""
+      },
+      {
+        "id": "9eebf7ec-248c-4342-a220-188730c7ed83",
+        "type": "Store",
+        "label": "Mentai Mania",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eea7863-91ba-4483-a8d5-61714099ac61",
+          "name": "Mentai Mania",
+          "description": "Mentai Mania adalah kedai modern di lantai 2 Gedung Barat Pasar Gede Solo yang menyajikan berbagai hidangan bergaya Jepang dan Korea, seperti salmon mentai don, tuna mentai rice, dan mozzarella corndog.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/cU1lZMe3vyi7QCdfrNkbiWi1K8C5MnHt.jpg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/cU1lZMe3vyi7QCdfrNkbiWi1K8C5MnHt_xs.jpg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/cU1lZMe3vyi7QCdfrNkbiWi1K8C5MnHt.jpg"
+          ],
+          "category": {
+            "id": "kuliner",
+            "label": "Kuliner",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/dHf3JxQGoNxu18k2KQpfnYHXuewgx1aG.svg"
+          },
+          "entries": [
+            {
+              "x": 698,
+              "y": 606
+            }
+          ]
+        },
+        "location_x": 701,
+        "location_y": 593,
+        "sub_label": ""
+      },
+      {
+        "id": "9eebf94b-8244-4019-a32e-606e4ee6ce7c",
+        "type": "Store",
+        "label": "Uma Yumcha",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eea22c0-e0ee-493e-8736-a88e12c3ac9d",
+          "name": "Uma Yumcha",
+          "description": "Uma Yumcha adalah kedai dimsum di Pasar Gede Solo yang terkenal dengan dimsum jumbo berisi ayam asli dan harga terjangkau.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/PoxE8JodQyMlsUYnNQ9MpygcqhgsyoVV.png",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/PoxE8JodQyMlsUYnNQ9MpygcqhgsyoVV_xs.png",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/PoxE8JodQyMlsUYnNQ9MpygcqhgsyoVV.png"
+          ],
+          "category": {
+            "id": "kuliner",
+            "label": "Kuliner",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/dHf3JxQGoNxu18k2KQpfnYHXuewgx1aG.svg"
+          },
+          "entries": [
+            {
+              "x": 773,
+              "y": 135
+            }
+          ]
+        },
+        "location_x": 765,
+        "location_y": 145,
+        "sub_label": ""
+      },
+      {
+        "id": "9eebfd8b-29bb-4086-a31a-a601f34f78b0",
+        "type": "Store",
+        "label": "Kedailicious",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eea31cf-23e0-47a6-9ef3-72f36aae8826",
+          "name": "Kedailicious",
+          "description": "Kedailicious adalah kedai makanan spesial gongso san penyet yang berada di Lantai 2 Pasar Gede Barat atau Gedung Pasar Buah di Pasar Gede",
+          "image": "https://maps.pasargedesolo.com/storage/stores/WBLXIk8TxgPv7TJKQS3c482tRbQiYny7.jpeg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/WBLXIk8TxgPv7TJKQS3c482tRbQiYny7_xs.jpeg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/WBLXIk8TxgPv7TJKQS3c482tRbQiYny7.jpeg"
+          ],
+          "category": {
+            "id": "kuliner",
+            "label": "Kuliner",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/dHf3JxQGoNxu18k2KQpfnYHXuewgx1aG.svg"
+          },
+          "entries": [
+            {
+              "x": 274,
+              "y": 261
+            }
+          ]
+        },
+        "location_x": 250,
+        "location_y": 273,
+        "sub_label": ""
+      },
+      {
+        "id": "9eebfc56-12ec-482f-994b-bfea7ae2d314",
+        "type": "Store",
+        "label": "Ayam Geprek Kulit Crispy LESTARI",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eea6689-7c10-4905-99be-e7f3312f816a",
+          "name": "Ayam Geprek Kulit Crispy LESTARI",
+          "description": "Ayam Geprek Kulit Crispy LESTARI adalah warung makanan spesialisasi ayam geprek yang berada di Lantai 2 Pasar Gede Barat atau Gedung Pasar Buah di Pasar Gede",
+          "image": "https://maps.pasargedesolo.com/storage/stores/UCqSGyPHoYyZxpxSdt1iJ0IS2l1Pt3hm.jpeg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/UCqSGyPHoYyZxpxSdt1iJ0IS2l1Pt3hm_xs.jpeg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/UCqSGyPHoYyZxpxSdt1iJ0IS2l1Pt3hm.jpeg",
+            "https://maps.pasargedesolo.com/storage/locations/2sxPzVLRdGNWTgRKBwYjjSeZXcxbuR9I8QY1C4J7.jpg"
+          ],
+          "category": {
+            "id": "kuliner",
+            "label": "Kuliner",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/dHf3JxQGoNxu18k2KQpfnYHXuewgx1aG.svg"
+          },
+          "entries": [
+            {
+              "x": 202,
+              "y": 297
+            }
+          ]
+        },
+        "location_x": 219,
+        "location_y": 286,
+        "sub_label": ""
+      },
+      {
+        "id": "9eebfca5-d79a-463f-8797-8104c200b844",
+        "type": "Store",
+        "label": "Kedai Kopi Pak Agus",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eea0884-648c-4b8e-8633-81a8616f961a",
+          "name": "Kedai Kopi Pak Agus",
+          "description": "Kedai Kopi Pak Agus di Pasar Gede Solo adalah tempat ngopi yang menawarkan suasana klasik di lantai dua sisi barat pasar . Dikenal dengan menu andalannya seperti cappuccino, kopi susu gula aren, dan caramel macchiato,",
+          "image": "https://maps.pasargedesolo.com/storage/stores/wE6qJUAz08ImViWeGszs1hhTxUAYdWjf.jpeg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/wE6qJUAz08ImViWeGszs1hhTxUAYdWjf_xs.jpeg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/wE6qJUAz08ImViWeGszs1hhTxUAYdWjf.jpeg"
+          ],
+          "category": {
+            "id": "kuliner",
+            "label": "Kuliner",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/dHf3JxQGoNxu18k2KQpfnYHXuewgx1aG.svg"
+          },
+          "entries": [
+            {
+              "x": 233,
+              "y": 435
+            }
+          ]
+        },
+        "location_x": 250,
+        "location_y": 426,
+        "sub_label": ""
+      },
+      {
+        "id": "9eebfc01-ec1a-41fe-9411-c0bae168de9b",
+        "type": "Store",
+        "label": "WM Suprenasi",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eea5027-e43d-4e4f-9955-784aaca533f1",
+          "name": "WM Suprenasi",
+          "description": "WM Supernasi adalah tempat makan baru di lantai 2 Pasar Gede Solo yang menawarkan menu nasi ayam komplit dengan harga terjangkau, sekitar Rp20.000 sudah termasuk es teh. Dengan porsi yang mengenyangkan dan rasa yang lezat, WM Supernasi menjadi pilihan favorit bagi pengunjung pasar yang mencari makan siang praktis dan nikmat",
+          "image": "https://maps.pasargedesolo.com/storage/stores/THMaHlzZlkioO2Qa2adNnklgGVVPrf2Q.jpeg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/THMaHlzZlkioO2Qa2adNnklgGVVPrf2Q_xs.jpeg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/THMaHlzZlkioO2Qa2adNnklgGVVPrf2Q.jpeg"
+          ],
+          "category": {
+            "id": "kuliner",
+            "label": "Kuliner",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/dHf3JxQGoNxu18k2KQpfnYHXuewgx1aG.svg"
+          },
+          "entries": [
+            {
+              "x": 223,
+              "y": 171
+            }
+          ]
+        },
+        "location_x": 231,
+        "location_y": 179,
+        "sub_label": ""
+      },
+      {
+        "id": "9eebf67e-eb5a-4194-bbfc-996c7c051849",
+        "type": "Store",
+        "label": "Cuma Jus",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eea7766-a62c-4250-9671-e23be938c4aa",
+          "name": "Cuma Jus",
+          "description": "Cuma Jus adalah kedai minuman segar yang berlokasi di lantai 2 Gedung Barat Pasar Gede Solo, menawarkan berbagai jus buah segar dengan konsep modern dan harga terjangkau. Dengan slogan \"100% Fresh Juice\"",
+          "image": "https://maps.pasargedesolo.com/storage/stores/xIt3yIRc4yrBXjqMeGi5eC733iU2ypFk.jpg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/xIt3yIRc4yrBXjqMeGi5eC733iU2ypFk_xs.jpg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/xIt3yIRc4yrBXjqMeGi5eC733iU2ypFk.jpg"
+          ],
+          "category": {
+            "id": "kuliner",
+            "label": "Kuliner",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/dHf3JxQGoNxu18k2KQpfnYHXuewgx1aG.svg"
+          },
+          "entries": [
+            {
+              "x": 689,
+              "y": 943
+            }
+          ]
+        },
+        "location_x": 710,
+        "location_y": 939,
+        "sub_label": ""
+      },
+      {
+        "id": "9eebf836-45f6-4343-8213-d4a75c62476b",
+        "type": "Store",
+        "label": "Big Size Juice",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eea78cd-8916-40ff-a14f-6e57486c0bf5",
+          "name": "Big Size Juice",
+          "description": "Big Size Juice adalah kedai minuman segar yang terletak di lantai 2 Pasar Gede Solo, menawarkan berbagai jus buah murni dalam porsi jumbo yang mengenyangkan. Dengan konsep \"jus sehat dan mengenyangkan,\" mereka menyajikan jus tanpa tambahan gula, air, atau es, memastikan rasa alami dari buah-buahan segar . Beberapa varian populer meliputi Pure Orange (jeruk murni), Immune Booster, dan Manggo Juice, dengan ukuran 600 ml yang cocok untuk dinikmati saat berkeliling pasar",
+          "image": "https://maps.pasargedesolo.com/storage/stores/kQjuVHnGieldSEWPvnGo2MDbl19o59qg.jpg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/kQjuVHnGieldSEWPvnGo2MDbl19o59qg_xs.jpg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/kQjuVHnGieldSEWPvnGo2MDbl19o59qg.jpg"
+          ],
+          "category": {
+            "id": "kuliner",
+            "label": "Kuliner",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/dHf3JxQGoNxu18k2KQpfnYHXuewgx1aG.svg"
+          },
+          "entries": [
+            {
+              "x": 726,
+              "y": 613
+            }
+          ]
+        },
+        "location_x": 729,
+        "location_y": 599,
+        "sub_label": ""
+      },
+      {
+        "id": "9eebff95-4008-474e-b4fd-0f5c8aeadd7b",
+        "type": "Store",
+        "label": "Nasi Liwet Bu Sri",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ee9f367-15c8-4d27-805f-6a56a321aa39",
+          "name": "Nasi Liwet Bu Sri",
+          "description": "Nasi Liwet Bu Sri Pasar Gede adalah kuliner legendaris Solo berada di Pasar Gede Barat yang menyajikan nasi gurih dengan ayam suwir, sayur labu, telur, areh, dan sambal, terkenal karena cita rasanya yang autentik dan harganya yang terjangkau.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/kbD3l4jvCzgm1d7UCDLTJTlR5pXL2KIq.jpeg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/kbD3l4jvCzgm1d7UCDLTJTlR5pXL2KIq_xs.jpeg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/kbD3l4jvCzgm1d7UCDLTJTlR5pXL2KIq.jpeg"
+          ],
+          "category": {
+            "id": "kuliner",
+            "label": "Kuliner",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/dHf3JxQGoNxu18k2KQpfnYHXuewgx1aG.svg"
+          },
+          "entries": [
+            {
+              "x": 529,
+              "y": 193
+            }
+          ]
+        },
+        "location_x": 531,
+        "location_y": 164,
+        "sub_label": ""
+      },
+      {
+        "id": "9eebffe6-fa71-4d78-a5b7-69c9b4342d57",
+        "type": "Store",
+        "label": "Kedai Mini 2",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eea82e8-0b68-44ba-97d6-ac9af62e45ff",
+          "name": "Kedai Mini 2",
+          "description": "Kedai Mini 2 adalah kedai makanan non-halal spesialisasi babi yang berada di Lantai 2 Pasar Gede Barat atau Gedung Pasar Buah di Pasar Gede",
+          "image": "https://maps.pasargedesolo.com/storage/stores/jlWklvfGR3FAcxAQtFrxgkypogk0GLke.jpg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/jlWklvfGR3FAcxAQtFrxgkypogk0GLke_xs.jpg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/jlWklvfGR3FAcxAQtFrxgkypogk0GLke.jpg",
+            "https://maps.pasargedesolo.com/storage/locations/bMUL6mz6UROP6o2NHVzvPxt31WwdF4H8EI3uHfej.jpg"
+          ],
+          "category": {
+            "id": "kuliner",
+            "label": "Kuliner",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/dHf3JxQGoNxu18k2KQpfnYHXuewgx1aG.svg"
+          },
+          "entries": [
+            {
+              "x": 448,
+              "y": 192
+            }
+          ]
+        },
+        "location_x": 450,
+        "location_y": 162,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec00ae-4173-4717-9399-bd7eb174f0e6",
+        "type": "Store",
+        "label": "Teh Tarik 3 Raja",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eea38cd-8bcd-4a56-835a-0a1fa4c48d65",
+          "name": "Teh Tarik 3 Raja",
+          "description": "Teh Tarik 3 Raja adalah kedai minuman spesialisasi teh tarik yang berada di Lantai 2 Pasar Gede Barat atau Gedung Pasar Buah di Pasar Gede yang tempatnya jadi satu dengan Dee Pastelin.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/3jVxasZlYTJcC24gOiRvcVbC2DVYsL78.jpeg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/3jVxasZlYTJcC24gOiRvcVbC2DVYsL78_xs.jpeg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/3jVxasZlYTJcC24gOiRvcVbC2DVYsL78.jpeg"
+          ],
+          "category": {
+            "id": "kuliner",
+            "label": "Kuliner",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/dHf3JxQGoNxu18k2KQpfnYHXuewgx1aG.svg"
+          },
+          "entries": [
+            {
+              "x": 295,
+              "y": 187
+            }
+          ]
+        },
+        "location_x": 293,
+        "location_y": 163,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec0bd3-c8dc-4026-a5bb-8467e4e820a1",
+        "type": "Tangga",
+        "label": "Tangga Naik Turun Pasar Buah 3",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/tTHfn881yaHYu4UoCUELmBQRIo6b4r2Q.svg",
+        "store": null,
+        "location_x": 805,
+        "location_y": 238,
+        "links": [
+          {
+            "id": "9ef49e93-f78c-4e70-8caf-3c0f52386f87",
+            "type": "Tangga",
+            "label": "Tangga lt 1.3",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/tTHfn881yaHYu4UoCUELmBQRIo6b4r2Q.svg",
+            "location_x": 876,
+            "location_y": 185,
+            "floor_id": "9ee8a4fc-e73c-466f-bd71-b14f5f535f90"
+          }
+        ]
+      },
+      {
+        "id": "9eec0b55-2fc3-4dcd-a7c9-54989062dad0",
+        "type": "Tangga",
+        "label": "Tangga Naik Turun Pasar Buah 1",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/tTHfn881yaHYu4UoCUELmBQRIo6b4r2Q.svg",
+        "store": null,
+        "location_x": 470,
+        "location_y": 624,
+        "links": [
+          {
+            "id": "9ef49e10-b3f4-4fb1-9afa-cd2ac7bae336",
+            "type": "Tangga",
+            "label": "Tangga lt 1.1",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/tTHfn881yaHYu4UoCUELmBQRIo6b4r2Q.svg",
+            "location_x": 502,
+            "location_y": 673,
+            "floor_id": "9ee8a4fc-e73c-466f-bd71-b14f5f535f90"
+          }
+        ]
+      },
+      {
+        "id": "9eec190a-b777-4fb1-bb47-6ff30a39b519",
+        "type": "Store",
+        "label": "Warung Makan Seafood Sido Laras",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eea7e50-b93d-498b-88b0-90a186805ce3",
+          "name": "Warung Makan Seafood Sido Laras",
+          "description": "Warung Makan Seafood Sido Laras merupakan salah satu warung makan yang ada di Pasar Gede",
+          "image": "https://maps.pasargedesolo.com/storage/stores/CZQVcU1wP3BteP4r9DBU8ZalEWWLd17S.jpg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/CZQVcU1wP3BteP4r9DBU8ZalEWWLd17S_xs.jpg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/CZQVcU1wP3BteP4r9DBU8ZalEWWLd17S.jpg"
+          ],
+          "category": {
+            "id": "kuliner",
+            "label": "Kuliner",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/dHf3JxQGoNxu18k2KQpfnYHXuewgx1aG.svg"
+          },
+          "entries": [
+            {
+              "x": 675,
+              "y": 601
+            }
+          ]
+        },
+        "location_x": 679,
+        "location_y": 586,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec0b8a-15f9-4358-85c5-46133cf330b5",
+        "type": "Tangga",
+        "label": "Tangga Naik Turun Pasar Buah 2",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/tTHfn881yaHYu4UoCUELmBQRIo6b4r2Q.svg",
+        "store": null,
+        "location_x": 459,
+        "location_y": 831,
+        "links": [
+          {
+            "id": "9ef49dee-e4b2-4e01-9963-0c6f4be6f493",
+            "type": "Tangga",
+            "label": "Tangga lt 1.2",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/tTHfn881yaHYu4UoCUELmBQRIo6b4r2Q.svg",
+            "location_x": 540,
+            "location_y": 766,
+            "floor_id": "9ee8a4fc-e73c-466f-bd71-b14f5f535f90"
+          }
+        ]
+      },
+      {
+        "id": "9eec0c15-0184-41b5-9bba-f0581b28174c",
+        "type": "Tangga",
+        "label": "Tangga Naik Turun Pasar Buah 4",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/tTHfn881yaHYu4UoCUELmBQRIo6b4r2Q.svg",
+        "store": null,
+        "location_x": 179,
+        "location_y": 159,
+        "links": [
+          {
+            "id": "9ef49ed1-cd82-4787-a3c2-cee71937dd17",
+            "type": "Tangga",
+            "label": "Tangga lt 1.4",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/tTHfn881yaHYu4UoCUELmBQRIo6b4r2Q.svg",
+            "location_x": 215,
+            "location_y": 200,
+            "floor_id": "9ee8a4fc-e73c-466f-bd71-b14f5f535f90"
+          }
+        ]
+      },
+      {
+        "id": "9eebff2d-d940-4772-9b0f-6a683701cd02",
+        "type": "Store",
+        "label": "Tama Kitchen",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eea6aa2-4f4a-4801-9338-34258694226a",
+          "name": "Tama Kitchen",
+          "description": "Tama Kitchen adalah kedai makanan yang berada di Lantai 2 Pasar Gede Barat atau Gedung Pasar Buah di Pasar Gede.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/ID4mL5tSeAhKBVyr973E6kBnleCU82fR.png",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/ID4mL5tSeAhKBVyr973E6kBnleCU82fR_xs.png",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/ID4mL5tSeAhKBVyr973E6kBnleCU82fR.png",
+            "https://maps.pasargedesolo.com/storage/locations/FTCyN9bEbBsmFp6QmHXAhiehQnZdM3zn1YQdph3F.jpg"
+          ],
+          "category": {
+            "id": "kuliner",
+            "label": "Kuliner",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/dHf3JxQGoNxu18k2KQpfnYHXuewgx1aG.svg"
+          },
+          "entries": [
+            {
+              "x": 289,
+              "y": 677
+            }
+          ]
+        },
+        "location_x": 306,
+        "location_y": 668,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec19e0-123d-4978-a3f4-4a10f1252c15",
+        "type": "Store",
+        "label": "Dee Pastelin",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eea3847-0ce7-4b45-9ac7-2d2751b05b2a",
+          "name": "Dee Pastelin",
+          "description": "Dee Pastelin adalah kedai makanan oleh-oleh spesial Solo yaitu home made pastel premium yang berada di Lantai 2 Pasar Gede Barat atau Gedung Pasar Buah di Pasar Gede",
+          "image": "https://maps.pasargedesolo.com/storage/stores/I9IDLJ5driqqLQVoYAfx1S9WiGk4GeUJ.jpeg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/I9IDLJ5driqqLQVoYAfx1S9WiGk4GeUJ_xs.jpeg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/I9IDLJ5driqqLQVoYAfx1S9WiGk4GeUJ.jpeg"
+          ],
+          "category": {
+            "id": "kuliner",
+            "label": "Kuliner",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/dHf3JxQGoNxu18k2KQpfnYHXuewgx1aG.svg"
+          },
+          "entries": [
+            {
+              "x": 312,
+              "y": 191
+            }
+          ]
+        },
+        "location_x": 307,
+        "location_y": 163,
+        "sub_label": ""
+      },
+      {
+        "id": "a1018e0d-acb7-474f-8e2d-9ef389f237bb",
+        "type": "Store",
+        "label": "Atedoz",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "a1018d43-f030-4770-8fc1-d683144d6dd8",
+          "name": "Atedoz",
+          "description": "Atedoz adalah photobox estetik yang menghadirkan tiga pilihan konsep foto dalam satu tempat, mulai dari Spotlight, Vintage, dan Red Theme. Mulai dari Rp 35.000, pengunjung sudah mendapatkan softfile gratis dan bebas mengekspresikan berbagai mood foto bersama.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/mtSNxOxMGjbTPcaB7fUON51g3fHSG84v.png",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/mtSNxOxMGjbTPcaB7fUON51g3fHSG84v_xs.png",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/mtSNxOxMGjbTPcaB7fUON51g3fHSG84v.png",
+            "https://maps.pasargedesolo.com/storage/locations/MM94pNiweKEjrPlAG3nv0fN0SROjg9QxS9O3jZ4G.png"
+          ],
+          "category": {
+            "id": "entertainment",
+            "label": "Entertainment",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/vXc2dOFY44fJYdzgYJdSm0tMvrdCKqwU.svg"
+          },
+          "entries": [
+            {
+              "x": 306,
+              "y": 93
+            }
+          ]
+        },
+        "location_x": 308,
+        "location_y": 116,
+        "sub_label": ""
+      },
+      {
+        "id": "a1018efd-0d08-4fcb-89b0-c4c0560fe3a5",
+        "type": "Store",
+        "label": "Soto Gobyos Ais",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "a10181e9-01e7-4268-86fd-25de6322f2f8",
+          "name": "Soto Gobyos Ais",
+          "description": "Soto Gobyos Ais merupakan tenant kuliner spesialis soto yang mengutamakan kualitas bahan dan racikan rempah pilihan. Dengan perpaduan rasa yang autentik dan konsisten, Soto Gobyos Ais menghadirkan pengalaman kuliner yang hangat, lezat, dan berkarakter di setiap sajiannya.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/QI1m3qyC7L2tgvgXYkCizc6z81d2AJMw.png",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/QI1m3qyC7L2tgvgXYkCizc6z81d2AJMw_xs.png",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/QI1m3qyC7L2tgvgXYkCizc6z81d2AJMw.png"
+          ],
+          "category": {
+            "id": "kuliner",
+            "label": "Kuliner",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/dHf3JxQGoNxu18k2KQpfnYHXuewgx1aG.svg"
+          },
+          "entries": [
+            {
+              "x": 309,
+              "y": 409
+            }
+          ]
+        },
+        "location_x": 285,
+        "location_y": 418,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec196a-6c0b-4204-8225-52d3308a3858",
+        "type": "Store",
+        "label": "Selat Steak PXD",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eea82e6-dd82-42ab-b2af-cc3aab857bc5",
+          "name": "Selat Steak PXD",
+          "description": "Selat Steak PXD merupakan salah satu tempat makan spesial selat steak yang ada di Pasar Gede",
+          "image": "https://maps.pasargedesolo.com/storage/stores/F9ZcCqwAgATDV8OPjyY6qTMyxprJ2Xnw.jpg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/F9ZcCqwAgATDV8OPjyY6qTMyxprJ2Xnw_xs.jpg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/F9ZcCqwAgATDV8OPjyY6qTMyxprJ2Xnw.jpg"
+          ],
+          "category": {
+            "id": "kuliner",
+            "label": "Kuliner",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/dHf3JxQGoNxu18k2KQpfnYHXuewgx1aG.svg"
+          },
+          "entries": [
+            {
+              "x": 682,
+              "y": 627
+            }
+          ]
+        },
+        "location_x": 680,
+        "location_y": 633,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec8a0a-fc34-41da-9271-270faef1d505",
+        "type": "Store",
+        "label": "The French Press",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eec1e60-0bf6-467c-ac59-024974687e4f",
+          "name": "The French Press",
+          "description": "The French Press (TFP) adalah warung kopi unik di lantai 2 Pasar Gede Solo yang menyajikan hidangan ala Barat seperti buttermilk fried chicken, mac & cheese, dan Mexican beef casserole dalam suasana pasar tradisional. Dengan konsep \"Menu of the Day\", TFP menawarkan variasi menu harian yang membuat pengunjung selalu memiliki alasan untuk kembali.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/JKf7MGkTYVF6Nf7tng7F6fL1R0rPUZoH.jpg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/JKf7MGkTYVF6Nf7tng7F6fL1R0rPUZoH_xs.jpg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/JKf7MGkTYVF6Nf7tng7F6fL1R0rPUZoH.jpg"
+          ],
+          "category": {
+            "id": "kuliner",
+            "label": "Kuliner",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/dHf3JxQGoNxu18k2KQpfnYHXuewgx1aG.svg"
+          },
+          "entries": [
+            {
+              "x": 794,
+              "y": 382
+            }
+          ]
+        },
+        "location_x": 777,
+        "location_y": 376,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec8a91-c6e3-4aec-a28b-1bac434d66e7",
+        "type": "Store",
+        "label": "Kopi Labuhan Hati",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eec244d-1434-42e8-b7b4-4b19c3c741f9",
+          "name": "Kopi Labuhan Hati",
+          "description": "Kopi Labuan Hati adalah kedai kopi modern yang terletak di lantai 2 Pasar Gede Solo, menawarkan berbagai minuman kopi, non-kopi, serta menu makanan seperti rice bowl dan camilan ringan. Dengan pilihan menu seperti Es Kopi Suren, Kopsu Mangga, Soda Gembira Spesial, dan Cumi Jlitheng, tempat ini menjadi favorit bagi pengunjung pasar yang mencari suasana santai dengan harga terjangkau.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/eOaZ4hBYTgaa2nvVAeJO8xF94oClp64U.jpg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/eOaZ4hBYTgaa2nvVAeJO8xF94oClp64U_xs.jpg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/eOaZ4hBYTgaa2nvVAeJO8xF94oClp64U.jpg"
+          ],
+          "category": {
+            "id": "kuliner",
+            "label": "Kuliner",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/dHf3JxQGoNxu18k2KQpfnYHXuewgx1aG.svg"
+          },
+          "entries": [
+            {
+              "x": 681,
+              "y": 91
+            }
+          ]
+        },
+        "location_x": 682,
+        "location_y": 113,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec89c4-edac-4e3b-a427-a53b4f62c2cf",
+        "type": "Store",
+        "label": "Lembah manah",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eea2fdf-b4b0-4284-bee0-ecc514fb3724",
+          "name": "Lembah manah",
+          "description": "Lembah manah adalah kedai makanan spesialisasi geprek dan penyetan yang berada di Lantai 2 Pasar Gede Barat  atau Gedung Pasar Buah di Pasar Gede",
+          "image": "https://maps.pasargedesolo.com/storage/stores/niw3g0qKeVT0VP9HaSx8ZmQ75hyQe7sf.jpeg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/niw3g0qKeVT0VP9HaSx8ZmQ75hyQe7sf_xs.jpeg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/niw3g0qKeVT0VP9HaSx8ZmQ75hyQe7sf.jpeg"
+          ],
+          "category": {
+            "id": "kuliner",
+            "label": "Kuliner",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/dHf3JxQGoNxu18k2KQpfnYHXuewgx1aG.svg"
+          },
+          "entries": [
+            {
+              "x": 540,
+              "y": 625
+            }
+          ]
+        },
+        "location_x": 539,
+        "location_y": 641,
+        "sub_label": ""
+      },
+      {
+        "id": "9ef1f725-ee73-4b91-9baa-4c1149cbde00",
+        "type": "Store",
+        "label": "Minoom Ahh",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eec262a-4193-4e16-b415-36b712f6171f",
+          "name": "Minoom Ahh",
+          "description": "Minoom Ahh adalah kedai minuman kekinian yang terletak di lantai 2 Pasar Gede Solo, Blok B12, tepat di belakang Dimsum Uma Yumcha. Kedai ini menawarkan berbagai pilihan minuman segar seperti milk tea, yakult jelly, brown sugar boba, dan kopi, dengan harga terjangkau",
+          "image": "https://maps.pasargedesolo.com/storage/stores/7WnaN8qs5EWZ6k7Yz7yl3psjTmAiuKXs.jpg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/7WnaN8qs5EWZ6k7Yz7yl3psjTmAiuKXs_xs.jpg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/7WnaN8qs5EWZ6k7Yz7yl3psjTmAiuKXs.jpg"
+          ],
+          "category": {
+            "id": "kuliner",
+            "label": "Kuliner",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/dHf3JxQGoNxu18k2KQpfnYHXuewgx1aG.svg"
+          },
+          "entries": [
+            {
+              "x": 704,
+              "y": 165
+            }
+          ]
+        },
+        "location_x": 704,
+        "location_y": 178,
+        "sub_label": ""
+      },
+      {
+        "id": "9ef1f57c-69fb-411d-9f4a-36c12b4dd723",
+        "type": "Store",
+        "label": "Mie Pinangsia",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eec1322-6802-4a08-b0d9-c835ebd3f8ec",
+          "name": "Mie Pinangsia",
+          "description": "Mie Pinangsia Pasar Gede adalah warung bakmi legendaris yang terletak di lantai 2 Pasar Gede Solo, terkenal dengan sajian mie tipis kenyal dan pangsit rebus yang gurih. Menu andalannya meliputi mie kuah, mie pangsit, dan kwetiau dengan topping daging cincang, bakso, serta pangsit isi babi, menjadikannya favorit bagi pecinta kuliner non-halal.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/eTvpmgim9Q7IaRTI3rp6JOhIEWChuWoP.jpg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/eTvpmgim9Q7IaRTI3rp6JOhIEWChuWoP_xs.jpg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/eTvpmgim9Q7IaRTI3rp6JOhIEWChuWoP.jpg"
+          ],
+          "category": {
+            "id": "kuliner",
+            "label": "Kuliner",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/dHf3JxQGoNxu18k2KQpfnYHXuewgx1aG.svg"
+          },
+          "entries": [
+            {
+              "x": 222,
+              "y": 126
+            }
+          ]
+        },
+        "location_x": 238,
+        "location_y": 125,
+        "sub_label": ""
+      },
+      {
+        "id": "9ef1f6c5-d0fd-40a5-acf3-0c9cce8f81d8",
+        "type": "Store",
+        "label": "Warung Makan Bu Marti",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eec27ef-8d3c-409d-aeef-c0b9a1ead03f",
+          "name": "Warung Makan Bu Marti",
+          "description": "Warung Makan Bu Marti adalah warteg yang menjual berbagai masakan Khas Jawa dengan harga terjangkau",
+          "image": "https://maps.pasargedesolo.com/storage/stores/3raywnew4rDjiN3CjVCfzuKegyKMkmSv.jpg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/3raywnew4rDjiN3CjVCfzuKegyKMkmSv_xs.jpg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/3raywnew4rDjiN3CjVCfzuKegyKMkmSv.jpg"
+          ],
+          "category": {
+            "id": "kuliner",
+            "label": "Kuliner",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/dHf3JxQGoNxu18k2KQpfnYHXuewgx1aG.svg"
+          },
+          "entries": [
+            {
+              "x": 755,
+              "y": 173
+            }
+          ]
+        },
+        "location_x": 749,
+        "location_y": 185,
+        "sub_label": ""
+      },
+      {
+        "id": "9ef1f800-6c29-497a-8697-0bd1532fdd3d",
+        "type": "Store",
+        "label": "Rujak Mood",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eec2922-a30d-4a1d-9720-5c3781d8fae8",
+          "name": "Rujak Mood",
+          "description": "Rujak Mood adalah kedai kuliner di lantai 2 Pasar Gede Solo yang menyajikan berbagai hidangan segar dan unik, seperti somtam (salad pepaya ala Thailand), asinan, rujak Bangkok, dan minuman seperti Thai tea.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/eHRLmxjMNXSE7yEfVGcgPeICEM9NfRUY.jpg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/eHRLmxjMNXSE7yEfVGcgPeICEM9NfRUY_xs.jpg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/eHRLmxjMNXSE7yEfVGcgPeICEM9NfRUY.jpg",
+            "https://maps.pasargedesolo.com/storage/locations/vgvmWlPggaRVLNEzkelLSuLmP1AM9pDloBvSX7iw.jpg",
+            "https://maps.pasargedesolo.com/storage/locations/9RXGqAZMislEw1PBYVPTzN7wpuq2fAy4eM51XHWX.jpg"
+          ],
+          "category": {
+            "id": "kuliner",
+            "label": "Kuliner",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/dHf3JxQGoNxu18k2KQpfnYHXuewgx1aG.svg"
+          },
+          "entries": [
+            {
+              "x": 723,
+              "y": 635
+            }
+          ]
+        },
+        "location_x": 720,
+        "location_y": 644,
+        "sub_label": ""
+      },
+      {
+        "id": "9ef20721-91df-4a4a-9019-c8322f75f9c9",
+        "type": "Store",
+        "label": "Gongso 92",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef206d1-1f61-4bdd-9674-bfb487513b02",
+          "name": "Gongso 92",
+          "description": "Gongso 92 adalah kedai makanan spesialisasi gongso yang berada di lantai 2 Pasar Gede Barat atau Pasar Buah di Pasar Gede",
+          "image": "https://maps.pasargedesolo.com/storage/stores/FBk8gYkIMq0SbtDMdDNS8yW1MOua1aMS.jpeg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/FBk8gYkIMq0SbtDMdDNS8yW1MOua1aMS_xs.jpeg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/FBk8gYkIMq0SbtDMdDNS8yW1MOua1aMS.jpeg"
+          ],
+          "category": {
+            "id": "kuliner",
+            "label": "Kuliner",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/dHf3JxQGoNxu18k2KQpfnYHXuewgx1aG.svg"
+          },
+          "entries": [
+            {
+              "x": 310,
+              "y": 630
+            }
+          ]
+        },
+        "location_x": 315,
+        "location_y": 641,
+        "sub_label": ""
+      },
+      {
+        "id": "9ef20a06-9d6f-487e-8f20-f4834fbf8d4c",
+        "type": "Store",
+        "label": "Meurdue Chocolate & Coffee",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eec25bf-c744-4f26-98d1-11c8f4730e0c",
+          "name": "Meurdue Chocolate & Coffee",
+          "description": "Meurdue Chocolate & Coffee adalah kafe modern yang terletak di ujung Pasar Gede Barat Solo. Kafe ini menyajikan berbagai minuman cokelat dan kopi, serta aneka makanan ringan dalam suasana yang nyaman dan estetik.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/9bal7Tljg4rY63UzVu6GqxDaWXLG6Y8Y.jpg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/9bal7Tljg4rY63UzVu6GqxDaWXLG6Y8Y_xs.jpg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/9bal7Tljg4rY63UzVu6GqxDaWXLG6Y8Y.jpg",
+            "https://maps.pasargedesolo.com/storage/locations/7cA9T9GAnapAxXhbIa5F22Vyv7P7GUnR9z2rthDS.jpg"
+          ],
+          "category": {
+            "id": "kuliner",
+            "label": "Kuliner",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/dHf3JxQGoNxu18k2KQpfnYHXuewgx1aG.svg"
+          },
+          "entries": [
+            {
+              "x": 403,
+              "y": 93
+            }
+          ]
+        },
+        "location_x": 404,
+        "location_y": 118,
+        "sub_label": ""
+      },
+      {
+        "id": "9ef24fb8-a00e-4405-aa12-a42c322083e2",
+        "type": "Store",
+        "label": "Toilet lt. 2",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef1f850-7955-478e-89a2-c71d105ccd4f",
+          "name": "Toilet",
+          "description": "Fasilitas toilet yang berada di Pasar Gede",
+          "image": "",
+          "image_thumb": "",
+          "images": [],
+          "category": {
+            "id": "fasilitas-umum",
+            "label": "Fasilitas Umum",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/DhR2azyaRB6ATAi5y9PLFiCNp8qn85nd.jpeg"
+          },
+          "entries": [
+            {
+              "x": 675,
+              "y": 806
+            }
+          ]
+        },
+        "location_x": 671,
+        "location_y": 802,
+        "sub_label": ""
+      },
+      {
+        "id": "9ef20284-a758-4a52-8ffa-760e2ea92da3",
+        "type": "Store",
+        "label": "Lele Melet dan Nasi Bakar Le JM",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef20249-5214-4ff7-ab71-f67d18ba9999",
+          "name": "Lele Melet dan Nasi Bakar Le JM",
+          "description": "Lele Melet dan Nasi Bakar Le JM adalah warung makan di lantai 2 Pasar Gede Solo yang terkenal dengan sajian lele goreng pedas dan sambal khas. Menu andalannya mencakup lele melet, kulit crispy, dan sambal bawang, yang disajikan bersama nasi dan minuman seperti es lemon tea",
+          "image": "https://maps.pasargedesolo.com/storage/stores/LoBtJtxKl6EIwX8AbPfUmD7pfwmxyocP.png",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/LoBtJtxKl6EIwX8AbPfUmD7pfwmxyocP_xs.png",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/LoBtJtxKl6EIwX8AbPfUmD7pfwmxyocP.png"
+          ],
+          "category": {
+            "id": "kuliner",
+            "label": "Kuliner",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/dHf3JxQGoNxu18k2KQpfnYHXuewgx1aG.svg"
+          },
+          "entries": [
+            {
+              "x": 347,
+              "y": 624
+            }
+          ]
+        },
+        "location_x": 351,
+        "location_y": 632,
+        "sub_label": ""
+      },
+      {
+        "id": "9eebf885-f1b5-474d-a43b-4c44df2578ad",
+        "type": "Store",
+        "label": "Dimsum Jhian Cook",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eea77e7-05a4-4e23-9f13-7f1fa3f7d8d0",
+          "name": "Dimsum Jhian Cook",
+          "description": "Dimsum Jhian Cook adalah kedai dimsum halal yang terletak di lantai 2 sisi selatan Pasar Gede Solo, dekat dengan Cendono Wanggi. Kedai ini menawarkan berbagai pilihan dimsum yang lezat dan terjangkau, menjadikannya favorit di kalangan pengunjung pasar.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/YoYOzIBqgSY8l9vlLSX7BkD5Pe9zGVvG.jpg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/YoYOzIBqgSY8l9vlLSX7BkD5Pe9zGVvG_xs.jpg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/YoYOzIBqgSY8l9vlLSX7BkD5Pe9zGVvG.jpg"
+          ],
+          "category": {
+            "id": "kuliner",
+            "label": "Kuliner",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/dHf3JxQGoNxu18k2KQpfnYHXuewgx1aG.svg"
+          },
+          "entries": [
+            {
+              "x": 753,
+              "y": 571
+            }
+          ]
+        },
+        "location_x": 737,
+        "location_y": 561,
+        "sub_label": ""
+      },
+      {
+        "id": "9ef1f535-7132-41fd-a82b-64fc48bc0701",
+        "type": "Store",
+        "label": "Geprek Lovers by Tama Kitchen",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eea6b58-f137-4ace-8484-5d44823f37bc",
+          "name": "Geprek Lovers by Tama Kitchen",
+          "description": "Geprek Lovers by Tama Kitchen kedai makanan spesialisasi olahan ayam geprek yang berada di Lantai 2 Pasar Gede Barat atau Gedung Pasar Buah di Pasar Gede",
+          "image": "https://maps.pasargedesolo.com/storage/stores/M4pXtjaBl63lvke2iC6hHGescvDn9V3L.jpeg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/M4pXtjaBl63lvke2iC6hHGescvDn9V3L_xs.jpeg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/M4pXtjaBl63lvke2iC6hHGescvDn9V3L.jpeg",
+            "https://maps.pasargedesolo.com/storage/locations/sC7BWAoTreswMJuGx6ishl84EvFdKK1o43wvxCXO.jpg"
+          ],
+          "category": {
+            "id": "kuliner",
+            "label": "Kuliner",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/dHf3JxQGoNxu18k2KQpfnYHXuewgx1aG.svg"
+          },
+          "entries": [
+            {
+              "x": 288,
+              "y": 667
+            }
+          ]
+        },
+        "location_x": 310,
+        "location_y": 663,
+        "sub_label": ""
+      },
+      {
+        "id": "9eebfdd5-a761-47be-b239-6fdf72f3bc7f",
+        "type": "Store",
+        "label": "Box 2 Box",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eea5a64-0882-4028-b7ef-3c199f892077",
+          "name": "Box 2 Box",
+          "description": "Box2Box Photo Box adalah layanan photobooth kreatif yang hadir di berbagai lokasi strategis di Solo, seperti di Pasar Gede. Mereka menawarkan pengalaman berfoto dengan konsep unik dan estetik, termasuk photobox bertema retro, kereta api, dan bahkan bus . Dengan harga terjangkau, mulai dari Rp10.000, Box2Box menjadi pilihan populer bagi warga Solo dan wisatawan untuk mengabadikan momen spesial",
+          "image": "https://maps.pasargedesolo.com/storage/stores/Gi6PeWBBjn4wUBrL1zVcUwDorrR0ZupY.jpeg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/Gi6PeWBBjn4wUBrL1zVcUwDorrR0ZupY_xs.jpeg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/Gi6PeWBBjn4wUBrL1zVcUwDorrR0ZupY.jpeg",
+            "https://maps.pasargedesolo.com/storage/locations/hdtujsbNuptO0IXIyUwVhcOUROg1WTWVhDCY0BkC.jpg"
+          ],
+          "category": {
+            "id": "entertainment",
+            "label": "Entertainment",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/vXc2dOFY44fJYdzgYJdSm0tMvrdCKqwU.svg"
+          },
+          "entries": [
+            {
+              "x": 296,
+              "y": 480
+            }
+          ]
+        },
+        "location_x": 293,
+        "location_y": 465,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec0166-4d0a-4009-a5ca-facf64aeace2",
+        "type": "Store",
+        "label": "Warung Makan Bu Tapruk",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eea2411-8e43-4db2-a305-aa169c49f32f",
+          "name": "Warung Makan Bu Tapruk",
+          "description": "Warung Makan Bu Tapruk adalah warung legendaris di Pasar Gede Solo yang terkenal dengan nasi tumpang khas Jawa, sajian nasi dengan sambal tempe bosok dan sayur daun singkong, yang tetap digemari karena rasa autentik dan harga terjangkau.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/38O8fR3JFUbHoN7XIh44wgM7vJb0WTJg.jpeg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/38O8fR3JFUbHoN7XIh44wgM7vJb0WTJg_xs.jpeg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/38O8fR3JFUbHoN7XIh44wgM7vJb0WTJg.jpeg"
+          ],
+          "category": {
+            "id": "kuliner",
+            "label": "Kuliner",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/dHf3JxQGoNxu18k2KQpfnYHXuewgx1aG.svg"
+          },
+          "entries": [
+            {
+              "x": 253,
+              "y": 201
+            }
+          ]
+        },
+        "location_x": 243,
+        "location_y": 199,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec0058-6839-4405-9735-d22dbcadc6d1",
+        "type": "Store",
+        "label": "Kedai Nyah T3ll On",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eea6394-5507-45c2-962b-b27c68fbb661",
+          "name": "Kedai Nyah T3ll On",
+          "description": "Kedai Nyah T3ll On adalah kedai makanan yang berada di Lantai 2 Pasar Gede Barat atau Gedung Pasar Buah di Pasar Gede",
+          "image": "https://maps.pasargedesolo.com/storage/stores/Mdfp9Aeban3N790hr2ZWeGN6jEoBv96q.jpeg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/Mdfp9Aeban3N790hr2ZWeGN6jEoBv96q_xs.jpeg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/Mdfp9Aeban3N790hr2ZWeGN6jEoBv96q.jpeg"
+          ],
+          "category": {
+            "id": "kuliner",
+            "label": "Kuliner",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/dHf3JxQGoNxu18k2KQpfnYHXuewgx1aG.svg"
+          },
+          "entries": [
+            {
+              "x": 369,
+              "y": 194
+            }
+          ]
+        },
+        "location_x": 372,
+        "location_y": 162,
+        "sub_label": ""
+      },
+      {
+        "id": "9eec17ce-36e9-410f-b65e-7bc7fdf435e5",
+        "type": "Store",
+        "label": "Pentol Monster",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eec1234-4541-46bc-84ad-e24bcae6e77d",
+          "name": "Pentol Monster",
+          "description": "Pentol Monter adalah tenant yang menjual pentol dengan tekstur kenyal, rasa gurih, dan pilihan bumbu pedas yang menggugah selera. Cocok untuk pencinta camilan ekstrem dengan porsi mengenyangkan.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/sA1G7dCyaxkFkD6ic5M0w7HPyaBQQrfe.jpg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/sA1G7dCyaxkFkD6ic5M0w7HPyaBQQrfe_xs.jpg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/sA1G7dCyaxkFkD6ic5M0w7HPyaBQQrfe.jpg"
+          ],
+          "category": {
+            "id": "kuliner",
+            "label": "Kuliner",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/dHf3JxQGoNxu18k2KQpfnYHXuewgx1aG.svg"
+          },
+          "entries": [
+            {
+              "x": 727,
+              "y": 701
+            }
+          ]
+        },
+        "location_x": 712,
+        "location_y": 692,
+        "sub_label": ""
+      },
+      {
+        "id": "9ef1f5f0-5a61-49c5-a77f-4b10d84b8129",
+        "type": "Store",
+        "label": "Kedai Mini 2 ",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eea82e8-0b68-44ba-97d6-ac9af62e45ff",
+          "name": "Kedai Mini 2",
+          "description": "Kedai Mini 2 adalah kedai makanan non-halal spesialisasi babi yang berada di Lantai 2 Pasar Gede Barat atau Gedung Pasar Buah di Pasar Gede",
+          "image": "https://maps.pasargedesolo.com/storage/stores/jlWklvfGR3FAcxAQtFrxgkypogk0GLke.jpg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/jlWklvfGR3FAcxAQtFrxgkypogk0GLke_xs.jpg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/jlWklvfGR3FAcxAQtFrxgkypogk0GLke.jpg",
+            "https://maps.pasargedesolo.com/storage/locations/yIe3o1CDhh3dfnxXUKZknb1liMuvlVt4j7ZT8k4N.jpg"
+          ],
+          "category": {
+            "id": "kuliner",
+            "label": "Kuliner",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/dHf3JxQGoNxu18k2KQpfnYHXuewgx1aG.svg"
+          },
+          "entries": [
+            {
+              "x": 565,
+              "y": 91
+            }
+          ]
+        },
+        "location_x": 563,
+        "location_y": 115,
+        "sub_label": ""
+      },
+      {
+        "id": "9ef1fda9-a454-450f-99d5-93117e703bac",
+        "type": "Store",
+        "label": "Pastel Goreng Solo by Cinrol",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9ef1fd30-904a-4893-99f9-f93b960c426c",
+          "name": "Pastel Goreng Solo by Cinrol",
+          "description": "Pastel Goreng Solo by Cinrol adalah kedai makanan spesialisasi menjual pastel goreng khas solo dan jajanan pasar yang menerima pemesanan untuk acara-acara spesial anda",
+          "image": "https://maps.pasargedesolo.com/storage/stores/Pc5rpR4JCvue0O1GwaR63CdaeGmSMONQ.jpeg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/Pc5rpR4JCvue0O1GwaR63CdaeGmSMONQ_xs.jpeg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/Pc5rpR4JCvue0O1GwaR63CdaeGmSMONQ.jpeg"
+          ],
+          "category": {
+            "id": "kuliner",
+            "label": "Kuliner",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/dHf3JxQGoNxu18k2KQpfnYHXuewgx1aG.svg"
+          },
+          "entries": [
+            {
+              "x": 297,
+              "y": 614
+            }
+          ]
+        },
+        "location_x": 291,
+        "location_y": 607,
+        "sub_label": ""
+      },
+      {
+        "id": "9eebf74f-6286-4b7b-9f05-21558012a6b9",
+        "type": "Store",
+        "label": "Kedai Njonja",
+        "icon": "https://maps.pasargedesolo.com/storage/icons/HHb5C9pdl2x4Jt4aYZkWqmQY5d6GSa79.svg",
+        "store": {
+          "id": "9eea75d1-5b20-41b2-a5e2-1994d31e854a",
+          "name": "Kedai Njonja",
+          "description": "Kedai Njonja adalah kedai yang menjual aneka menu seperti toast, rice box, dan Mie Bangladesh, serta menjadi tempat nongkrong dengan nuansa santai di lantai 2 Pasar Gede Solo.",
+          "image": "https://maps.pasargedesolo.com/storage/stores/Iyp5yqGuaB4lvoiREdmOq4RoxBtRghCZ.jpg",
+          "image_thumb": "https://maps.pasargedesolo.com/storage/stores/Iyp5yqGuaB4lvoiREdmOq4RoxBtRghCZ_xs.jpg",
+          "images": [
+            "https://maps.pasargedesolo.com/storage/stores/Iyp5yqGuaB4lvoiREdmOq4RoxBtRghCZ.jpg",
+            "https://maps.pasargedesolo.com/storage/locations/uQUOmrhcjJdT0TeHBK6ekdmNDV0oNMaoFyEvVtqa.jpg"
+          ],
+          "category": {
+            "id": "kuliner",
+            "label": "Kuliner",
+            "icon": "https://maps.pasargedesolo.com/storage/icons/dHf3JxQGoNxu18k2KQpfnYHXuewgx1aG.svg"
+          },
+          "entries": [
+            {
+              "x": 676,
+              "y": 857
+            }
+          ]
+        },
+        "location_x": 711,
+        "location_y": 852,
+        "sub_label": ""
+      }
+    ]
+  }
+}
