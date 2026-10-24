@@ -512,25 +512,6 @@ body {
     box-shadow: var(--shadow-md);
 }
 
-/* Floor Indicator */
-.floor-indicator {
-    position: absolute;
-    left: 16px;
-    bottom: 16px;
-    background: white;
-    padding: 8px 16px;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow-md);
-    z-index: 800;
-    border: 2px solid var(--primary);
-}
-
-.floor-indicator-text {
-    font-size: 0.85rem;
-    font-weight: 700;
-    color: var(--primary);
-}
-
 /* Detail Panel Backdrop */
 .detail-backdrop {
     position: fixed;

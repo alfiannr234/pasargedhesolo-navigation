@@ -143,11 +143,6 @@
         bottom: 70px;
     }
     
-    .floor-indicator {
-        left: 12px;
-        bottom: 70px;
-    }
-    
     .detail-panel {
         width: 100%;
         top: auto;
@@ -209,7 +204,6 @@
     .app-header,
     .sidebar,
     .map-controls,
-    .floor-indicator,
     .a11y-status,
     .detail-panel {
         display: none !important;

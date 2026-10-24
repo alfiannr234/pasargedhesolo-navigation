@@ -330,11 +330,6 @@ const MarketMap = (() => {
             headerSubtitle.textContent = `${bldName} · Lantai ${currentFloor}`;
         }
 
-        const floorIndicator = document.getElementById('floorIndicator');
-        if (floorIndicator) {
-            floorIndicator.querySelector('.floor-indicator-text').textContent = `${bldName} · Lantai ${currentFloor}`;
-        }
-
         // Subtitles in floor selector
         const f1Sub = document.getElementById('floor1Subtitle');
         const f2Sub = document.getElementById('floor2Subtitle');
