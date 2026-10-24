@@ -254,6 +254,21 @@
                     </button>
                 </div>
 
+                <!-- Audio Guidance Setting Toggle (Default: Menyala / ON) -->
+                <div class="route-audio-setting" id="routeAudioSetting">
+                    <div class="route-audio-info">
+                        <span class="route-audio-icon" id="routeAudioIcon">🔊</span>
+                        <div>
+                            <span class="route-audio-title">Panduan Suara Rute</span>
+                            <small class="route-audio-desc">Dikte arah belokan otomatis (Default: Menyala)</small>
+                        </div>
+                    </div>
+                    <label class="switch-toggle" for="routeAudioToggle" title="Nyalakan atau matikan panduan suara rute">
+                        <input type="checkbox" id="routeAudioToggle" checked>
+                        <span class="switch-slider"></span>
+                    </label>
+                </div>
+
                 <button class="btn-primary nav-go-btn" id="navGoBtn" disabled>
                     <i data-lucide="route" aria-hidden="true"></i>
                     Cari Rute
@@ -262,6 +277,24 @@
                 <!-- Route Result -->
                 <div class="route-result" id="routeResult" style="display:none;">
                     <div class="route-summary" id="routeSummary"></div>
+
+                    <!-- Audio Playback Action Bar -->
+                    <div class="route-audio-action-bar" id="routeAudioActionBar">
+                        <button type="button" class="btn-play-audio" id="btnPlayAudio" title="Dengarkan panduan suara rute ini">
+                            <span class="btn-audio-icon" id="btnAudioIcon">🔊</span>
+                            <span id="btnAudioText">Putar Panduan Suara</span>
+                        </button>
+                    </div>
+
+                    <!-- Route Step-by-Step Guidance -->
+                    <div class="route-steps-container" id="routeStepsContainer">
+                        <div class="route-steps-header">
+                            <span>Petunjuk Belokan & Langkah</span>
+                            <small id="routeStepsCount">0 Langkah</small>
+                        </div>
+                        <div class="route-steps-list" id="routeStepsList"></div>
+                    </div>
+
                     <button class="btn-secondary" id="clearRoute">
                         <i data-lucide="x" aria-hidden="true"></i>
                         Hapus Rute

@@ -22,6 +22,7 @@ const Navigation = (() => {
         setupInputAutocomplete('navTo', 'navToSuggestions', 'to');
         setupRouteMode();
         setupButtons();
+        setupAudioControls();
     }
 
     function setupInputAutocomplete(inputId, suggestionsId, type) {
@@ -416,15 +417,115 @@ const Navigation = (() => {
         A11y.speakRouteSummary(route);
     }
 
+    function setupAudioControls() {
+        const audioToggle = document.getElementById('routeAudioToggle');
+        const audioIcon = document.getElementById('routeAudioIcon');
+        const btnPlayAudio = document.getElementById('btnPlayAudio');
+
+        // Set initial toggle state from A11y (default is true / checked)
+        if (audioToggle) {
+            audioToggle.checked = A11y.isAudioEnabled();
+        }
+        if (audioIcon) {
+            audioIcon.textContent = A11y.isAudioEnabled() ? '🔊' : '🔇';
+        }
+
+        // Handle Audio Toggle change
+        if (audioToggle) {
+            audioToggle.addEventListener('change', (e) => {
+                const enabled = e.target.checked;
+                A11y.setAudioEnabled(enabled);
+                if (audioIcon) {
+                    audioIcon.textContent = enabled ? '🔊' : '🔇';
+                }
+                if (enabled) {
+                    A11y.announce('Panduan suara rute diaktifkan');
+                } else {
+                    A11y.announce('Panduan suara rute dimatikan');
+                    resetAudioButton();
+                }
+            });
+        }
+
+        // Handle Play/Stop Audio Guidance Button
+        if (btnPlayAudio) {
+            btnPlayAudio.addEventListener('click', () => {
+                if (A11y.isSpeaking()) {
+                    A11y.stopSpeaking();
+                    resetAudioButton();
+                    A11y.announce('Panduan suara dihentikan');
+                } else {
+                    if (!currentRoute) return;
+                    startAudioGuidance();
+                }
+            });
+        }
+    }
+
+    function startAudioGuidance() {
+        if (!currentRoute) return;
+        const btnPlayAudio = document.getElementById('btnPlayAudio');
+        const btnAudioIcon = document.getElementById('btnAudioIcon');
+        const btnAudioText = document.getElementById('btnAudioText');
+
+        if (btnPlayAudio) {
+            btnPlayAudio.classList.add('playing');
+        }
+        if (btnAudioIcon) btnAudioIcon.textContent = '⏹️';
+        if (btnAudioText) btnAudioText.textContent = 'Hentikan Suara';
+
+        A11y.playFullRouteGuidance(currentRoute, {
+            onStart: () => {},
+            onStepChange: (stepIndex) => {
+                highlightStepItem(stepIndex);
+            },
+            onEnd: () => {
+                resetAudioButton();
+            }
+        });
+    }
+
+    function resetAudioButton() {
+        const btnPlayAudio = document.getElementById('btnPlayAudio');
+        const btnAudioIcon = document.getElementById('btnAudioIcon');
+        const btnAudioText = document.getElementById('btnAudioText');
+
+        if (btnPlayAudio) {
+            btnPlayAudio.classList.remove('playing');
+        }
+        if (btnAudioIcon) btnAudioIcon.textContent = '🔊';
+        if (btnAudioText) btnAudioText.textContent = 'Putar Panduan Suara';
+
+        document.querySelectorAll('.route-step-item.active-speaking').forEach(el => {
+            el.classList.remove('active-speaking');
+        });
+    }
+
+    function highlightStepItem(stepIndex) {
+        document.querySelectorAll('.route-step-item').forEach((el) => {
+            const idx = parseInt(el.dataset.stepIndex, 10);
+            if (idx === stepIndex) {
+                el.classList.add('active-speaking');
+                el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            } else {
+                el.classList.remove('active-speaking');
+            }
+        });
+    }
+
     function displayRoute(route) {
         const resultDiv = document.getElementById('routeResult');
         const summaryDiv = document.getElementById('routeSummary');
+        const stepsContainer = document.getElementById('routeStepsContainer');
+        const stepsList = document.getElementById('routeStepsList');
+        const stepsCount = document.getElementById('routeStepsCount');
 
         if (!resultDiv || !summaryDiv) return;
 
         resultDiv.style.display = 'flex';
+        resetAudioButton();
 
-        // Summary bar
+        // 1. Render Summary Bar
         summaryDiv.innerHTML = `
             <div class="route-summary-item">
                 <span class="route-summary-value">${route.totalDistance}m</span>
@@ -443,6 +544,68 @@ const Navigation = (() => {
             </div>
             ` : ''}
         `;
+
+        // 2. Render Step-by-Step Directions
+        if (stepsContainer && stepsList) {
+            const steps = route.steps || [];
+            if (stepsCount) {
+                stepsCount.textContent = `${steps.length} Langkah`;
+            }
+
+            if (steps.length > 0) {
+                stepsList.innerHTML = steps.map((step, idx) => {
+                    const badgeHtml = step.badge 
+                        ? `<span class="step-badge ${step.badge.class || ''}">${step.badge.text}</span>` 
+                        : '';
+                    return `
+                        <div class="route-step-item" data-step-index="${idx}" tabindex="0" role="listitem">
+                            <span class="step-icon" aria-hidden="true">${step.icon || '📍'}</span>
+                            <div class="step-content">
+                                <span class="step-text">${step.text} ${badgeHtml}</span>
+                                ${step.detail ? `<span class="step-detail">${step.detail}</span>` : ''}
+                            </div>
+                            <button type="button" class="btn-step-speak" data-step-index="${idx}" title="Dengarkan langkah ini" aria-label="Dengarkan: ${step.text}">
+                                🔊
+                            </button>
+                        </div>
+                    `;
+                }).join('');
+
+                // Bind click to listen to individual step
+                stepsList.querySelectorAll('.btn-step-speak').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        const idx = parseInt(btn.dataset.stepIndex, 10);
+                        const step = steps[idx];
+                        if (step) {
+                            highlightStepItem(idx);
+                            A11y.speakStep(step, {
+                                force: true,
+                                onEnd: () => {
+                                    highlightStepItem(-1);
+                                }
+                            });
+                        }
+                    });
+                });
+
+                // Pan to step coordinate when clicked
+                stepsList.querySelectorAll('.route-step-item').forEach(item => {
+                    item.addEventListener('click', () => {
+                        const idx = parseInt(item.dataset.stepIndex, 10);
+                        const step = steps[idx];
+                        if (step && step.coord && typeof MarketMap !== 'undefined' && MarketMap.getMap) {
+                            const map = MarketMap.getMap();
+                            if (map) {
+                                map.panTo([step.coord.lat, step.coord.lng], { animate: true });
+                            }
+                        }
+                    });
+                });
+            } else {
+                stepsList.innerHTML = `<div style="padding:10px 14px; color:var(--gray-500); font-size:0.75rem;">Ikuti garis rute berwarna pada peta.</div>`;
+            }
+        }
     }
 
     function clearRoute() {
@@ -450,13 +613,20 @@ const Navigation = (() => {
         fromNodeId = null;
         toNodeId = null;
 
+        A11y.stopSpeaking();
+        resetAudioButton();
+
         const fromInput = document.getElementById('navFrom');
         const toInput = document.getElementById('navTo');
         const resultDiv = document.getElementById('routeResult');
+        const stepsList = document.getElementById('routeStepsList');
+        const stepsCount = document.getElementById('routeStepsCount');
 
         if (fromInput) fromInput.value = '';
         if (toInput) toInput.value = '';
         if (resultDiv) resultDiv.style.display = 'none';
+        if (stepsList) stepsList.innerHTML = '';
+        if (stepsCount) stepsCount.textContent = '0 Langkah';
 
         updateGoButton();
         

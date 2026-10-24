@@ -235,7 +235,7 @@ document.addEventListener('DOMContentLoaded', () => {
         syncAndRefreshMap();
     });
 
-    // Firebase real-time listener if DB is available
+    // Supabase real-time listener if DB is available
     if (typeof DB !== 'undefined') {
         DB.init().then(() => {
             if (typeof DB.onStallsChange === 'function') {

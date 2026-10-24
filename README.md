@@ -52,8 +52,9 @@ Aplikasi web pemetaan indoor dan navigasi interaktif untuk **Pasar Gedhe Hardjon
 ### 5. Panel Pengelola & CMS Terpisah (/admin)
 - **Web Admin Terpisah:** Disediakan halaman login & dashboard admin mandiri di `/admin` untuk dinas / pengelola pasar.
 - **Manajemen Kios & Foto (CRUD):** Tambah, edit, dan hapus pedagang, upload foto asli kios dari kamera/laptop, serta update deskripsi.
+- **Tanda Bintang Ikonik (⭐):** Admin dapat menandai kios legendaris dengan bintang ⭐ sekali klik langsung dari tabel atau form modal.
 - **Penentu Posisi Denah Visual (Map Picker):** Admin dapat mengklik langsung denah SVG untuk menempatkan pin koordinat kios secara presisi.
-- **Dukungan Firebase & Offline Demo:** Terhubung dengan Cloud Firestore, Firebase Auth, dan Firebase Storage. Dilengkapi mode demo otomatis sehingga dapat dicoba langsung tanpa setup awal.
+- **Dukungan Supabase Cloud & Offline Demo:** Terhubung dengan PostgreSQL Supabase, Supabase Auth, Supabase Storage (100% gratis), dan Realtime WebSocket. Dilengkapi mode demo otomatis sehingga dapat dicoba langsung tanpa setup awal.
 
 ---
 
@@ -64,16 +65,14 @@ Maps Navigation Pasar Gedhe/
 ├── index.html                      # Web 1: Peta Navigasi Publik Pengunjung
 ├── README.md                       # Dokumentasi arsitektur dan panduan proyek
 ├── .gitignore                      # Konfigurasi pengabaian berkas Git
-├── firebase.json                   # Konfigurasi Firebase Hosting & Rules
-├── firestore.rules                 # Aturan keamanan database Cloud Firestore
-├── storage.rules                   # Aturan keamanan Cloud Storage foto kios
+├── supabase-schema.sql             # Skrip SQL tabel, izin RLS, realtime & storage Supabase
 │
 ├── admin/                          # Web 2: Dashboard Admin / CMS Pengelola Pasar
 │   ├── index.html                  # Halaman Login & Dashboard Admin
 │   ├── css/
 │   │   └── admin.css               # Desain antarmuka panel admin, tabel, dan modal
 │   └── js/
-│       ├── firebase-config.js      # Konfigurasi Firebase & fallback storage
+│       ├── supabase-config.js      # Konfigurasi Supabase Client & unified database
 │       └── admin-app.js            # Controller dashboard admin, form CRUD & map picker
 │
 ├── assets/                         # Aset statis aplikasi
