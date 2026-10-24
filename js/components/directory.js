@@ -54,9 +54,7 @@ const Directory = (() => {
         if (!modalEl) return;
 
         // Fetch and sort stalls
-        allStalls = MarketData.getAllStalls().slice().sort((a, b) => {
-            return (a.name || '').localeCompare(b.name || '');
-        });
+        refreshData();
 
         // Setup Alphabet Bar
         renderAlphabetBar();
@@ -155,16 +153,27 @@ const Directory = (() => {
         });
     }
 
+    function refreshData() {
+        allStalls = MarketData.getAllStalls().slice().sort((a, b) => {
+            return (a.name || '').localeCompare(b.name || '');
+        });
+        populateCategories();
+        if (isOpen()) {
+            renderGrid();
+        }
+    }
+
     function populateCategories() {
         if (!categorySelectEl) return;
 
         const categories = MarketData.getCategories();
-        const usedCategories = new Set(allStalls.map(s => s.category).filter(Boolean));
+        const usedCategories = new Set(allStalls.map(s => (s.category || '').toLowerCase()).filter(Boolean));
 
         let optionsHtml = '<option value="all">Kategori: Semua</option>';
-        for (const [id, cat] of Object.entries(categories)) {
-            if (usedCategories.has(id)) {
-                optionsHtml += `<option value="${id}">${cat.name}</option>`;
+        for (const [key, cat] of Object.entries(categories)) {
+            const catId = (cat.id || key).toLowerCase();
+            if (usedCategories.has(catId) || usedCategories.has(key.toLowerCase())) {
+                optionsHtml += `<option value="${catId}">${cat.name}</option>`;
             }
         }
 
@@ -186,8 +195,11 @@ const Directory = (() => {
             }
 
             // Category
-            if (selectedCategory !== 'all' && stall.category !== selectedCategory) {
-                return false;
+            if (selectedCategory !== 'all') {
+                const sCat = (stall.category || '').toLowerCase();
+                if (sCat !== selectedCategory.toLowerCase()) {
+                    return false;
+                }
             }
 
             // Floor
@@ -302,6 +314,7 @@ const Directory = (() => {
 
     function open() {
         if (!modalEl) return;
+        refreshData();
         modalEl.style.display = 'flex';
         renderGrid();
 
@@ -334,6 +347,7 @@ const Directory = (() => {
         open,
         close,
         isOpen,
-        resetFilters
+        resetFilters,
+        refreshData
     };
 })();

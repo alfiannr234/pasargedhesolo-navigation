@@ -200,5 +200,51 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // 16. Real-time Dynamic Data Synchronization (LocalStorage & Firestore)
+    function syncAndRefreshMap() {
+        if (MarketData.syncWithDynamicStorage()) {
+            MarketMap.reloadFloor();
+            Legend.refresh();
+            if (typeof Directory !== 'undefined' && Directory.refreshData) {
+                Directory.refreshData();
+            }
+        }
+    }
+
+    // Storage event: fires when stall is added/edited/deleted in Admin in another tab
+    window.addEventListener('storage', (e) => {
+        if (e.key === 'pasargede_dynamic_stalls') {
+            console.log('🔄 Data kios diperbarui dari admin, merefresh peta...');
+            syncAndRefreshMap();
+        }
+    });
+
+    // Focus & Visibility: refresh if user was in another tab/app
+    window.addEventListener('focus', () => {
+        syncAndRefreshMap();
+    });
+
+    document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'visible') {
+            syncAndRefreshMap();
+        }
+    });
+
+    // Custom local event for same-tab updates
+    window.addEventListener('pasargede_data_updated', () => {
+        syncAndRefreshMap();
+    });
+
+    // Firebase real-time listener if DB is available
+    if (typeof DB !== 'undefined') {
+        DB.init().then(() => {
+            if (typeof DB.onStallsChange === 'function') {
+                DB.onStallsChange(() => {
+                    syncAndRefreshMap();
+                });
+            }
+        });
+    }
+
     console.log('✅ Peta Navigasi Pasar Gedhe Solo siap digunakan.');
 });

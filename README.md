@@ -49,15 +49,32 @@ Aplikasi web pemetaan indoor dan navigasi interaktif untuk **Pasar Gedhe Hardjon
   - **Prioritas Jalur Taktil:** Mengutamakan rute yang memiliki jalur ubin pemandu (*guiding blocks*) dan ubin peringatan (*warning blocks*).
   - **Aksesibilitas Penuh:** Standar semantik WAI-ARIA, pembaca layar (*screen reader live region*), dan kontras visual tinggi.
 
+### 5. Panel Pengelola & CMS Terpisah (/admin)
+- **Web Admin Terpisah:** Disediakan halaman login & dashboard admin mandiri di `/admin` untuk dinas / pengelola pasar.
+- **Manajemen Kios & Foto (CRUD):** Tambah, edit, dan hapus pedagang, upload foto asli kios dari kamera/laptop, serta update deskripsi.
+- **Penentu Posisi Denah Visual (Map Picker):** Admin dapat mengklik langsung denah SVG untuk menempatkan pin koordinat kios secara presisi.
+- **Dukungan Firebase & Offline Demo:** Terhubung dengan Cloud Firestore, Firebase Auth, dan Firebase Storage. Dilengkapi mode demo otomatis sehingga dapat dicoba langsung tanpa setup awal.
+
 ---
 
 ## 🏗️ Struktur Proyek
 
 ```
 Maps Navigation Pasar Gedhe/
-├── index.html                      # Berkas HTML utama aplikasi
+├── index.html                      # Web 1: Peta Navigasi Publik Pengunjung
 ├── README.md                       # Dokumentasi arsitektur dan panduan proyek
 ├── .gitignore                      # Konfigurasi pengabaian berkas Git
+├── firebase.json                   # Konfigurasi Firebase Hosting & Rules
+├── firestore.rules                 # Aturan keamanan database Cloud Firestore
+├── storage.rules                   # Aturan keamanan Cloud Storage foto kios
+│
+├── admin/                          # Web 2: Dashboard Admin / CMS Pengelola Pasar
+│   ├── index.html                  # Halaman Login & Dashboard Admin
+│   ├── css/
+│   │   └── admin.css               # Desain antarmuka panel admin, tabel, dan modal
+│   └── js/
+│       ├── firebase-config.js      # Konfigurasi Firebase & fallback storage
+│       └── admin-app.js            # Controller dashboard admin, form CRUD & map picker
 │
 ├── assets/                         # Aset statis aplikasi
 │   ├── svg/                        # Berkas denah lantai format SVG

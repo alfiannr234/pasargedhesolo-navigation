@@ -125,20 +125,26 @@ const MarketMap = (() => {
         const stalls = MarketData.getFloorStalls(floorNum, buildingId);
 
         stalls.forEach(stall => {
-            const category = MarketData.getCategories()[stall.category] || {
-                id: stall.category,
+            const catId = (stall.category || '').toLowerCase();
+            const category = (MarketData.getCategory ? MarketData.getCategory(stall.category) : null) || 
+                MarketData.getCategories()[stall.category] || {
+                id: catId || 'kios',
                 name: stall.categoryLabel || 'Kios',
                 icon: stall.icon || '📍',
                 color: stall.color || '#C0392B'
             };
 
-            if (!markersByCategory[stall.category]) {
-                markersByCategory[stall.category] = [];
+            if (!markersByCategory[catId]) {
+                markersByCategory[catId] = [];
             }
+
+            // Ensure coordinates exist and fallback safely
+            const stallLat = stall.lat !== undefined ? stall.lat : (1024 - (stall.y || 500));
+            const stallLng = stall.lng !== undefined ? stall.lng : (stall.x || 500);
 
             // Create custom icon
             const markerIcon = createStallMarkerIcon(stall, category);
-            const marker = L.marker([stall.lat, stall.lng], {
+            const marker = L.marker([stallLat, stallLng], {
                 icon: markerIcon,
                 title: stall.name,
                 keyboard: true
@@ -147,7 +153,7 @@ const MarketMap = (() => {
             // Tooltip on hover
             marker.bindTooltip(`
                 <strong>${stall.name}</strong><br>
-                <small style="color:${category.color}; font-weight:600;">${category.name}</small>
+                <small style="color:${category.color || '#C0392B'}; font-weight:600;">${category.name || stall.categoryLabel || 'Kios'}</small>
             `, {
                 direction: 'top',
                 offset: [0, -14],
@@ -167,10 +173,10 @@ const MarketMap = (() => {
             });
 
             // Store marker in category array
-            markersByCategory[stall.category].push(marker);
+            markersByCategory[catId].push(marker);
 
             // Add to map if category is currently checked in legend
-            if (Legend.isCategoryActive(stall.category)) {
+            if (Legend.isCategoryActive(catId) || Legend.isCategoryActive(stall.category)) {
                 markersLayer.addLayer(marker);
             }
         });
@@ -213,9 +219,11 @@ const MarketMap = (() => {
             refreshCategoryVisibility();
             return;
         }
-        if (!markersByCategory[categoryId]) return;
+        const catKey = String(categoryId).toLowerCase();
+        const markers = markersByCategory[catKey] || markersByCategory[categoryId];
+        if (!markers) return;
 
-        markersByCategory[categoryId].forEach(marker => {
+        markers.forEach(marker => {
             if (isVisible) {
                 if (!markersLayer.hasLayer(marker)) {
                     markersLayer.addLayer(marker);
@@ -234,7 +242,7 @@ const MarketMap = (() => {
     function refreshCategoryVisibility() {
         const activeCats = Legend.getActiveCategories();
         for (const [catId, markers] of Object.entries(markersByCategory)) {
-            const isVisible = activeCats.has(catId);
+            const isVisible = activeCats.has(catId) || activeCats.has(catId.toLowerCase());
             markers.forEach(marker => {
                 if (isVisible) {
                     if (!markersLayer.hasLayer(marker)) {
@@ -247,6 +255,13 @@ const MarketMap = (() => {
                 }
             });
         }
+    }
+
+    /**
+     * Reload current floor and re-render all stall markers
+     */
+    function reloadFloor() {
+        loadFloorPlan(currentBuilding, currentFloor);
     }
 
     /**
@@ -489,7 +504,9 @@ const MarketMap = (() => {
             highlightLayer = null;
         }
 
-        const latlng = L.latLng(stall.lat, stall.lng);
+        const lat = stall.lat !== undefined ? stall.lat : (1024 - (stall.y || 500));
+        const lng = stall.lng !== undefined ? stall.lng : (stall.x || 500);
+        const latlng = L.latLng(lat, lng);
 
         highlightLayer = L.circleMarker(latlng, {
             radius: 22,
@@ -544,6 +561,8 @@ const MarketMap = (() => {
         init,
         switchBuilding,
         switchFloor,
+        reloadFloor,
+        refreshFloor: reloadFloor,
         setCategoryVisibility,
         refreshCategoryVisibility,
         drawRoute,

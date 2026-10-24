@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard & CMS · Peta Pasar Gedhe Solo</title>
+
+    <!-- Auto-redirect to trailing slash if opened as /admin (fixes relative path resolution) -->
+    <script>
+        (function () {
+            var p = window.location.pathname;
+            if (!p.endsWith('/') && !p.endsWith('.html')) {
+                window.location.replace(p + '/' + window.location.search + window.location.hash);
+            }
+        })();
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Admin Stylesheet (with smart fallback if loaded under /admin without slash) -->
+    <link rel="stylesheet" href="css/admin.css"
+        onerror="if(!this.dataset.retried){this.dataset.retried='1';this.href='admin/css/admin.css';}">
+
+    <!-- Supabase JS Client (100% Free Database, Auth, Free 1GB Storage & Realtime) -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- Master Seed Data from Public App -->
+    <script src="../js/data/market-data.js"
+        onerror="if(!this.dataset.retried){this.dataset.retried='1';this.src='js/data/market-data.js';}"></script>
+    <!-- Supabase Config & Unified DB -->
+    <script src="js/supabase-config.js"
+        onerror="if(!this.dataset.retried){this.dataset.retried='1';this.src='admin/js/supabase-config.js';}"></script>
+    <!-- Admin Application Logic -->
+    <script src="js/admin-app.js"
+        onerror="if(!this.dataset.retried){this.dataset.retried='1';this.src='admin/js/admin-app.js';}"></script>
+</head>
+
+<body>
+
+    <!-- 1. Login Screen Overlay -->
+    <div class="login-overlay" id="loginOverlay">
+        <div class="login-card">
+            <div class="login-header">
+                <div class="login-badge">
+                    <span>Admin Portal</span>
+                </div>
+                <h2 class="login-title">Pasar Gedhe Solo</h2>
+            </div>
+
+            <form class="login-form" id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail" class="form-label">Email Petugas</label>
+                    <input type="email" id="loginEmail" class="form-input" placeholder="admin@pasargedesolo.com"
+                        required autocomplete="username">
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword" class="form-label">Password</label>
+                    <input type="password" id="loginPassword" class="form-input" placeholder="••••••••" required
+                        autocomplete="current-password">
+                </div>
+                <button type="submit" class="btn-primary" id="btnLogin">
+                    <span>Masuk ke Dashboard</span>
+                    <span>→</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- 2. Admin Navbar -->
+    <header class="admin-navbar">
+        <div class="navbar-brand">
+            <div class="navbar-title-group">
+                <h1>Panel Pengelola Pasar Gedhe</h1>
+            </div>
+        </div>
+
+        <div class="navbar-right">
+            <!-- Link back to public map -->
+            <a href="../index.html" target="_blank" class="btn-open-map"
+                title="Buka website peta pengunjung di tab baru">
+                <span>Lihat Peta Pengunjung</span>
+                <span>↗</span>
+            </a>
+
+            <!-- Logout -->
+            <button type="button" class="btn-logout" id="btnLogout">Keluar</button>
+        </div>
+    </header>
+
+    <!-- 3. Dashboard Container -->
+    <main class="admin-container">
+
+        <!-- Stats Overview Cards -->
+        <section class="stats-grid" aria-label="Statistik Pasar">
+            <div class="stat-card">
+                <div class="stat-icon red">🏪</div>
+                <div class="stat-details">
+                    <span class="stat-value" id="statTotal">0</span>
+                    <span class="stat-label">Total Kios Terdaftar</span>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon green">📸</div>
+                <div class="stat-details">
+                    <span class="stat-value" id="statPhotos">0</span>
+                    <span class="stat-label">Kios Memiliki Foto</span>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon blue">🏛️</div>
+                <div class="stat-details">
+                    <span class="stat-value" id="statPasarGede">0</span>
+                    <span class="stat-label">Pasar Gede (Utama)</span>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon orange">🍎</div>
+                <div class="stat-details">
+                    <span class="stat-value" id="statPasarBuah">0</span>
+                    <span class="stat-label">Pasar Buah (Timur)</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stalls Management Panel -->
+        <section class="table-panel">
+            <div class="table-panel-header">
+                <div class="table-title-group">
+                    <h2>Manajemen Data Kios</h2>
+                </div>
+                <div class="table-actions">
+                    <button type="button" class="btn-action-secondary" id="btnSeedData"
+                        title="Import 471 data awal resmi Pasar Gedhe">
+                        <span>Sinkronkan Data Awal</span>
+                    </button>
+                    <button type="button" class="btn-action-secondary" id="btnExportData"
+                        title="Download backup data format JSON">
+                        <span>Export JSON</span>
+                    </button>
+                    <button type="button" class="btn-action-primary" id="btnAddStall">
+                        <span>Tambah Kios Baru</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Filter Toolbar -->
+            <div class="table-filter-bar">
+                <div class="filter-search">
+                    <input type="text" id="tableSearchInput" placeholder="Cari nama kios, produk, atau deskripsi">
+                </div>
+
+                <select id="filterBuilding" class="filter-select" aria-label="Filter Gedung">
+                    <option value="all">Gedung: Semua</option>
+                    <option value="pasar-gede">Pasar Gede (Utama)</option>
+                    <option value="pasar-buah">Pasar Buah (Timur)</option>
+                </select>
+
+                <select id="filterFloor" class="filter-select" aria-label="Filter Lantai">
+                    <option value="all">Lantai: Semua</option>
+                    <option value="1">Lantai 1</option>
+                    <option value="2">Lantai 2</option>
+                </select>
+
+                <select id="filterCategory" class="filter-select" aria-label="Filter Kategori">
+                    <option value="all">Kategori: Semua</option>
+                </select>
+
+                <select id="filterPhoto" class="filter-select" aria-label="Filter Foto">
+                    <option value="all">Status Foto: Semua</option>
+                    <option value="has-photo">Sudah Ada Foto</option>
+                    <option value="no-photo">Belum Ada Foto</option>
+                </select>
+            </div>
+
+            <!-- Data Table -->
+            <div class="table-responsive">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 60px;">Foto</th>
+                            <th>Nama Kios / Pedagang</th>
+                            <th>Kategori</th>
+                            <th>Lokasi</th>
+                            <th>Foto</th>
+                            <th>Koordinat</th>
+                            <th style="width: 120px;">Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="stallTableBody">
+                        <tr>
+                            <td colspan="7" style="text-align: center; padding: 40px; color: var(--gray-400);">
+                                Memuat data kios...
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Pagination Bar -->
+            <div class="pagination-bar">
+                <span id="paginationInfo">Menampilkan 0 dari 0 kios</span>
+                <div class="pagination-controls">
+                    <button type="button" class="btn-page" id="btnPrevPage">← Sebelumnya</button>
+                    <button type="button" class="btn-page" id="btnNextPage">Selanjutnya →</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 4. Modal: Add / Edit Stall Form -->
+    <div class="modal-overlay" id="stallModal" style="display: none;">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3 id="stallModalTitle">Tambah Kios Baru</h3>
+                <button type="button" class="modal-close-btn" id="stallModalClose">&times;</button>
+            </div>
+
+            <form id="stallForm">
+                <div class="modal-body">
+                    <input type="hidden" id="formStallId">
+
+                    <!-- Basic Info -->
+                    <div class="form-group">
+                        <label for="formStallName" class="form-label">Nama Kios / Toko *</label>
+                        <input type="text" id="formStallName" class="form-input"
+                            placeholder="Contoh: Dawet Telasih Bu Dermi" required>
+                    </div>
+
+                    <div class="form-grid-2">
+                        <div class="form-group">
+                            <label for="formStallBuilding" class="form-label">Gedung</label>
+                            <select id="formStallBuilding" class="form-select">
+                                <option value="pasar-gede">Pasar Gede (Utama)</option>
+                                <option value="pasar-buah">Pasar Buah (Timur)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="formStallFloor" class="form-label">Lantai</label>
+                            <select id="formStallFloor" class="form-select">
+                                <option value="1">Lantai 1</option>
+                                <option value="2">Lantai 2</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="formStallCategory" class="form-label">Kategori Komoditas</label>
+                        <select id="formStallCategory" class="form-select">
+                            <!-- Populated dynamically -->
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="formStallDesc" class="form-label">Deskripsi & Produk Unggulan</label>
+                        <textarea id="formStallDesc" class="form-textarea" rows="3"
+                            placeholder="Jelaskan produk yang dijual, varian rasa, harga atau jam buka..."></textarea>
+                    </div>
+
+                    <!-- Photo Upload Section -->
+                    <div class="form-group">
+                        <label class="form-label">Foto Kios Pedagang</label>
+                        <div class="upload-wrapper">
+                            <img src="" alt="Preview" class="preview-thumb" id="formPhotoPreview">
+                            <div class="upload-actions">
+                                <input type="file" id="formPhotoInput" accept="image/*" style="font-size: 0.8rem;">
+                                <span class="upload-tip">Bisa upload foto dari HP / laptop (JPG, PNG, WebP)</span>
+                                <input type="url" id="formPhotoUrl" class="form-input"
+                                    placeholder="Atau tempel URL gambar eksternal di sini"
+                                    style="margin-top: 6px; font-size: 0.75rem;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Position on SVG Floor Plan -->
+                    <div class="form-grid-2">
+                        <div class="form-group">
+                            <label class="form-label">Posisi Koordinat Denah (X, Y)</label>
+                            <div style="display: flex; gap: 8px;">
+                                <input type="number" id="formStallX" class="form-input" placeholder="X" value="500">
+                                <input type="number" id="formStallY" class="form-input" placeholder="Y" value="500">
+                            </div>
+                        </div>
+                        <div class="form-group" style="justify-content: flex-end;">
+                            <label class="form-label" style="opacity: 0;">Picker</label>
+                            <button type="button" class="btn-action-secondary" id="btnPickCoords"
+                                style="width: 100%; justify-content: center;">
+                                <span>Pilih Posisi di Denah</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Accessibility Options -->
+                    <div class="form-group">
+                        <label
+                            style="display: flex; align-items: center; gap: 8px; font-size: 0.82rem; cursor: pointer;">
+                            <input type="checkbox" id="formStallAccessible" checked>
+                            <strong>Aksesibel Kursi Roda</strong> (Dapat dijangkau tanpa hambatan tangga)
+                        </label>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn-action-secondary" id="btnCancelStall">Batal</button>
+                    <button type="submit" class="btn-action-primary" id="btnSaveStall">
+                        <span>💾</span>
+                        <span>Simpan Data Kios</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 5. Modal: Visual Map Coordinate Picker -->
+    <div class="modal-overlay" id="mapPickerModal" style="display: none;">
+        <div class="modal-card map-picker-card">
+            <div class="modal-header">
+                <div>
+                    <h3>Klik pada Denah untuk Menentukan Posisi Kios</h3>
+                    <p style="font-size: 0.75rem; color: var(--gray-500);">Klik di lorong atau kios yang sesuai untuk
+                        menempatkan pin.</p>
+                </div>
+                <button type="button" class="modal-close-btn" id="mapPickerClose">&times;</button>
+            </div>
+
+            <div class="picker-map-container" id="mapPickerContainer">
+                <img src="" alt="Denah Lantai" class="picker-map-img" id="mapPickerImg">
+                <div class="picker-pin" id="mapPickerPin">📍</div>
+            </div>
+
+            <div class="modal-footer" style="justify-content: space-between; align-items: center;">
+                <span id="mapPickerCoordsText" style="font-size: 0.8rem; font-weight: 700; color: var(--secondary);">
+                    Koordinat: X = 512, Y = 512
+                </span>
+                <div style="display: flex; gap: 8px;">
+                    <button type="button" class="btn-action-primary" id="btnConfirmCoords">Gunakan Posisi Ini</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 6. Toast Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+</body>
+
+</html>

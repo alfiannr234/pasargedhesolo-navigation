@@ -15552,16 +15552,30 @@ const MarketData = (() => {
         return data.categories;
     }
 
+    function getCategory(catIdOrName) {
+        if (!catIdOrName) return null;
+        const target = String(catIdOrName).toLowerCase().trim();
+        for (const [key, cat] of Object.entries(data.categories)) {
+            if ((cat.id && cat.id.toLowerCase() === target) || 
+                key.toLowerCase() === target || 
+                (cat.name && cat.name.toLowerCase() === target)) {
+                return cat;
+            }
+        }
+        return null;
+    }
+
     function getCategoriesForFloor(floor, bldId) {
         const bld = bldId || currentBuilding;
         const key = bld + '-' + floor;
         const stalls = data.stalls[key] || [];
         
-        const activeCatIds = new Set(stalls.map(s => s.category));
+        const activeCatIds = new Set(stalls.map(s => (s.category || '').toLowerCase()));
         const res = {};
-        for (const [id, cat] of Object.entries(data.categories)) {
-            if (activeCatIds.has(cat.id)) {
-                res[cat.id] = cat;
+        for (const [key, cat] of Object.entries(data.categories)) {
+            const catId = (cat.id || key).toLowerCase();
+            if (activeCatIds.has(catId) || activeCatIds.has(key.toLowerCase())) {
+                res[catId] = cat;
             }
         }
         return res;
@@ -15595,7 +15609,7 @@ const MarketData = (() => {
         const stalls = bldId ? getAllStalls(bldId) : getAllStalls();
         return stalls.filter(s => {
             return (
-                s.name.toLowerCase().includes(q) ||
+                (s.name && s.name.toLowerCase().includes(q)) ||
                 (s.description && s.description.toLowerCase().includes(q)) ||
                 (s.categoryLabel && s.categoryLabel.toLowerCase().includes(q))
             );
@@ -15604,8 +15618,73 @@ const MarketData = (() => {
 
     function getCategoryCount(catId, floor, bldId) {
         const stalls = getFloorStalls(floor, bldId);
-        return stalls.filter(s => s.category === catId).length;
+        const target = (catId || '').toLowerCase();
+        return stalls.filter(s => (s.category || '').toLowerCase() === target).length;
     }
+
+    function syncWithDynamicStorage() {
+        try {
+            const raw = typeof localStorage !== 'undefined' ? localStorage.getItem('pasargede_dynamic_stalls') : null;
+            if (raw) {
+                const dynamicList = JSON.parse(raw);
+                if (Array.isArray(dynamicList) && dynamicList.length > 0) {
+                    const newStalls = {
+                        'pasar-gede-1': [],
+                        'pasar-gede-2': [],
+                        'pasar-buah-1': [],
+                        'pasar-buah-2': []
+                    };
+                    dynamicList.forEach(s => {
+                        const key = (s.buildingId || 'pasar-gede') + '-' + (s.floor || 1);
+                        if (!newStalls[key]) newStalls[key] = [];
+
+                        // Normalize coordinates and category
+                        if (s.lat === undefined && s.y !== undefined) {
+                            s.lat = 1024 - s.y;
+                        }
+                        if (s.lng === undefined && s.x !== undefined) {
+                            s.lng = s.x;
+                        }
+                        if (s.category) {
+                            s.category = s.category.toLowerCase();
+                        }
+
+                        newStalls[key].push(s);
+
+                        // Register into NavigationGraph if available
+                        if (typeof NavigationGraph !== 'undefined' && NavigationGraph.nodes) {
+                            const nId = s.nodeId || ('n_' + s.id);
+                            if (!NavigationGraph.nodes[nId]) {
+                                NavigationGraph.nodes[nId] = {
+                                    id: nId,
+                                    stallId: s.id,
+                                    name: s.name,
+                                    buildingId: s.buildingId || 'pasar-gede',
+                                    floor: s.floor || 1,
+                                    x: s.lng !== undefined ? s.lng : (s.x || 500),
+                                    y: s.lat !== undefined ? s.lat : (1024 - (s.y || 500)),
+                                    realX: s.x || 500,
+                                    realY: s.y || 500,
+                                    type: 'stall',
+                                    category: s.category || 'kuliner',
+                                    accessible: s.accessible !== false,
+                                    hasTactile: false
+                                };
+                            }
+                        }
+                    });
+                    data.stalls = newStalls;
+                    return true;
+                }
+            }
+        } catch (e) {
+            console.warn('Could not sync dynamic stalls:', e);
+        }
+        return false;
+    }
+
+    // Auto-sync if dynamic data is found
+    syncWithDynamicStorage();
 
     return {
         data,
@@ -15614,11 +15693,13 @@ const MarketData = (() => {
         getBuildings,
         getBuildingInfo,
         getCategories,
+        getCategory,
         getCategoriesForFloor,
         getFloorStalls,
         getAllStalls,
         getStallById,
         searchStalls,
-        getCategoryCount
+        getCategoryCount,
+        syncWithDynamicStorage
     };
 })();

@@ -218,7 +218,9 @@ const Legend = (() => {
     }
 
     function isCategoryActive(key) {
-        return activeCategories.has(key);
+        if (!key) return true;
+        const normalized = String(key).toLowerCase();
+        return activeCategories.has(key) || activeCategories.has(normalized);
     }
 
     function resetForFloor(floor, buildingId) {
@@ -226,12 +228,23 @@ const Legend = (() => {
         const bld = buildingId || currentBuilding;
         activeCategories.clear();
         const floorCategories = MarketData.getCategoriesForFloor(fl, bld);
-        Object.keys(floorCategories).forEach(key => activeCategories.add(key));
+        Object.keys(floorCategories).forEach(key => {
+            activeCategories.add(key);
+            activeCategories.add(key.toLowerCase());
+        });
+    }
+
+    function refresh(floor, buildingId) {
+        const container = document.getElementById('legendContainer');
+        if (container) {
+            render(container, floor || currentFloor, buildingId || currentBuilding);
+        }
     }
 
     return {
         init,
         render,
+        refresh,
         toggleCategory,
         toggleAll,
         getActiveCategories,
