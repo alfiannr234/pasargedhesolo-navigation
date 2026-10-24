@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     let filterFloor = 'all';
     let filterCategory = 'all';
     let filterPhoto = 'all';
+    let filterLegendary = 'all';
 
     // Active edit state
     let editingStallId = null;
@@ -39,6 +40,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const selectFloor = document.getElementById('filterFloor');
     const selectCategory = document.getElementById('filterCategory');
     const selectPhoto = document.getElementById('filterPhoto');
+    const selectLegendary = document.getElementById('filterLegendary');
 
     const paginationInfo = document.getElementById('paginationInfo');
     const btnPrevPage = document.getElementById('btnPrevPage');
@@ -67,6 +69,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const fX = document.getElementById('formStallX');
     const fY = document.getElementById('formStallY');
     const fAccessible = document.getElementById('formStallAccessible');
+    const fLegendary = document.getElementById('formStallLegendary');
     const btnPickCoords = document.getElementById('btnPickCoords');
 
     // Map Picker Modal
@@ -182,6 +185,8 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
             if (filterPhoto === 'has-photo' && !(s.image || s.imageThumb)) return false;
             if (filterPhoto === 'no-photo' && (s.image || s.imageThumb)) return false;
+            if (filterLegendary === 'legendary' && !s.isLegendary) return false;
+            if (filterLegendary === 'non-legendary' && s.isLegendary) return false;
             return true;
         });
     }
@@ -209,6 +214,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 const img = s.imageThumb || s.image;
                 const cat = categories[s.category] || { name: s.categoryLabel || 'Kios', icon: s.icon || '🏪', color: s.color || '#C0392B' };
                 const bld = s.buildingId === 'pasar-buah' ? 'Pasar Buah' : 'Pasar Gede';
+                const isStar = Boolean(s.isLegendary);
 
                 return `
                     <tr data-id="${s.id}">
@@ -226,7 +232,12 @@ document.addEventListener('DOMContentLoaded', async () => {
                         </td>
                         <td>
                             <div class="stall-name-cell">
-                                <span class="stall-name-title">${s.name}</span>
+                                <span class="stall-name-title">
+                                    <button type="button" class="btn-star-toggle" data-id="${s.id}" title="${isStar ? 'Hapus status Bintang Legendaris' : 'Jadikan Kios Bintang Legendaris'}" style="background:none; border:none; padding:0; cursor:pointer; font-size:1.1rem; line-height:1; vertical-align:middle; margin-right:4px;">
+                                        ${isStar ? '⭐' : '<span style="opacity:0.25; filter:grayscale(1);">☆</span>'}
+                                    </button>
+                                    ${s.name}
+                                </span>
                                 <span class="stall-name-desc">${s.description || 'Tidak ada deskripsi'}</span>
                             </div>
                         </td>
@@ -246,6 +257,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                         </td>
                         <td>
                             <div class="action-buttons">
+                                <button class="btn-icon-action btn-star-action" title="${isStar ? 'Hapus Bintang Legendaris' : 'Beri Bintang Legendaris'}" data-id="${s.id}">${isStar ? '⭐' : '☆'}</button>
                                 <button class="btn-icon-action btn-edit" title="Edit Data Kios" data-id="${s.id}">✏️</button>
                                 <button class="btn-icon-action btn-pick-pos" title="Atur Posisi di Denah" data-id="${s.id}">📍</button>
                                 <button class="btn-icon-action delete btn-delete" title="Hapus Kios" data-id="${s.id}">🗑️</button>
@@ -266,6 +278,12 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (btnNextPage) btnNextPage.disabled = (currentPage >= totalPages);
 
         // Bind table action clicks
+        tableBody.querySelectorAll('.btn-star-toggle, .btn-star-action').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                toggleLegendary(btn.dataset.id);
+            });
+        });
         tableBody.querySelectorAll('.btn-edit').forEach(btn => {
             btn.addEventListener('click', () => openEditStall(btn.dataset.id));
         });
@@ -275,6 +293,24 @@ document.addEventListener('DOMContentLoaded', async () => {
         tableBody.querySelectorAll('.btn-delete').forEach(btn => {
             btn.addEventListener('click', () => confirmDeleteStall(btn.dataset.id));
         });
+    }
+
+    // Quick Toggle Legendary Star
+    async function toggleLegendary(id) {
+        const stall = stalls.find(s => s.id === id);
+        if (!stall) return;
+        const newState = !stall.isLegendary;
+        stall.isLegendary = newState;
+        showToast(newState ? `Kios "${stall.name}" kini ditandai Bintang Legendaris ⭐` : `Tanda Bintang pada "${stall.name}" dihapus.`, 'info');
+        try {
+            await DB.saveStall(stall);
+            if (typeof window !== 'undefined') {
+                window.dispatchEvent(new Event('pasargede_data_updated'));
+            }
+            await loadDashboardData();
+        } catch (err) {
+            showToast('Gagal mengubah status bintang: ' + err.message, 'error');
+        }
     }
 
     // Filter Listeners
@@ -313,6 +349,13 @@ document.addEventListener('DOMContentLoaded', async () => {
             renderTable();
         });
     }
+    if (selectLegendary) {
+        selectLegendary.addEventListener('change', (e) => {
+            filterLegendary = e.target.value;
+            currentPage = 1;
+            renderTable();
+        });
+    }
 
     // Pagination Listeners
     if (btnPrevPage) {
@@ -339,6 +382,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         fId.value = '';
         fX.value = '500';
         fY.value = '500';
+        if (fLegendary) fLegendary.checked = false;
         fPhotoPreview.src = 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="%239CA3AF" stroke-width="1.5"><rect width="18" height="18" x="3" y="3" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>';
         stallModal.style.display = 'flex';
     }
@@ -361,6 +405,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         fX.value = stall.x || 500;
         fY.value = stall.y || 500;
         fAccessible.checked = !!stall.accessible;
+        if (fLegendary) fLegendary.checked = Boolean(stall.isLegendary);
 
         if (stall.image || stall.imageThumb) {
             fPhotoPreview.src = stall.imageThumb || stall.image;
@@ -441,7 +486,8 @@ document.addEventListener('DOMContentLoaded', async () => {
                     y: posY,
                     lng: posX,
                     lat: 1024 - posY,
-                    accessible: fAccessible.checked
+                    accessible: fAccessible.checked,
+                    isLegendary: Boolean(fLegendary && fLegendary.checked)
                 };
 
                 await DB.saveStall(stallData);

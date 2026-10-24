@@ -178,6 +178,12 @@
                     <option value="has-photo">Sudah Ada Foto</option>
                     <option value="no-photo">Belum Ada Foto</option>
                 </select>
+
+                <select id="filterLegendary" class="filter-select" aria-label="Filter Bintang Legendaris">
+                    <option value="all">Status Bintang: Semua</option>
+                    <option value="legendary">⭐ Hanya Kios Bintang (Legendaris)</option>
+                    <option value="non-legendary">Kios Reguler</option>
+                </select>
             </div>
 
             <!-- Data Table -->
@@ -297,6 +303,17 @@
                                 <span>Pilih Posisi di Denah</span>
                             </button>
                         </div>
+                    </div>
+
+                    <!-- Legendary Star Option -->
+                    <div class="form-group" style="padding: 12px 14px; background: #FFFBEB; border: 1.5px solid #FCD34D; border-radius: 8px; margin-top: 4px;">
+                        <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; font-size: 0.85rem; margin: 0;">
+                            <input type="checkbox" id="formStallLegendary" style="width: 18px; height: 18px; cursor: pointer;">
+                            <span style="font-weight: 700; color: #92400E;">⭐ Kios Ikonik / Kuliner Legendaris (Tampilkan Bintang di Peta)</span>
+                        </label>
+                        <small style="display: block; margin-top: 4px; margin-left: 28px; color: #B45309; font-size: 0.75rem;">
+                            Jika dicentang, pin kios di peta pengunjung akan memiliki bintang ⭐ dan badge khusus "Kuliner Ikonik & Legendaris Solo".
+                        </small>
                     </div>
 
                     <!-- Accessibility Options -->

@@ -145,7 +145,8 @@ const DB = (() => {
                         name: row.name,
                         buildingId: row.building_id || (row.data && row.data.buildingId) || 'pasar-gede',
                         floor: row.floor !== undefined ? row.floor : (row.data && row.data.floor) || 1,
-                        category: (row.category || (row.data && row.data.category) || 'kuliner').toLowerCase()
+                        category: (row.category || (row.data && row.data.category) || 'kuliner').toLowerCase(),
+                        isLegendary: Boolean(row.data && row.data.isLegendary)
                     }));
                     // Keep local storage warm for offline cache
                     localStorage.setItem(STORAGE_KEY, JSON.stringify(stalls));
@@ -183,6 +184,7 @@ const DB = (() => {
             id: id,
             nodeId: stallData.nodeId || ('n_' + id),
             category: (stallData.category || 'kuliner').toLowerCase(),
+            isLegendary: Boolean(stallData.isLegendary),
             updatedAt: new Date().toISOString()
         };
 

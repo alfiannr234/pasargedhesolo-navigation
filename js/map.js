@@ -65,7 +65,8 @@ const MarketMap = (() => {
                     Navigation.setLocationFromMap(closest.id, closest.name);
                 }
             } else {
-                // Clicking blank space closes detail panel
+                // Clicking blank space closes detail panel and clears highlight
+                clearHighlight();
                 DetailPanel.close();
             }
         });
@@ -485,6 +486,16 @@ const MarketMap = (() => {
     }
 
     /**
+     * Clear active highlight marker
+     */
+    function clearHighlight() {
+        if (highlightLayer) {
+            map.removeLayer(highlightLayer);
+            highlightLayer = null;
+        }
+    }
+
+    /**
      * Highlight specific stall with pulsing marker
      */
     function highlightStall(stall) {
@@ -499,10 +510,7 @@ const MarketMap = (() => {
         }
 
         // Remove previous highlight
-        if (highlightLayer) {
-            map.removeLayer(highlightLayer);
-            highlightLayer = null;
-        }
+        clearHighlight();
 
         const lat = stall.lat !== undefined ? stall.lat : (1024 - (stall.y || 500));
         const lng = stall.lng !== undefined ? stall.lng : (stall.x || 500);
@@ -568,6 +576,7 @@ const MarketMap = (() => {
         drawRoute,
         clearRoute,
         highlightStall,
+        clearHighlight,
         getCurrentBuilding,
         getCurrentFloor,
         getMap

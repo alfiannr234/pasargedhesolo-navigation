@@ -208,6 +208,12 @@ const DetailPanel = (() => {
             backdrop.style.display = 'none';
         }
         currentStallId = null;
+
+        // Clear active highlight marker from map
+        if (typeof MarketMap !== 'undefined' && MarketMap.clearHighlight) {
+            MarketMap.clearHighlight();
+        }
+
         A11y.announce('Panel detail ditutup');
     }
 
