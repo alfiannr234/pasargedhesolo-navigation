@@ -198,6 +198,10 @@ const Navigation = (() => {
     }
 
     function openRoutePopup() {
+        if (typeof Directory !== 'undefined' && Directory.isOpen()) {
+            Directory.close();
+        }
+
         const popup = document.getElementById('routePopup');
         const backdrop = document.getElementById('routePopupBackdrop');
         const btnToggle = document.getElementById('btnRouteToggle');

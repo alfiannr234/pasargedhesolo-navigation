@@ -31,6 +31,12 @@ document.addEventListener('DOMContentLoaded', () => {
         DetailPanel.show(selectedStall.id);
     });
 
+    // 5b. Initialize Directory (Tenant List)
+    Directory.init((selectedStall) => {
+        MarketMap.highlightStall(selectedStall);
+        DetailPanel.show(selectedStall.id);
+    });
+
     // 6. Initialize Navigation
     Navigation.init(
         // On route found
@@ -101,7 +107,21 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // 10. Info Modal Dialog
+    // 10. Directory Button
+    const btnDirectory = document.getElementById('btnDirectory');
+    if (btnDirectory) {
+        btnDirectory.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (Directory.isOpen()) {
+                Directory.close();
+            } else {
+                Navigation.closeRoutePopup();
+                Directory.open();
+            }
+        });
+    }
+
+    // 11. Info Modal Dialog
     const btnInfo = document.getElementById('btnInfo');
     const infoModal = document.getElementById('infoModal');
     const infoModalClose = document.getElementById('infoModalClose');
@@ -153,12 +173,21 @@ document.addEventListener('DOMContentLoaded', () => {
         toggleRoute: () => {
             Navigation.toggleRoutePopup();
         },
+        toggleDirectory: () => {
+            if (Directory.isOpen()) {
+                Directory.close();
+            } else {
+                Navigation.closeRoutePopup();
+                Directory.open();
+            }
+        },
         focusSearch: () => {
             const searchInput = document.getElementById('searchInput');
             if (searchInput) searchInput.focus();
         },
         closeModals: () => {
             if (infoModal) infoModal.style.display = 'none';
+            if (Directory.isOpen()) Directory.close();
             Navigation.closeRoutePopup();
             DetailPanel.close();
         }

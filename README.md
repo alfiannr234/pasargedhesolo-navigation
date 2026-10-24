@@ -21,7 +21,15 @@ Aplikasi web pemetaan indoor dan navigasi interaktif untuk **Pasar Gedhe Hardjon
 - **Aksi Cepat:** Tombol *Pilih Semua* dan *Sembunyikan Semua* untuk mempermudah pencarian fasilitas tertentu.
 - **Indikator Jumlah:** Setiap label legenda menampilkan jumlah kios atau fasilitas yang aktif di lantai dan gedung yang dipilih.
 
-### 3. Navigasi Rute Pop-up (Top-Center Floating Modal)
+### 3. Menu Direktori Kios (Tenant List ala Situs Resmi)
+- **Katalog Lengkap 470+ Kios:** Menampilkan grid kartu kios dengan foto autentik kios pedagang, nama toko, dan lokasi lantai.
+- **Filter Cepat Multi-Kriteria:**
+  - **Pencarian Teks Langsung:** Filter instan berdasarkan nama toko atau produk.
+  - **Filter Kategori & Lantai:** Dropdown pemilihan kategori dan lantai (Lantai 1 / Lantai 2).
+  - **Bilah Abjad A-Z (10 Kolom):** Memilih kios berdasarkan huruf awal nama (tombol `All` dan `A` s/d `Z`) persis seperti pada aplikasi resmi Pasar Gede.
+- **Integrasi Peta & Detail:** Mengetuk kartu kios akan langsung mengarahkan tampilan denah ke posisi kios tersebut dengan penanda berkedip (*pulsing highlight*), serta membuka panel detail kios lengkap dengan tombol *"Navigasi dari sini"* dan *"Navigasi ke sini"*.
+
+### 4. Navigasi Rute Pop-up (Top-Center Floating Modal)
 - **Akses Cepat & Bersih:** Dibuka melalui tombol navigasi rute di header kanan atau tombol pintas di detail kios.
 - **Pilihan Titik Awal & Tujuan Fleksibel:**
   - Ketik nama kios atau kategori dengan fitur *autocomplete* pencarian cerdas.
@@ -68,6 +76,7 @@ Maps Navigation Pasar Gedhe/
 │   ├── sidebar.css                 # Sidebar pemilihan gedung dan lantai
 │   ├── legend.css                  # Desain kartu legenda, checkbox, dan toggle filter
 │   ├── navigation.css              # Tampilan popup navigasi mengambang dan hasil rute
+│   ├── directory.css               # Gaya modal Tenant List / Direktori kios
 │   ├── accessibility.css           # Gaya khusus mode kursi roda, tunanetra, dan status bar
 │   └── responsive.css              # Responsivitas layar mobile, tablet, dan desktop
 │
@@ -77,6 +86,7 @@ Maps Navigation Pasar Gedhe/
 │   ├── components/                 # Komponen antarmuka pengguna
 │   │   ├── detail-panel.js         # Drawer panel informasi kios dan aksi rute
 │   │   ├── legend.js               # Pengendali filter legenda interaktif
+│   │   ├── directory.js            # Pengendali Tenant List / Direktori Kios & filter A-Z
 │   │   ├── navigation.js           # Pengendali input rute, pemilihan titik peta, dan modal pop-up
 │   │   └── search.js               # Pencarian instan kios dengan autocomplete
 │   ├── data/                       # Data master pasar dan grafik jaringan

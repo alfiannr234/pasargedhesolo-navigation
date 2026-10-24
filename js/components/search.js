@@ -12,18 +12,33 @@ const Search = (() => {
         
         const searchInput = document.getElementById('searchInput');
         const searchResults = document.getElementById('searchResults');
+        const clearBtn = document.getElementById('searchClearBtn');
 
         if (!searchInput || !searchResults) return;
 
         searchInput.addEventListener('input', (e) => {
+            const val = e.target.value;
+            if (clearBtn) clearBtn.style.display = val.length > 0 ? 'flex' : 'none';
+
             clearTimeout(debounceTimer);
             debounceTimer = setTimeout(() => {
-                handleSearch(e.target.value, searchResults);
+                handleSearch(val, searchResults);
             }, 180);
         });
 
+        if (clearBtn) {
+            clearBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                searchInput.value = '';
+                clearBtn.style.display = 'none';
+                searchResults.classList.remove('active');
+                searchInput.focus();
+            });
+        }
+
         searchInput.addEventListener('focus', () => {
             if (searchInput.value.trim().length >= 1) {
+                if (clearBtn) clearBtn.style.display = 'flex';
                 handleSearch(searchInput.value, searchResults);
             }
         });

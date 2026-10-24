@@ -145,6 +145,10 @@ const A11y = (() => {
                 case 'R':
                     if (callbacks.toggleRoute) callbacks.toggleRoute();
                     break;
+                case 'd':
+                case 'D':
+                    if (callbacks.toggleDirectory) callbacks.toggleDirectory();
+                    break;
                 case 's':
                 case 'S':
                     if (callbacks.focusSearch) callbacks.focusSearch();

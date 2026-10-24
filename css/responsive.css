@@ -8,8 +8,8 @@
         --sidebar-width: 320px;
     }
     
-    .search-container {
-        width: 220px;
+    .header-center {
+        max-width: 380px;
     }
 }
 
@@ -21,20 +21,98 @@
     }
     
     .app-header {
-        padding: 0 12px;
+        padding: 0 10px;
+        gap: 6px;
     }
     
-    .header-subtitle {
+    .header-left {
+        gap: 6px;
+        flex-shrink: 0;
+    }
+
+    .header-brand .header-subtitle {
         display: none;
     }
     
+    .header-title {
+        font-size: 0.85rem;
+    }
+
+    /* Top-Center Search on Mobile */
+    .header-center {
+        margin: 0 4px;
+        flex: 1;
+        min-width: 0;
+        max-width: none;
+    }
+    
     .search-container {
-        width: 160px;
+        width: 100%;
     }
     
     .search-input {
-        padding: 8px 12px 8px 36px;
-        font-size: 0.8rem;
+        padding: 7px 28px 7px 32px;
+        font-size: 0.78rem;
+        height: 38px;
+    }
+
+    .search-icon {
+        left: 10px;
+        width: 15px;
+        height: 15px;
+    }
+
+    /* Search Results Pop-up on Mobile (Full width, NO horizontal scroll) */
+    .search-results {
+        position: fixed;
+        top: calc(var(--header-height) + 6px);
+        left: 10px;
+        right: 10px;
+        width: auto;
+        max-width: 520px;
+        margin: 0 auto;
+        max-height: 65vh;
+        border-radius: var(--border-radius);
+        box-shadow: 0 14px 32px rgba(0, 0, 0, 0.22);
+        z-index: 3000;
+        border: 1px solid var(--gray-200);
+    }
+
+    .search-result-item {
+        padding: 10px 12px;
+    }
+
+    .search-result-name {
+        font-size: 0.82rem;
+        white-space: normal;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        line-height: 1.3;
+    }
+
+    .search-result-category {
+        font-size: 0.7rem;
+    }
+
+    .header-right {
+        gap: 6px;
+        flex-shrink: 0;
+    }
+
+    /* Collapse button text to sleek square icon buttons */
+    .btn-directory-toggle span,
+    .btn-route-toggle span {
+        display: none;
+    }
+
+    .btn-directory-toggle,
+    .btn-route-toggle {
+        width: 38px;
+        height: 38px;
+        padding: 0;
+        justify-content: center;
     }
     
     .sidebar {
@@ -83,20 +161,6 @@
         margin: 10px;
         border-radius: var(--border-radius-sm);
     }
-    
-    .header-title {
-        font-size: 0.95rem;
-    }
-    
-    .btn-route-toggle span {
-        display: none;
-    }
-
-    .btn-route-toggle {
-        width: 40px;
-        padding: 0;
-        justify-content: center;
-    }
 
     .route-popup {
         width: calc(100vw - 20px);
@@ -111,13 +175,10 @@
     }
 }
 
-/* Small Mobile */
+/* Small Mobile (Under 480px) */
 @media (max-width: 480px) {
-    .search-container {
-        width: 110px;
-    }
-    
-    .btn-icon:last-child {
+    /* Hide text title on small screens so top-center search has ample room */
+    .header-brand .header-title {
         display: none;
     }
     
