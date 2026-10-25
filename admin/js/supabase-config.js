@@ -20,7 +20,34 @@ const DB = (() => {
     let currentUser = null;
 
     const STORAGE_KEY = 'pasargede_dynamic_stalls';
+    const CATEGORIES_KEY = 'pasargede_dynamic_categories';
     const AUTH_KEY = 'pasargede_admin_session';
+
+    // 19 Default Master Categories of Pasar Gedhe Solo (+ facilities)
+    const DEFAULT_CATEGORIES = [
+        { id: 'buah', name: 'Buah-buahan', icon: '🍎', color: '#FF6B35', is_facility: false, sort_order: 1 },
+        { id: 'kuliner', name: 'Kuliner Legendaris', icon: '🍜', color: '#E74C3C', is_facility: false, sort_order: 2 },
+        { id: 'camilan', name: 'Oleh-oleh & Camilan', icon: '🎁', color: '#9B59B6', is_facility: false, sort_order: 3 },
+        { id: 'sayur', name: 'Sayuran Segar', icon: '🥬', color: '#2ECC71', is_facility: false, sort_order: 4 },
+        { id: 'sembako', name: 'Sembako & Beras', icon: '🌾', color: '#F39C12', is_facility: false, sort_order: 5 },
+        { id: 'jamu', name: 'Jamu & Rempah', icon: '🍵', color: '#E67E22', is_facility: false, sort_order: 6 },
+        { id: 'daging_unggas', name: 'Daging Unggas & Ayam', icon: '🍗', color: '#D35400', is_facility: false, sort_order: 7 },
+        { id: 'daging_sapi', name: 'Daging Sapi & Kambing', icon: '🥩', color: '#C0392B', is_facility: false, sort_order: 8 },
+        { id: 'seafood', name: 'Ikan & Hasil Laut', icon: '🐟', color: '#3498DB', is_facility: false, sort_order: 9 },
+        { id: 'perkakas', name: 'Perkakas Rumah', icon: '🍳', color: '#795548', is_facility: false, sort_order: 10 },
+        { id: 'kerajinan', name: 'Batik & Kerajinan', icon: '🧵', color: '#8E44AD', is_facility: false, sort_order: 11 },
+        { id: 'tekstil', name: 'Pakaian & Tekstil', icon: '👕', color: '#16A085', is_facility: false, sort_order: 12 },
+        { id: 'telur', name: 'Telur', icon: '🥚', color: '#F1C40F', is_facility: false, sort_order: 13 },
+        { id: 'bunga', name: 'Bunga & Tanaman', icon: '🌸', color: '#E91E63', is_facility: false, sort_order: 14 },
+        { id: 'service', name: 'Jasa & Lainnya', icon: '🛠️', color: '#607D8B', is_facility: false, sort_order: 15 },
+        { id: 'fashion', name: 'Aksesoris & Fashion', icon: '👜', color: '#E91E63', is_facility: false, sort_order: 16 },
+        { id: 'entertainment', name: 'Hiburan', icon: '☕', color: '#9C27B0', is_facility: false, sort_order: 17 },
+        { id: 'mushola', name: 'Mushola / Ibadah', icon: '🕌', color: '#4CAF50', is_facility: true, sort_order: 18 },
+        { id: 'toilet', name: 'Toilet & Fasilitas', icon: '🚻', color: '#009688', is_facility: true, sort_order: 19 },
+        { id: 'pintu', name: 'Pintu Masuk/Keluar', icon: '🚪', color: '#FF5722', is_facility: true, sort_order: 20 },
+        { id: 'tangga', name: 'Tangga', icon: '🪜', color: '#9E9E9E', is_facility: true, sort_order: 21 },
+        { id: 'ramp', name: 'Ramp Aksesibel', icon: '♿', color: '#2196F3', is_facility: true, sort_order: 22 }
+    ];
 
     /**
      * Check if user has pasted real Supabase credentials
@@ -72,9 +99,11 @@ const DB = (() => {
     }
 
     /**
-     * Seed initial 471 stalls from market-data.js into LocalStorage if empty
+     * Seed initial 471 stalls and 22 master categories into LocalStorage if empty
      */
     function seedLocalStorageIfNeeded(force = false) {
+        seedCategoriesLocalStorageIfNeeded(force);
+
         const existing = localStorage.getItem(STORAGE_KEY);
         if (!existing || force) {
             let initialData = [];
@@ -89,7 +118,18 @@ const DB = (() => {
     }
 
     /**
-     * Seed master stalls directly to Supabase cloud
+     * Seed initial 22 categories into LocalStorage
+     */
+    function seedCategoriesLocalStorageIfNeeded(force = false) {
+        const existing = localStorage.getItem(CATEGORIES_KEY);
+        if (!existing || force) {
+            localStorage.setItem(CATEGORIES_KEY, JSON.stringify(DEFAULT_CATEGORIES));
+            console.log(`✅ Seeded ${DEFAULT_CATEGORIES.length} default categories to local storage.`);
+        }
+    }
+
+    /**
+     * Seed master stalls and categories directly to Supabase cloud
      */
     async function seedToCloudDatabase() {
         if (!isSupabaseReady || !client) {
@@ -97,6 +137,14 @@ const DB = (() => {
             return { count: 471, mode: 'local' };
         }
 
+        // 1. Seed Categories first
+        try {
+            await seedCategoriesToCloud();
+        } catch (catErr) {
+            console.warn('Could not seed categories to cloud (ensure table public.categories is created):', catErr);
+        }
+
+        // 2. Seed Stalls
         let all = [];
         if (typeof MarketData !== 'undefined') {
             all = MarketData.getAllStalls();
@@ -125,6 +173,176 @@ const DB = (() => {
 
         localStorage.setItem(STORAGE_KEY, JSON.stringify(all));
         return { count: all.length, mode: 'supabase' };
+    }
+
+    /**
+     * Seed default categories to Supabase cloud
+     */
+    async function seedCategoriesToCloud() {
+        if (!isSupabaseReady || !client) {
+            seedCategoriesLocalStorageIfNeeded(true);
+            return { count: DEFAULT_CATEGORIES.length, mode: 'local' };
+        }
+
+        const rows = DEFAULT_CATEGORIES.map(c => ({
+            id: c.id,
+            name: c.name,
+            icon: c.icon,
+            color: c.color,
+            is_facility: Boolean(c.is_facility),
+            sort_order: c.sort_order
+        }));
+
+        const { error } = await client.from('categories').upsert(rows);
+        if (error) {
+            console.error('Categories seed error:', error);
+            throw error;
+        }
+
+        localStorage.setItem(CATEGORIES_KEY, JSON.stringify(DEFAULT_CATEGORIES));
+        return { count: DEFAULT_CATEGORIES.length, mode: 'supabase' };
+    }
+
+    /**
+     * Get all categories (Supabase or LocalStorage)
+     */
+    async function getAllCategories() {
+        if (isSupabaseReady && client) {
+            try {
+                const { data, error } = await client
+                    .from('categories')
+                    .select('*')
+                    .order('sort_order', { ascending: true });
+
+                if (!error && Array.isArray(data) && data.length > 0) {
+                    const categories = data.map(row => ({
+                        id: row.id,
+                        name: row.name,
+                        icon: row.icon || '📍',
+                        color: row.color || '#C0392B',
+                        is_facility: Boolean(row.is_facility),
+                        isFacility: Boolean(row.is_facility),
+                        sort_order: row.sort_order || 0
+                    }));
+                    localStorage.setItem(CATEGORIES_KEY, JSON.stringify(categories));
+                    return categories;
+                }
+            } catch (err) {
+                console.warn('Error fetching Supabase categories, fallback to local storage:', err);
+            }
+        }
+
+        // LocalStorage fallback
+        const local = localStorage.getItem(CATEGORIES_KEY);
+        if (local) {
+            try {
+                const parsed = JSON.parse(local);
+                if (Array.isArray(parsed) && parsed.length > 0) {
+                    return parsed.map(c => ({
+                        ...c,
+                        isFacility: Boolean(c.is_facility || c.isFacility)
+                    }));
+                }
+            } catch (e) {
+                console.warn(e);
+            }
+        }
+
+        seedCategoriesLocalStorageIfNeeded();
+        return DEFAULT_CATEGORIES.map(c => ({
+            ...c,
+            isFacility: Boolean(c.is_facility || c.isFacility)
+        }));
+    }
+
+    /**
+     * Save / Update a category
+     */
+    async function saveCategory(categoryData) {
+        const rawId = (categoryData.id || categoryData.name || 'kategori_' + Date.now())
+            .toLowerCase()
+            .trim()
+            .replace(/\s+/g, '_')
+            .replace(/[^a-z0-9_-]/g, '');
+
+        const category = {
+            id: rawId,
+            name: (categoryData.name || 'Kategori Baru').trim(),
+            icon: (categoryData.icon || '📍').trim(),
+            color: (categoryData.color || '#C0392B').trim(),
+            is_facility: Boolean(categoryData.is_facility || categoryData.isFacility),
+            isFacility: Boolean(categoryData.is_facility || categoryData.isFacility),
+            sort_order: parseInt(categoryData.sort_order || categoryData.sortOrder || 99, 10),
+            created_at: new Date().toISOString()
+        };
+
+        if (isSupabaseReady && client) {
+            try {
+                const payload = {
+                    id: category.id,
+                    name: category.name,
+                    icon: category.icon,
+                    color: category.color,
+                    is_facility: category.is_facility,
+                    sort_order: category.sort_order
+                };
+
+                const { error } = await client.from('categories').upsert(payload);
+                if (error) {
+                    console.warn('Supabase saveCategory warning:', error);
+                    // If error is table not found, continue saving to local storage
+                }
+            } catch (err) {
+                console.warn('Error saving category to Supabase:', err);
+            }
+        }
+
+        // Update LocalStorage cache
+        const all = await getAllCategories();
+        const idx = all.findIndex(c => c.id === category.id);
+        if (idx >= 0) {
+            all[idx] = { ...all[idx], ...category };
+        } else {
+            all.push(category);
+        }
+        all.sort((a, b) => (a.sort_order || 99) - (b.sort_order || 99));
+        localStorage.setItem(CATEGORIES_KEY, JSON.stringify(all));
+
+        // Fire custom window event for same-window updates
+        if (typeof window !== 'undefined' && typeof CustomEvent !== 'undefined') {
+            window.dispatchEvent(new CustomEvent('pasargede_categories_updated', { detail: all }));
+        }
+
+        return { success: true, category };
+    }
+
+    /**
+     * Delete a category
+     */
+    async function deleteCategory(id) {
+        const safeId = String(id).toLowerCase();
+
+        if (isSupabaseReady && client) {
+            try {
+                const { error } = await client.from('categories').delete().eq('id', safeId);
+                if (error) {
+                    console.warn('Supabase deleteCategory warning:', error);
+                }
+            } catch (err) {
+                console.warn('Error deleting category from Supabase:', err);
+            }
+        }
+
+        const all = await getAllCategories();
+        const filtered = all.filter(c => c.id !== safeId);
+        localStorage.setItem(CATEGORIES_KEY, JSON.stringify(filtered));
+
+        // Fire custom window event
+        if (typeof window !== 'undefined' && typeof CustomEvent !== 'undefined') {
+            window.dispatchEvent(new CustomEvent('pasargede_categories_updated', { detail: filtered }));
+        }
+
+        return { success: true };
     }
 
     /**
@@ -323,6 +541,31 @@ const DB = (() => {
     }
 
     /**
+     * Real-time categories subscription
+     */
+    function onCategoriesChange(callback) {
+        if (isSupabaseReady && client) {
+            try {
+                const channel = client
+                    .channel('public:categories')
+                    .on('postgres_changes', { event: '*', schema: 'public', table: 'categories' }, async (payload) => {
+                        console.log('⚡ Realtime category update from Supabase:', payload);
+                        const categories = await getAllCategories();
+                        if (typeof callback === 'function') {
+                            callback(categories);
+                        }
+                    })
+                    .subscribe();
+
+                return channel;
+            } catch (err) {
+                console.warn('Could not attach Supabase Realtime category channel:', err);
+            }
+        }
+        return null;
+    }
+
+    /**
      * Authentication: Login
      */
     async function login(email, password) {
@@ -374,13 +617,20 @@ const DB = (() => {
         getAllStalls,
         saveStall,
         deleteStall,
+        getAllCategories,
+        saveCategory,
+        deleteCategory,
+        getDefaultCategories: () => [...DEFAULT_CATEGORIES],
+        seedCategoriesToCloud,
         uploadPhoto,
         seedLocalStorageIfNeeded,
+        seedCategoriesLocalStorageIfNeeded,
         seedToCloudDatabase,
         login,
         logout,
         getCurrentUser,
         isSupabaseActive,
-        onStallsChange
+        onStallsChange,
+        onCategoriesChange
     };
 })();

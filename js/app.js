@@ -78,33 +78,49 @@ document.addEventListener('DOMContentLoaded', () => {
     const sidebarToggle = document.getElementById('sidebarToggle');
     const sidebar = document.getElementById('sidebar');
 
-    if (sidebarToggle && sidebar) {
-        sidebarToggle.addEventListener('click', () => {
-            const isCollapsed = sidebar.classList.contains('collapsed');
-            const isOpen = sidebar.classList.contains('open');
-
-            if (window.innerWidth <= 768) {
-                toggleSidebar(!isOpen);
-            } else {
-                toggleSidebar(isCollapsed);
-            }
-        });
+    function isSidebarOpen() {
+        if (!sidebar) return false;
+        if (window.innerWidth <= 768) {
+            return sidebar.classList.contains('open');
+        } else {
+            return !sidebar.classList.contains('collapsed');
+        }
     }
 
     function toggleSidebar(show) {
         if (!sidebar) return;
 
+        const willOpen = (show !== undefined) ? Boolean(show) : !isSidebarOpen();
+
         if (window.innerWidth <= 768) {
-            sidebar.classList.toggle('open', show);
+            sidebar.classList.toggle('open', willOpen);
             sidebar.classList.remove('collapsed');
         } else {
-            sidebar.classList.toggle('collapsed', !show);
+            sidebar.classList.toggle('collapsed', !willOpen);
             sidebar.classList.remove('open');
         }
 
         if (sidebarToggle) {
-            sidebarToggle.setAttribute('aria-expanded', show ? 'true' : 'false');
+            sidebarToggle.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
         }
+
+        if (typeof A11y !== 'undefined' && A11y.announce) {
+            A11y.announce(willOpen ? 'Bilah samping legenda & filter dibuka' : 'Bilah samping legenda & filter ditutup');
+        }
+
+        // Adjust Leaflet map viewport after sidebar collapse/expand animation
+        if (typeof MarketMap !== 'undefined' && MarketMap.getMap) {
+            setTimeout(() => {
+                const map = MarketMap.getMap();
+                if (map) map.invalidateSize();
+            }, 300);
+        }
+    }
+
+    if (sidebarToggle && sidebar) {
+        sidebarToggle.addEventListener('click', () => {
+            toggleSidebar();
+        });
     }
 
     // 10. Directory Button
@@ -159,19 +175,43 @@ document.addEventListener('DOMContentLoaded', () => {
     A11y.initKeyboardShortcuts({
         switchFloor: (floor) => MarketMap.switchFloor(floor),
         toggleLegend: () => {
-            const container = document.getElementById('legendContainer');
-            if (container) {
-                const firstItem = container.querySelector('.legend-item');
-                if (firstItem) firstItem.focus();
+            toggleSidebar();
+        },
+        toggleNavigation: () => {
+            if (Navigation.isPopupOpen()) {
+                Navigation.closeRoutePopup();
+                A11y.announce('Navigasi rute ditutup');
+            } else {
+                Navigation.openRoutePopup();
+                A11y.announce('Navigasi rute dibuka');
+                setTimeout(() => {
+                    const navFrom = document.getElementById('navFrom');
+                    if (navFrom) {
+                        navFrom.focus();
+                        if (navFrom.value === 'n' || navFrom.value === 'N') {
+                            navFrom.value = '';
+                        }
+                    }
+                }, 60);
             }
         },
-        focusNavigation: () => {
-            Navigation.openRoutePopup();
-            const navFrom = document.getElementById('navFrom');
-            if (navFrom) navFrom.focus();
-        },
         toggleRoute: () => {
-            Navigation.toggleRoutePopup();
+            if (Navigation.isPopupOpen()) {
+                Navigation.closeRoutePopup();
+                A11y.announce('Navigasi rute ditutup');
+            } else {
+                Navigation.openRoutePopup();
+                A11y.announce('Navigasi rute dibuka');
+                setTimeout(() => {
+                    const navFrom = document.getElementById('navFrom');
+                    if (navFrom) {
+                        navFrom.focus();
+                        if (navFrom.value === 'n' || navFrom.value === 'N' || navFrom.value === 'r' || navFrom.value === 'R') {
+                            navFrom.value = '';
+                        }
+                    }
+                }, 60);
+            }
         },
         toggleDirectory: () => {
             if (Directory.isOpen()) {
@@ -211,10 +251,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Storage event: fires when stall is added/edited/deleted in Admin in another tab
+    // Storage event: fires when stall or category is added/edited/deleted in Admin in another tab
     window.addEventListener('storage', (e) => {
-        if (e.key === 'pasargede_dynamic_stalls') {
-            console.log('🔄 Data kios diperbarui dari admin, merefresh peta...');
+        if (e.key === 'pasargede_dynamic_stalls' || e.key === 'pasargede_dynamic_categories') {
+            console.log('🔄 Data diperbarui dari admin, merefresh peta...');
             syncAndRefreshMap();
         }
     });
@@ -235,12 +275,42 @@ document.addEventListener('DOMContentLoaded', () => {
         syncAndRefreshMap();
     });
 
+    window.addEventListener('pasargede_categories_updated', (e) => {
+        if (e.detail) {
+            MarketData.syncCategories(e.detail);
+            MarketMap.reloadFloor();
+            Legend.refresh();
+        }
+    });
+
     // Supabase real-time listener if DB is available
     if (typeof DB !== 'undefined') {
-        DB.init().then(() => {
+        DB.init().then(async () => {
+            // Load and sync dynamic categories from Supabase / LocalStorage
+            try {
+                const cats = await DB.getAllCategories();
+                if (cats && cats.length > 0) {
+                    MarketData.syncCategories(cats);
+                    Legend.refresh();
+                }
+            } catch (err) {
+                console.warn('Could not load categories:', err);
+            }
+
             if (typeof DB.onStallsChange === 'function') {
                 DB.onStallsChange(() => {
                     syncAndRefreshMap();
+                });
+            }
+
+            if (typeof DB.onCategoriesChange === 'function') {
+                DB.onCategoriesChange((cats) => {
+                    console.log('🔄 Kategori dinamis diperbarui dari server:', cats);
+                    if (cats && cats.length > 0) {
+                        MarketData.syncCategories(cats);
+                        MarketMap.reloadFloor();
+                        Legend.refresh();
+                    }
                 });
             }
         });

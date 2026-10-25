@@ -381,33 +381,39 @@ const A11y = (() => {
 
             switch (e.key) {
                 case '1':
+                    e.preventDefault();
                     if (callbacks.switchFloor) callbacks.switchFloor(1);
                     break;
                 case '2':
+                    e.preventDefault();
                     if (callbacks.switchFloor) callbacks.switchFloor(2);
                     break;
                 case 'l':
                 case 'L':
+                    e.preventDefault();
                     if (callbacks.toggleLegend) callbacks.toggleLegend();
                     break;
                 case 'n':
                 case 'N':
-                    if (callbacks.focusNavigation) callbacks.focusNavigation();
-                    break;
                 case 'r':
                 case 'R':
-                    if (callbacks.toggleRoute) callbacks.toggleRoute();
+                    e.preventDefault();
+                    if (callbacks.toggleNavigation) callbacks.toggleNavigation();
+                    else if (callbacks.toggleRoute) callbacks.toggleRoute();
+                    else if (callbacks.focusNavigation) callbacks.focusNavigation();
                     break;
                 case 'd':
                 case 'D':
+                    e.preventDefault();
                     if (callbacks.toggleDirectory) callbacks.toggleDirectory();
                     break;
                 case 's':
                 case 'S':
-                    if (callbacks.focusSearch) callbacks.focusSearch();
                     e.preventDefault();
+                    if (callbacks.focusSearch) callbacks.focusSearch();
                     break;
                 case 'Escape':
+                    e.preventDefault();
                     if (callbacks.closeModals) callbacks.closeModals();
                     break;
             }

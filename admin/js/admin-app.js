@@ -83,6 +83,26 @@ document.addEventListener('DOMContentLoaded', async () => {
     let tempPickerX = 512;
     let tempPickerY = 512;
 
+    // Category Management Modal Elements
+    const btnManageCategories = document.getElementById('btnManageCategories');
+    const categoryModal = document.getElementById('categoryModal');
+    const categoryModalClose = document.getElementById('categoryModalClose');
+    const categoryModalDone = document.getElementById('categoryModalDone');
+    const categoryForm = document.getElementById('categoryForm');
+    const catFormTitle = document.getElementById('catFormTitle');
+    const catFormOriginalId = document.getElementById('catFormOriginalId');
+    const catFormMode = document.getElementById('catFormMode');
+    const catFormName = document.getElementById('catFormName');
+    const catFormId = document.getElementById('catFormId');
+    const catFormIcon = document.getElementById('catFormIcon');
+    const catFormColor = document.getElementById('catFormColor');
+    const catFormColorHex = document.getElementById('catFormColorHex');
+    const catFormFacility = document.getElementById('catFormFacility');
+    const btnSaveCategory = document.getElementById('btnSaveCategory');
+    const btnResetCatForm = document.getElementById('btnResetCatForm');
+    const catListCount = document.getElementById('catListCount');
+    const categoryTableBody = document.getElementById('categoryTableBody');
+
     // Toast Container
     const toastContainer = document.getElementById('toastContainer');
 
@@ -131,8 +151,25 @@ document.addEventListener('DOMContentLoaded', async () => {
     // 3. Load & Render Dashboard Data
     async function loadDashboardData() {
         stalls = await DB.getAllStalls();
-        if (typeof MarketData !== 'undefined') {
-            categories = MarketData.getCategories();
+        try {
+            const rawCats = await DB.getAllCategories();
+            categories = {};
+            if (Array.isArray(rawCats) && rawCats.length > 0) {
+                rawCats.forEach(c => {
+                    const id = (c.id || '').toLowerCase();
+                    categories[id] = c;
+                });
+                if (typeof MarketData !== 'undefined') {
+                    MarketData.syncCategories(rawCats);
+                }
+            } else if (typeof MarketData !== 'undefined') {
+                categories = MarketData.getCategories();
+            }
+        } catch (e) {
+            console.warn('Could not load categories:', e);
+            if (typeof MarketData !== 'undefined') {
+                categories = MarketData.getCategories();
+            }
         }
         populateCategoryOptions();
         updateStats();
@@ -152,19 +189,26 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     function populateCategoryOptions() {
+        const catList = Object.values(categories).sort((a, b) => {
+            const soA = a.sort_order !== undefined ? a.sort_order : (a.sortOrder || 99);
+            const soB = b.sort_order !== undefined ? b.sort_order : (b.sortOrder || 99);
+            if (soA !== soB) return soA - soB;
+            return (a.name || '').localeCompare(b.name || '');
+        });
+
         let opts = '<option value="all">Kategori: Semua</option>';
-        for (const [key, cat] of Object.entries(categories)) {
-            const catId = (cat.id || key).toLowerCase();
+        catList.forEach(cat => {
+            const catId = (cat.id || '').toLowerCase();
             opts += `<option value="${catId}">${cat.icon || ''} ${cat.name}</option>`;
-        }
+        });
         if (selectCategory) selectCategory.innerHTML = opts;
 
         // In form category dropdown
         let formOpts = '';
-        for (const [key, cat] of Object.entries(categories)) {
-            const catId = (cat.id || key).toLowerCase();
-            formOpts += `<option value="${catId}">${cat.icon || ''} ${cat.name}</option>`;
-        }
+        catList.forEach(cat => {
+            const catId = (cat.id || '').toLowerCase();
+            formOpts += `<option value="${catId}">${cat.icon || ''} ${cat.name}${cat.is_facility || cat.isFacility ? ' (Fasilitas)' : ''}</option>`;
+        });
         if (fCategory) fCategory.innerHTML = formOpts;
     }
 
@@ -615,6 +659,271 @@ document.addEventListener('DOMContentLoaded', async () => {
                 } catch (e) {
                     showToast('Gagal sinkronisasi data: ' + e.message, 'error');
                 }
+            }
+        });
+    }
+
+    // ============================================
+    // 9. Category Management Controller
+    // ============================================
+    function openCategoryModal() {
+        if (!categoryModal) return;
+        resetCategoryForm();
+        renderCategoryTable();
+        categoryModal.style.display = 'flex';
+    }
+
+    function closeCategoryModal() {
+        if (categoryModal) {
+            categoryModal.style.display = 'none';
+        }
+    }
+
+    function resetCategoryForm() {
+        if (!categoryForm) return;
+        categoryForm.reset();
+        catFormMode.value = 'create';
+        catFormOriginalId.value = '';
+        catFormTitle.textContent = 'Tambah Kategori Baru';
+        btnSaveCategory.querySelector('span').textContent = 'Simpan Kategori';
+        btnResetCatForm.style.display = 'none';
+        catFormId.readOnly = false;
+        catFormIcon.value = '🍎';
+        catFormColor.value = '#E74C3C';
+        catFormColorHex.value = '#E74C3C';
+    }
+
+    function populateEditCategory(cat) {
+        catFormMode.value = 'edit';
+        catFormOriginalId.value = cat.id;
+        catFormTitle.textContent = `Edit Kategori: ${cat.name}`;
+        catFormName.value = cat.name || '';
+        catFormId.value = cat.id || '';
+        catFormId.readOnly = true; // Lock ID during edit to avoid broken references
+        catFormIcon.value = cat.icon || '📍';
+        catFormColor.value = cat.color || '#C0392B';
+        catFormColorHex.value = (cat.color || '#C0392B').toUpperCase();
+        catFormFacility.checked = Boolean(cat.is_facility || cat.isFacility);
+        btnSaveCategory.querySelector('span').textContent = 'Perbarui Kategori';
+        btnResetCatForm.style.display = 'inline-block';
+        catFormName.focus();
+    }
+
+    function renderCategoryTable() {
+        if (!categoryTableBody) return;
+        const catList = Object.values(categories).sort((a, b) => {
+            const soA = a.sort_order !== undefined ? a.sort_order : (a.sortOrder || 99);
+            const soB = b.sort_order !== undefined ? b.sort_order : (b.sortOrder || 99);
+            if (soA !== soB) return soA - soB;
+            return (a.name || '').localeCompare(b.name || '');
+        });
+
+        if (catListCount) catListCount.textContent = catList.length;
+
+        if (catList.length === 0) {
+            categoryTableBody.innerHTML = `
+                <tr>
+                    <td colspan="7" style="text-align: center; padding: 20px; color: var(--gray-400);">
+                        Belum ada kategori yang terdaftar.
+                    </td>
+                </tr>
+            `;
+            return;
+        }
+
+        categoryTableBody.innerHTML = catList.map(cat => {
+            const catId = (cat.id || '').toLowerCase();
+            const isFac = Boolean(cat.is_facility || cat.isFacility);
+            // Count how many stalls currently use this category
+            const count = stalls.filter(s => (s.category || '').toLowerCase() === catId).length;
+
+            return `
+                <tr>
+                    <td style="font-size: 1.25rem; text-align: center;">${cat.icon || '📍'}</td>
+                    <td><strong>${cat.name}</strong></td>
+                    <td><code>${cat.id}</code></td>
+                    <td>
+                        <span class="cat-color-badge">
+                            <span class="color-dot" style="background:${cat.color || '#C0392B'};"></span>
+                            ${cat.color || '#C0392B'}
+                        </span>
+                    </td>
+                    <td>
+                        <span class="${isFac ? 'badge-facility' : 'badge-merchant'}">
+                            ${isFac ? 'Fasilitas' : 'Komoditas'}
+                        </span>
+                    </td>
+                    <td>
+                        <span style="font-weight: 700; color: ${count > 0 ? 'var(--secondary)' : 'var(--gray-400)'};">
+                            ${count} Kios
+                        </span>
+                    </td>
+                    <td>
+                        <button type="button" class="btn-cat-action btn-edit-cat" data-cat-id="${cat.id}" title="Edit Kategori">
+                            ✏️ Edit
+                        </button>
+                        <button type="button" class="btn-cat-action delete btn-delete-cat" data-cat-id="${cat.id}" title="Hapus Kategori">
+                            🗑️
+                        </button>
+                    </td>
+                </tr>
+            `;
+        }).join('');
+
+        // Attach edit button listeners
+        categoryTableBody.querySelectorAll('.btn-edit-cat').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const id = btn.dataset.catId;
+                const cat = categories[id];
+                if (cat) populateEditCategory(cat);
+            });
+        });
+
+        // Attach delete button listeners
+        categoryTableBody.querySelectorAll('.btn-delete-cat').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const id = btn.dataset.catId;
+                confirmDeleteCategory(id);
+            });
+        });
+    }
+
+    async function confirmDeleteCategory(id) {
+        const cat = categories[id];
+        if (!cat) return;
+
+        const count = stalls.filter(s => (s.category || '').toLowerCase() === id.toLowerCase()).length;
+        let warning = `Yakin ingin menghapus kategori "${cat.name}"?`;
+        if (count > 0) {
+            warning = `⚠️ PERHATIAN: Ada ${count} kios yang sedang menggunakan kategori "${cat.name}"!\n\nJika kategori ini dihapus, kios-kios tersebut akan kehilangan kategori spesifiknya.\n\nTetap hapus kategori ini?`;
+        }
+
+        if (confirm(warning)) {
+            try {
+                await DB.deleteCategory(id);
+                delete categories[id];
+                if (typeof MarketData !== 'undefined') {
+                    MarketData.syncCategories(Object.values(categories));
+                }
+                populateCategoryOptions();
+                renderCategoryTable();
+                renderTable();
+                showToast(`Kategori "${cat.name}" berhasil dihapus.`, 'info');
+            } catch (err) {
+                showToast('Gagal menghapus kategori: ' + err.message, 'error');
+            }
+        }
+    }
+
+    // Category Events Wiring
+    if (btnManageCategories) {
+        btnManageCategories.addEventListener('click', openCategoryModal);
+    }
+    if (categoryModalClose) {
+        categoryModalClose.addEventListener('click', closeCategoryModal);
+    }
+    if (categoryModalDone) {
+        categoryModalDone.addEventListener('click', closeCategoryModal);
+    }
+    if (btnResetCatForm) {
+        btnResetCatForm.addEventListener('click', resetCategoryForm);
+    }
+
+    // Auto-fill ID from Name on create mode
+    if (catFormName && catFormId) {
+        catFormName.addEventListener('input', () => {
+            if (catFormMode.value === 'create') {
+                catFormId.value = catFormName.value
+                    .toLowerCase()
+                    .trim()
+                    .replace(/\s+/g, '_')
+                    .replace(/[^a-z0-9_-]/g, '');
+            }
+        });
+    }
+
+    // Color picker & Hex text sync
+    if (catFormColor && catFormColorHex) {
+        catFormColor.addEventListener('input', () => {
+            catFormColorHex.value = catFormColor.value.toUpperCase();
+        });
+        catFormColorHex.addEventListener('input', () => {
+            const hex = catFormColorHex.value.trim();
+            if (/^#[0-9A-Fa-f]{6}$/.test(hex)) {
+                catFormColor.value = hex;
+            }
+        });
+    }
+
+    // Quick emoji preset buttons
+    document.querySelectorAll('.btn-preset-emoji').forEach(btn => {
+        btn.addEventListener('click', () => {
+            if (catFormIcon) {
+                catFormIcon.value = btn.dataset.emoji || '📍';
+            }
+        });
+    });
+
+    // Category Form Submit (Create / Update)
+    if (categoryForm) {
+        categoryForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const name = catFormName.value.trim();
+            const id = (catFormId.value || name).toLowerCase().trim().replace(/\s+/g, '_').replace(/[^a-z0-9_-]/g, '');
+            const icon = catFormIcon.value.trim() || '📍';
+            const color = catFormColor.value || '#C0392B';
+            const isFacility = catFormFacility.checked;
+
+            if (!name || !id) {
+                showToast('Nama dan ID kategori wajib diisi!', 'error');
+                return;
+            }
+
+            try {
+                showToast('Menyimpan kategori...', 'info');
+                const catData = {
+                    id: id,
+                    name: name,
+                    icon: icon,
+                    color: color,
+                    is_facility: isFacility,
+                    isFacility: isFacility,
+                    sort_order: categories[id] ? categories[id].sort_order : 99
+                };
+
+                await DB.saveCategory(catData);
+                categories[id] = catData;
+
+                if (typeof MarketData !== 'undefined') {
+                    MarketData.syncCategories(Object.values(categories));
+                }
+
+                populateCategoryOptions();
+                renderCategoryTable();
+                renderTable();
+                resetCategoryForm();
+                showToast(`Kategori "${name}" ${icon} berhasil disimpan!`, 'success');
+            } catch (err) {
+                showToast('Gagal menyimpan kategori: ' + err.message, 'error');
+            }
+        });
+    }
+
+    // Listen for realtime category updates
+    if (typeof DB !== 'undefined' && typeof DB.onCategoriesChange === 'function') {
+        DB.onCategoriesChange((newCats) => {
+            if (Array.isArray(newCats) && newCats.length > 0) {
+                categories = {};
+                newCats.forEach(c => {
+                    const cid = (c.id || '').toLowerCase();
+                    categories[cid] = c;
+                });
+                if (typeof MarketData !== 'undefined') {
+                    MarketData.syncCategories(newCats);
+                }
+                populateCategoryOptions();
+                renderCategoryTable();
+                renderTable();
             }
         });
     }

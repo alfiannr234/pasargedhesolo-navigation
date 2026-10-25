@@ -53,6 +53,7 @@ Aplikasi web pemetaan indoor dan navigasi interaktif untuk **Pasar Gedhe Hardjon
 - **Web Admin Terpisah:** Disediakan halaman login & dashboard admin mandiri di `/admin` untuk dinas / pengelola pasar.
 - **Manajemen Kios & Foto (CRUD):** Tambah, edit, dan hapus pedagang, upload foto asli kios dari kamera/laptop, serta update deskripsi.
 - **Tanda Bintang Ikonik (⭐):** Admin dapat menandai kios legendaris dengan bintang ⭐ sekali klik langsung dari tabel atau form modal.
+- **Master Kategori Dinamis:** Admin dapat mengelola kategori komoditas (tambah/edit/hapus), memilih ikon emoji kustom, dan menentukan warna pin peta secara visual dengan sinkronisasi real-time.
 - **Penentu Posisi Denah Visual (Map Picker):** Admin dapat mengklik langsung denah SVG untuk menempatkan pin koordinat kios secara presisi.
 - **Dukungan Supabase Cloud & Offline Demo:** Terhubung dengan PostgreSQL Supabase, Supabase Auth, Supabase Storage (100% gratis), dan Realtime WebSocket. Dilengkapi mode demo otomatis sehingga dapat dicoba langsung tanpa setup awal.
 

@@ -15622,8 +15622,47 @@ const MarketData = (() => {
         return stalls.filter(s => (s.category || '').toLowerCase() === target).length;
     }
 
+    function syncCategories(categoryList) {
+        if (!categoryList) return false;
+        try {
+            const list = Array.isArray(categoryList) ? categoryList : Object.values(categoryList);
+            if (list.length > 0) {
+                const newCategories = { ...data.categories };
+                list.forEach(c => {
+                    if (!c || !c.id) return;
+                    const id = String(c.id).toLowerCase();
+                    newCategories[id] = {
+                        id: id,
+                        name: c.name || id,
+                        icon: c.icon || '📍',
+                        color: c.color || '#C0392B',
+                        isFacility: Boolean(c.is_facility || c.isFacility),
+                        sortOrder: c.sort_order || c.sortOrder || 99
+                    };
+                });
+                data.categories = newCategories;
+                return true;
+            }
+        } catch (e) {
+            console.warn('Error syncing categories in MarketData:', e);
+        }
+        return false;
+    }
+
     function syncWithDynamicStorage() {
         try {
+            // 1. Sync dynamic categories
+            if (typeof localStorage !== 'undefined') {
+                const rawCats = localStorage.getItem('pasargede_dynamic_categories');
+                if (rawCats) {
+                    try {
+                        const parsedCats = JSON.parse(rawCats);
+                        syncCategories(parsedCats);
+                    } catch (e) {}
+                }
+            }
+
+            // 2. Sync dynamic stalls
             const raw = typeof localStorage !== 'undefined' ? localStorage.getItem('pasargede_dynamic_stalls') : null;
             if (raw) {
                 const dynamicList = JSON.parse(raw);
@@ -15700,6 +15739,7 @@ const MarketData = (() => {
         getStallById,
         searchStalls,
         getCategoryCount,
+        syncCategories,
         syncWithDynamicStorage
     };
 })();

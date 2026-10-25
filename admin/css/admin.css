@@ -812,12 +812,237 @@ body {
     to { transform: translateY(0); opacity: 1; }
 }
 
+/* ============================================
+   CATEGORY MANAGEMENT MODAL STYLES
+   ============================================ */
+.modal-category-card {
+    max-width: 820px;
+    width: 95%;
+}
+
+.modal-subtitle {
+    font-size: 0.78rem;
+    color: var(--gray-500);
+    margin-top: 2px;
+}
+
+.category-modal-body {
+    padding: 20px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    overflow-y: auto;
+}
+
+.category-form-card {
+    background: var(--gray-50);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-md);
+    padding: 18px 20px;
+}
+
+.category-form-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--secondary);
+    margin-bottom: 14px;
+}
+
+.form-grid-3 {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 1fr;
+    gap: 14px;
+    margin-bottom: 12px;
+}
+
+.cat-emoji-presets {
+    margin-bottom: 14px;
+}
+
+.cat-preset-label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--gray-600);
+    margin-bottom: 6px;
+}
+
+.cat-preset-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.btn-preset-emoji {
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.15rem;
+    background: white;
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.btn-preset-emoji:hover {
+    background: var(--primary-bg);
+    border-color: var(--primary);
+    transform: scale(1.15);
+}
+
+.color-picker-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.color-input {
+    width: 42px;
+    height: 38px;
+    padding: 2px;
+    border: 1px solid var(--gray-300);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    background: white;
+}
+
+.form-input-hex {
+    width: 100px;
+    font-family: monospace;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.cat-checkbox-group {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 18px;
+}
+
+.category-form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.category-list-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.category-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 1px solid var(--gray-200);
+    padding-bottom: 8px;
+}
+
+.category-list-header h4 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--secondary);
+}
+
+.category-list-header small {
+    font-size: 0.75rem;
+    color: var(--gray-500);
+}
+
+.category-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.82rem;
+}
+
+.category-table th {
+    background: var(--gray-50);
+    padding: 10px 12px;
+    text-align: left;
+    font-weight: 700;
+    color: var(--gray-600);
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.category-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--gray-100);
+    vertical-align: middle;
+}
+
+.category-table tr:hover {
+    background: #FFF9F9;
+}
+
+.cat-color-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: monospace;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.color-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.badge-facility {
+    display: inline-block;
+    padding: 2px 7px;
+    font-size: 0.68rem;
+    font-weight: 700;
+    background: #E8F8F5;
+    color: #16A085;
+    border-radius: 12px;
+}
+
+.badge-merchant {
+    display: inline-block;
+    padding: 2px 7px;
+    font-size: 0.68rem;
+    font-weight: 700;
+    background: #FEF9E7;
+    color: #D35400;
+    border-radius: 12px;
+}
+
+.btn-cat-action {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px 6px;
+    font-size: 0.85rem;
+    border-radius: 4px;
+    transition: all 0.15s ease;
+}
+
+.btn-cat-action:hover {
+    background: var(--gray-100);
+}
+
+.btn-cat-action.delete:hover {
+    background: #FDEDEC;
+    color: var(--danger);
+}
+
 /* Responsive */
 @media (max-width: 900px) {
     .stats-grid {
         grid-template-columns: repeat(2, 1fr);
     }
     .form-grid-2 {
+        grid-template-columns: 1fr;
+    }
+    .form-grid-3 {
         grid-template-columns: 1fr;
     }
 }
