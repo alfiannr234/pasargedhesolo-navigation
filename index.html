@@ -51,7 +51,8 @@
                 <i data-lucide="search" class="search-icon" aria-hidden="true"></i>
                 <input type="search" id="searchInput" class="search-input" placeholder="Cari kios, kuliner, pedagang..."
                     aria-label="Cari di peta" autocomplete="off">
-                <button type="button" class="search-clear-btn" id="searchClearBtn" aria-label="Hapus pencarian" style="display:none;">
+                <button type="button" class="search-clear-btn" id="searchClearBtn" aria-label="Hapus pencarian"
+                    style="display:none;">
                     <i data-lucide="x" style="width:14px;height:14px;" aria-hidden="true"></i>
                 </button>
                 <div class="search-results" id="searchResults" role="listbox" aria-label="Hasil pencarian"></div>
@@ -60,8 +61,8 @@
 
         <!-- Right: Actions (Directory, Route, Info) -->
         <div class="header-right">
-            <button class="btn-directory-toggle" id="btnDirectory" aria-label="Buka Direktori Kios" title="Tenant List / Direktori Kios"
-                aria-expanded="false">
+            <button class="btn-directory-toggle" id="btnDirectory" aria-label="Buka Direktori Kios"
+                title="Tenant List / Direktori Kios" aria-expanded="false">
                 <i data-lucide="store" aria-hidden="true"></i>
                 <span>Direktori</span>
             </button>
@@ -135,7 +136,7 @@
             <div class="sidebar-section">
                 <h2 class="section-title">
                     <i data-lucide="palette" aria-hidden="true"></i>
-                    Legenda & Filter Zona
+                    Filter Zona
                 </h2>
                 <div class="legend-container" id="legendContainer" role="group" aria-label="Legenda peta">
                     <!-- Legend items dynamically generated -->
@@ -189,7 +190,6 @@
                 </div>
                 <div>
                     <h2 class="route-popup-title" id="routePopupTitle">Navigasi Rute</h2>
-                    <span class="route-popup-subtitle">Pasar Gedhe & Pasar Buah Solo</span>
                 </div>
             </div>
             <button class="route-popup-close" id="routePopupClose" aria-label="Tutup navigasi rute" title="Tutup">
@@ -263,7 +263,8 @@
                             <small class="route-audio-desc">Dikte arah belokan otomatis (Default: Menyala)</small>
                         </div>
                     </div>
-                    <label class="switch-toggle" for="routeAudioToggle" title="Nyalakan atau matikan panduan suara rute">
+                    <label class="switch-toggle" for="routeAudioToggle"
+                        title="Nyalakan atau matikan panduan suara rute">
                         <input type="checkbox" id="routeAudioToggle" checked>
                         <span class="switch-slider"></span>
                     </label>
@@ -280,7 +281,8 @@
 
                     <!-- Audio Playback Action Bar -->
                     <div class="route-audio-action-bar" id="routeAudioActionBar">
-                        <button type="button" class="btn-play-audio" id="btnPlayAudio" title="Dengarkan panduan suara rute ini">
+                        <button type="button" class="btn-play-audio" id="btnPlayAudio"
+                            title="Dengarkan panduan suara rute ini">
                             <span class="btn-audio-icon" id="btnAudioIcon">🔊</span>
                             <span id="btnAudioText">Putar Panduan Suara</span>
                         </button>
@@ -338,12 +340,14 @@
     </div>
 
     <!-- Directory / Tenant List Modal -->
-    <div class="directory-modal" id="directoryModal" role="dialog" aria-modal="true" aria-labelledby="directoryTitle" style="display:none;">
+    <div class="directory-modal" id="directoryModal" role="dialog" aria-modal="true" aria-labelledby="directoryTitle"
+        style="display:none;">
         <div class="directory-container">
             <!-- Directory Header -->
             <div class="directory-header">
                 <div class="directory-header-left">
-                    <button class="directory-back-btn" id="directoryBackBtn" aria-label="Kembali" title="Kembali ke peta">
+                    <button class="directory-back-btn" id="directoryBackBtn" aria-label="Kembali"
+                        title="Kembali ke peta">
                         <i data-lucide="chevron-left" aria-hidden="true"></i>
                     </button>
                     <div class="directory-title-group">
@@ -361,8 +365,10 @@
                 <!-- Search Input -->
                 <div class="directory-search-wrapper">
                     <i data-lucide="search" class="directory-search-icon" aria-hidden="true"></i>
-                    <input type="text" id="directorySearchInput" class="directory-search-input" placeholder="Search..." autocomplete="off">
-                    <button type="button" class="directory-search-clear" id="directorySearchClear" aria-label="Hapus teks" style="display:none;">
+                    <input type="text" id="directorySearchInput" class="directory-search-input" placeholder="Search..."
+                        autocomplete="off">
+                    <button type="button" class="directory-search-clear" id="directorySearchClear"
+                        aria-label="Hapus teks" style="display:none;">
                         <i data-lucide="x" style="width:14px;height:14px;" aria-hidden="true"></i>
                     </button>
                 </div>
@@ -428,9 +434,9 @@
             </div>
             <div class="modal-body">
                 <div class="info-card">
-                    <h3>🏛️ Sejarah Pasar Gede Hardjonagoro</h3>
+                    <h3>Sejarah Pasar Gede Hardjonagoro</h3>
                     <p>Pasar Gede Hardjonagoro didirikan pada masa pemerintahan Pakubuwono X dan dirancang oleh arsitek
-                        Belanda ternama Thomas Karsten pada tahun 1930. Menggabungkan kemegahan arsitektur kolonial
+                        Belanda ternama Thomas Karsten pada tahun 1930. Menggabungkan arsitektur kolonial
                         Belanda dengan atap limasan tradisional Jawa.</p>
                 </div>
                 <div class="info-card">
@@ -444,7 +450,7 @@
                     </ul>
                 </div>
                 <div class="info-card">
-                    <h3>♿ Aksesibilitas Ramah Disabilitas</h3>
+                    <h3>Aksesibilitas Ramah Disabilitas</h3>
                     <p>Aplikasi ini dirancang inklusif:</p>
                     <ul>
                         <li><strong>Mode Kursi Roda:</strong> Mengeliminasi tangga dan memilih jalur ramp landai
@@ -454,36 +460,44 @@
                     </ul>
                 </div>
                 <div class="info-card">
-                    <h3>🔍 Pencarian Cepat</h3>
-                    <p>Ketik nama kios, pedagang, atau jenis dagangan di kotak pencarian atas. Hasil muncul langsung, lalu ketuk untuk melihat posisinya di denah.</p>
+                    <h3>Pencarian Cepat</h3>
+                    <p>Ketik nama kios, pedagang, atau jenis dagangan di kotak pencarian atas. Hasil muncul langsung,
+                        lalu ketuk untuk melihat posisinya di denah.</p>
                 </div>
-                
+
                 <div class="info-card">
-                    <h3>🎨 Legenda & Filter Zona</h3>
-                    <p>Di menu samping, ketuk kategori (buah, sayur, kuliner, jamu, dll.) untuk menampilkan atau menyembunyikan zona di denah. Angka di samping label menunjukkan jumlah kios.</p>
+                    <h3>LFilter Zona</h3>
+                    <p>Di menu samping, ketuk kategori (buah, sayur, kuliner, jamu, dll.) untuk menampilkan atau
+                        menyembunyikan zona di denah. Angka di samping label menunjukkan jumlah kios.</p>
                 </div>
-                
+
                 <div class="info-card">
-                    <h3>🏪 Direktori Kios</h3>
-                    <p>Tombol <strong>Direktori</strong> menampilkan 470+ kios lengkap dengan foto. Filter berdasarkan nama, kategori, lantai, gedung, atau huruf awal A–Z. Ketuk kartu untuk langsung menuju posisi kios di peta.</p>
+                    <h3>Direktori Kios</h3>
+                    <p>Tombol <strong>Direktori</strong> menampilkan 470+ kios lengkap dengan foto. Filter berdasarkan
+                        nama, kategori, lantai, gedung, atau huruf awal A–Z. Ketuk kartu untuk langsung menuju posisi
+                        kios di peta.</p>
                 </div>
-                
+
                 <div class="info-card">
-                    <h3>🧭 Navigasi Rute</h3>
+                    <h3>Navigasi Rute</h3>
                     <ul>
-                        <li><strong>Dari & Ke:</strong> pilih kios awal dan tujuan, atau tunjuk langsung di denah dengan tombol ⌖.</li>
+                        <li><strong>Dari & Ke:</strong> pilih kios awal dan tujuan, atau tunjuk langsung di denah dengan
+                            tombol ⌖.</li>
                         <li><strong>Tukar arah:</strong> satu ketukan untuk membalik rute.</li>
-                        <li><strong>Antar lantai:</strong> rute otomatis melewati tangga atau ramp dan menampilkan jarak serta estimasi waktu jalan kaki.</li>
+                        <li><strong>Antar lantai:</strong> rute otomatis melewati tangga atau ramp dan menampilkan jarak
+                            serta estimasi waktu jalan kaki.</li>
                     </ul>
                 </div>
-                
+
                 <div class="info-card">
-                    <h3>🔊 Panduan Suara</h3>
-                    <p>Arah belokan bisa dibacakan otomatis dalam bahasa Indonesia. Nyalakan atau matikan lewat tombol <strong>Panduan Suara Rute</strong> di menu Rute.</p>
+                    <h3>Panduan Suara</h3>
+                    <p>Arah belokan bisa dibacakan otomatis dalam bahasa Indonesia. Nyalakan atau matikan lewat tombol
+                        <strong>Panduan Suara Rute</strong> di menu Rute.
+                    </p>
                 </div>
-                
+
                 <div class="info-card">
-                    <h3>⌨️ Pintasan Keyboard</h3>
+                    <h3>⌨Pintasan Keyboard</h3>
                     <ul>
                         <li><strong>1 / 2:</strong> pindah Lantai 1 / Lantai 2</li>
                         <li><strong>S:</strong> kotak pencarian</li>

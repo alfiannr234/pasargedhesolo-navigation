@@ -132,9 +132,14 @@ const DB = (() => {
      * Seed master stalls and categories directly to Supabase cloud
      */
     async function seedToCloudDatabase() {
+        let all = [];
+        if (typeof MarketData !== 'undefined') {
+            all = MarketData.getAllStalls();
+        }
+
         if (!isSupabaseReady || !client) {
             seedLocalStorageIfNeeded(true);
-            return { count: 471, mode: 'local' };
+            return { count: all.length, mode: 'local' };
         }
 
         // 1. Seed Categories first
@@ -142,12 +147,6 @@ const DB = (() => {
             await seedCategoriesToCloud();
         } catch (catErr) {
             console.warn('Could not seed categories to cloud (ensure table public.categories is created):', catErr);
-        }
-
-        // 2. Seed Stalls
-        let all = [];
-        if (typeof MarketData !== 'undefined') {
-            all = MarketData.getAllStalls();
         }
 
         const rows = all.map(s => ({

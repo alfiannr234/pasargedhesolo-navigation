@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     let categories = {};
     let currentPage = 1;
     const pageSize = 15;
-    
+
     // Filters
     let searchQuery = '';
     let filterBuilding = 'all';
@@ -146,6 +146,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     function showDashboard() {
         if (loginOverlay) loginOverlay.style.display = 'none';
         loadDashboardData();
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
     }
 
     // 3. Load & Render Dashboard Data
@@ -302,9 +305,15 @@ document.addEventListener('DOMContentLoaded', async () => {
                         <td>
                             <div class="action-buttons">
                                 <button class="btn-icon-action btn-star-action" title="${isStar ? 'Hapus Bintang Legendaris' : 'Beri Bintang Legendaris'}" data-id="${s.id}">${isStar ? '⭐' : '☆'}</button>
-                                <button class="btn-icon-action btn-edit" title="Edit Data Kios" data-id="${s.id}">✏️</button>
-                                <button class="btn-icon-action btn-pick-pos" title="Atur Posisi di Denah" data-id="${s.id}">📍</button>
-                                <button class="btn-icon-action delete btn-delete" title="Hapus Kios" data-id="${s.id}">🗑️</button>
+                                <button class="btn-icon-action btn-edit" title="Edit Data Kios" data-id="${s.id}">
+                                    <i data-lucide="pencil" aria-hidden="true"></i>
+                                </button>
+                                <button class="btn-icon-action btn-pick-pos" title="Atur Posisi di Denah" data-id="${s.id}">
+                                    <i data-lucide="map-pin" aria-hidden="true"></i>
+                                </button>
+                                <button class="btn-icon-action delete btn-delete" title="Hapus Kios" data-id="${s.id}">
+                                    <i data-lucide="trash-2" aria-hidden="true"></i>
+                                </button>
                             </div>
                         </td>
                     </tr>
@@ -337,6 +346,11 @@ document.addEventListener('DOMContentLoaded', async () => {
         tableBody.querySelectorAll('.btn-delete').forEach(btn => {
             btn.addEventListener('click', () => confirmDeleteStall(btn.dataset.id));
         });
+
+        // Initialize Lucide icons on newly rendered table rows
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
     }
 
     // Quick Toggle Legendary Star
@@ -576,8 +590,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         const flr = fFloor.value || 1;
 
         // Path to SVG floor plan
-        const svgPath = bld === 'pasar-buah' ? 
-            `../assets/svg/pasar_buah_lt${flr}.svg` : 
+        const svgPath = bld === 'pasar-buah' ?
+            `../assets/svg/pasar_buah_lt${flr}.svg` :
             `../assets/svg/pasar_gede_lt${flr}.svg`;
 
         mapPickerImg.src = svgPath;
@@ -645,15 +659,19 @@ document.addEventListener('DOMContentLoaded', async () => {
     // 8. Seed Default Data (Reset)
     if (btnSeedData) {
         btnSeedData.addEventListener('click', async () => {
-            if (confirm('Import ulang 471 data kios resmi Pasar Gedhe ke database cloud / penyimpanan aktif?')) {
-                showToast('Sedang menyinkronkan 471 kios resmi...', 'info');
+            const masterCount = (typeof MarketData !== 'undefined' && typeof MarketData.getAllStalls === 'function')
+                ? MarketData.getAllStalls().length
+                : (stalls.length || 0);
+
+            if (confirm(`Import ulang ${masterCount} data kios resmi Pasar Gedhe ke database cloud / penyimpanan aktif?`)) {
+                showToast(`Sedang menyinkronkan ${masterCount} kios resmi...`, 'info');
                 try {
                     if (typeof DB.seedToCloudDatabase === 'function') {
                         const res = await DB.seedToCloudDatabase();
                         showToast(`Berhasil menyinkronkan ${res.count} kios ke ${res.mode === 'supabase' ? 'database Supabase' : 'penyimpanan lokal'}!`, 'success');
                     } else {
                         DB.seedLocalStorageIfNeeded(true);
-                        showToast('Data master kios berhasil disinkronkan!', 'success');
+                        showToast(`Data master (${masterCount} kios) berhasil disinkronkan!`, 'success');
                     }
                     await loadDashboardData();
                 } catch (e) {
@@ -760,10 +778,11 @@ document.addEventListener('DOMContentLoaded', async () => {
                     </td>
                     <td>
                         <button type="button" class="btn-cat-action btn-edit-cat" data-cat-id="${cat.id}" title="Edit Kategori">
-                            ✏️ Edit
+                            <i data-lucide="pencil" aria-hidden="true"></i>
+                            <span>Edit</span>
                         </button>
                         <button type="button" class="btn-cat-action delete btn-delete-cat" data-cat-id="${cat.id}" title="Hapus Kategori">
-                            🗑️
+                            <i data-lucide="trash-2" aria-hidden="true"></i>
                         </button>
                     </td>
                 </tr>
@@ -786,6 +805,11 @@ document.addEventListener('DOMContentLoaded', async () => {
                 confirmDeleteCategory(id);
             });
         });
+
+        // Initialize Lucide icons on category table rows
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
     }
 
     async function confirmDeleteCategory(id) {
@@ -795,7 +819,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const count = stalls.filter(s => (s.category || '').toLowerCase() === id.toLowerCase()).length;
         let warning = `Yakin ingin menghapus kategori "${cat.name}"?`;
         if (count > 0) {
-            warning = `⚠️ PERHATIAN: Ada ${count} kios yang sedang menggunakan kategori "${cat.name}"!\n\nJika kategori ini dihapus, kios-kios tersebut akan kehilangan kategori spesifiknya.\n\nTetap hapus kategori ini?`;
+            warning = `PERHATIAN: Ada ${count} kios yang sedang menggunakan kategori "${cat.name}"!\n\nTetap hapus kategori ini?`;
         }
 
         if (confirm(warning)) {
@@ -875,7 +899,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             const isFacility = catFormFacility.checked;
 
             if (!name || !id) {
-                showToast('Nama dan ID kategori wajib diisi!', 'error');
+                showToast('Nama atau ID kategori belum diisi!', 'error');
                 return;
             }
 

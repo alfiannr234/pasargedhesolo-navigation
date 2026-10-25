@@ -26,6 +26,9 @@
     <link rel="stylesheet" href="css/admin.css"
         onerror="if(!this.dataset.retried){this.dataset.retried='1';this.href='admin/css/admin.css';}">
 
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
     <!-- Supabase JS Client (100% Free Database, Auth, Free 1GB Storage & Realtime) -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
@@ -139,10 +142,10 @@
                 <div class="table-actions">
                     <button type="button" class="btn-action-secondary" id="btnManageCategories"
                         title="Kelola master kategori komoditas, ikon emoji, dan warna pin">
-                        <span>🏷️ Kelola Kategori</span>
+                        <span>Kelola Kategori</span>
                     </button>
                     <button type="button" class="btn-action-secondary" id="btnSeedData"
-                        title="Import 471 data awal resmi Pasar Gedhe">
+                        title="Import ulang seluruh data kios resmi Pasar Gedhe">
                         <span>Sinkronkan Data Awal</span>
                     </button>
                     <button type="button" class="btn-action-secondary" id="btnExportData"
@@ -393,19 +396,22 @@
                     <form id="categoryForm">
                         <input type="hidden" id="catFormOriginalId" value="">
                         <input type="hidden" id="catFormMode" value="create">
-                        
+
                         <div class="form-grid-3">
                             <div class="form-group">
                                 <label for="catFormName" class="form-label">Nama Kategori *</label>
-                                <input type="text" id="catFormName" class="form-input" placeholder="Contoh: Kopi & Angkringan" required>
+                                <input type="text" id="catFormName" class="form-input"
+                                    placeholder="Contoh: Kopi & Angkringan" required>
                             </div>
                             <div class="form-group">
-                                <label for="catFormId" class="form-label">ID / Kode Sistem *</label>
-                                <input type="text" id="catFormId" class="form-input" placeholder="contoh: kopi" required>
+                                <label for="catFormId" class="form-label">ID *</label>
+                                <input type="text" id="catFormId" class="form-input" placeholder="contoh: kopi"
+                                    required>
                             </div>
                             <div class="form-group">
                                 <label for="catFormIcon" class="form-label">Ikon Emoji *</label>
-                                <input type="text" id="catFormIcon" class="form-input" placeholder="☕" maxlength="4" value="🍎" required>
+                                <input type="text" id="catFormIcon" class="form-input" placeholder="☕" maxlength="4"
+                                    value="🍎" required>
                             </div>
                         </div>
 
@@ -439,20 +445,22 @@
                                 <label for="catFormColor" class="form-label">Warna Pin Peta</label>
                                 <div class="color-picker-wrapper">
                                     <input type="color" id="catFormColor" class="color-input" value="#E74C3C">
-                                    <input type="text" id="catFormColorHex" class="form-input form-input-hex" value="#E74C3C" maxlength="7">
+                                    <input type="text" id="catFormColorHex" class="form-input form-input-hex"
+                                        value="#E74C3C" maxlength="7">
                                 </div>
                             </div>
 
                             <div class="form-group cat-checkbox-group">
                                 <label class="checkbox-label" for="catFormFacility">
                                     <input type="checkbox" id="catFormFacility">
-                                    <span>Tandai sebagai Fasilitas Umum (Mushola, Toilet, dsb)</span>
+                                    <span>Tandai sebagai Fasilitas Umum</span>
                                 </label>
                             </div>
                         </div>
 
                         <div class="category-form-actions">
-                            <button type="button" class="btn-action-secondary" id="btnResetCatForm" style="display:none;">
+                            <button type="button" class="btn-action-secondary" id="btnResetCatForm"
+                                style="display:none;">
                                 Batal Edit
                             </button>
                             <button type="submit" class="btn-action-primary" id="btnSaveCategory">
@@ -475,7 +483,7 @@
                                 <tr>
                                     <th style="width: 50px;">Ikon</th>
                                     <th>Nama Kategori</th>
-                                    <th>ID / Slug</th>
+                                    <th>ID /</th>
                                     <th>Warna Pin</th>
                                     <th>Tipe</th>
                                     <th>Jumlah Kios</th>
