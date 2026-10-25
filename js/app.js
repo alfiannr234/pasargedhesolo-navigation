@@ -78,49 +78,41 @@ document.addEventListener('DOMContentLoaded', () => {
     const sidebarToggle = document.getElementById('sidebarToggle');
     const sidebar = document.getElementById('sidebar');
 
-    function isSidebarOpen() {
-        if (!sidebar) return false;
-        if (window.innerWidth <= 768) {
-            return sidebar.classList.contains('open');
-        } else {
-            return !sidebar.classList.contains('collapsed');
-        }
+    if (sidebarToggle && sidebar) {
+        sidebarToggle.addEventListener('click', () => {
+            const isCollapsed = sidebar.classList.contains('collapsed');
+            const isOpen = sidebar.classList.contains('open');
+
+            if (window.innerWidth <= 768) {
+                toggleSidebar(!isOpen);
+            } else {
+                toggleSidebar(isCollapsed);
+            }
+        });
     }
 
     function toggleSidebar(show) {
         if (!sidebar) return;
 
-        const willOpen = (show !== undefined) ? Boolean(show) : !isSidebarOpen();
-
         if (window.innerWidth <= 768) {
-            sidebar.classList.toggle('open', willOpen);
+            sidebar.classList.toggle('open', show);
             sidebar.classList.remove('collapsed');
         } else {
-            sidebar.classList.toggle('collapsed', !willOpen);
+            sidebar.classList.toggle('collapsed', !show);
             sidebar.classList.remove('open');
         }
 
         if (sidebarToggle) {
-            sidebarToggle.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+            sidebarToggle.setAttribute('aria-expanded', show ? 'true' : 'false');
         }
 
-        if (typeof A11y !== 'undefined' && A11y.announce) {
-            A11y.announce(willOpen ? 'Bilah samping legenda & filter dibuka' : 'Bilah samping legenda & filter ditutup');
-        }
-
-        // Adjust Leaflet map viewport after sidebar collapse/expand animation
+        // Adjust Leaflet map size smoothly after sidebar animation
         if (typeof MarketMap !== 'undefined' && MarketMap.getMap) {
             setTimeout(() => {
                 const map = MarketMap.getMap();
                 if (map) map.invalidateSize();
             }, 300);
         }
-    }
-
-    if (sidebarToggle && sidebar) {
-        sidebarToggle.addEventListener('click', () => {
-            toggleSidebar();
-        });
     }
 
     // 10. Directory Button
@@ -175,24 +167,34 @@ document.addEventListener('DOMContentLoaded', () => {
     A11y.initKeyboardShortcuts({
         switchFloor: (floor) => MarketMap.switchFloor(floor),
         toggleLegend: () => {
-            toggleSidebar();
+            if (!sidebar) return;
+            const isMobile = window.innerWidth <= 768;
+            const willOpen = isMobile ? !sidebar.classList.contains('open') : sidebar.classList.contains('collapsed');
+            toggleSidebar(willOpen);
+
+            if (willOpen) {
+                A11y.announce('Bilah sisi legenda dibuka');
+                const container = document.getElementById('legendContainer');
+                if (container) {
+                    container.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    const firstItem = container.querySelector('.legend-item');
+                    if (firstItem) firstItem.focus();
+                }
+            } else {
+                A11y.announce('Bilah sisi legenda ditutup');
+            }
         },
-        toggleNavigation: () => {
+        focusNavigation: () => {
             if (Navigation.isPopupOpen()) {
                 Navigation.closeRoutePopup();
                 A11y.announce('Navigasi rute ditutup');
             } else {
                 Navigation.openRoutePopup();
                 A11y.announce('Navigasi rute dibuka');
-                setTimeout(() => {
+                requestAnimationFrame(() => {
                     const navFrom = document.getElementById('navFrom');
-                    if (navFrom) {
-                        navFrom.focus();
-                        if (navFrom.value === 'n' || navFrom.value === 'N') {
-                            navFrom.value = '';
-                        }
-                    }
-                }, 60);
+                    if (navFrom) navFrom.focus();
+                });
             }
         },
         toggleRoute: () => {
@@ -202,15 +204,10 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 Navigation.openRoutePopup();
                 A11y.announce('Navigasi rute dibuka');
-                setTimeout(() => {
+                requestAnimationFrame(() => {
                     const navFrom = document.getElementById('navFrom');
-                    if (navFrom) {
-                        navFrom.focus();
-                        if (navFrom.value === 'n' || navFrom.value === 'N' || navFrom.value === 'r' || navFrom.value === 'R') {
-                            navFrom.value = '';
-                        }
-                    }
-                }, 60);
+                    if (navFrom) navFrom.focus();
+                });
             }
         },
         toggleDirectory: () => {

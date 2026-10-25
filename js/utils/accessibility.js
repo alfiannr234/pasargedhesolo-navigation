@@ -381,40 +381,59 @@ const A11y = (() => {
 
             switch (e.key) {
                 case '1':
-                    e.preventDefault();
-                    if (callbacks.switchFloor) callbacks.switchFloor(1);
+                    if (callbacks.switchFloor) {
+                        e.preventDefault();
+                        callbacks.switchFloor(1);
+                    }
                     break;
                 case '2':
-                    e.preventDefault();
-                    if (callbacks.switchFloor) callbacks.switchFloor(2);
+                    if (callbacks.switchFloor) {
+                        e.preventDefault();
+                        callbacks.switchFloor(2);
+                    }
                     break;
                 case 'l':
                 case 'L':
-                    e.preventDefault();
-                    if (callbacks.toggleLegend) callbacks.toggleLegend();
+                    if (callbacks.toggleLegend) {
+                        e.preventDefault();
+                        callbacks.toggleLegend();
+                    }
                     break;
                 case 'n':
                 case 'N':
+                    e.preventDefault();
+                    if (callbacks.toggleRoute) {
+                        callbacks.toggleRoute();
+                    } else if (callbacks.focusNavigation) {
+                        callbacks.focusNavigation();
+                    }
+                    break;
                 case 'r':
                 case 'R':
-                    e.preventDefault();
-                    if (callbacks.toggleNavigation) callbacks.toggleNavigation();
-                    else if (callbacks.toggleRoute) callbacks.toggleRoute();
-                    else if (callbacks.focusNavigation) callbacks.focusNavigation();
+                    if (callbacks.toggleRoute) {
+                        e.preventDefault();
+                        callbacks.toggleRoute();
+                    }
                     break;
                 case 'd':
                 case 'D':
-                    e.preventDefault();
-                    if (callbacks.toggleDirectory) callbacks.toggleDirectory();
+                    if (callbacks.toggleDirectory) {
+                        e.preventDefault();
+                        callbacks.toggleDirectory();
+                    }
                     break;
                 case 's':
                 case 'S':
-                    e.preventDefault();
-                    if (callbacks.focusSearch) callbacks.focusSearch();
+                    if (callbacks.focusSearch) {
+                        e.preventDefault();
+                        callbacks.focusSearch();
+                    }
                     break;
                 case 'Escape':
-                    e.preventDefault();
-                    if (callbacks.closeModals) callbacks.closeModals();
+                    if (callbacks.closeModals) {
+                        e.preventDefault();
+                        callbacks.closeModals();
+                    }
                     break;
             }
         });
