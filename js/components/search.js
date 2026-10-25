@@ -112,7 +112,7 @@ const Search = (() => {
                 icon: stall.icon || '📍',
                 color: stall.color || '#C0392B'
             };
-            const bldName = stall.buildingId === 'pasar-buah' ? 'Pasar Buah' : 'Pasar Gede';
+            const bldName = stall.buildingId === 'pasar-buah' ? 'Pasar Buah' : 'Pasar Gedhe';
 
             return `
                 <div class="search-result-item" 
@@ -160,7 +160,7 @@ const Search = (() => {
                 onSelectCallback(stall);
             }
 
-            const bldName = stall.buildingId === 'pasar-buah' ? 'Pasar Buah' : 'Pasar Gede';
+            const bldName = stall.buildingId === 'pasar-buah' ? 'Pasar Buah' : 'Pasar Gedhe';
             A11y.announce(`${stall.name} dipilih di ${bldName} Lantai ${stall.floor}`);
         }
     }

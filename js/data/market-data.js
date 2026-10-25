@@ -8,7 +8,7 @@ const MarketData = (() => {
   "buildings": [
     {
       "id": "pasar-gede",
-      "name": "Pasar Gede (Utama)",
+      "name": "Pasar Gedhe (Utama)",
       "description": "Bangunan utama pasar bersejarah di pusat Kota Solo. Lantai 1 untuk kebutuhan pangan harian dan oleh-oleh; Lantai 2 untuk sentra kuliner legendaris dan daging.",
       "floors": [
         {
@@ -210,7 +210,7 @@ const MarketData = (() => {
         "y": 869,
         "lat": 155,
         "lng": 408,
-        "description": "Jasa Penggilingan Barokah adalah salah satu kios yang ada di Pasar Gede yang menyediakan jasa penggilingan daging dan penggilingan ayam",
+        "description": "Jasa Penggilingan Barokah adalah salah satu kios yang ada di Pasar Gedhe yang menyediakan jasa penggilingan daging dan penggilingan ayam",
         "image": "https://maps.pasargedesolo.com/storage/stores/Ds3GAfWWXy9juuSecJ4paecr5MWF3L1Z.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/Ds3GAfWWXy9juuSecJ4paecr5MWF3L1Z_xs.jpg",
         "images": [
@@ -243,7 +243,7 @@ const MarketData = (() => {
         "y": 872,
         "lat": 152,
         "lng": 699,
-        "description": "Kios Oleh Oleh Bu Nanik adalah kios yang berada di Pasar Gede yang menjual spesialis teh racikan, wedang rempah dan oleh-oleh khas Solo",
+        "description": "Kios Oleh Oleh Bu Nanik adalah kios yang berada di Pasar Gedhe yang menjual spesialis teh racikan, wedang rempah dan oleh-oleh khas Solo",
         "image": "https://maps.pasargedesolo.com/storage/stores/veKZkA7s28jYUKZZopgJPBQEBxxyk96R.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/veKZkA7s28jYUKZZopgJPBQEBxxyk96R_xs.jpg",
         "images": [
@@ -276,7 +276,7 @@ const MarketData = (() => {
         "y": 711,
         "lat": 313,
         "lng": 546,
-        "description": "Kios Mbak Titik merupakan kios yang ada di Pasar Gede yang menyediakan spesialis oleh-oleh khas Solo seperti rambak petis, brem, intip goreng, ampyang dan rengginan",
+        "description": "Kios Mbak Titik merupakan kios yang ada di Pasar Gedhe yang menyediakan spesialis oleh-oleh khas Solo seperti rambak petis, brem, intip goreng, ampyang dan rengginan",
         "image": "https://maps.pasargedesolo.com/storage/stores/aPv12ovRTdIdOG0A8jYCyYcgJQ4okI9Q.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/aPv12ovRTdIdOG0A8jYCyYcgJQ4okI9Q_xs.jpg",
         "images": [
@@ -309,7 +309,7 @@ const MarketData = (() => {
         "y": 780,
         "lat": 244,
         "lng": 449,
-        "description": "Kios Bu Widadi 2 adalah salah satu kios yang ada di Pasar Gede yang menjual spesialis bahan racikan untuk minuman herbal teh atau jamu dan bahan baku untuk minuman kesehatan lainnya",
+        "description": "Kios Bu Widadi 2 adalah salah satu kios yang ada di Pasar Gedhe yang menjual spesialis bahan racikan untuk minuman herbal teh atau jamu dan bahan baku untuk minuman kesehatan lainnya",
         "image": "https://maps.pasargedesolo.com/storage/stores/YIWlhAOuCMX5e3ajHl1qXlXaSdXLWLg5.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/YIWlhAOuCMX5e3ajHl1qXlXaSdXLWLg5_xs.jpg",
         "images": [
@@ -342,7 +342,7 @@ const MarketData = (() => {
         "y": 870,
         "lat": 154,
         "lng": 574,
-        "description": "Kios Ramadhani merupakan kios yang ada di Pasar Gede yang menjual spesialis rambak petis dengan pilihan rasa,  racikan teh, kerupuk ikan dan karak",
+        "description": "Kios Ramadhani merupakan kios yang ada di Pasar Gedhe yang menjual spesialis rambak petis dengan pilihan rasa,  racikan teh, kerupuk ikan dan karak",
         "image": "https://maps.pasargedesolo.com/storage/stores/9vsbAn7RvjOIsyXJDPUeU0vL9eykOikG.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/9vsbAn7RvjOIsyXJDPUeU0vL9eykOikG_xs.jpg",
         "images": [
@@ -375,7 +375,7 @@ const MarketData = (() => {
         "y": 727,
         "lat": 297,
         "lng": 632,
-        "description": "Dawet Selasih Bu Watik merupakan los yang ada di Pasar Gede yang menyediakan spesial es dawet selasih",
+        "description": "Dawet Selasih Bu Watik merupakan los yang ada di Pasar Gedhe yang menyediakan spesial es dawet selasih",
         "image": "https://maps.pasargedesolo.com/storage/stores/OIcAoIpYblNfoVZp7vyHUk9IG7762Wb8.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/OIcAoIpYblNfoVZp7vyHUk9IG7762Wb8_xs.jpg",
         "images": [
@@ -408,7 +408,7 @@ const MarketData = (() => {
         "y": 743,
         "lat": 281,
         "lng": 442,
-        "description": "Kios Bu Widadi 1 adalah salah satu kios yang ada di Pasar Gede yang menjual khusus racikan jamu dan minuman jamu kemasan untuk kesehatan",
+        "description": "Kios Bu Widadi 1 adalah salah satu kios yang ada di Pasar Gedhe yang menjual khusus racikan jamu dan minuman jamu kemasan untuk kesehatan",
         "image": "https://maps.pasargedesolo.com/storage/stores/ho6Px9H2MQNQK5vtQPvCYpuvf4Bou056.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/ho6Px9H2MQNQK5vtQPvCYpuvf4Bou056_xs.jpg",
         "images": [
@@ -441,7 +441,7 @@ const MarketData = (() => {
         "y": 745,
         "lat": 279,
         "lng": 474,
-        "description": "Kios Bu Sugiarti adalah salah satu kios yang ada di Pasar Gede yang menjual khusus rempah-rempahan untuk racikan jamu dan minuman wedang kesehatan",
+        "description": "Kios Bu Sugiarti adalah salah satu kios yang ada di Pasar Gedhe yang menjual khusus rempah-rempahan untuk racikan jamu dan minuman wedang kesehatan",
         "image": "https://maps.pasargedesolo.com/storage/stores/Vzm7T7jYW2XipMTAGkzzS7H71BkW98Tr.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/Vzm7T7jYW2XipMTAGkzzS7H71BkW98Tr_xs.jpg",
         "images": [
@@ -474,7 +474,7 @@ const MarketData = (() => {
         "y": 697,
         "lat": 327,
         "lng": 356,
-        "description": "Kios Ibu Wartini adalah salah satu kios yang ada di Pasar Gede yang spesialis menjual kebutuhan sayuran-sayuran segar dan bumbu dapur untuk memasak",
+        "description": "Kios Ibu Wartini adalah salah satu kios yang ada di Pasar Gedhe yang spesialis menjual kebutuhan sayuran-sayuran segar dan bumbu dapur untuk memasak",
         "image": "https://maps.pasargedesolo.com/storage/stores/Fveaieh6vOS1lzshcLPw3DJtFDbVsxFF.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/Fveaieh6vOS1lzshcLPw3DJtFDbVsxFF_xs.jpg",
         "images": [
@@ -507,7 +507,7 @@ const MarketData = (() => {
         "y": 726,
         "lat": 298,
         "lng": 580,
-        "description": "Ayam Goreng Pak Ali adalah kuliner legendaris Solo yang telah berjualan sejak tahun 1930 di dalam Pasar Gede. Menggunakan ayam pejantan yang digoreng dua kali untuk menghasilkan tekstur renyah, ayam ini dimarinasi dengan bumbu rempah khas yang membuat minyak gorengnya berwarna gelap namun kaya rasa. Dengan harga sekitar Rp70.000 per ekor, Ayam Goreng Pak Ali menjadi hidden gem favorit warga lokal dan wisatawan yang mencari cita rasa otentik Solo.",
+        "description": "Ayam Goreng Pak Ali adalah kuliner legendaris Solo yang telah berjualan sejak tahun 1930 di dalam Pasar Gedhe. Menggunakan ayam pejantan yang digoreng dua kali untuk menghasilkan tekstur renyah, ayam ini dimarinasi dengan bumbu rempah khas yang membuat minyak gorengnya berwarna gelap namun kaya rasa. Dengan harga sekitar Rp70.000 per ekor, Ayam Goreng Pak Ali menjadi hidden gem favorit warga lokal dan wisatawan yang mencari cita rasa otentik Solo.",
         "image": "https://maps.pasargedesolo.com/storage/stores/RGcHwsbKqUoZl1VgdHNOA4eu6tuY6OnL.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/RGcHwsbKqUoZl1VgdHNOA4eu6tuY6OnL_xs.jpg",
         "images": [
@@ -540,7 +540,7 @@ const MarketData = (() => {
         "y": 613,
         "lat": 411,
         "lng": 667,
-        "description": "Kios Bang Agiu merupakan salah satu kios yang ada di Pasar Gede yang menyediakan beragam sembako seperti sabun, mie, bumbu dapur, dan susu",
+        "description": "Kios Bang Agiu merupakan salah satu kios yang ada di Pasar Gedhe yang menyediakan beragam sembako seperti sabun, mie, bumbu dapur, dan susu",
         "image": "https://maps.pasargedesolo.com/storage/stores/q4Ee17eRL1HhFjDIBSrqrKcgVCdHOKYn.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/q4Ee17eRL1HhFjDIBSrqrKcgVCdHOKYn_xs.jpg",
         "images": [
@@ -573,7 +573,7 @@ const MarketData = (() => {
         "y": 676,
         "lat": 348,
         "lng": 367,
-        "description": "Kios Pak Suparmi adalah salah satu kios yang ada di Pasar Gede yang menjual sayur sawi dan pakcoy",
+        "description": "Kios Pak Suparmi adalah salah satu kios yang ada di Pasar Gedhe yang menjual sayur sawi dan pakcoy",
         "image": "https://maps.pasargedesolo.com/storage/stores/sz5fDnn5T5e3hqycp6A6JQMxZXoB9ri9.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/sz5fDnn5T5e3hqycp6A6JQMxZXoB9ri9_xs.jpg",
         "images": [
@@ -605,7 +605,7 @@ const MarketData = (() => {
         "y": 897,
         "lat": 127,
         "lng": 315,
-        "description": "Bakso Juventus adalah salah satu kuliner legendaris yang berada di Pasar Gede Pintu Utara yang dikenal menyajikan bakso dan soto dengan cita rasa khas Jawa yang autentik",
+        "description": "Bakso Juventus adalah salah satu kuliner legendaris yang berada di Pasar Gedhe Pintu Utara yang dikenal menyajikan bakso dan soto dengan cita rasa khas Jawa yang autentik",
         "image": "https://maps.pasargedesolo.com/storage/stores/el0DkhO1PP2oNPPU6vaIq7WKGrh6aE9N.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/el0DkhO1PP2oNPPU6vaIq7WKGrh6aE9N_xs.jpeg",
         "images": [
@@ -638,7 +638,7 @@ const MarketData = (() => {
         "y": 571,
         "lat": 453,
         "lng": 677,
-        "description": "Kios Makbenk 2 merupakan kios yang ada di Pasar Gede yang menyediakan spesialis gerabah dan alat kebersihan yang lengkap seperti sapu, tampah, camping, dan alat makan dari rotan atau kayu. Kios Makbenk memiliki 2 kios di sisi depan dan belakang bersebrangan",
+        "description": "Kios Makbenk 2 merupakan kios yang ada di Pasar Gedhe yang menyediakan spesialis gerabah dan alat kebersihan yang lengkap seperti sapu, tampah, camping, dan alat makan dari rotan atau kayu. Kios Makbenk memiliki 2 kios di sisi depan dan belakang bersebrangan",
         "image": "https://maps.pasargedesolo.com/storage/stores/pEWU4dzQ4MOiHQBvSg4QgEcoIevXYbTS.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/pEWU4dzQ4MOiHQBvSg4QgEcoIevXYbTS_xs.jpg",
         "images": [
@@ -671,7 +671,7 @@ const MarketData = (() => {
         "y": 697,
         "lat": 327,
         "lng": 482,
-        "description": "Kios Bu Spinarti adalah salah satu kios yang ada di Pasar Gede yang menjual racikan teh solo dan beraneka macam krupuk serta menyediakan bumbu masak",
+        "description": "Kios Bu Spinarti adalah salah satu kios yang ada di Pasar Gedhe yang menjual racikan teh solo dan beraneka macam krupuk serta menyediakan bumbu masak",
         "image": "https://maps.pasargedesolo.com/storage/stores/w7aZnFKMhW5bLPs2BxwksyTceh3hMepe.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/w7aZnFKMhW5bLPs2BxwksyTceh3hMepe_xs.jpg",
         "images": [
@@ -704,7 +704,7 @@ const MarketData = (() => {
         "y": 695,
         "lat": 329,
         "lng": 431,
-        "description": "Toko Jamu Sari Asih adalah salah satu toko jamu yang berada di Pasar Gede yang spesialis menjual berbagai minuman jamu herbal untuk kesehatan yang komplit",
+        "description": "Toko Jamu Sari Asih adalah salah satu toko jamu yang berada di Pasar Gedhe yang spesialis menjual berbagai minuman jamu herbal untuk kesehatan yang komplit",
         "image": "https://maps.pasargedesolo.com/storage/stores/ucvyBF8trn9CoVlKloXaalH5SlX0q9f5.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/ucvyBF8trn9CoVlKloXaalH5SlX0q9f5_xs.jpg",
         "images": [
@@ -738,7 +738,7 @@ const MarketData = (() => {
         "y": 695,
         "lat": 329,
         "lng": 394,
-        "description": "Kios Pak Syahrudin adalah salah satu kios yang ada di Pasar Gede yang menjual krupuk dan karak mentah",
+        "description": "Kios Pak Syahrudin adalah salah satu kios yang ada di Pasar Gedhe yang menjual krupuk dan karak mentah",
         "image": "https://maps.pasargedesolo.com/storage/stores/mdjNAIptMxMXZm43iTpDcGpgUbUiow9e.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/mdjNAIptMxMXZm43iTpDcGpgUbUiow9e_xs.jpg",
         "images": [
@@ -771,7 +771,7 @@ const MarketData = (() => {
         "y": 613,
         "lat": 411,
         "lng": 484,
-        "description": "Sugeng Rebung merupakan kios yang ada di Pasar Gede yang menjual spesialis rebung utuh maupun rebung yang sudah diparut",
+        "description": "Sugeng Rebung merupakan kios yang ada di Pasar Gedhe yang menjual spesialis rebung utuh maupun rebung yang sudah diparut",
         "image": "https://maps.pasargedesolo.com/storage/stores/02RiOy9kNCIx810he5KqKQS6cnBTbLDc.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/02RiOy9kNCIx810he5KqKQS6cnBTbLDc_xs.jpg",
         "images": [
@@ -804,7 +804,7 @@ const MarketData = (() => {
         "y": 552,
         "lat": 472,
         "lng": 612,
-        "description": "Kios Jeruk Pak Mulyono merupakan salah satu kios yang ada di Pasar Gede yang menyediakan spesialis buah jeruk peras dan lemon",
+        "description": "Kios Jeruk Pak Mulyono merupakan salah satu kios yang ada di Pasar Gedhe yang menyediakan spesialis buah jeruk peras dan lemon",
         "image": "https://maps.pasargedesolo.com/storage/stores/uZLWkA11voAgNEoNP0Yp5aipPsrDF21T.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/uZLWkA11voAgNEoNP0Yp5aipPsrDF21T_xs.jpg",
         "images": [
@@ -837,7 +837,7 @@ const MarketData = (() => {
         "y": 677,
         "lat": 347,
         "lng": 455,
-        "description": "Toko Bu Slamet 2 adalah salah satu kios yang ada di Pasar Gede yang menjual khusus sayur-sayuran yang variannya cukup komplit dan aneka kebutuhan bumbu dapur",
+        "description": "Toko Bu Slamet 2 adalah salah satu kios yang ada di Pasar Gedhe yang menjual khusus sayur-sayuran yang variannya cukup komplit dan aneka kebutuhan bumbu dapur",
         "image": "https://maps.pasargedesolo.com/storage/stores/RTS66bH7JML8YfBWUphq4MtFAST6QTO5.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/RTS66bH7JML8YfBWUphq4MtFAST6QTO5_xs.jpg",
         "images": [
@@ -870,7 +870,7 @@ const MarketData = (() => {
         "y": 681,
         "lat": 343,
         "lng": 488,
-        "description": "Kios Bu Darini adalah salah satu kios yang ada di Pasar Gede menjual aneka krupuk dan karak mentah selain itu juga menjual aneka bumbu dapur",
+        "description": "Kios Bu Darini adalah salah satu kios yang ada di Pasar Gedhe menjual aneka krupuk dan karak mentah selain itu juga menjual aneka bumbu dapur",
         "image": "https://maps.pasargedesolo.com/storage/stores/DStHrddFKbpqg3MChs5Vr1xgmzAtkWGA.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/DStHrddFKbpqg3MChs5Vr1xgmzAtkWGA_xs.jpg",
         "images": [
@@ -903,7 +903,7 @@ const MarketData = (() => {
         "y": 638,
         "lat": 386,
         "lng": 358,
-        "description": "Kios Bu Tyah Sayur adalah salah satu kios sayur yang berada di Pasar Gede yang menjual spesialis sayur-sayuran yang segar dan cukup lengkap",
+        "description": "Kios Bu Tyah Sayur adalah salah satu kios sayur yang berada di Pasar Gedhe yang menjual spesialis sayur-sayuran yang segar dan cukup lengkap",
         "image": "https://maps.pasargedesolo.com/storage/stores/NBB5jfDjsvC507Nvkta9pA9u5SJUWghC.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/NBB5jfDjsvC507Nvkta9pA9u5SJUWghC_xs.jpg",
         "images": [
@@ -936,7 +936,7 @@ const MarketData = (() => {
         "y": 614,
         "lat": 410,
         "lng": 361,
-        "description": "Toko Sayur Bu Pan adalah salah satu kios sayur yang berada di Pasar Gede yang menjual spesialis bermacam-macam aneka sayuran segar",
+        "description": "Toko Sayur Bu Pan adalah salah satu kios sayur yang berada di Pasar Gedhe yang menjual spesialis bermacam-macam aneka sayuran segar",
         "image": "https://maps.pasargedesolo.com/storage/stores/PNxF76YA72cdTmFs91DBBddCUVhvBiP7.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/PNxF76YA72cdTmFs91DBBddCUVhvBiP7_xs.jpg",
         "images": [
@@ -969,7 +969,7 @@ const MarketData = (() => {
         "y": 612,
         "lat": 412,
         "lng": 410,
-        "description": "Kios Surya Sayur adalah salah satu kios yang ada di Pasar Gede yang menjual sayur-sayuran seperti timun dan bunga pepaya",
+        "description": "Kios Surya Sayur adalah salah satu kios yang ada di Pasar Gedhe yang menjual sayur-sayuran seperti timun dan bunga pepaya",
         "image": "https://maps.pasargedesolo.com/storage/stores/5n644WpSatdO3AzuFQdqbDR3stMdlYTn.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/5n644WpSatdO3AzuFQdqbDR3stMdlYTn_xs.jpg",
         "images": [
@@ -1003,7 +1003,7 @@ const MarketData = (() => {
         "y": 555,
         "lat": 469,
         "lng": 359,
-        "description": "Budi Susato adalah pedagang kios sayur yang berada di Pasar Gede yang menjual khusus aneka sayur-sayuran",
+        "description": "Budi Susato adalah pedagang kios sayur yang berada di Pasar Gedhe yang menjual khusus aneka sayur-sayuran",
         "image": "https://maps.pasargedesolo.com/storage/stores/RQjJzNETGE13CJDb3AgoFfjMpDqDkGDF.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/RQjJzNETGE13CJDb3AgoFfjMpDqDkGDF_xs.jpg",
         "images": [
@@ -1036,7 +1036,7 @@ const MarketData = (() => {
         "y": 189,
         "lat": 835,
         "lng": 762,
-        "description": "UD Bintang Buah merupakan kios buah yang ada di Pasar Gede yang menyediakan khusus jeruk peras grosir",
+        "description": "UD Bintang Buah merupakan kios buah yang ada di Pasar Gedhe yang menyediakan khusus jeruk peras grosir",
         "image": "https://maps.pasargedesolo.com/storage/stores/nGDa1Di6BPmsKmxTabccjyPp1Zm3SD5i.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/nGDa1Di6BPmsKmxTabccjyPp1Zm3SD5i_xs.jpeg",
         "images": [
@@ -1068,7 +1068,7 @@ const MarketData = (() => {
         "y": 153,
         "lat": 871,
         "lng": 718,
-        "description": "TWK Grosir Buah merupakan los kios yang ada di Pasar Gede yang menyediakan spesialis buah jeruk grosir",
+        "description": "TWK Grosir Buah merupakan los kios yang ada di Pasar Gedhe yang menyediakan spesialis buah jeruk grosir",
         "image": "https://maps.pasargedesolo.com/storage/stores/IvhlBHfT1PjqmfYjG0cavzXRHljsjlgE.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/IvhlBHfT1PjqmfYjG0cavzXRHljsjlgE_xs.jpg",
         "images": [
@@ -1101,7 +1101,7 @@ const MarketData = (() => {
         "y": 569,
         "lat": 455,
         "lng": 412,
-        "description": "Berkah Ayam Bu Yati adalah salah satu kios yang berada di Pasar Gede yang menjual produk khusus spesialis ayam potong dan ayam utuh",
+        "description": "Berkah Ayam Bu Yati adalah salah satu kios yang berada di Pasar Gedhe yang menjual produk khusus spesialis ayam potong dan ayam utuh",
         "image": "https://maps.pasargedesolo.com/storage/stores/6lyYJ7qi9NDoIoL50g4f2jwJDgH6DlGK.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/6lyYJ7qi9NDoIoL50g4f2jwJDgH6DlGK_xs.jpg",
         "images": [
@@ -1134,7 +1134,7 @@ const MarketData = (() => {
         "y": 550,
         "lat": 474,
         "lng": 458,
-        "description": "HS Group Bu Nunik adalah salah satu kios yang ada di Pasar Gede yang menjual spesialis sayur-sayuran yang lengkap dan bumbu masak dapur",
+        "description": "HS Group Bu Nunik adalah salah satu kios yang ada di Pasar Gedhe yang menjual spesialis sayur-sayuran yang lengkap dan bumbu masak dapur",
         "image": "https://maps.pasargedesolo.com/storage/stores/ulmhy9syDN2jXE1xE0DxU0DWYpPCmVMq.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/ulmhy9syDN2jXE1xE0DxU0DWYpPCmVMq_xs.jpg",
         "images": [
@@ -1167,7 +1167,7 @@ const MarketData = (() => {
         "y": 352,
         "lat": 672,
         "lng": 558,
-        "description": "Es Dawet Telasih Mbak Genduk merupakan salah satu los yang ada di Pasar Gede yang menjual spesialis es dawet",
+        "description": "Es Dawet Telasih Mbak Genduk merupakan salah satu los yang ada di Pasar Gedhe yang menjual spesialis es dawet",
         "image": "https://maps.pasargedesolo.com/storage/stores/w3V7vbVAIf4V8glDB6KvQCKx0EmkWA5g.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/w3V7vbVAIf4V8glDB6KvQCKx0EmkWA5g_xs.jpg",
         "images": [
@@ -1199,7 +1199,7 @@ const MarketData = (() => {
         "y": 514,
         "lat": 510,
         "lng": 391,
-        "description": "Hosana Sayur adalah salah satu kios sayur yang ada di Pasar Gede yang menjual spesialis sayur-sayuran yang lengkap dan juga sebagai supplier sayur-sayuran",
+        "description": "Hosana Sayur adalah salah satu kios sayur yang ada di Pasar Gedhe yang menjual spesialis sayur-sayuran yang lengkap dan juga sebagai supplier sayur-sayuran",
         "image": "https://maps.pasargedesolo.com/storage/stores/NWL0RmbJpECy8t0PDfmshPI9lnaqAALl.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/NWL0RmbJpECy8t0PDfmshPI9lnaqAALl_xs.jpg",
         "images": [
@@ -1298,7 +1298,7 @@ const MarketData = (() => {
         "y": 446,
         "lat": 578,
         "lng": 678,
-        "description": "Kios Bu Wiwin merupakan kios yang ada di Pasar Gede dan memiliki 2 kios yang berhadapan yang menyediakan spesialis nangka, pisang, mete, sambal pecel mete, dan sembako",
+        "description": "Kios Bu Wiwin merupakan kios yang ada di Pasar Gedhe dan memiliki 2 kios yang berhadapan yang menyediakan spesialis nangka, pisang, mete, sambal pecel mete, dan sembako",
         "image": "https://maps.pasargedesolo.com/storage/stores/MqRGA1sTu0OQ1lfS0RMA5agA9ZUheEBx.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/MqRGA1sTu0OQ1lfS0RMA5agA9ZUheEBx_xs.jpg",
         "images": [
@@ -1331,7 +1331,7 @@ const MarketData = (() => {
         "y": 514,
         "lat": 510,
         "lng": 486,
-        "description": "Kios Bu Mariyani adalah salah satu kios yang ada di Pasar Gede yang spesialis menjual beraneka ikan asin",
+        "description": "Kios Bu Mariyani adalah salah satu kios yang ada di Pasar Gedhe yang spesialis menjual beraneka ikan asin",
         "image": "https://maps.pasargedesolo.com/storage/stores/0aMWQbPugovS4apCh1al5KB2Cw0lBw2s.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/0aMWQbPugovS4apCh1al5KB2Cw0lBw2s_xs.jpg",
         "images": [
@@ -1364,7 +1364,7 @@ const MarketData = (() => {
         "y": 810,
         "lat": 214,
         "lng": 590,
-        "description": "Kios Mbak Unyil merupakan salah satu kios yang ada di Pasar Gede yang menjual beragam cemilan dan oleh-oleh khas Solo seperti racikan teh, intip, dan rambak",
+        "description": "Kios Mbak Unyil merupakan salah satu kios yang ada di Pasar Gedhe yang menjual beragam cemilan dan oleh-oleh khas Solo seperti racikan teh, intip, dan rambak",
         "image": "https://maps.pasargedesolo.com/storage/stores/lynhWLNNCzZVprsirNQqnfehZsK63i4y.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/lynhWLNNCzZVprsirNQqnfehZsK63i4y_xs.jpg",
         "images": [
@@ -1397,7 +1397,7 @@ const MarketData = (() => {
         "y": 513,
         "lat": 511,
         "lng": 473,
-        "description": "Kios Sambel Pecel Bu Warsini adalah salah satu kios yang ada di Pasar Gede yang menjual spesialis sambal pecel",
+        "description": "Kios Sambel Pecel Bu Warsini adalah salah satu kios yang ada di Pasar Gedhe yang menjual spesialis sambal pecel",
         "image": "https://maps.pasargedesolo.com/storage/stores/KQZw0rNauulf3TkgDeR1ycVKsp2WTRpW.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/KQZw0rNauulf3TkgDeR1ycVKsp2WTRpW_xs.jpg",
         "images": [
@@ -1430,7 +1430,7 @@ const MarketData = (() => {
         "y": 496,
         "lat": 528,
         "lng": 466,
-        "description": "PS Mas Abon adalah produk khas Solo yang berada di Pasar Gede yang menjual spesialis abon dan oleh-oleh khas solo",
+        "description": "PS Mas Abon adalah produk khas Solo yang berada di Pasar Gedhe yang menjual spesialis abon dan oleh-oleh khas solo",
         "image": "https://maps.pasargedesolo.com/storage/stores/V5yzZDJ9OQXeu1nRF5f4KVcIKDaPJ6oF.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/V5yzZDJ9OQXeu1nRF5f4KVcIKDaPJ6oF_xs.jpg",
         "images": [
@@ -1463,7 +1463,7 @@ const MarketData = (() => {
         "y": 783,
         "lat": 241,
         "lng": 543,
-        "description": "Es Dawet Telasih Bu Dermi adalah minuman legendaris khas Solo yang telah hadir sejak tahun 1930 di Pasar Gede. Dengan perpaduan cendol hijau kenyal, santan gurih, gula merah cair aromatik, biji telasih segar, ketan hitam, dan jenang sumsum, minuman ini menawarkan cita rasa autentik yang menyegarkan.",
+        "description": "Es Dawet Telasih Bu Dermi adalah minuman legendaris khas Solo yang telah hadir sejak tahun 1930 di Pasar Gedhe. Dengan perpaduan cendol hijau kenyal, santan gurih, gula merah cair aromatik, biji telasih segar, ketan hitam, dan jenang sumsum, minuman ini menawarkan cita rasa autentik yang menyegarkan.",
         "image": "https://maps.pasargedesolo.com/storage/stores/9rOAOPqWurjbESoCgsQpRgn6yGsUksMS.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/9rOAOPqWurjbESoCgsQpRgn6yGsUksMS_xs.jpg",
         "images": [
@@ -1496,7 +1496,7 @@ const MarketData = (() => {
         "y": 465,
         "lat": 559,
         "lng": 455,
-        "description": "Kios Bu Tini adalah salah satu kios yang ada di Pasar Gede yang menjual aneka bawang dan aneka kacang serta bumbu masak dapur lainnya",
+        "description": "Kios Bu Tini adalah salah satu kios yang ada di Pasar Gedhe yang menjual aneka bawang dan aneka kacang serta bumbu masak dapur lainnya",
         "image": "https://maps.pasargedesolo.com/storage/stores/aNjhWury9FmrAKKLJ6ZGd6CvQ3hiLsF2.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/aNjhWury9FmrAKKLJ6ZGd6CvQ3hiLsF2_xs.jpg",
         "images": [
@@ -1529,7 +1529,7 @@ const MarketData = (() => {
         "y": 444,
         "lat": 580,
         "lng": 489,
-        "description": "Dawet Bu Siti adalah warung legendaris di Pasar Gede Solo yang menyajikan berbagai varian dawet khas, seperti dawet telasih, dawet durian, dan dawet gempol pleret. Setiap porsi disajikan dengan cendol kenyal, ketan hitam, tape ketan, jenang sumsum, nangka, dan gula merah cair, memberikan sensasi rasa manis dan gurih yang khas.",
+        "description": "Dawet Bu Siti adalah warung legendaris di Pasar Gedhe Solo yang menyajikan berbagai varian dawet khas, seperti dawet telasih, dawet durian, dan dawet gempol pleret. Setiap porsi disajikan dengan cendol kenyal, ketan hitam, tape ketan, jenang sumsum, nangka, dan gula merah cair, memberikan sensasi rasa manis dan gurih yang khas.",
         "image": "https://maps.pasargedesolo.com/storage/stores/NviLF6kZCAF2MyW7fq5wh3PEEcmVkYyC.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/NviLF6kZCAF2MyW7fq5wh3PEEcmVkYyC_xs.jpg",
         "images": [
@@ -1553,7 +1553,7 @@ const MarketData = (() => {
         "buildingId": "pasar-gede",
         "floor": 1,
         "label": "Soto Pasar Gede Bu Harini",
-        "name": "Soto Pasar Gede Bu Harini",
+        "name": "Soto Pasar Gedhe Bu Harini",
         "category": "kuliner",
         "categoryLabel": "Kuliner Legendaris",
         "icon": "🍜",
@@ -1562,7 +1562,7 @@ const MarketData = (() => {
         "y": 762,
         "lat": 262,
         "lng": 738,
-        "description": "Soto Pasar Gede Bu Harini adalah tempat makan yang menjual makanan khas Indonesia terutama soto kuah bening",
+        "description": "Soto Pasar Gedhe Bu Harini adalah tempat makan yang menjual makanan khas Indonesia terutama soto kuah bening",
         "image": "https://maps.pasargedesolo.com/storage/stores/ETWjmqqxQOcGMLtBSNieX6z5CzksynOD.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/ETWjmqqxQOcGMLtBSNieX6z5CzksynOD_xs.jpeg",
         "images": [
@@ -1595,7 +1595,7 @@ const MarketData = (() => {
         "y": 268,
         "lat": 756,
         "lng": 631,
-        "description": "Kios Omah Buah merupakan kios yang ada di Pasar Gede yang menyediakan grosir dan ecer buah lokal dan import yang segar setiap hari dengan kualitas yang terjamin seperti buah anggur hijau atau ungu, apel, pear, dan jeruk",
+        "description": "Kios Omah Buah merupakan kios yang ada di Pasar Gedhe yang menyediakan grosir dan ecer buah lokal dan import yang segar setiap hari dengan kualitas yang terjamin seperti buah anggur hijau atau ungu, apel, pear, dan jeruk",
         "image": "https://maps.pasargedesolo.com/storage/stores/sfujpYI3hWrYEhjqL9EAmNfhO4MqLepF.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/sfujpYI3hWrYEhjqL9EAmNfhO4MqLepF_xs.jpg",
         "images": [
@@ -1627,7 +1627,7 @@ const MarketData = (() => {
         "y": 579,
         "lat": 445,
         "lng": 289,
-        "description": "Kios Mas Pion adalah salah satu kios di Pasar Gede yang menjual khusus kebutuhan bahan makanan sayur-sayuran dan bumbu dapur",
+        "description": "Kios Mas Pion adalah salah satu kios di Pasar Gedhe yang menjual khusus kebutuhan bahan makanan sayur-sayuran dan bumbu dapur",
         "image": "https://maps.pasargedesolo.com/storage/stores/H5Mf1XqZtYwldQk96tuKSkhPN29IE3Yx.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/H5Mf1XqZtYwldQk96tuKSkhPN29IE3Yx_xs.jpg",
         "images": [
@@ -1660,7 +1660,7 @@ const MarketData = (() => {
         "y": 397,
         "lat": 627,
         "lng": 405,
-        "description": "Kios Endang Cholil adalah salah satu kios pasar gede yang menjual aneka buah grosir",
+        "description": "Kios Endang Cholil adalah salah satu kios pasar gedhe yang menjual aneka buah grosir",
         "image": "https://maps.pasargedesolo.com/storage/stores/fq0V2rWQelLSwN7p1XhzVQxLGDwRaRzJ.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/fq0V2rWQelLSwN7p1XhzVQxLGDwRaRzJ_xs.jpg",
         "images": [
@@ -1693,7 +1693,7 @@ const MarketData = (() => {
         "y": 464,
         "lat": 560,
         "lng": 489,
-        "description": "Kios Sembako Widayanti adalah salah satu kios yang berada di Pasar Gede yang menjual rambak kering dan aneka kacang-kacangan serta sembako lainnya",
+        "description": "Kios Sembako Widayanti adalah salah satu kios yang berada di Pasar Gedhe yang menjual rambak kering dan aneka kacang-kacangan serta sembako lainnya",
         "image": "https://maps.pasargedesolo.com/storage/stores/NSGHSf0feOtAqdnkjzFBfW0AJtXec0zM.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/NSGHSf0feOtAqdnkjzFBfW0AJtXec0zM_xs.jpg",
         "images": [
@@ -1726,7 +1726,7 @@ const MarketData = (() => {
         "y": 617,
         "lat": 407,
         "lng": 549,
-        "description": "Kios Bu Warni merupakan kios yang ada di Pasar Gede yang menyediakan beragam cemilan khas Solo dan ikan asin",
+        "description": "Kios Bu Warni merupakan kios yang ada di Pasar Gedhe yang menyediakan beragam cemilan khas Solo dan ikan asin",
         "image": "https://maps.pasargedesolo.com/storage/stores/rEinDT41Rw3rrlJLfWEWC412N1UX1WVc.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/rEinDT41Rw3rrlJLfWEWC412N1UX1WVc_xs.jpg",
         "images": [
@@ -1759,7 +1759,7 @@ const MarketData = (() => {
         "y": 233,
         "lat": 791,
         "lng": 418,
-        "description": "Mbak Priyanti Bandeng Pasar Gedhe adalah salah satu kios oprokan yang ada di Pasar Gede Pintu Utama yang menjual khusus ikan bandeng",
+        "description": "Mbak Priyanti Bandeng Pasar Gedhe adalah salah satu kios oprokan yang ada di Pasar Gedhe Pintu Utama yang menjual khusus ikan bandeng",
         "image": "https://maps.pasargedesolo.com/storage/stores/gkOrj0Fn6tdYOecP0GjarOkkeOcntXNJ.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/gkOrj0Fn6tdYOecP0GjarOkkeOcntXNJ_xs.jpg",
         "images": [
@@ -1792,7 +1792,7 @@ const MarketData = (() => {
         "y": 269,
         "lat": 755,
         "lng": 476,
-        "description": "Kios Gimin Buah merupakan kios yang ada di Pasar Gede yang menyediakan buah-buahan grosir import dan lokal",
+        "description": "Kios Gimin Buah merupakan kios yang ada di Pasar Gedhe yang menyediakan buah-buahan grosir import dan lokal",
         "image": "https://maps.pasargedesolo.com/storage/stores/EnCE8AnpIbfNNAyFjkmrEtUcYf58hR0u.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/EnCE8AnpIbfNNAyFjkmrEtUcYf58hR0u_xs.jpg",
         "images": [
@@ -1825,7 +1825,7 @@ const MarketData = (() => {
         "y": 224,
         "lat": 800,
         "lng": 459,
-        "description": "Kios Buah Suwarpo merupakan kios yang ada di Pasar Gede yang menyediakan berbagai macam buah yang diecerkan",
+        "description": "Kios Buah Suwarpo merupakan kios yang ada di Pasar Gedhe yang menyediakan berbagai macam buah yang diecerkan",
         "image": "https://maps.pasargedesolo.com/storage/stores/gY6qLwtlGttOeMDCFF1F64SY1ZWJhEDg.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/gY6qLwtlGttOeMDCFF1F64SY1ZWJhEDg_xs.jpg",
         "images": [
@@ -1858,7 +1858,7 @@ const MarketData = (() => {
         "y": 420,
         "lat": 604,
         "lng": 290,
-        "description": "Kios Paerah adalah salah satu yang ada di Pasar Gede yang menjual spesialis aneka rambak dan peyek",
+        "description": "Kios Paerah adalah salah satu yang ada di Pasar Gedhe yang menjual spesialis aneka rambak dan peyek",
         "image": "https://maps.pasargedesolo.com/storage/stores/s0bHoTKoBPcNjOnRAOh2ecjVrpIiu9GT.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/s0bHoTKoBPcNjOnRAOh2ecjVrpIiu9GT_xs.jpg",
         "images": [
@@ -1891,7 +1891,7 @@ const MarketData = (() => {
         "y": 345,
         "lat": 679,
         "lng": 361,
-        "description": "Oleh-oleh Mbak Parti adalah salah satu kios yang ada di Pasar Gede yang menjual spesialis beragam produk cemilan tradisional",
+        "description": "Oleh-oleh Mbak Parti adalah salah satu kios yang ada di Pasar Gedhe yang menjual spesialis beragam produk cemilan tradisional",
         "image": "https://maps.pasargedesolo.com/storage/stores/wAsCPOOL7Gl7xwwb5GYxIf80t9TJ8jxy.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/wAsCPOOL7Gl7xwwb5GYxIf80t9TJ8jxy_xs.jpg",
         "images": [
@@ -1958,7 +1958,7 @@ const MarketData = (() => {
         "y": 225,
         "lat": 799,
         "lng": 500,
-        "description": "Dawet Bu Haji Sipon adalah minuman tradisional legendaris di Pasar Gede Solo, terkenal dengan cendol segar, santan, dan gula merah khasnya.",
+        "description": "Dawet Bu Haji Sipon adalah minuman tradisional legendaris di Pasar Gedhe Solo, terkenal dengan cendol segar, santan, dan gula merah khasnya.",
         "image": "https://maps.pasargedesolo.com/storage/stores/Sbl0Kpc5LfJxEFgb5UGQkksqgEMIIo7M.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/Sbl0Kpc5LfJxEFgb5UGQkksqgEMIIo7M_xs.jpg",
         "images": [
@@ -1991,7 +1991,7 @@ const MarketData = (() => {
         "y": 271,
         "lat": 753,
         "lng": 502,
-        "description": "Kios Bu Ngatmi 1 merupakan salah satu kios yang ada di Pasar Gede yang menyediakan spesialis beragam cemilan dan oleh-oleh khas Solo",
+        "description": "Kios Bu Ngatmi 1 merupakan salah satu kios yang ada di Pasar Gedhe yang menyediakan spesialis beragam cemilan dan oleh-oleh khas Solo",
         "image": "https://maps.pasargedesolo.com/storage/stores/4Mfhjz42sKpn3j38Vv9jawu7HYccH2lB.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/4Mfhjz42sKpn3j38Vv9jawu7HYccH2lB_xs.jpg",
         "images": [
@@ -2024,7 +2024,7 @@ const MarketData = (() => {
         "y": 444,
         "lat": 580,
         "lng": 333,
-        "description": "Endang Snack adalah salah satu kios yang ada di Pasar Gede yang menjual spesialis aneka jajan pasar tradisional",
+        "description": "Endang Snack adalah salah satu kios yang ada di Pasar Gedhe yang menjual spesialis aneka jajan pasar tradisional",
         "image": "https://maps.pasargedesolo.com/storage/stores/EJFTcG6umY3jWt4VkTS1L1kCB9J32XFw.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/EJFTcG6umY3jWt4VkTS1L1kCB9J32XFw_xs.jpg",
         "images": [
@@ -2048,7 +2048,7 @@ const MarketData = (() => {
         "buildingId": "pasar-gede",
         "floor": 1,
         "label": "Bidin Los Buah Pasar Gede",
-        "name": "Bidin Los Buah Pasar Gede",
+        "name": "Bidin Los Buah Pasar Gedhe",
         "category": "buah",
         "categoryLabel": "Buah-buahan",
         "icon": "🍎",
@@ -2057,7 +2057,7 @@ const MarketData = (() => {
         "y": 343,
         "lat": 681,
         "lng": 337,
-        "description": "Bidin Los Buah Pasar Gede adalah pedagang buah yang berada di area Pasar Gede sisi timur yang terkenal produk buah-buahan import dan lokal yang segar serta menerima pesanan buah dalam jumlah yang besar",
+        "description": "Bidin Los Buah Pasar Gedhe adalah pedagang buah yang berada di area Pasar Gedhe sisi timur yang terkenal produk buah-buahan import dan lokal yang segar serta menerima pesanan buah dalam jumlah yang besar",
         "image": "https://maps.pasargedesolo.com/storage/stores/N57eNbWDGw55R1JWyPPN4y0uO1Bkcf8I.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/N57eNbWDGw55R1JWyPPN4y0uO1Bkcf8I_xs.jpg",
         "images": [
@@ -2094,7 +2094,7 @@ const MarketData = (() => {
         "y": 392,
         "lat": 632,
         "lng": 333,
-        "description": "Kios Dewi Astuti adalah salah satu kios yang ada di Pasar Gede yang menjual spesialis buah-buahan dan menerima pesanan parsel buah",
+        "description": "Kios Dewi Astuti adalah salah satu kios yang ada di Pasar Gedhe yang menjual spesialis buah-buahan dan menerima pesanan parsel buah",
         "image": "https://maps.pasargedesolo.com/storage/stores/7g5ROvbwSd2K8Zm1MrG74GORnuPJqqY0.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/7g5ROvbwSd2K8Zm1MrG74GORnuPJqqY0_xs.jpg",
         "images": [
@@ -2127,7 +2127,7 @@ const MarketData = (() => {
         "y": 236,
         "lat": 788,
         "lng": 251,
-        "description": "Pintu masuk dan keluar tepat di seberang jam Pasar Gede",
+        "description": "Pintu masuk dan keluar tepat di seberang jam Pasar Gedhe",
         "image": "https://maps.pasargedesolo.com/storage/stores/t84C99Rti4tCZI6WodA9KD4ht2N8U8qX.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/t84C99Rti4tCZI6WodA9KD4ht2N8U8qX_xs.jpg",
         "images": [
@@ -2159,7 +2159,7 @@ const MarketData = (() => {
         "y": 465,
         "lat": 559,
         "lng": 332,
-        "description": "Kios Bu Desi adalah salah satu kios yang ada di Pasar Gede yang menjual sayuran",
+        "description": "Kios Bu Desi adalah salah satu kios yang ada di Pasar Gedhe yang menjual sayuran",
         "image": "https://maps.pasargedesolo.com/storage/stores/D74NL97aeYWh2EqZTYnlM1buKplLCo0S.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/D74NL97aeYWh2EqZTYnlM1buKplLCo0S_xs.jpg",
         "images": [
@@ -2192,7 +2192,7 @@ const MarketData = (() => {
         "y": 907,
         "lat": 117,
         "lng": 525,
-        "description": "Pintu masuk dan keluar di seberang BCA Pasar Gede",
+        "description": "Pintu masuk dan keluar di seberang BCA Pasar Gedhe",
         "image": "https://maps.pasargedesolo.com/storage/stores/jBJvvYnNlPfTJPUGXyjaC1e85lNKndEo.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/jBJvvYnNlPfTJPUGXyjaC1e85lNKndEo_xs.jpg",
         "images": [
@@ -2224,7 +2224,7 @@ const MarketData = (() => {
         "y": 226,
         "lat": 798,
         "lng": 778,
-        "description": "Pintu masuk dan keluar belakang Pasar Gede",
+        "description": "Pintu masuk dan keluar belakang Pasar Gedhe",
         "image": "https://maps.pasargedesolo.com/storage/stores/EkqIRHfdeVoMdThmEu3YkXq474gepw55.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/EkqIRHfdeVoMdThmEu3YkXq474gepw55_xs.jpg",
         "images": [
@@ -2256,7 +2256,7 @@ const MarketData = (() => {
         "y": 202,
         "lat": 822,
         "lng": 530,
-        "description": "Oprokan Ibu Sri merupakan oprokan yang ada di Pasar Gede yang menyediakan spesialis minuman rempah dan teh racikan",
+        "description": "Oprokan Ibu Sri merupakan oprokan yang ada di Pasar Gedhe yang menyediakan spesialis minuman rempah dan teh racikan",
         "image": "https://maps.pasargedesolo.com/storage/stores/k9fxAoIh7og256VJacmhHnvUwF1z2DWx.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/k9fxAoIh7og256VJacmhHnvUwF1z2DWx_xs.jpg",
         "images": [
@@ -2289,7 +2289,7 @@ const MarketData = (() => {
         "y": 211,
         "lat": 813,
         "lng": 530,
-        "description": "Oprokan Ibu Sugiyem adalah salah satu oprokan yang ada di Pasar Gede yang menjual spesialis kerupuk",
+        "description": "Oprokan Ibu Sugiyem adalah salah satu oprokan yang ada di Pasar Gedhe yang menjual spesialis kerupuk",
         "image": "https://maps.pasargedesolo.com/storage/stores/GaCawft6vmP1bSRuzKhDztz2UA6wfUKy.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/GaCawft6vmP1bSRuzKhDztz2UA6wfUKy_xs.jpg",
         "images": [
@@ -2322,7 +2322,7 @@ const MarketData = (() => {
         "y": 234,
         "lat": 790,
         "lng": 531,
-        "description": "Oprokan Ibu Lastri merupakan oprokan yang ada di Pasar Gede yang menjual spesialis karak atau kerupuk beras",
+        "description": "Oprokan Ibu Lastri merupakan oprokan yang ada di Pasar Gedhe yang menjual spesialis karak atau kerupuk beras",
         "image": "https://maps.pasargedesolo.com/storage/stores/AgupV17Z42YYo4pvIrVew57Zv6RHmXM0.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/AgupV17Z42YYo4pvIrVew57Zv6RHmXM0_xs.jpg",
         "images": [
@@ -2354,7 +2354,7 @@ const MarketData = (() => {
         "y": 273,
         "lat": 751,
         "lng": 530,
-        "description": "Oprokan Bu Nanik merupakan oprokan yang ada di Pasar Gede yang menjual spesialis aneka masakan jawa seperti pecel ndeso, brambang asem, dan cabuk rambak",
+        "description": "Oprokan Bu Nanik merupakan oprokan yang ada di Pasar Gedhe yang menjual spesialis aneka masakan jawa seperti pecel ndeso, brambang asem, dan cabuk rambak",
         "image": "https://maps.pasargedesolo.com/storage/stores/mwIQc6t84iyotfLWAUkKZEajB5DQqGk5.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/mwIQc6t84iyotfLWAUkKZEajB5DQqGk5_xs.jpg",
         "images": [
@@ -2386,7 +2386,7 @@ const MarketData = (() => {
         "y": 256,
         "lat": 768,
         "lng": 530,
-        "description": "Sambel Pecel Sedep Bu Kareni adalah bumbu pecel legendaris yang dapat ditemukan di Pasar Gede Solo, tepatnya di kios depan Dawet Telasih Bu Sipon. Dikenal dengan cita rasa khas dan pedas yang menggugah selera, sambel pecel ini tersedia dalam beberapa varian, seperti Sambel Pecel Kota (coklat), Sambel Pecel Ndeso (hitam), dan Sambel Cabuk Rambak. Dengan ketahanan hingga satu bulan, produk ini cocok sebagai oleh-oleh khas Solo bagi pecinta kuliner pedas.",
+        "description": "Sambel Pecel Sedep Bu Kareni adalah bumbu pecel legendaris yang dapat ditemukan di Pasar Gedhe Solo, tepatnya di kios depan Dawet Telasih Bu Sipon. Dikenal dengan cita rasa khas dan pedas yang menggugah selera, sambel pecel ini tersedia dalam beberapa varian, seperti Sambel Pecel Kota (coklat), Sambel Pecel Ndeso (hitam), dan Sambel Cabuk Rambak. Dengan ketahanan hingga satu bulan, produk ini cocok sebagai oleh-oleh khas Solo bagi pecinta kuliner pedas.",
         "image": "https://maps.pasargedesolo.com/storage/stores/UbQUumezVzysngZuQKhO37sTryajFBoz.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/UbQUumezVzysngZuQKhO37sTryajFBoz_xs.jpg",
         "images": [
@@ -2451,7 +2451,7 @@ const MarketData = (() => {
         "y": 218,
         "lat": 806,
         "lng": 301,
-        "description": "Oprokan Bp Sarmo 1 adalah salah satu kios oprokan yang ada di Pasar Gede Pintu Utama yang menjual khusus sendal karet",
+        "description": "Oprokan Bp Sarmo 1 adalah salah satu kios oprokan yang ada di Pasar Gedhe Pintu Utama yang menjual khusus sendal karet",
         "image": "https://maps.pasargedesolo.com/storage/stores/GIsmqYrfSG8zavvzDrPgIvKxem3Pj5Db.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/GIsmqYrfSG8zavvzDrPgIvKxem3Pj5Db_xs.jpg",
         "images": [
@@ -2474,7 +2474,7 @@ const MarketData = (() => {
         "buildingId": "pasar-gede",
         "floor": 1,
         "label": "Toilet Pasar Gede 2",
-        "name": "Toilet Pasar Gede 2",
+        "name": "Toilet Pasar Gedhe 2",
         "category": "toilet",
         "categoryLabel": "Toilet & Fasilitas",
         "icon": "🚻",
@@ -2483,7 +2483,7 @@ const MarketData = (() => {
         "y": 202,
         "lat": 822,
         "lng": 293,
-        "description": "Fasilitas toilet yang berada di Pasar Gede",
+        "description": "Fasilitas toilet yang berada di Pasar Gedhe",
         "image": null,
         "imageThumb": null,
         "images": [],
@@ -2504,7 +2504,7 @@ const MarketData = (() => {
         "buildingId": "pasar-gede",
         "floor": 1,
         "label": "Toilet Pasar Gede 3",
-        "name": "Toilet Pasar Gede 3",
+        "name": "Toilet Pasar Gedhe 3",
         "category": "toilet",
         "categoryLabel": "Toilet & Fasilitas",
         "icon": "🚻",
@@ -2513,7 +2513,7 @@ const MarketData = (() => {
         "y": 180,
         "lat": 844,
         "lng": 744,
-        "description": "Fasilitas toilet yang berada di Pasar Gede",
+        "description": "Fasilitas toilet yang berada di Pasar Gedhe",
         "image": null,
         "imageThumb": null,
         "images": [],
@@ -2534,7 +2534,7 @@ const MarketData = (() => {
         "buildingId": "pasar-gede",
         "floor": 1,
         "label": "Toilet Pasar Gede 4",
-        "name": "Toilet Pasar Gede 4",
+        "name": "Toilet Pasar Gedhe 4",
         "category": "toilet",
         "categoryLabel": "Toilet & Fasilitas",
         "icon": "🚻",
@@ -2543,7 +2543,7 @@ const MarketData = (() => {
         "y": 265,
         "lat": 759,
         "lng": 739,
-        "description": "Fasilitas toilet yang berada di Pasar Gede",
+        "description": "Fasilitas toilet yang berada di Pasar Gedhe",
         "image": null,
         "imageThumb": null,
         "images": [],
@@ -2564,7 +2564,7 @@ const MarketData = (() => {
         "buildingId": "pasar-gede",
         "floor": 1,
         "label": "Toilet Pasar Gede 1",
-        "name": "Toilet Pasar Gede 1",
+        "name": "Toilet Pasar Gedhe 1",
         "category": "toilet",
         "categoryLabel": "Toilet & Fasilitas",
         "icon": "🚻",
@@ -2573,7 +2573,7 @@ const MarketData = (() => {
         "y": 266,
         "lat": 758,
         "lng": 293,
-        "description": "Fasilitas toilet yang berada di Pasar Gede",
+        "description": "Fasilitas toilet yang berada di Pasar Gedhe",
         "image": null,
         "imageThumb": null,
         "images": [],
@@ -2603,7 +2603,7 @@ const MarketData = (() => {
         "y": 350,
         "lat": 674,
         "lng": 519,
-        "description": "Oprokan Ibu Giyarti merupakan oprokan yang ada di Pasar Gede yang menjual beragam sayuran dan tahu tempe",
+        "description": "Oprokan Ibu Giyarti merupakan oprokan yang ada di Pasar Gedhe yang menjual beragam sayuran dan tahu tempe",
         "image": "https://maps.pasargedesolo.com/storage/stores/1CzoMugSx36yjFRoNflH4jxMfDRwED52.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/1CzoMugSx36yjFRoNflH4jxMfDRwED52_xs.jpg",
         "images": [
@@ -2636,7 +2636,7 @@ const MarketData = (() => {
         "y": 331,
         "lat": 693,
         "lng": 519,
-        "description": "Oprokan Ibu Sriyono merupakan oprokan yang ada di Pasar Gede yang menjual spesialis ayam potong dan kulit ayam",
+        "description": "Oprokan Ibu Sriyono merupakan oprokan yang ada di Pasar Gedhe yang menjual spesialis ayam potong dan kulit ayam",
         "image": "https://maps.pasargedesolo.com/storage/stores/CISQ4BocGjalCMvFeF2ZAmPpDC8e5hxI.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/CISQ4BocGjalCMvFeF2ZAmPpDC8e5hxI_xs.jpg",
         "images": [
@@ -2669,7 +2669,7 @@ const MarketData = (() => {
         "y": 624,
         "lat": 400,
         "lng": 519,
-        "description": "Oprokan Ibu Nurhidayati merupakan salah satu oprokan yang ada di Pasar Gede yang menjual spesialis ayam potong dan tulang ayam",
+        "description": "Oprokan Ibu Nurhidayati merupakan salah satu oprokan yang ada di Pasar Gedhe yang menjual spesialis ayam potong dan tulang ayam",
         "image": "https://maps.pasargedesolo.com/storage/stores/PQSvvG5H1OAEh8BplEvvZBLc5zXaLdD1.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/PQSvvG5H1OAEh8BplEvvZBLc5zXaLdD1_xs.jpg",
         "images": [
@@ -2701,7 +2701,7 @@ const MarketData = (() => {
         "y": 338,
         "lat": 686,
         "lng": 520,
-        "description": "Oprokan Ibu Parinah merupakan salah satu oprokan yang ada di Pasar Gede yang menjual ayam potong dan uritan",
+        "description": "Oprokan Ibu Parinah merupakan salah satu oprokan yang ada di Pasar Gedhe yang menjual ayam potong dan uritan",
         "image": "https://maps.pasargedesolo.com/storage/stores/LyBs70UYpEph0c1yJMWXQ0l6vghuugun.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/LyBs70UYpEph0c1yJMWXQ0l6vghuugun_xs.jpg",
         "images": [
@@ -2734,7 +2734,7 @@ const MarketData = (() => {
         "y": 636,
         "lat": 388,
         "lng": 518,
-        "description": "Oprokan Ibu Warti Ayam Potong 3 merupakan oprokan yang ada di Pasar Gede yang menyediakan spesialis ayam potong, tulang ayam, dan kepala ayam",
+        "description": "Oprokan Ibu Warti Ayam Potong 3 merupakan oprokan yang ada di Pasar Gedhe yang menyediakan spesialis ayam potong, tulang ayam, dan kepala ayam",
         "image": "https://maps.pasargedesolo.com/storage/stores/ujHbeIa7gV9a0V0rrCqOKK1xMRoEzoOi.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/ujHbeIa7gV9a0V0rrCqOKK1xMRoEzoOi_xs.jpg",
         "images": [
@@ -2766,7 +2766,7 @@ const MarketData = (() => {
         "y": 671,
         "lat": 353,
         "lng": 292,
-        "description": "Toko Mee Lian 1 adalah salah satu toko yang ada di Pasar Gede yang khusus menjual bumbu dapur masak dan keperluan sembako",
+        "description": "Toko Mee Lian 1 adalah salah satu toko yang ada di Pasar Gedhe yang khusus menjual bumbu dapur masak dan keperluan sembako",
         "image": "https://maps.pasargedesolo.com/storage/stores/R94SF0KCzZxTAQvtYBm4hFDrOJmMvv57.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/R94SF0KCzZxTAQvtYBm4hFDrOJmMvv57_xs.jpg",
         "images": [
@@ -2800,7 +2800,7 @@ const MarketData = (() => {
         "y": 784,
         "lat": 240,
         "lng": 596,
-        "description": "Kios Oleh-Oleh Mbak Lies merupakan salah satu kios yang ada di Pasar Gede yang menyediakan beragam oleh-oleh khas Solo seperti abon, intip, dan karak",
+        "description": "Kios Oleh-Oleh Mbak Lies merupakan salah satu kios yang ada di Pasar Gedhe yang menyediakan beragam oleh-oleh khas Solo seperti abon, intip, dan karak",
         "image": "https://maps.pasargedesolo.com/storage/stores/VqQrzGumZNW6U9JWpansEws8h2v3gROo.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/VqQrzGumZNW6U9JWpansEws8h2v3gROo_xs.jpg",
         "images": [
@@ -2833,7 +2833,7 @@ const MarketData = (() => {
         "y": 573,
         "lat": 451,
         "lng": 557,
-        "description": "Kios Bu Samini merupakan salah satu kios yang ada di Pasar Gede yang menyediakan spesialis tanaman biji rempah seperti jahe, kunyit, dan sereh",
+        "description": "Kios Bu Samini merupakan salah satu kios yang ada di Pasar Gedhe yang menyediakan spesialis tanaman biji rempah seperti jahe, kunyit, dan sereh",
         "image": "https://maps.pasargedesolo.com/storage/stores/NSpETl480jVBRSTjS2F2rmtsyl3CX7uC.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/NSpETl480jVBRSTjS2F2rmtsyl3CX7uC_xs.jpg",
         "images": [
@@ -2866,7 +2866,7 @@ const MarketData = (() => {
         "y": 572,
         "lat": 452,
         "lng": 654,
-        "description": "Kios Bu Suniyem merupakan kios yang ada di Pasar Gede yang menyediakan spesialis minuman es teh",
+        "description": "Kios Bu Suniyem merupakan kios yang ada di Pasar Gedhe yang menyediakan spesialis minuman es teh",
         "image": "https://maps.pasargedesolo.com/storage/stores/Lric42nucY6dWUWTRhJZdQ0s4VGDxBRE.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/Lric42nucY6dWUWTRhJZdQ0s4VGDxBRE_xs.jpg",
         "images": [
@@ -2899,7 +2899,7 @@ const MarketData = (() => {
         "y": 143,
         "lat": 881,
         "lng": 390,
-        "description": "UD Hasil Buah Antok (Bagong) merupakan salah satu suplier atau grosir buah-buahan lokal dan import yang ada di Pasar Gede",
+        "description": "UD Hasil Buah Antok (Bagong) merupakan salah satu suplier atau grosir buah-buahan lokal dan import yang ada di Pasar Gedhe",
         "image": "https://maps.pasargedesolo.com/storage/locations/N1c2SfBHo3g5YrV0xOqFRob6YKOJ6hQIGnMz0SNT.jpg",
         "imageThumb": null,
         "images": [
@@ -2932,7 +2932,7 @@ const MarketData = (() => {
         "y": 720,
         "lat": 304,
         "lng": 263,
-        "description": "Kios Uzhie adalah salah satu kios yang berada di kawaban Pasar Gede yang menjual aneka buah dan menerima pesanan buah secara grosir",
+        "description": "Kios Uzhie adalah salah satu kios yang berada di kawaban Pasar Gedhe yang menjual aneka buah dan menerima pesanan buah secara grosir",
         "image": "https://maps.pasargedesolo.com/storage/stores/BlfUh7YhK9qtwCsnStVC6QENmD2G4Bl5.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/BlfUh7YhK9qtwCsnStVC6QENmD2G4Bl5_xs.jpeg",
         "images": [
@@ -2965,7 +2965,7 @@ const MarketData = (() => {
         "y": 535,
         "lat": 489,
         "lng": 261,
-        "description": "Toko Sinar adalah salah satu kios yang ada di Pasar Gede yang menjual aneka makanan, kue kering khas imlek dan kebutuhan imlek",
+        "description": "Toko Sinar adalah salah satu kios yang ada di Pasar Gedhe yang menjual aneka makanan, kue kering khas imlek dan kebutuhan imlek",
         "image": "https://maps.pasargedesolo.com/storage/stores/mF3iHl6A7b12Xr2pjYc4Lf4eLET1RncJ.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/mF3iHl6A7b12Xr2pjYc4Lf4eLET1RncJ_xs.jpeg",
         "images": [
@@ -2998,7 +2998,7 @@ const MarketData = (() => {
         "y": 779,
         "lat": 245,
         "lng": 259,
-        "description": "Toko Mas Kembar adalah salah satu kios yang ada di Pasar Gede yang menjual aneka jamu racikan dan jamu kemasan untuk kesehatan",
+        "description": "Toko Mas Kembar adalah salah satu kios yang ada di Pasar Gedhe yang menjual aneka jamu racikan dan jamu kemasan untuk kesehatan",
         "image": "https://maps.pasargedesolo.com/storage/stores/lnZRl1tmcBga8n2WS98YsCZKPwItEDCL.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/lnZRl1tmcBga8n2WS98YsCZKPwItEDCL_xs.jpeg",
         "images": [
@@ -3031,7 +3031,7 @@ const MarketData = (() => {
         "y": 269,
         "lat": 755,
         "lng": 675,
-        "description": "Sayuran Bu Warni merupakan kios los yang ada di Pasar Gede yang menyediakan khusus sayuran dengan berbagai macam jenis sayuran",
+        "description": "Sayuran Bu Warni merupakan kios los yang ada di Pasar Gedhe yang menyediakan khusus sayuran dengan berbagai macam jenis sayuran",
         "image": "https://maps.pasargedesolo.com/storage/stores/3eHhqnwITfSVXP832n2hXt0dO6uHROZ8.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/3eHhqnwITfSVXP832n2hXt0dO6uHROZ8_xs.jpg",
         "images": [
@@ -3064,7 +3064,7 @@ const MarketData = (() => {
         "y": 467,
         "lat": 557,
         "lng": 628,
-        "description": "Kios Pak Sawali merupakan kios yang ada di Pasar Gede yang menjual spesialis plastik dengan berbagai macam dan ukuran jenis plastik",
+        "description": "Kios Pak Sawali merupakan kios yang ada di Pasar Gedhe yang menjual spesialis plastik dengan berbagai macam dan ukuran jenis plastik",
         "image": "https://maps.pasargedesolo.com/storage/stores/eBbwFpcW54uzn6SdDeOb6Ur032WIraq2.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/eBbwFpcW54uzn6SdDeOb6Ur032WIraq2_xs.jpg",
         "images": [
@@ -3096,7 +3096,7 @@ const MarketData = (() => {
         "y": 496,
         "lat": 528,
         "lng": 571,
-        "description": "Kios Bu Wadinah merupakan salah satu kios yang ada di Pasar Gede yang menjual beragam sembako lengkap seperti bawang bombai, bawang putih dan bawang merah",
+        "description": "Kios Bu Wadinah merupakan salah satu kios yang ada di Pasar Gedhe yang menjual beragam sembako lengkap seperti bawang bombai, bawang putih dan bawang merah",
         "image": "https://maps.pasargedesolo.com/storage/stores/JGAuNdwZu7zM10dmmikLkcPEfe8ZUDtb.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/JGAuNdwZu7zM10dmmikLkcPEfe8ZUDtb_xs.jpg",
         "images": [
@@ -3128,7 +3128,7 @@ const MarketData = (() => {
         "y": 331,
         "lat": 693,
         "lng": 554,
-        "description": "Kios Bu Tatik adalah salah satu kios yang ada di Pasar Gede yang menjual spesialis kebutuhan dapur dan cemilan",
+        "description": "Kios Bu Tatik adalah salah satu kios yang ada di Pasar Gedhe yang menjual spesialis kebutuhan dapur dan cemilan",
         "image": "https://maps.pasargedesolo.com/storage/stores/EYoeKuDhZm2iMQhbUOswZtU4wLZC01Xg.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/EYoeKuDhZm2iMQhbUOswZtU4wLZC01Xg_xs.jpg",
         "images": [
@@ -3161,7 +3161,7 @@ const MarketData = (() => {
         "y": 559,
         "lat": 465,
         "lng": 734,
-        "description": "Kios Bu Darso merupakan salah satu kios yang ada di Pasar Gede yang menjual beragam gerabah seperti kendi dan piring rotan",
+        "description": "Kios Bu Darso merupakan salah satu kios yang ada di Pasar Gedhe yang menjual beragam gerabah seperti kendi dan piring rotan",
         "image": "https://maps.pasargedesolo.com/storage/stores/kgnTvQjk6FSYEc2yz7BRWyjtwOYYc30K.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/kgnTvQjk6FSYEc2yz7BRWyjtwOYYc30K_xs.jpg",
         "images": [
@@ -3195,7 +3195,7 @@ const MarketData = (() => {
         "y": 497,
         "lat": 527,
         "lng": 672,
-        "description": "Kios Bu Ratih 2 merupakan kios yang ada di Pasar Gede yang menyediakan beragam gerabah alat rumah tangga dan dapur yang lengkap seperti sapu hingga alat dapur yang terbuat dari kayu dan rotan",
+        "description": "Kios Bu Ratih 2 merupakan kios yang ada di Pasar Gedhe yang menyediakan beragam gerabah alat rumah tangga dan dapur yang lengkap seperti sapu hingga alat dapur yang terbuat dari kayu dan rotan",
         "image": "https://maps.pasargedesolo.com/storage/stores/WW847LMRiHH2w7zuMYeuQp19QEglRpPx.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/WW847LMRiHH2w7zuMYeuQp19QEglRpPx_xs.jpg",
         "images": [
@@ -3229,7 +3229,7 @@ const MarketData = (() => {
         "y": 466,
         "lat": 558,
         "lng": 661,
-        "description": "Kios Bu Ratih 1 merupakan kios yang ada di Pasar Gede yang menyediakan beragam gerabah alat rumah tangga dan dapur yang lengkap seperti sapu hingga alat dapur yang terbuat dari kayu dan rotan",
+        "description": "Kios Bu Ratih 1 merupakan kios yang ada di Pasar Gedhe yang menyediakan beragam gerabah alat rumah tangga dan dapur yang lengkap seperti sapu hingga alat dapur yang terbuat dari kayu dan rotan",
         "image": "https://maps.pasargedesolo.com/storage/stores/HTYhQlB9NPXTEGNGfU3yNWdd8g2teECX.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/HTYhQlB9NPXTEGNGfU3yNWdd8g2teECX_xs.jpg",
         "images": [
@@ -3263,7 +3263,7 @@ const MarketData = (() => {
         "y": 122,
         "lat": 902,
         "lng": 583,
-        "description": "Solo Buah Segar merupakan kios suplier buah grosir di Pasar Gede yang menyediakan beraneka macam buah",
+        "description": "Solo Buah Segar merupakan kios suplier buah grosir di Pasar Gedhe yang menyediakan beraneka macam buah",
         "image": "https://maps.pasargedesolo.com/storage/stores/1ZAPhOxjEJ8mDWYkfQfezpnVZ4S8HROo.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/1ZAPhOxjEJ8mDWYkfQfezpnVZ4S8HROo_xs.jpeg",
         "images": [
@@ -3296,7 +3296,7 @@ const MarketData = (() => {
         "y": 349,
         "lat": 675,
         "lng": 263,
-        "description": "Kios UD Uzhie 2 adalah salah satu kios  buah yang berada di kawasan Pasar Gede yang menjual aneka buah-buahan yang menerima pesanan buah secara grosir",
+        "description": "Kios UD Uzhie 2 adalah salah satu kios  buah yang berada di kawasan Pasar Gedhe yang menjual aneka buah-buahan yang menerima pesanan buah secara grosir",
         "image": "https://maps.pasargedesolo.com/storage/stores/0RpwULhBg8oKCMHp9SmoEAp8pHB0CPMp.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/0RpwULhBg8oKCMHp9SmoEAp8pHB0CPMp_xs.jpeg",
         "images": [
@@ -3329,7 +3329,7 @@ const MarketData = (() => {
         "y": 143,
         "lat": 881,
         "lng": 281,
-        "description": "Genduk Buah merupakan kios di Pasar Gede yang menyediakan beragam buah untuk suplier",
+        "description": "Genduk Buah merupakan kios di Pasar Gedhe yang menyediakan beragam buah untuk suplier",
         "image": "https://maps.pasargedesolo.com/storage/stores/1XgwIhSDgptsr4PgVIGpbV4nA9uXqOCi.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/1XgwIhSDgptsr4PgVIGpbV4nA9uXqOCi_xs.jpg",
         "images": [
@@ -3362,7 +3362,7 @@ const MarketData = (() => {
         "y": 378,
         "lat": 646,
         "lng": 259,
-        "description": "Toko Surya adalah salah satu toko yang berada di kawasan Pasar Gede yang dikenal menjual berbagai jenis pakaian termasuk pakaian harian, seragam sekolah dan khususnya baju tradisional imlek seperti cheongsam",
+        "description": "Toko Surya adalah salah satu toko yang berada di kawasan Pasar Gedhe yang dikenal menjual berbagai jenis pakaian termasuk pakaian harian, seragam sekolah dan khususnya baju tradisional imlek seperti cheongsam",
         "image": "https://maps.pasargedesolo.com/storage/stores/hEiercFi6WttHzCbKZQRg6t8mtpmrqYb.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/hEiercFi6WttHzCbKZQRg6t8mtpmrqYb_xs.jpeg",
         "images": [
@@ -3395,7 +3395,7 @@ const MarketData = (() => {
         "y": 595,
         "lat": 429,
         "lng": 261,
-        "description": "Toko Mulia Baru adalah salah satu kios yang berada di Pasar Gede yang menjual aneka snack yang bisa dijadikan oleh-oleh",
+        "description": "Toko Mulia Baru adalah salah satu kios yang berada di Pasar Gedhe yang menjual aneka snack yang bisa dijadikan oleh-oleh",
         "image": "https://maps.pasargedesolo.com/storage/stores/oYRv4hQ4m0aPQP8N3jxE0HEyul3bRTmz.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/oYRv4hQ4m0aPQP8N3jxE0HEyul3bRTmz_xs.jpeg",
         "images": [
@@ -3427,7 +3427,7 @@ const MarketData = (() => {
         "y": 123,
         "lat": 901,
         "lng": 381,
-        "description": "Iin Koentjoro adalah kios supplier buah di Pasar Gede yang menyediakan buah melon dan buah jeruk",
+        "description": "Iin Koentjoro adalah kios supplier buah di Pasar Gedhe yang menyediakan buah melon dan buah jeruk",
         "image": "https://maps.pasargedesolo.com/storage/stores/d0cDbY8vdGEir6iYG8oGJMRwWxd6dAn9.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/d0cDbY8vdGEir6iYG8oGJMRwWxd6dAn9_xs.jpeg",
         "images": [
@@ -3460,7 +3460,7 @@ const MarketData = (() => {
         "y": 289,
         "lat": 735,
         "lng": 372,
-        "description": "Kios Oprokan Pak Cahyo adalah salah satu kios oprokan yang ada di Pasar Gede Pintu Utama yang menjual khusus makanan telur asin dan telur kampung",
+        "description": "Kios Oprokan Pak Cahyo adalah salah satu kios oprokan yang ada di Pasar Gedhe Pintu Utama yang menjual khusus makanan telur asin dan telur kampung",
         "image": "https://maps.pasargedesolo.com/storage/stores/XPXxaArygXmy4PuMtcuNnwvkAH1oNzTK.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/XPXxaArygXmy4PuMtcuNnwvkAH1oNzTK_xs.jpg",
         "images": [
@@ -3493,7 +3493,7 @@ const MarketData = (() => {
         "y": 296,
         "lat": 728,
         "lng": 376,
-        "description": "Kios Oprokan Pak Joko adalah salah satu kios oprokan yang ada di Pasar Gede Pintu Utama yang menjual buah-buahan",
+        "description": "Kios Oprokan Pak Joko adalah salah satu kios oprokan yang ada di Pasar Gedhe Pintu Utama yang menjual buah-buahan",
         "image": "https://maps.pasargedesolo.com/storage/stores/WiyRnCSYn8UfmYYhTiTN2x92CMqAUFXi.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/WiyRnCSYn8UfmYYhTiTN2x92CMqAUFXi_xs.jpg",
         "images": [
@@ -3526,7 +3526,7 @@ const MarketData = (() => {
         "y": 289,
         "lat": 735,
         "lng": 500,
-        "description": "Kios Lenjongan Jumiati adalah salah satu kios yang berada di Pasar Gede yang menjual spesialis aneka oleh-oleh khas Solo",
+        "description": "Kios Lenjongan Jumiati adalah salah satu kios yang berada di Pasar Gedhe yang menjual spesialis aneka oleh-oleh khas Solo",
         "image": "https://maps.pasargedesolo.com/storage/stores/2D4n8szzWHjGLDXrHciJFigvcbuQi85h.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/2D4n8szzWHjGLDXrHciJFigvcbuQi85h_xs.jpg",
         "images": [
@@ -3559,7 +3559,7 @@ const MarketData = (() => {
         "y": 269,
         "lat": 755,
         "lng": 427,
-        "description": "Oprokan Buah Bu Warni merupakan kios yang ada di Pasar Gede yang menyediakan berbagai macam buah yang diecerkan seperti jambu air dan manggis",
+        "description": "Oprokan Buah Bu Warni merupakan kios yang ada di Pasar Gedhe yang menyediakan berbagai macam buah yang diecerkan seperti jambu air dan manggis",
         "image": "https://maps.pasargedesolo.com/storage/stores/cbmjlF2Fmqjjti3NyRsP9A8bTNk9M7Dg.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/cbmjlF2Fmqjjti3NyRsP9A8bTNk9M7Dg_xs.jpg",
         "images": [
@@ -3592,7 +3592,7 @@ const MarketData = (() => {
         "y": 898,
         "lat": 126,
         "lng": 362,
-        "description": "Manggala Putri adalah salah satu kios yang ada di Pasar Gede Pintu Utara yang menjual aneka makanan snack yang menerima pesanan secara eceran dan grosir",
+        "description": "Manggala Putri adalah salah satu kios yang ada di Pasar Gedhe Pintu Utara yang menjual aneka makanan snack yang menerima pesanan secara eceran dan grosir",
         "image": "https://maps.pasargedesolo.com/storage/stores/hjxBZ4DeDCDP8XgdPDjEyvMj8gdgE6cg.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/hjxBZ4DeDCDP8XgdPDjEyvMj8gdgE6cg_xs.jpeg",
         "images": [
@@ -3625,7 +3625,7 @@ const MarketData = (() => {
         "y": 285,
         "lat": 739,
         "lng": 669,
-        "description": "Kios Bu Marti Sayuran merupakan salah satu kios yang ada di Pasar Gede yang menyediakan spesialis sayuran yang lengkap seperti Tomat, Terong, Sawi Putih, Cabai, Kentang, Kecambah, Wortel, Brokoli, Timun, Tahu, Tempe, Kangkung",
+        "description": "Kios Bu Marti Sayuran merupakan salah satu kios yang ada di Pasar Gedhe yang menyediakan spesialis sayuran yang lengkap seperti Tomat, Terong, Sawi Putih, Cabai, Kentang, Kecambah, Wortel, Brokoli, Timun, Tahu, Tempe, Kangkung",
         "image": "https://maps.pasargedesolo.com/storage/stores/3I28M03yV8E3JcQazEoYHo6cuaJrYLiL.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/3I28M03yV8E3JcQazEoYHo6cuaJrYLiL_xs.jpg",
         "images": [
@@ -3658,7 +3658,7 @@ const MarketData = (() => {
         "y": 121,
         "lat": 903,
         "lng": 482,
-        "description": "UD Tanti 2 merupakan salah satu kios yang ada di Pasar Gede yang menjual buah-buahan grosir",
+        "description": "UD Tanti 2 merupakan salah satu kios yang ada di Pasar Gedhe yang menjual buah-buahan grosir",
         "image": "https://maps.pasargedesolo.com/storage/stores/qy17teZjck69ScjHlMsXffM6AkaA48gs.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/qy17teZjck69ScjHlMsXffM6AkaA48gs_xs.jpeg",
         "images": [
@@ -3691,7 +3691,7 @@ const MarketData = (() => {
         "y": 353,
         "lat": 671,
         "lng": 624,
-        "description": "Oleh-Oleh Khas Solo Bu Saji adalah kios yang terletak di dalam Pasar Gede Solo, dikenal sebagai salah satu tempat terbaik untuk mencari oleh-oleh khas Solo. Kios ini menawarkan beragam produk tradisional seperti intip madu, karak bawang, bakpia kering, mete goreng, abon halus, lanting, bagelan, roti jadul, serta berbagai camilan khas lainnya.",
+        "description": "Oleh-Oleh Khas Solo Bu Saji adalah kios yang terletak di dalam Pasar Gedhe Solo, dikenal sebagai salah satu tempat terbaik untuk mencari oleh-oleh khas Solo. Kios ini menawarkan beragam produk tradisional seperti intip madu, karak bawang, bakpia kering, mete goreng, abon halus, lanting, bagelan, roti jadul, serta berbagai camilan khas lainnya.",
         "image": "https://maps.pasargedesolo.com/storage/stores/mELiWDTFPwqhk2eUg1fa9eKs6npQexRu.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/mELiWDTFPwqhk2eUg1fa9eKs6npQexRu_xs.jpg",
         "images": [
@@ -3723,7 +3723,7 @@ const MarketData = (() => {
         "y": 873,
         "lat": 151,
         "lng": 747,
-        "description": "Sinar Jaya merupakan kios yang ada di Pasar Gede yang menyediakan perlengkapan kemasan",
+        "description": "Sinar Jaya merupakan kios yang ada di Pasar Gedhe yang menyediakan perlengkapan kemasan",
         "image": "https://maps.pasargedesolo.com/storage/stores/x9WE7bcbw1HmHaEI7zFRMfRXfbvrOoSK.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/x9WE7bcbw1HmHaEI7zFRMfRXfbvrOoSK_xs.jpeg",
         "images": [
@@ -3756,7 +3756,7 @@ const MarketData = (() => {
         "y": 572,
         "lat": 452,
         "lng": 520,
-        "description": "Oprokan Ibu Sunarti merupakan salah satu oprokan yang ada di Pasar Gede yang menjual spesialis tahu tempe dan telur puyuh matang, tersedia juga telur puyuh yang sudah di kupas kulitnya",
+        "description": "Oprokan Ibu Sunarti merupakan salah satu oprokan yang ada di Pasar Gedhe yang menjual spesialis tahu tempe dan telur puyuh matang, tersedia juga telur puyuh yang sudah di kupas kulitnya",
         "image": "https://maps.pasargedesolo.com/storage/stores/ZY9H3q52ux2ckvm1KASBu0dYysw0pKLo.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/ZY9H3q52ux2ckvm1KASBu0dYysw0pKLo_xs.jpg",
         "images": [
@@ -3790,7 +3790,7 @@ const MarketData = (() => {
         "y": 896,
         "lat": 128,
         "lng": 632,
-        "description": "Toko Indah Jaya adalah salah satu toko yang berada di Pasar Gede Pintu Utara yang menjual kebutuhan sehari-hari atau sembako",
+        "description": "Toko Indah Jaya adalah salah satu toko yang berada di Pasar Gedhe Pintu Utara yang menjual kebutuhan sehari-hari atau sembako",
         "image": "https://maps.pasargedesolo.com/storage/stores/SMOXlPr7fRprb8vRcCpBDl8vYQZeqTvA.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/SMOXlPr7fRprb8vRcCpBDl8vYQZeqTvA_xs.jpeg",
         "images": [
@@ -3822,7 +3822,7 @@ const MarketData = (() => {
         "y": 134,
         "lat": 890,
         "lng": 735,
-        "description": "Dewa Dewi merupakan kios yang ada di Pasar Gede yang menyediakan berbagai macam cemilan dan teh",
+        "description": "Dewa Dewi merupakan kios yang ada di Pasar Gedhe yang menyediakan berbagai macam cemilan dan teh",
         "image": "https://maps.pasargedesolo.com/storage/stores/dZis9ktcdexyy549UVnVzKhqDtPH0f42.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/dZis9ktcdexyy549UVnVzKhqDtPH0f42_xs.jpeg",
         "images": [
@@ -3855,7 +3855,7 @@ const MarketData = (() => {
         "y": 898,
         "lat": 126,
         "lng": 408,
-        "description": "Mie Dimsum Story adalah salah satu kuliner populer yang berada di Pasar Gede Pintu Utara yang menjual aneka dimsum dan mie yang buka setiap hari mulai dari jam 08.30 pagi sampai jam 5.30 sore",
+        "description": "Mie Dimsum Story adalah salah satu kuliner populer yang berada di Pasar Gedhe Pintu Utara yang menjual aneka dimsum dan mie yang buka setiap hari mulai dari jam 08.30 pagi sampai jam 5.30 sore",
         "image": "https://maps.pasargedesolo.com/storage/stores/ftQm7dGVEHBqq73SkXFmePgtIs7jD1zn.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/ftQm7dGVEHBqq73SkXFmePgtIs7jD1zn_xs.jpeg",
         "images": [
@@ -3887,7 +3887,7 @@ const MarketData = (() => {
         "y": 896,
         "lat": 128,
         "lng": 608,
-        "description": "Toko Dua Sembilan adalah salah satu toko yang ada di Pasar Gede Pintu Utara yang menjual kebutuhan sehari-hari atau sembako",
+        "description": "Toko Dua Sembilan adalah salah satu toko yang ada di Pasar Gedhe Pintu Utara yang menjual kebutuhan sehari-hari atau sembako",
         "image": "https://maps.pasargedesolo.com/storage/stores/ZKPAPd6Tv884jsRKbKuObVrVDzkcIQVW.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/ZKPAPd6Tv884jsRKbKuObVrVDzkcIQVW_xs.jpeg",
         "images": [
@@ -3920,7 +3920,7 @@ const MarketData = (() => {
         "y": 551,
         "lat": 473,
         "lng": 519,
-        "description": "Oprokan Ibu Rokayah merupakan oprokan yang ada di Pasar Gede yang menjual spesialis racikan teh, kremesan dan intip dengan taburan gula jawa",
+        "description": "Oprokan Ibu Rokayah merupakan oprokan yang ada di Pasar Gedhe yang menjual spesialis racikan teh, kremesan dan intip dengan taburan gula jawa",
         "image": "https://maps.pasargedesolo.com/storage/stores/AMbLAlKOWOLem3iAU6znJcsZ1scJITrv.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/AMbLAlKOWOLem3iAU6znJcsZ1scJITrv_xs.jpg",
         "images": [
@@ -3953,7 +3953,7 @@ const MarketData = (() => {
         "y": 897,
         "lat": 127,
         "lng": 453,
-        "description": "Bu Yanti adalah salah satu toko yang berada di Pasar Gede Pintu Utara yang menjual beraneka macam snack dan krupuk yang bisa dipesan dalam jumlah banyak atau eceran",
+        "description": "Bu Yanti adalah salah satu toko yang berada di Pasar Gedhe Pintu Utara yang menjual beraneka macam snack dan krupuk yang bisa dipesan dalam jumlah banyak atau eceran",
         "image": "https://maps.pasargedesolo.com/storage/stores/hZxYck8TrN5NGLTSLPeTZ1LZMO1bahhH.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/hZxYck8TrN5NGLTSLPeTZ1LZMO1bahhH_xs.jpeg",
         "images": [
@@ -3986,7 +3986,7 @@ const MarketData = (() => {
         "y": 570,
         "lat": 454,
         "lng": 761,
-        "description": "Toko Menyan Mororejo merupakan kios yang ada di Pasar Gede yang menyediakan berbagai perlengkapan yang berhubungan dengan keperluan ritual, spiritual, tradisional dan keagamaan",
+        "description": "Toko Menyan Mororejo merupakan kios yang ada di Pasar Gedhe yang menyediakan berbagai perlengkapan yang berhubungan dengan keperluan ritual, spiritual, tradisional dan keagamaan",
         "image": "https://maps.pasargedesolo.com/storage/stores/YM9CAFzVEtEiNo4LnGnnWBW4H7IkHknw.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/YM9CAFzVEtEiNo4LnGnnWBW4H7IkHknw_xs.jpeg",
         "images": [
@@ -4023,7 +4023,7 @@ const MarketData = (() => {
         "y": 416,
         "lat": 608,
         "lng": 760,
-        "description": "Kios Buah Sunarto merupakan kios yang ada di Pasar Gede yang menyediakan khusus jeruk peras grosir",
+        "description": "Kios Buah Sunarto merupakan kios yang ada di Pasar Gedhe yang menyediakan khusus jeruk peras grosir",
         "image": "https://maps.pasargedesolo.com/storage/stores/cGo6RN4cIU6BeaVihjmJIAMYRcoARKDL.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/cGo6RN4cIU6BeaVihjmJIAMYRcoARKDL_xs.jpeg",
         "images": [
@@ -4055,7 +4055,7 @@ const MarketData = (() => {
         "y": 792,
         "lat": 232,
         "lng": 508,
-        "description": "Oprokan Bu Irma merupakan oprokan yang ada di Pasar Gede yang menjual spesialis bawang lanang dan lemon",
+        "description": "Oprokan Bu Irma merupakan oprokan yang ada di Pasar Gedhe yang menjual spesialis bawang lanang dan lemon",
         "image": "https://maps.pasargedesolo.com/storage/stores/hXshq6bZ5Q9ZtqcP4HatXG91EfVZDj4W.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/hXshq6bZ5Q9ZtqcP4HatXG91EfVZDj4W_xs.jpg",
         "images": [
@@ -4092,7 +4092,7 @@ const MarketData = (() => {
         "y": 557,
         "lat": 467,
         "lng": 521,
-        "description": "Oprokan Ibu Dwi Hartini merupakan oprokan yang ada di Pasar Gede yang menjual spesialis tahu dan bakso dalam kemasan",
+        "description": "Oprokan Ibu Dwi Hartini merupakan oprokan yang ada di Pasar Gedhe yang menjual spesialis tahu dan bakso dalam kemasan",
         "image": "https://maps.pasargedesolo.com/storage/stores/ZE9O6BOqwbkr1789u0Ti1aB9wUVaT0sx.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/ZE9O6BOqwbkr1789u0Ti1aB9wUVaT0sx_xs.jpg",
         "images": [
@@ -4126,7 +4126,7 @@ const MarketData = (() => {
         "y": 566,
         "lat": 458,
         "lng": 521,
-        "description": "Oprokan Ibu Sularni merupakan salah satu oprokan yang ada di Pasar Gede yang menjual spesialis daging ayam, paha ayam, dan ceker ayam",
+        "description": "Oprokan Ibu Sularni merupakan salah satu oprokan yang ada di Pasar Gedhe yang menjual spesialis daging ayam, paha ayam, dan ceker ayam",
         "image": "https://maps.pasargedesolo.com/storage/stores/WfYvKCChsTb71RtbFDdzGgloCh9GIxAf.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/WfYvKCChsTb71RtbFDdzGgloCh9GIxAf_xs.jpg",
         "images": [
@@ -4159,7 +4159,7 @@ const MarketData = (() => {
         "y": 586,
         "lat": 438,
         "lng": 520,
-        "description": "Oprokan Ibu Saifudin merupakan salah satu oprokan yang ada di Pasar Gede yang menyediakan spesialis tahu tempe dan sayuran, selain itu juga tersedia pare dalam bentuk sudah terpotong",
+        "description": "Oprokan Ibu Saifudin merupakan salah satu oprokan yang ada di Pasar Gedhe yang menyediakan spesialis tahu tempe dan sayuran, selain itu juga tersedia pare dalam bentuk sudah terpotong",
         "image": "https://maps.pasargedesolo.com/storage/stores/NVm0OR7D5KEzUET8Y5WT6xPHwY5lVpC9.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/NVm0OR7D5KEzUET8Y5WT6xPHwY5lVpC9_xs.jpg",
         "images": [
@@ -4192,7 +4192,7 @@ const MarketData = (() => {
         "y": 513,
         "lat": 511,
         "lng": 549,
-        "description": "Ayam Potong Bu Tien merupakan salah satu kios los yang ada di Pasar Gede yang menyediakan spesialis ayam potong, hati ayam, ceker ayam, dan paha ayam",
+        "description": "Ayam Potong Bu Tien merupakan salah satu kios los yang ada di Pasar Gedhe yang menyediakan spesialis ayam potong, hati ayam, ceker ayam, dan paha ayam",
         "image": "https://maps.pasargedesolo.com/storage/stores/7X9nTUOeiUgAKsYjts7R404WS7zxQZW6.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/7X9nTUOeiUgAKsYjts7R404WS7zxQZW6_xs.jpg",
         "images": [
@@ -4225,7 +4225,7 @@ const MarketData = (() => {
         "y": 397,
         "lat": 627,
         "lng": 519,
-        "description": "Oprokan Ibu Tami merupakan oprokan yang ada di Pasar Gede yang menjual spesialis gendar pecel dan semar mendem",
+        "description": "Oprokan Ibu Tami merupakan oprokan yang ada di Pasar Gedhe yang menjual spesialis gendar pecel dan semar mendem",
         "image": "https://maps.pasargedesolo.com/storage/stores/WM9M8V25rkGJngKNrJi9X1L8Jd15XjjZ.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/WM9M8V25rkGJngKNrJi9X1L8Jd15XjjZ_xs.jpg",
         "images": [
@@ -4258,7 +4258,7 @@ const MarketData = (() => {
         "y": 360,
         "lat": 664,
         "lng": 520,
-        "description": "Oprokan Ibu Warti Kelapa merupakan oprokan yang ada di Pasar Gede yang menjual spesialis kelapa utuh dan kelapa parut",
+        "description": "Oprokan Ibu Warti Kelapa merupakan oprokan yang ada di Pasar Gedhe yang menjual spesialis kelapa utuh dan kelapa parut",
         "image": "https://maps.pasargedesolo.com/storage/stores/WJ8bOXKQlcvUAiaUWucJfbfPWGdFHd3b.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/WJ8bOXKQlcvUAiaUWucJfbfPWGdFHd3b_xs.jpg",
         "images": [
@@ -4290,7 +4290,7 @@ const MarketData = (() => {
         "y": 380,
         "lat": 644,
         "lng": 519,
-        "description": "Lenjongan Bu Sum 2 merupakan cabang kedua jajanan pasar legendaris yang ada di Pasar Gede yang menjual spesialis aneka kue tradisional",
+        "description": "Lenjongan Bu Sum 2 merupakan cabang kedua jajanan pasar legendaris yang ada di Pasar Gedhe yang menjual spesialis aneka kue tradisional",
         "image": "https://maps.pasargedesolo.com/storage/stores/wAOWGkf4ucVn16D2aCpFUy1PsifJmmV5.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/wAOWGkf4ucVn16D2aCpFUy1PsifJmmV5_xs.jpg",
         "images": [
@@ -4323,7 +4323,7 @@ const MarketData = (() => {
         "y": 387,
         "lat": 637,
         "lng": 518,
-        "description": "Oprokan Ibu Rubinem Lumpia merupakan oprokan yang ada di Pasar Gede yang menjual spesialis lumpia manteb",
+        "description": "Oprokan Ibu Rubinem Lumpia merupakan oprokan yang ada di Pasar Gedhe yang menjual spesialis lumpia manteb",
         "image": "https://maps.pasargedesolo.com/storage/stores/wgd25YmxHU2H6qDvKHRCgkcLFppg2O8g.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/wgd25YmxHU2H6qDvKHRCgkcLFppg2O8g_xs.jpg",
         "images": [
@@ -4355,7 +4355,7 @@ const MarketData = (() => {
         "y": 526,
         "lat": 498,
         "lng": 519,
-        "description": "Oprokan Ibu Lina merupakan oprokan yang ada di Pasar Gede yang menjual spesialis karak dan bawang lanang",
+        "description": "Oprokan Ibu Lina merupakan oprokan yang ada di Pasar Gedhe yang menjual spesialis karak dan bawang lanang",
         "image": "https://maps.pasargedesolo.com/storage/stores/Lj0pxNUC6B5tgSOphtSJSxLkFbDNwSYa.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/Lj0pxNUC6B5tgSOphtSJSxLkFbDNwSYa_xs.jpg",
         "images": [
@@ -4387,7 +4387,7 @@ const MarketData = (() => {
         "y": 750,
         "lat": 274,
         "lng": 763,
-        "description": "Toko 37 merupakan kios yang ada di Pasar Gede yang menyediakan beragam cemilan grosir",
+        "description": "Toko 37 merupakan kios yang ada di Pasar Gedhe yang menyediakan beragam cemilan grosir",
         "image": "https://maps.pasargedesolo.com/storage/stores/haCgThAacONqWS2dHsQDO04y798olrEJ.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/haCgThAacONqWS2dHsQDO04y798olrEJ_xs.jpeg",
         "images": [
@@ -4420,7 +4420,7 @@ const MarketData = (() => {
         "y": 386,
         "lat": 638,
         "lng": 481,
-        "description": "Oleh-Oleh Khas Solo Bu Saji 3 adalah kios yang terletak di dalam Pasar Gede Solo, dikenal sebagai salah satu tempat terbaik untuk mencari oleh-oleh khas Solo. Kios ini menawarkan beragam produk tradisional seperti intip madu, karak bawang, bakpia kering, mete goreng, abon halus, lanting, bagelan, roti jadul, serta berbagai camilan khas lainnya.",
+        "description": "Oleh-Oleh Khas Solo Bu Saji 3 adalah kios yang terletak di dalam Pasar Gedhe Solo, dikenal sebagai salah satu tempat terbaik untuk mencari oleh-oleh khas Solo. Kios ini menawarkan beragam produk tradisional seperti intip madu, karak bawang, bakpia kering, mete goreng, abon halus, lanting, bagelan, roti jadul, serta berbagai camilan khas lainnya.",
         "image": "https://maps.pasargedesolo.com/storage/stores/jzEjU2d4Yq15LxLeFFy44bc9UG4wIzrQ.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/jzEjU2d4Yq15LxLeFFy44bc9UG4wIzrQ_xs.jpg",
         "images": [
@@ -4453,7 +4453,7 @@ const MarketData = (() => {
         "y": 463,
         "lat": 561,
         "lng": 521,
-        "description": "Ayam Potong Bu Tipuk merupakan oprokan yang ada di Pasar Gede yang menyediakan berbagai jenis ayam seperti ayam merah, ayam jantan dan ayam karkas. Tersedia beragam pilihan bagian tubuh ayam serta layanan fillet untuk bagian dada atau paha sesuai permintaan",
+        "description": "Ayam Potong Bu Tipuk merupakan oprokan yang ada di Pasar Gedhe yang menyediakan berbagai jenis ayam seperti ayam merah, ayam jantan dan ayam karkas. Tersedia beragam pilihan bagian tubuh ayam serta layanan fillet untuk bagian dada atau paha sesuai permintaan",
         "image": "https://maps.pasargedesolo.com/storage/stores/f8DtzphuoupDgM1mgAAgx4IUexce0sWa.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/f8DtzphuoupDgM1mgAAgx4IUexce0sWa_xs.jpg",
         "images": [
@@ -4486,7 +4486,7 @@ const MarketData = (() => {
         "y": 444,
         "lat": 580,
         "lng": 520,
-        "description": "Oprokan Ibu Puji merupakan salah satu oprokan yang ada di Pasar Gede yang menjual spesialis ikan bandeng segar dan ikan bandeng presto",
+        "description": "Oprokan Ibu Puji merupakan salah satu oprokan yang ada di Pasar Gedhe yang menjual spesialis ikan bandeng segar dan ikan bandeng presto",
         "image": "https://maps.pasargedesolo.com/storage/stores/U26lcPNfS7iQl9hLZBILQiuKZf2FQmD8.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/U26lcPNfS7iQl9hLZBILQiuKZf2FQmD8_xs.jpg",
         "images": [
@@ -4519,7 +4519,7 @@ const MarketData = (() => {
         "y": 404,
         "lat": 620,
         "lng": 521,
-        "description": "Oprokan Ibu Warti Ayam Potong 1 merupakan oprokan yang ada di Pasar Gede yang menyediakan spesialis ayam potong dan ayam utuh",
+        "description": "Oprokan Ibu Warti Ayam Potong 1 merupakan oprokan yang ada di Pasar Gedhe yang menyediakan spesialis ayam potong dan ayam utuh",
         "image": "https://maps.pasargedesolo.com/storage/stores/WZmxYCrJUaWi8cyChUD7clMigANkGu7G.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/WZmxYCrJUaWi8cyChUD7clMigANkGu7G_xs.jpg",
         "images": [
@@ -4551,7 +4551,7 @@ const MarketData = (() => {
         "y": 417,
         "lat": 607,
         "lng": 520,
-        "description": "Oprokan Ibu Harini merupakan oprokan yang ada di Pasar Gede yang menjual spesialis sambal pecal, kering tempa dan kering kentang",
+        "description": "Oprokan Ibu Harini merupakan oprokan yang ada di Pasar Gedhe yang menjual spesialis sambal pecal, kering tempa dan kering kentang",
         "image": "https://maps.pasargedesolo.com/storage/stores/ViBDFuIirVJTSGYhodGYjklhIUr0LX4E.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/ViBDFuIirVJTSGYhodGYjklhIUr0LX4E_xs.jpg",
         "images": [
@@ -4584,7 +4584,7 @@ const MarketData = (() => {
         "y": 499,
         "lat": 525,
         "lng": 519,
-        "description": "Oprokan Ibu Tinah merupakan oprokan yang ada di Pasar Gede yang menyediakan spesialis tahu putih, ikan bandeng segar dan ikan bandeng presto",
+        "description": "Oprokan Ibu Tinah merupakan oprokan yang ada di Pasar Gedhe yang menyediakan spesialis tahu putih, ikan bandeng segar dan ikan bandeng presto",
         "image": "https://maps.pasargedesolo.com/storage/stores/bpm1zdQSbiLwOhRgI24G5YXq0KXiM8lk.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/bpm1zdQSbiLwOhRgI24G5YXq0KXiM8lk_xs.jpg",
         "images": [
@@ -4617,7 +4617,7 @@ const MarketData = (() => {
         "y": 253,
         "lat": 771,
         "lng": 320,
-        "description": "Kios Oleh-Oleh Haryanto adalah toko oleh-oleh yang berada di Pasar Gede Pintu Utama yang menjual spesialis beragam camilan dan makanan khas Solo yang bisa dijadikan buah tangan",
+        "description": "Kios Oleh-Oleh Haryanto adalah toko oleh-oleh yang berada di Pasar Gedhe Pintu Utama yang menjual spesialis beragam camilan dan makanan khas Solo yang bisa dijadikan buah tangan",
         "image": "https://maps.pasargedesolo.com/storage/stores/4SOysnKnmL6y8n8ZcK4pFawV5tPllaUv.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/4SOysnKnmL6y8n8ZcK4pFawV5tPllaUv_xs.jpg",
         "images": [
@@ -4651,7 +4651,7 @@ const MarketData = (() => {
         "y": 273,
         "lat": 751,
         "lng": 332,
-        "description": "Kios Tangga lt 1.1 di Pasar Gede Lantai 1",
+        "description": "Kios Tangga lt 1.1 di Pasar Gedhe Lantai 1",
         "image": null,
         "imageThumb": null,
         "images": [],
@@ -4681,7 +4681,7 @@ const MarketData = (() => {
         "y": 870,
         "lat": 154,
         "lng": 320,
-        "description": "Kios Tangga lt 1.3 di Pasar Gede Lantai 1",
+        "description": "Kios Tangga lt 1.3 di Pasar Gedhe Lantai 1",
         "image": null,
         "imageThumb": null,
         "images": [],
@@ -4711,7 +4711,7 @@ const MarketData = (() => {
         "y": 163,
         "lat": 861,
         "lng": 488,
-        "description": "Kios Tangga lt 1.4 di Pasar Gede Lantai 1",
+        "description": "Kios Tangga lt 1.4 di Pasar Gedhe Lantai 1",
         "image": null,
         "imageThumb": null,
         "images": [],
@@ -4741,7 +4741,7 @@ const MarketData = (() => {
         "y": 790,
         "lat": 234,
         "lng": 520,
-        "description": "Oprokan Bu Narti merupakan oprokan yang ada di Pasar Gede yang menjual spesialis kolang kaling, cendol, cincau dan nata de coco",
+        "description": "Oprokan Bu Narti merupakan oprokan yang ada di Pasar Gedhe yang menjual spesialis kolang kaling, cendol, cincau dan nata de coco",
         "image": "https://maps.pasargedesolo.com/storage/stores/t8GGxnLB6PbWzkathvQ5ie7t2hqCKgvh.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/t8GGxnLB6PbWzkathvQ5ie7t2hqCKgvh_xs.jpg",
         "images": [
@@ -4774,7 +4774,7 @@ const MarketData = (() => {
         "y": 513,
         "lat": 511,
         "lng": 307,
-        "description": "Kios Tangga lt 1.5 di Pasar Gede Lantai 1",
+        "description": "Kios Tangga lt 1.5 di Pasar Gedhe Lantai 1",
         "image": null,
         "imageThumb": null,
         "images": [],
@@ -4804,7 +4804,7 @@ const MarketData = (() => {
         "y": 212,
         "lat": 812,
         "lng": 352,
-        "description": "Kios Tangga lt 1.2 di Pasar Gede Lantai 1",
+        "description": "Kios Tangga lt 1.2 di Pasar Gedhe Lantai 1",
         "image": null,
         "imageThumb": null,
         "images": [],
@@ -4834,7 +4834,7 @@ const MarketData = (() => {
         "y": 126,
         "lat": 898,
         "lng": 404,
-        "description": "Toko Buah Mulia merupakan kios buah suplier di Pasar Gede yang menyediakan khusus jeruk peras",
+        "description": "Toko Buah Mulia merupakan kios buah suplier di Pasar Gedhe yang menyediakan khusus jeruk peras",
         "image": "https://maps.pasargedesolo.com/storage/stores/9ODr82t0zWcW9cnS32cVIwSPvF6HJsaY.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/9ODr82t0zWcW9cnS32cVIwSPvF6HJsaY_xs.jpeg",
         "images": [
@@ -4866,7 +4866,7 @@ const MarketData = (() => {
         "y": 229,
         "lat": 795,
         "lng": 316,
-        "description": "Dawet Telasih & Gempol Pleret Mbak Nanik Pasar Gede adalah kuliner legendaris yang berada di Pintu Utama Pasar Gede yang terkenal dengan menu spesialnya es dawet telasih dan gempol pleret yang memiliki cita rasa yang segar dan autentik",
+        "description": "Dawet Telasih & Gempol Pleret Mbak Nanik Pasar Gedhe adalah kuliner legendaris yang berada di Pintu Utama Pasar Gedhe yang terkenal dengan menu spesialnya es dawet telasih dan gempol pleret yang memiliki cita rasa yang segar dan autentik",
         "image": "https://maps.pasargedesolo.com/storage/stores/VSj6rghFP2BZiKCO9gABhIGEl0FVauL1.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/VSj6rghFP2BZiKCO9gABhIGEl0FVauL1_xs.jpg",
         "images": [
@@ -4899,7 +4899,7 @@ const MarketData = (() => {
         "y": 232,
         "lat": 792,
         "lng": 288,
-        "description": "Oprokan Bapak Wahyudi adalah oprokan yang ada di pintu utama Pasar Gede yang menyediakan spesialis pisau dengan berbagai macam ukuran",
+        "description": "Oprokan Bapak Wahyudi adalah oprokan yang ada di pintu utama Pasar Gedhe yang menyediakan spesialis pisau dengan berbagai macam ukuran",
         "image": "https://maps.pasargedesolo.com/storage/stores/5okMhaNIcPGsk1cmeqNKGrvnAbDqD4PB.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/5okMhaNIcPGsk1cmeqNKGrvnAbDqD4PB_xs.jpg",
         "images": [
@@ -4932,7 +4932,7 @@ const MarketData = (() => {
         "y": 218,
         "lat": 806,
         "lng": 324,
-        "description": "Gethuk Lenjongan Bu Rubi adalah salah satu jajanan tradisional yang populer di Pasar Gede Pintu Utama yang menjual aneka jenis jajanan pasar yang disajikan bersama parutan kepala dengan siraman gula cair merah menciptakan rasa yang manis, gurih dan kenyal.",
+        "description": "Gethuk Lenjongan Bu Rubi adalah salah satu jajanan tradisional yang populer di Pasar Gedhe Pintu Utama yang menjual aneka jenis jajanan pasar yang disajikan bersama parutan kepala dengan siraman gula cair merah menciptakan rasa yang manis, gurih dan kenyal.",
         "image": "https://maps.pasargedesolo.com/storage/stores/kvcDlLn0l1pM0T9mdGG4s8OKPRcgXCvz.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/kvcDlLn0l1pM0T9mdGG4s8OKPRcgXCvz_xs.jpg",
         "images": [
@@ -4964,7 +4964,7 @@ const MarketData = (() => {
         "y": 897,
         "lat": 127,
         "lng": 341,
-        "description": "Fanny Snack adalah salah satu kios yang ada di Pasar Gede Pintu Utara yang menjual aneka makanan ringan dan aneka kripik",
+        "description": "Fanny Snack adalah salah satu kios yang ada di Pasar Gedhe Pintu Utara yang menjual aneka makanan ringan dan aneka kripik",
         "image": "https://maps.pasargedesolo.com/storage/stores/fL4XKCxr3h14msGdupT8WmaE08BCNBAs.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/fL4XKCxr3h14msGdupT8WmaE08BCNBAs_xs.jpg",
         "images": [
@@ -4997,7 +4997,7 @@ const MarketData = (() => {
         "y": 570,
         "lat": 454,
         "lng": 627,
-        "description": "Kios Mbak Yayuk merupakan salah satu kios yang ada di Pasar Gede yang menyediakan spesialis rebung dan minyak goreng",
+        "description": "Kios Mbak Yayuk merupakan salah satu kios yang ada di Pasar Gedhe yang menyediakan spesialis rebung dan minyak goreng",
         "image": "https://maps.pasargedesolo.com/storage/stores/zsO6yTr3mTqxBzpZUw6MfPdTbK8SiIMY.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/zsO6yTr3mTqxBzpZUw6MfPdTbK8SiIMY_xs.jpg",
         "images": [
@@ -5030,7 +5030,7 @@ const MarketData = (() => {
         "y": 859,
         "lat": 165,
         "lng": 479,
-        "description": "Kios Tangga lt 1.6 di Pasar Gede Lantai 1",
+        "description": "Kios Tangga lt 1.6 di Pasar Gedhe Lantai 1",
         "image": null,
         "imageThumb": null,
         "images": [],
@@ -5051,7 +5051,7 @@ const MarketData = (() => {
         "buildingId": "pasar-gede",
         "floor": 1,
         "label": "Jadah Bakar Tasik Pasar Gede",
-        "name": "Jadah Bakar Tasik Pasar Gede",
+        "name": "Jadah Bakar Tasik Pasar Gedhe",
         "category": "kuliner",
         "categoryLabel": "Kuliner Legendaris",
         "icon": "🍜",
@@ -5060,7 +5060,7 @@ const MarketData = (() => {
         "y": 253,
         "lat": 771,
         "lng": 254,
-        "description": "Jadah Bakar Tasik Pasar Gede merupakan jajanan tradisional yang terletak di depan pintu utama Pasar Gede yang menjual spesialis Jadah Bakar",
+        "description": "Jadah Bakar Tasik Pasar Gedhe merupakan jajanan tradisional yang terletak di depan pintu utama Pasar Gedhe yang menjual spesialis Jadah Bakar",
         "image": "https://maps.pasargedesolo.com/storage/stores/IMvsKkBDDgK3A7EEWfjePhMu2AFC9REv.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/IMvsKkBDDgK3A7EEWfjePhMu2AFC9REv_xs.jpg",
         "images": [
@@ -5092,7 +5092,7 @@ const MarketData = (() => {
         "y": 326,
         "lat": 698,
         "lng": 726,
-        "description": "Semar Mendem Bu Yuyun merupakan oprokan yang ada di Pasar Gede yang menjual kuliner khas Solo yaitu spesialis semar mendem",
+        "description": "Semar Mendem Bu Yuyun merupakan oprokan yang ada di Pasar Gedhe yang menjual kuliner khas Solo yaitu spesialis semar mendem",
         "image": "https://maps.pasargedesolo.com/storage/stores/Ju7ExgctWMRKkxBG9IcvDZgGI0dGy33v.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/Ju7ExgctWMRKkxBG9IcvDZgGI0dGy33v_xs.jpg",
         "images": [
@@ -5125,7 +5125,7 @@ const MarketData = (() => {
         "y": 725,
         "lat": 299,
         "lng": 561,
-        "description": "Jadah Blondo Mbak Siska adalah jajanan tradisional khas Solo yang dapat ditemukan di Pasar Gede, tepatnya di samping Dawet Telasih Bu Dermi . Jadah Blondo merupakan olahan ketan yang dipadukan dengan blondo, yaitu ampas kelapa dari proses pembuatan minyak kelapa yang memiliki rasa gurih dan manis . Kombinasi rasa dan tekstur ini menjadikan Jadah Blondo Mbak Siska sebagai camilan favorit bagi pengunjung pasar yang ingin menikmati cita rasa khas Solo.",
+        "description": "Jadah Blondo Mbak Siska adalah jajanan tradisional khas Solo yang dapat ditemukan di Pasar Gedhe, tepatnya di samping Dawet Telasih Bu Dermi . Jadah Blondo merupakan olahan ketan yang dipadukan dengan blondo, yaitu ampas kelapa dari proses pembuatan minyak kelapa yang memiliki rasa gurih dan manis . Kombinasi rasa dan tekstur ini menjadikan Jadah Blondo Mbak Siska sebagai camilan favorit bagi pengunjung pasar yang ingin menikmati cita rasa khas Solo.",
         "image": "https://maps.pasargedesolo.com/storage/stores/zwYERLG3iQIQGbsUxhTHHSJtFmF64Ktw.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/zwYERLG3iQIQGbsUxhTHHSJtFmF64Ktw_xs.jpg",
         "images": [
@@ -5158,7 +5158,7 @@ const MarketData = (() => {
         "y": 852,
         "lat": 172,
         "lng": 257,
-        "description": "Ayam Panggang Bu Kas adalah salah satu kuliner di Pasar Gede yang menjual spesialis ayam panggang khas klaten",
+        "description": "Ayam Panggang Bu Kas adalah salah satu kuliner di Pasar Gedhe yang menjual spesialis ayam panggang khas klaten",
         "image": "https://maps.pasargedesolo.com/storage/stores/lfUmbxZjPABRHd61zsYGis6Vxdbmw3Rm.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/lfUmbxZjPABRHd61zsYGis6Vxdbmw3Rm_xs.jpg",
         "images": [
@@ -5191,7 +5191,7 @@ const MarketData = (() => {
         "y": 896,
         "lat": 128,
         "lng": 475,
-        "description": "Intip Boniyem adalah camilan tradisional yang telah menjadi ikon kuliner sejak tahun 1945 yang berada di Pasar Gede Pintu Utara yang dikenal dengan sajian spesialis intip goreng yang terbuat dari kerak nasi yang dikeringkan lalu digoreng hingga renyah dan dilapisi lelehan gula jawa",
+        "description": "Intip Boniyem adalah camilan tradisional yang telah menjadi ikon kuliner sejak tahun 1945 yang berada di Pasar Gedhe Pintu Utara yang dikenal dengan sajian spesialis intip goreng yang terbuat dari kerak nasi yang dikeringkan lalu digoreng hingga renyah dan dilapisi lelehan gula jawa",
         "image": "https://maps.pasargedesolo.com/storage/stores/pwSjQMFv6srjJvywxCgThdbHRSN6XcSm.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/pwSjQMFv6srjJvywxCgThdbHRSN6XcSm_xs.jpg",
         "images": [
@@ -5256,7 +5256,7 @@ const MarketData = (() => {
         "y": 284,
         "lat": 740,
         "lng": 529,
-        "description": "Oprokan Bu Rubinem merupkan oprokan yang ada di Pasar Gede yang menjual spesialis sayuran untuk lauk, gula batu dan wedang rempah",
+        "description": "Oprokan Bu Rubinem merupkan oprokan yang ada di Pasar Gedhe yang menjual spesialis sayuran untuk lauk, gula batu dan wedang rempah",
         "image": "https://maps.pasargedesolo.com/storage/stores/1cWyvoGXVEORiV1Lk7Epng5581pOFimg.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/1cWyvoGXVEORiV1Lk7Epng5581pOFimg_xs.jpg",
         "images": [
@@ -5289,7 +5289,7 @@ const MarketData = (() => {
         "y": 334,
         "lat": 690,
         "lng": 587,
-        "description": "Kios Bu Wiwik merupakan salah satu kios yang ada di Pasar Gede yang menyediakan spesialis kerupuk rambak dan racikan teh",
+        "description": "Kios Bu Wiwik merupakan salah satu kios yang ada di Pasar Gedhe yang menyediakan spesialis kerupuk rambak dan racikan teh",
         "image": "https://maps.pasargedesolo.com/storage/stores/CtAmIyrcxShoxtJUyYAVZEKHccH2vjsR.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/CtAmIyrcxShoxtJUyYAVZEKHccH2vjsR_xs.jpg",
         "images": [
@@ -5321,7 +5321,7 @@ const MarketData = (() => {
         "y": 869,
         "lat": 155,
         "lng": 267,
-        "description": "Kopi Podjok adalah toko kopi legendaris di Pasar Gede Solo yang telah berdiri sejak 1947, menawarkan berbagai jenis biji kopi lokal dan impor, serta minuman kopi seduh langsung di tempat.",
+        "description": "Kopi Podjok adalah toko kopi legendaris di Pasar Gedhe Solo yang telah berdiri sejak 1947, menawarkan berbagai jenis biji kopi lokal dan impor, serta minuman kopi seduh langsung di tempat.",
         "image": "https://maps.pasargedesolo.com/storage/stores/qeY8i3F512AhUGf8z0b7svrafRUPgDKA.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/qeY8i3F512AhUGf8z0b7svrafRUPgDKA_xs.jpeg",
         "images": [
@@ -5354,7 +5354,7 @@ const MarketData = (() => {
         "y": 896,
         "lat": 128,
         "lng": 576,
-        "description": "Toko Hasil Baru adalah salah satu toko yang ada di Pasar Gede Pintu Utara yang menjual keperluan sehari-hari atau sembako",
+        "description": "Toko Hasil Baru adalah salah satu toko yang ada di Pasar Gedhe Pintu Utara yang menjual keperluan sehari-hari atau sembako",
         "image": "https://maps.pasargedesolo.com/storage/stores/RnZsbdfG52pT3rUrH9hOL1BY8bIhAJDP.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/RnZsbdfG52pT3rUrH9hOL1BY8bIhAJDP_xs.jpeg",
         "images": [
@@ -5387,7 +5387,7 @@ const MarketData = (() => {
         "y": 641,
         "lat": 383,
         "lng": 461,
-        "description": "Toko Bu Slamet 1 adalah salah satu kios yang ada di Pasar Gede yang menjual khusus sayur-sayuran yang variannya cukup komplit dan aneka kebutuhan bumbu dapur",
+        "description": "Toko Bu Slamet 1 adalah salah satu kios yang ada di Pasar Gedhe yang menjual khusus sayur-sayuran yang variannya cukup komplit dan aneka kebutuhan bumbu dapur",
         "image": "https://maps.pasargedesolo.com/storage/stores/meeXLxjvkGN7XuEONCA9NT8guIcph651.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/meeXLxjvkGN7XuEONCA9NT8guIcph651_xs.jpg",
         "images": [
@@ -5420,7 +5420,7 @@ const MarketData = (() => {
         "y": 777,
         "lat": 247,
         "lng": 511,
-        "description": "Oprokan Pak Widodo merupakan oprokan yang ada di Pasar Gede yang menjual spesialis oleh-oleh khas Solo seperti racikan teh, karak solo mentah, dan rengginan",
+        "description": "Oprokan Pak Widodo merupakan oprokan yang ada di Pasar Gedhe yang menjual spesialis oleh-oleh khas Solo seperti racikan teh, karak solo mentah, dan rengginan",
         "image": "https://maps.pasargedesolo.com/storage/stores/32QTvCR57zGfgIPjDGnKwZL7iUYv9Tna.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/32QTvCR57zGfgIPjDGnKwZL7iUYv9Tna_xs.jpg",
         "images": [
@@ -5453,7 +5453,7 @@ const MarketData = (() => {
         "y": 450,
         "lat": 574,
         "lng": 570,
-        "description": "Los Bu Warti Kelapa merupakan los yang ada di Pasar Gede yang menyediakan spesialis kelapa dan parutan kelapa",
+        "description": "Los Bu Warti Kelapa merupakan los yang ada di Pasar Gedhe yang menyediakan spesialis kelapa dan parutan kelapa",
         "image": "https://maps.pasargedesolo.com/storage/stores/TazswmOc3ItxmyoYuxYWZlhl018b7Voj.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/TazswmOc3ItxmyoYuxYWZlhl018b7Voj_xs.jpg",
         "images": [
@@ -5485,7 +5485,7 @@ const MarketData = (() => {
         "y": 217,
         "lat": 807,
         "lng": 309,
-        "description": "Oprokan Ibu Endah merupakan oprokan yang ada di pintu utama Pasar Gede yang menyediakan beragam jenis cemilan kering khas Solo seperti intip, peyek teri dan racikan teh Solo",
+        "description": "Oprokan Ibu Endah merupakan oprokan yang ada di pintu utama Pasar Gedhe yang menyediakan beragam jenis cemilan kering khas Solo seperti intip, peyek teri dan racikan teh Solo",
         "image": "https://maps.pasargedesolo.com/storage/stores/5OFUFgvuKq1gerG70xh62xqZ8I5wMTFh.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/5OFUFgvuKq1gerG70xh62xqZ8I5wMTFh_xs.jpg",
         "images": [
@@ -5517,7 +5517,7 @@ const MarketData = (() => {
         "y": 269,
         "lat": 755,
         "lng": 652,
-        "description": "Kios Bu Ni merupakan salah satu kios yang ada di Pasar Gede yang menjual spesialis buah kesemek dan cemilan oleh-oleh khas Solo",
+        "description": "Kios Bu Ni merupakan salah satu kios yang ada di Pasar Gedhe yang menjual spesialis buah kesemek dan cemilan oleh-oleh khas Solo",
         "image": "https://maps.pasargedesolo.com/storage/stores/nYVYGajeHXKxSuygDSSVA97eYo6Vw8gD.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/nYVYGajeHXKxSuygDSSVA97eYo6Vw8gD_xs.jpg",
         "images": [
@@ -5583,7 +5583,7 @@ const MarketData = (() => {
         "y": 223,
         "lat": 801,
         "lng": 487,
-        "description": "Bu Nanik Pakaian merupakan kios yang ada di Pasar Gede yang menyediakan pakaian",
+        "description": "Bu Nanik Pakaian merupakan kios yang ada di Pasar Gedhe yang menyediakan pakaian",
         "image": "https://maps.pasargedesolo.com/storage/stores/JhDabGMeJ2beRiVHL63Otdns2hFtUIqI.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/JhDabGMeJ2beRiVHL63Otdns2hFtUIqI_xs.jpg",
         "images": [
@@ -5616,7 +5616,7 @@ const MarketData = (() => {
         "y": 225,
         "lat": 799,
         "lng": 389,
-        "description": "Kios Oprokan Agus Sriyanto adalah salah satu kios oprokan yang ada di Pasar Gede Pintu Utama yang menjual khusus buah mangga harum manis dan aneka buah lainnya",
+        "description": "Kios Oprokan Agus Sriyanto adalah salah satu kios oprokan yang ada di Pasar Gedhe Pintu Utama yang menjual khusus buah mangga harum manis dan aneka buah lainnya",
         "image": "https://maps.pasargedesolo.com/storage/stores/aPTdQhQNNoovYELBa33QV9uZANjlivRy.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/aPTdQhQNNoovYELBa33QV9uZANjlivRy_xs.jpg",
         "images": [
@@ -5649,7 +5649,7 @@ const MarketData = (() => {
         "y": 221,
         "lat": 803,
         "lng": 671,
-        "description": "Es Dawet Telasih Ngangeni adalah warung legendaris di Pasar Gede Solo yang menyajikan dawet telasih khas dengan cendol kenyal, biji selasih, ketan hitam, tape ketan, bubur sumsum, nangka, dan siraman gula merah cair.",
+        "description": "Es Dawet Telasih Ngangeni adalah warung legendaris di Pasar Gedhe Solo yang menyajikan dawet telasih khas dengan cendol kenyal, biji selasih, ketan hitam, tape ketan, bubur sumsum, nangka, dan siraman gula merah cair.",
         "image": "https://maps.pasargedesolo.com/storage/stores/eg5oNoDGv0TKQzWBjIHDlt03xwd6hERQ.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/eg5oNoDGv0TKQzWBjIHDlt03xwd6hERQ_xs.jpg",
         "images": [
@@ -5682,7 +5682,7 @@ const MarketData = (() => {
         "y": 270,
         "lat": 754,
         "lng": 465,
-        "description": "Kios UD Hasil Buah Sutrisno BG merupakan kios yang ada di Pasar Gede yang menjual khusus buah jeruk grosir",
+        "description": "Kios UD Hasil Buah Sutrisno BG merupakan kios yang ada di Pasar Gedhe yang menjual khusus buah jeruk grosir",
         "image": "https://maps.pasargedesolo.com/storage/stores/37B7nYi3eplNtbLUetUg6tYQQstQGR6L.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/37B7nYi3eplNtbLUetUg6tYQQstQGR6L_xs.jpg",
         "images": [
@@ -5715,7 +5715,7 @@ const MarketData = (() => {
         "y": 219,
         "lat": 805,
         "lng": 559,
-        "description": "Kios Oleh Oleh Bu Siti adalah kios yang berada di Pasar Gede yang menjual spesialis oleh-oleh khas Solo seperti intip, rambak, dan racikan teh selain oleh-oleh khas Solo juga tersedia beragam jenis gerabah",
+        "description": "Kios Oleh Oleh Bu Siti adalah kios yang berada di Pasar Gedhe yang menjual spesialis oleh-oleh khas Solo seperti intip, rambak, dan racikan teh selain oleh-oleh khas Solo juga tersedia beragam jenis gerabah",
         "image": "https://maps.pasargedesolo.com/storage/stores/NQgGiZ0iAeNSE6Nph7gBUnZ6dbxizR8t.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/NQgGiZ0iAeNSE6Nph7gBUnZ6dbxizR8t_xs.jpeg",
         "images": [
@@ -5747,7 +5747,7 @@ const MarketData = (() => {
         "y": 216,
         "lat": 808,
         "lng": 295,
-        "description": "Oprokan Bapak Suharno merupakan oprokan yang ada di pintu utama Pasar Gede yang menyediakan spesialis penyaring gorengan, alat makan, dan pisau besi atau pisau kayu",
+        "description": "Oprokan Bapak Suharno merupakan oprokan yang ada di pintu utama Pasar Gedhe yang menyediakan spesialis penyaring gorengan, alat makan, dan pisau besi atau pisau kayu",
         "image": "https://maps.pasargedesolo.com/storage/stores/kLqIS0BfEYZ02eRDGBD2pHT0LY4ILvwx.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/kLqIS0BfEYZ02eRDGBD2pHT0LY4ILvwx_xs.jpg",
         "images": [
@@ -5780,7 +5780,7 @@ const MarketData = (() => {
         "y": 289,
         "lat": 735,
         "lng": 428,
-        "description": "Oprokan Buah Tante Bella adalah salah satu kios oprokan yang ada di Pasar Gede Pintu Utama yang menjual buah-buahan",
+        "description": "Oprokan Buah Tante Bella adalah salah satu kios oprokan yang ada di Pasar Gedhe Pintu Utama yang menjual buah-buahan",
         "image": "https://maps.pasargedesolo.com/storage/stores/5xkF3zi5iZjinLxfS4j53exc4SRxnSMG.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/5xkF3zi5iZjinLxfS4j53exc4SRxnSMG_xs.jpg",
         "images": [
@@ -5813,7 +5813,7 @@ const MarketData = (() => {
         "y": 254,
         "lat": 770,
         "lng": 303,
-        "description": "Oprokan Bp Sarmo 2 adalah salah satu kios oprokan yang ada di Pasar Gede Pintu Utama yang menjual khusus aneka sandal karet",
+        "description": "Oprokan Bp Sarmo 2 adalah salah satu kios oprokan yang ada di Pasar Gedhe Pintu Utama yang menjual khusus aneka sandal karet",
         "image": "https://maps.pasargedesolo.com/storage/stores/m1X5LIjs0TFmMozjCQluNXt9YmX5jfwJ.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/m1X5LIjs0TFmMozjCQluNXt9YmX5jfwJ_xs.jpg",
         "images": [
@@ -5879,7 +5879,7 @@ const MarketData = (() => {
         "y": 258,
         "lat": 766,
         "lng": 311,
-        "description": "Oprokan Bu Sutinah adalah salah satu oprokan yang berada di Pasar Gede Pintu Utama yang menjual aneka rambak dan intip goreng yang cocok dijadikan oleh-oleh",
+        "description": "Oprokan Bu Sutinah adalah salah satu oprokan yang berada di Pasar Gedhe Pintu Utama yang menjual aneka rambak dan intip goreng yang cocok dijadikan oleh-oleh",
         "image": "https://maps.pasargedesolo.com/storage/stores/jzTh7Iw7go7TCCJmEoBCtxhLli6CNiUb.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/jzTh7Iw7go7TCCJmEoBCtxhLli6CNiUb_xs.jpg",
         "images": [
@@ -5912,7 +5912,7 @@ const MarketData = (() => {
         "y": 233,
         "lat": 791,
         "lng": 412,
-        "description": "Oprokan Bu Suharni adalah salah satu oprokan yang berada di Pasar Gede yang menjual buah-buahan seperti pisang dan strawberry",
+        "description": "Oprokan Bu Suharni adalah salah satu oprokan yang berada di Pasar Gedhe yang menjual buah-buahan seperti pisang dan strawberry",
         "image": "https://maps.pasargedesolo.com/storage/stores/EBWE5MLD6nX1P2ga6Xzx5E5mOOGT95ap.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/EBWE5MLD6nX1P2ga6Xzx5E5mOOGT95ap_xs.jpg",
         "images": [
@@ -5945,7 +5945,7 @@ const MarketData = (() => {
         "y": 271,
         "lat": 753,
         "lng": 373,
-        "description": "Kios Oprokan Bu Ninuk Darmayanti adalah salah satu kios oprokan yang ada di Pasar Gede Pintu Utama yang menjual spesialis buah-buahan",
+        "description": "Kios Oprokan Bu Ninuk Darmayanti adalah salah satu kios oprokan yang ada di Pasar Gedhe Pintu Utama yang menjual spesialis buah-buahan",
         "image": "https://maps.pasargedesolo.com/storage/stores/TOKklxS3lykJ97yzehdi5CMZ6iS1lCja.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/TOKklxS3lykJ97yzehdi5CMZ6iS1lCja_xs.jpg",
         "images": [
@@ -5978,7 +5978,7 @@ const MarketData = (() => {
         "y": 291,
         "lat": 733,
         "lng": 408,
-        "description": "Kios Oprokan Bu Parto adalah salah satu kios oprokan yang ada di Pintu Utama Pasar Gede yang menjual buah-buahan",
+        "description": "Kios Oprokan Bu Parto adalah salah satu kios oprokan yang ada di Pintu Utama Pasar Gedhe yang menjual buah-buahan",
         "image": "https://maps.pasargedesolo.com/storage/stores/CgyUvCRBBiQLxuTlFdNoBS6ZWQl5d6dY.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/CgyUvCRBBiQLxuTlFdNoBS6ZWQl5d6dY_xs.jpg",
         "images": [
@@ -6011,7 +6011,7 @@ const MarketData = (() => {
         "y": 271,
         "lat": 753,
         "lng": 410,
-        "description": "Oprokan Bu Marsi adalah salah satu kios oprokan yang berada di Pasar Gede Pintu Utama yang menjual aneka oleh-oleh khas solo",
+        "description": "Oprokan Bu Marsi adalah salah satu kios oprokan yang berada di Pasar Gedhe Pintu Utama yang menjual aneka oleh-oleh khas solo",
         "image": "https://maps.pasargedesolo.com/storage/stores/1GzQSw6etXYCOStNaTuji5zCZK2Ihm43.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/1GzQSw6etXYCOStNaTuji5zCZK2Ihm43_xs.jpg",
         "images": [
@@ -6044,7 +6044,7 @@ const MarketData = (() => {
         "y": 144,
         "lat": 880,
         "lng": 341,
-        "description": "Oprokan Bu Suparti merupakan oprokan yang ada di Pasar Gede yang menjual beragam makanan ringan dan minuman dingin",
+        "description": "Oprokan Bu Suparti merupakan oprokan yang ada di Pasar Gedhe yang menjual beragam makanan ringan dan minuman dingin",
         "image": "https://maps.pasargedesolo.com/storage/stores/i856D71MAkDRZN56V0VGfqhaJ0PHUERN.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/i856D71MAkDRZN56V0VGfqhaJ0PHUERN_xs.jpg",
         "images": [
@@ -6076,7 +6076,7 @@ const MarketData = (() => {
         "y": 170,
         "lat": 854,
         "lng": 731,
-        "description": "UD Grosir Buah merupakan salah satu los yang ada di Pasar Gede yang menyediakan spesialis buah jeruk grosir",
+        "description": "UD Grosir Buah merupakan salah satu los yang ada di Pasar Gedhe yang menyediakan spesialis buah jeruk grosir",
         "image": "https://maps.pasargedesolo.com/storage/stores/QisQ17beOnaVw2NBHjxUGkEzHD38f61M.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/QisQ17beOnaVw2NBHjxUGkEzHD38f61M_xs.jpg",
         "images": [
@@ -6109,7 +6109,7 @@ const MarketData = (() => {
         "y": 201,
         "lat": 823,
         "lng": 556,
-        "description": "Spesial Usor-Usor Ratno Group merupakan salah satu los yang ada di Pasar Gede yang menyediakan spesialis buah jeruk grosir",
+        "description": "Spesial Usor-Usor Ratno Group merupakan salah satu los yang ada di Pasar Gedhe yang menyediakan spesialis buah jeruk grosir",
         "image": "https://maps.pasargedesolo.com/storage/stores/3Pq6UK2X4sFaEiDO7AwsXTJNtexZSDcm.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/3Pq6UK2X4sFaEiDO7AwsXTJNtexZSDcm_xs.jpeg",
         "images": [
@@ -6142,7 +6142,7 @@ const MarketData = (() => {
         "y": 266,
         "lat": 758,
         "lng": 614,
-        "description": "Kios Bu Kus merupakan salah satu kios yang ada di Pasar Gede yang menyediakan berbagai macam pakaian dan kain batik dari anak-anak hingga dewasa",
+        "description": "Kios Bu Kus merupakan salah satu kios yang ada di Pasar Gedhe yang menyediakan berbagai macam pakaian dan kain batik dari anak-anak hingga dewasa",
         "image": "https://maps.pasargedesolo.com/storage/stores/XAcHnfjyhJqxfzMYu0AGwp5eZHMfi1ZL.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/XAcHnfjyhJqxfzMYu0AGwp5eZHMfi1ZL_xs.jpg",
         "images": [
@@ -6174,7 +6174,7 @@ const MarketData = (() => {
         "y": 413,
         "lat": 611,
         "lng": 525,
-        "description": "Oprokan Ibu Winarti merupakan salah satu oprokan yang ada di Pasar Gede yang menyediakan spesialis Ikan Bandeng dengan ukuran besar dan kecil",
+        "description": "Oprokan Ibu Winarti merupakan salah satu oprokan yang ada di Pasar Gedhe yang menyediakan spesialis Ikan Bandeng dengan ukuran besar dan kecil",
         "image": "https://maps.pasargedesolo.com/storage/stores/48ncmuatvKY9sm1Y6ZajD2m7QzMthJEA.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/48ncmuatvKY9sm1Y6ZajD2m7QzMthJEA_xs.jpg",
         "images": [
@@ -6207,7 +6207,7 @@ const MarketData = (() => {
         "y": 221,
         "lat": 803,
         "lng": 530,
-        "description": "Lenjongan Bu Sum 1 adalah jajanan pasar legendaris di sisi timur Pasar Gede Solo yang telah eksis sejak 1980-an, menjual aneka kue tradisional seperti ketan putih, ketan hitam, cenil, tiwul, klepon, getuk, dan gathot, disajikan dengan taburan kelapa parut serta siraman gula merah cair. Camilan manis dan empuk ini menjadi favorit warga lokal dan wisatawan yang ingin mencicipi cita rasa khas Solo.",
+        "description": "Lenjongan Bu Sum 1 adalah jajanan pasar legendaris di sisi timur Pasar Gedhe Solo yang telah eksis sejak 1980-an, menjual aneka kue tradisional seperti ketan putih, ketan hitam, cenil, tiwul, klepon, getuk, dan gathot, disajikan dengan taburan kelapa parut serta siraman gula merah cair. Camilan manis dan empuk ini menjadi favorit warga lokal dan wisatawan yang ingin mencicipi cita rasa khas Solo.",
         "image": "https://maps.pasargedesolo.com/storage/stores/WEtr9Ex9JmwjYvFvOqCeI6W7LCbWjmVv.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/WEtr9Ex9JmwjYvFvOqCeI6W7LCbWjmVv_xs.jpg",
         "images": [
@@ -6240,7 +6240,7 @@ const MarketData = (() => {
         "y": 464,
         "lat": 560,
         "lng": 389,
-        "description": "Rani Snack adalah salah satu kios yang ada di Pasar Gede yang menjual spesialis snack jajanan pasar khas solo dan aneka kue tradisional lainnya",
+        "description": "Rani Snack adalah salah satu kios yang ada di Pasar Gedhe yang menjual spesialis snack jajanan pasar khas solo dan aneka kue tradisional lainnya",
         "image": "https://maps.pasargedesolo.com/storage/stores/OLTD8Q6y8lBR05fsuVVitBo54rSqJncC.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/OLTD8Q6y8lBR05fsuVVitBo54rSqJncC_xs.jpg",
         "images": [
@@ -6273,7 +6273,7 @@ const MarketData = (() => {
         "y": 477,
         "lat": 547,
         "lng": 291,
-        "description": "Kios Guritno Chandra adalah salah satu kios yang berada di Pasar Gede menjual khusus emping atau karak yang belum matang dan aneka kacang-kacangan",
+        "description": "Kios Guritno Chandra adalah salah satu kios yang berada di Pasar Gedhe menjual khusus emping atau karak yang belum matang dan aneka kacang-kacangan",
         "image": "https://maps.pasargedesolo.com/storage/stores/Cv1ISuFUJJ3QLTogXdUAe0i0NgrYvs8l.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/Cv1ISuFUJJ3QLTogXdUAe0i0NgrYvs8l_xs.jpg",
         "images": [
@@ -6307,7 +6307,7 @@ const MarketData = (() => {
         "y": 405,
         "lat": 619,
         "lng": 488,
-        "description": "Dawet Mbah Harso adalah minuman tradisional legendaris yang ada di Pasar Gede yang terkenal dengan minuman dawet menggunakan santan dan gula asli yang menawarkan cita rasa autentik dan menyegarkan dengan harga mulai 10 ribu hingga 17 ribu saja",
+        "description": "Dawet Mbah Harso adalah minuman tradisional legendaris yang ada di Pasar Gedhe yang terkenal dengan minuman dawet menggunakan santan dan gula asli yang menawarkan cita rasa autentik dan menyegarkan dengan harga mulai 10 ribu hingga 17 ribu saja",
         "image": "https://maps.pasargedesolo.com/storage/stores/MbqZDCzezeejB1QSf0RuBR39dtGcCkFb.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/MbqZDCzezeejB1QSf0RuBR39dtGcCkFb_xs.jpg",
         "images": [
@@ -6340,7 +6340,7 @@ const MarketData = (() => {
         "y": 335,
         "lat": 689,
         "lng": 491,
-        "description": "Es Dawet Bu Yatik adalah minuman tradisional yang ada di Pasar Gede yang terkenal dengan es dawet telasih dan gempol pleret karena rasanya yang legit dan autentik",
+        "description": "Es Dawet Bu Yatik adalah minuman tradisional yang ada di Pasar Gedhe yang terkenal dengan es dawet telasih dan gempol pleret karena rasanya yang legit dan autentik",
         "image": "https://maps.pasargedesolo.com/storage/stores/pZo5m3gF2eK0AUi89jsWHaAFtdPc58V8.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/pZo5m3gF2eK0AUi89jsWHaAFtdPc58V8_xs.jpg",
         "images": [
@@ -6373,7 +6373,7 @@ const MarketData = (() => {
         "y": 810,
         "lat": 214,
         "lng": 551,
-        "description": "Kios Sabar Menanti merupakan salah satu kios di Pasar Gede yang menyediakan spesialis buah pepaya, pisang, rambak, dan intip",
+        "description": "Kios Sabar Menanti merupakan salah satu kios di Pasar Gedhe yang menyediakan spesialis buah pepaya, pisang, rambak, dan intip",
         "image": "https://maps.pasargedesolo.com/storage/stores/QBKQ9gqrm4UcrEgMXVh0aT5Im8GLqOEb.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/QBKQ9gqrm4UcrEgMXVh0aT5Im8GLqOEb_xs.jpg",
         "images": [
@@ -6406,7 +6406,7 @@ const MarketData = (() => {
         "y": 649,
         "lat": 375,
         "lng": 517,
-        "description": "Oprokan Ibu Karsi merupakan oprokan yang ada di Pasar Gede yang menjual spesialis ayam kremes, bawang goreng dan emping mentah",
+        "description": "Oprokan Ibu Karsi merupakan oprokan yang ada di Pasar Gedhe yang menjual spesialis ayam kremes, bawang goreng dan emping mentah",
         "image": "https://maps.pasargedesolo.com/storage/stores/mTFi0CLJYqoftwhFFQh3cqDSIlMhlxOj.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/mTFi0CLJYqoftwhFFQh3cqDSIlMhlxOj_xs.jpg",
         "images": [
@@ -6439,7 +6439,7 @@ const MarketData = (() => {
         "y": 295,
         "lat": 729,
         "lng": 530,
-        "description": "Oprokan Ibu Nurnaini merupakan oprokan yang ada di Pasar Gede yang spesialis menjual tahu dan tempe",
+        "description": "Oprokan Ibu Nurnaini merupakan oprokan yang ada di Pasar Gedhe yang spesialis menjual tahu dan tempe",
         "image": "https://maps.pasargedesolo.com/storage/stores/mNPxp5XCppAeFpnioh38S7RKpDAtOKMW.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/mNPxp5XCppAeFpnioh38S7RKpDAtOKMW_xs.jpg",
         "images": [
@@ -6472,7 +6472,7 @@ const MarketData = (() => {
         "y": 492,
         "lat": 532,
         "lng": 519,
-        "description": "Oprokan Ibu Warsini Ayam Potong merupakan oprokan yang ada di Pasar Gede yang menjual spesialis ayam potong atau ayam utuh, usus dan ceker ayam",
+        "description": "Oprokan Ibu Warsini Ayam Potong merupakan oprokan yang ada di Pasar Gedhe yang menjual spesialis ayam potong atau ayam utuh, usus dan ceker ayam",
         "image": "https://maps.pasargedesolo.com/storage/stores/OqSCWC9heQaagkbh0nkpsE2mSIuOlR5j.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/OqSCWC9heQaagkbh0nkpsE2mSIuOlR5j_xs.jpg",
         "images": [
@@ -6505,7 +6505,7 @@ const MarketData = (() => {
         "y": 606,
         "lat": 418,
         "lng": 519,
-        "description": "Oprokan Ibu Ngadiyem merupakan salah satu oprokan yang ada di Pasar Gede yang menyediakan beragam sayuran, tahu tempe dan santan kelapa",
+        "description": "Oprokan Ibu Ngadiyem merupakan salah satu oprokan yang ada di Pasar Gedhe yang menyediakan beragam sayuran, tahu tempe dan santan kelapa",
         "image": "https://maps.pasargedesolo.com/storage/stores/fan30TCc0pe3JKJQ3X3GOWD4aKDhGJXX.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/fan30TCc0pe3JKJQ3X3GOWD4aKDhGJXX_xs.jpg",
         "images": [
@@ -6538,7 +6538,7 @@ const MarketData = (() => {
         "y": 455,
         "lat": 569,
         "lng": 521,
-        "description": "Oprokan Ibu Warti Ayam Potong 2 merupakan oprokan yang ada di Pasar Gede yang menyediakan spesialis kepala ayam, tulang ayam, dan ceker ayam",
+        "description": "Oprokan Ibu Warti Ayam Potong 2 merupakan oprokan yang ada di Pasar Gedhe yang menyediakan spesialis kepala ayam, tulang ayam, dan ceker ayam",
         "image": "https://maps.pasargedesolo.com/storage/stores/Zb10AkDL7AYD0d39pYYt0SxMPlY55CJb.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/Zb10AkDL7AYD0d39pYYt0SxMPlY55CJb_xs.jpg",
         "images": [
@@ -6571,7 +6571,7 @@ const MarketData = (() => {
         "y": 325,
         "lat": 699,
         "lng": 520,
-        "description": "Oprokan Ibu Tatik merupakan oprokan yang ada di Pasar Gede yang menyediakan spesialis ayam potong, usus ayam dan hati ayam",
+        "description": "Oprokan Ibu Tatik merupakan oprokan yang ada di Pasar Gedhe yang menyediakan spesialis ayam potong, usus ayam dan hati ayam",
         "image": "https://maps.pasargedesolo.com/storage/stores/KCRGKeby0BRK3zE4An7n0VcvbUttgwBB.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/KCRGKeby0BRK3zE4An7n0VcvbUttgwBB_xs.jpg",
         "images": [
@@ -6604,7 +6604,7 @@ const MarketData = (() => {
         "y": 514,
         "lat": 510,
         "lng": 415,
-        "description": "Kios Koh Po adalah salah satu kios yang terletak di Pasar Gede yang dikenal menjual spesialis aneka sayur mayur segar yang lengkap serta kebutuhan bahan masak dapur dengan harga terjangkau",
+        "description": "Kios Koh Po adalah salah satu kios yang terletak di Pasar Gedhe yang dikenal menjual spesialis aneka sayur mayur segar yang lengkap serta kebutuhan bahan masak dapur dengan harga terjangkau",
         "image": "https://maps.pasargedesolo.com/storage/stores/ntubeeTsH4Z1UqJSBTdj33RFYrCUG8nu.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/ntubeeTsH4Z1UqJSBTdj33RFYrCUG8nu_xs.jpg",
         "images": [
@@ -6638,7 +6638,7 @@ const MarketData = (() => {
         "y": 551,
         "lat": 473,
         "lng": 483,
-        "description": "Toko Bu Narti adalah salah satu kios yang ada di Pasar Gede menjual spesialis cemilan seperti aneka krupuk dan ampiang serta menjual minuman wedang kesehatan",
+        "description": "Toko Bu Narti adalah salah satu kios yang ada di Pasar Gedhe menjual spesialis cemilan seperti aneka krupuk dan ampiang serta menjual minuman wedang kesehatan",
         "image": "https://maps.pasargedesolo.com/storage/stores/Mx2MeL0H5A2uh8bk1hVielonnDeveurN.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/Mx2MeL0H5A2uh8bk1hVielonnDeveurN_xs.jpg",
         "images": [
@@ -6672,7 +6672,7 @@ const MarketData = (() => {
         "y": 807,
         "lat": 217,
         "lng": 664,
-        "description": "Warung Makan Mbak Dewi merupakan warung makan yang ada di dalam Pasar Gede dengan menyediakan masakan jawa dan beragam gorengan",
+        "description": "Warung Makan Mbak Dewi merupakan warung makan yang ada di dalam Pasar Gedhe dengan menyediakan masakan jawa dan beragam gorengan",
         "image": "https://maps.pasargedesolo.com/storage/stores/7Y2uExKCosunV2zKC25wfdevvgZPwoXC.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/7Y2uExKCosunV2zKC25wfdevvgZPwoXC_xs.jpg",
         "images": [
@@ -6738,7 +6738,7 @@ const MarketData = (() => {
         "y": 781,
         "lat": 243,
         "lng": 578,
-        "description": "Ayam Goreng Bu Mukini merupakan salah satu kios di Pasar Gede yang menyediakan spesialis ayam goreng",
+        "description": "Ayam Goreng Bu Mukini merupakan salah satu kios di Pasar Gedhe yang menyediakan spesialis ayam goreng",
         "image": "https://maps.pasargedesolo.com/storage/stores/itapj2wR84M2JrWnlXx4DGRwcXQEXdiX.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/itapj2wR84M2JrWnlXx4DGRwcXQEXdiX_xs.jpg",
         "images": [
@@ -6771,7 +6771,7 @@ const MarketData = (() => {
         "y": 569,
         "lat": 455,
         "lng": 384,
-        "description": "Kios Pak Mul Sayur adalah salah satu kios sayur yang berada di Pasar Gede yang menjual spesialis aneka sayur segar seperti paprikan merah dan paprika hijau selain itu juga menjual aneka bumbu dapur",
+        "description": "Kios Pak Mul Sayur adalah salah satu kios sayur yang berada di Pasar Gedhe yang menjual spesialis aneka sayur segar seperti paprikan merah dan paprika hijau selain itu juga menjual aneka bumbu dapur",
         "image": "https://maps.pasargedesolo.com/storage/stores/5JboONmOo8hRUAGvZtkhp0SghO2jGylm.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/5JboONmOo8hRUAGvZtkhp0SghO2jGylm_xs.jpg",
         "images": [
@@ -6804,7 +6804,7 @@ const MarketData = (() => {
         "y": 899,
         "lat": 125,
         "lng": 432,
-        "description": "Cak We Hoo adalah salah salah satu jajajnan legendaris yang berada di Pasar Gede Pintu Utara yang sudah ada sejak tahun 1980 terkenal dengan cakwe yang berukuran jumbo dan rasa yang gurih serta cita rasa yang konsisten sehingga menjadi favorit banyak orang",
+        "description": "Cak We Hoo adalah salah salah satu jajajnan legendaris yang berada di Pasar Gedhe Pintu Utara yang sudah ada sejak tahun 1980 terkenal dengan cakwe yang berukuran jumbo dan rasa yang gurih serta cita rasa yang konsisten sehingga menjadi favorit banyak orang",
         "image": "https://maps.pasargedesolo.com/storage/stores/Y3CGwFU9x76BCJCaiNhQiSuyZLox8zok.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/Y3CGwFU9x76BCJCaiNhQiSuyZLox8zok_xs.jpeg",
         "images": [
@@ -6836,7 +6836,7 @@ const MarketData = (() => {
         "y": 498,
         "lat": 526,
         "lng": 486,
-        "description": "Kios Bu Eni adalah salah satu kios yang ada di Pasar Gede yang menjual aneka sayur-sayuran dan bumbu dapur lainnya",
+        "description": "Kios Bu Eni adalah salah satu kios yang ada di Pasar Gedhe yang menjual aneka sayur-sayuran dan bumbu dapur lainnya",
         "image": "https://maps.pasargedesolo.com/storage/stores/owacO2kL56fnKvMDe0iuwj8jpaSFr02r.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/owacO2kL56fnKvMDe0iuwj8jpaSFr02r_xs.jpg",
         "images": [
@@ -6874,7 +6874,7 @@ const MarketData = (() => {
         "y": 750,
         "lat": 274,
         "lng": 289,
-        "description": "Kios Widji Snack adalah salah satu kios yang ada di Pasar Gede yang menjual khusus rengginang dan kue dollar",
+        "description": "Kios Widji Snack adalah salah satu kios yang ada di Pasar Gedhe yang menjual khusus rengginang dan kue dollar",
         "image": "https://maps.pasargedesolo.com/storage/stores/n9XjX1ZAymEfRbqJLVvbt0AekkYZ7yya.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/n9XjX1ZAymEfRbqJLVvbt0AekkYZ7yya_xs.jpg",
         "images": [
@@ -6907,7 +6907,7 @@ const MarketData = (() => {
         "y": 496,
         "lat": 528,
         "lng": 365,
-        "description": "Pusat Jajan Bursa Rasa adalah salah satu kios yang ada di Pasar Gede yang dikenal spesialis menjual aneka jajan pasar kue tradisional dan aneka makanan ringan khas solo",
+        "description": "Pusat Jajan Bursa Rasa adalah salah satu kios yang ada di Pasar Gedhe yang dikenal spesialis menjual aneka jajan pasar kue tradisional dan aneka makanan ringan khas solo",
         "image": "https://maps.pasargedesolo.com/storage/stores/5g5CfbbyAGt9dn0PQcG5HPDjdiJPvAr2.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/5g5CfbbyAGt9dn0PQcG5HPDjdiJPvAr2_xs.jpg",
         "images": [
@@ -6940,7 +6940,7 @@ const MarketData = (() => {
         "y": 784,
         "lat": 240,
         "lng": 559,
-        "description": "Kios oleh-oleh Bu Mukini adalah kios yang menjual aneka oleh-oleh atau camilan ringan di Pasar Gede seperti keripik ceker, abon sapi dan racikan teh",
+        "description": "Kios oleh-oleh Bu Mukini adalah kios yang menjual aneka oleh-oleh atau camilan ringan di Pasar Gedhe seperti keripik ceker, abon sapi dan racikan teh",
         "image": "https://maps.pasargedesolo.com/storage/stores/igwp6MB6QbD0ElfeWC4NDLmLq001mBEI.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/igwp6MB6QbD0ElfeWC4NDLmLq001mBEI_xs.jpg",
         "images": [
@@ -6973,7 +6973,7 @@ const MarketData = (() => {
         "y": 808,
         "lat": 216,
         "lng": 631,
-        "description": "Ayam Kampung Bu Sri merupakan los yang ada di Pasar Gede yang menyediakan spesial ayam kampung dan ayam jantan",
+        "description": "Ayam Kampung Bu Sri merupakan los yang ada di Pasar Gedhe yang menyediakan spesial ayam kampung dan ayam jantan",
         "image": "https://maps.pasargedesolo.com/storage/stores/9Gez5fNW1nCNWU1ZGKVFc8YbKn5GL6n0.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/9Gez5fNW1nCNWU1ZGKVFc8YbKn5GL6n0_xs.jpg",
         "images": [
@@ -7006,7 +7006,7 @@ const MarketData = (() => {
         "y": 124,
         "lat": 900,
         "lng": 525,
-        "description": "Kios UD Uzhie 2 adalah salah satu kios  buah yang berada di kawasan Pasar Gede yang menjual aneka buah-buahan yang menerima pesanan buah secara grosir",
+        "description": "Kios UD Uzhie 2 adalah salah satu kios  buah yang berada di kawasan Pasar Gedhe yang menjual aneka buah-buahan yang menerima pesanan buah secara grosir",
         "image": "https://maps.pasargedesolo.com/storage/stores/0RpwULhBg8oKCMHp9SmoEAp8pHB0CPMp.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/0RpwULhBg8oKCMHp9SmoEAp8pHB0CPMp_xs.jpeg",
         "images": [
@@ -7039,7 +7039,7 @@ const MarketData = (() => {
         "y": 679,
         "lat": 345,
         "lng": 474,
-        "description": "Toko Bu Sri Sugiarti adalah salah satu kios yang ada di pasar gede menjual beraneka macam sayur-sayuran dan bumbu dapur",
+        "description": "Toko Bu Sri Sugiarti adalah salah satu kios yang ada di pasar gedhe menjual beraneka macam sayur-sayuran dan bumbu dapur",
         "image": "https://maps.pasargedesolo.com/storage/stores/oL5TAmWekUxOcXVIo7iddiM36XwZlVdO.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/oL5TAmWekUxOcXVIo7iddiM36XwZlVdO_xs.jpg",
         "images": [
@@ -7073,7 +7073,7 @@ const MarketData = (() => {
         "y": 695,
         "lat": 329,
         "lng": 462,
-        "description": "Dua Putri Solo adalah salah satu kios yang berada di Pasar Gede yang dikenal menjual aneka jamu untuk kesehatan dan racikan teh solo",
+        "description": "Dua Putri Solo adalah salah satu kios yang berada di Pasar Gedhe yang dikenal menjual aneka jamu untuk kesehatan dan racikan teh solo",
         "image": "https://maps.pasargedesolo.com/storage/stores/LdT0jxzMB87N7wrVoavTE3OwhHliS37a.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/LdT0jxzMB87N7wrVoavTE3OwhHliS37a_xs.jpg",
         "images": [
@@ -7106,7 +7106,7 @@ const MarketData = (() => {
         "y": 700,
         "lat": 324,
         "lng": 571,
-        "description": "Kios Bu Daryanti memiliki dua kios yang berhadapan yang ada di Pasar Gede yang menyediakan berbagai macam sembako, cemilan dan minuman sachet yang lengkap",
+        "description": "Kios Bu Daryanti memiliki dua kios yang berhadapan yang ada di Pasar Gedhe yang menyediakan berbagai macam sembako, cemilan dan minuman sachet yang lengkap",
         "image": "https://maps.pasargedesolo.com/storage/stores/33V4gidepoGHVznUya8oHELHmjJH7ojT.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/33V4gidepoGHVznUya8oHELHmjJH7ojT_xs.jpg",
         "images": [
@@ -7139,7 +7139,7 @@ const MarketData = (() => {
         "y": 782,
         "lat": 242,
         "lng": 477,
-        "description": "Kios Ibu Mulyani adalah salah satu toko yang ada di Pasar Gede yang menjual rempah-rempahan untuk minuman jamu kesehatan",
+        "description": "Kios Ibu Mulyani adalah salah satu toko yang ada di Pasar Gedhe yang menjual rempah-rempahan untuk minuman jamu kesehatan",
         "image": "https://maps.pasargedesolo.com/storage/stores/mFGbcZUVv7NAyn0mrta8wmD8962daAtv.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/mFGbcZUVv7NAyn0mrta8wmD8962daAtv_xs.jpg",
         "images": [
@@ -7172,7 +7172,7 @@ const MarketData = (() => {
         "y": 121,
         "lat": 903,
         "lng": 647,
-        "description": "Rizkiana Buah merupakan kios buah grosir yang ada di Pasar Gede yang menyediakan khusus buah salak dan jeruk peras",
+        "description": "Rizkiana Buah merupakan kios buah grosir yang ada di Pasar Gedhe yang menyediakan khusus buah salak dan jeruk peras",
         "image": "https://maps.pasargedesolo.com/storage/stores/bBh3MrAPNOr5ZwlKOy1gF8ngogSO3KIa.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/bBh3MrAPNOr5ZwlKOy1gF8ngogSO3KIa_xs.jpeg",
         "images": [
@@ -7205,7 +7205,7 @@ const MarketData = (() => {
         "y": 856,
         "lat": 168,
         "lng": 463,
-        "description": "Bandeng & Daun Pisang Bu Surayem merupakan salah satu oprokan yang ada di Pasar Gede yang menjual spesialis ikan bandeng dan daun pisang",
+        "description": "Bandeng & Daun Pisang Bu Surayem merupakan salah satu oprokan yang ada di Pasar Gedhe yang menjual spesialis ikan bandeng dan daun pisang",
         "image": "https://maps.pasargedesolo.com/storage/stores/UWVs5WsNxCHASzy34hamsNjhNMdrLvGq.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/UWVs5WsNxCHASzy34hamsNjhNMdrLvGq_xs.jpg",
         "images": [
@@ -7238,7 +7238,7 @@ const MarketData = (() => {
         "y": 638,
         "lat": 386,
         "lng": 485,
-        "description": "Kios Pak Man adalah salah satu kios yang ada di Pasar Gede yang menjual khusus ikan teri asin dan ebi kering",
+        "description": "Kios Pak Man adalah salah satu kios yang ada di Pasar Gedhe yang menjual khusus ikan teri asin dan ebi kering",
         "image": "https://maps.pasargedesolo.com/storage/stores/SCDvtRLDgO5AMESf7xD45bn89gKhKfzc.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/SCDvtRLDgO5AMESf7xD45bn89gKhKfzc_xs.jpg",
         "images": [
@@ -7271,7 +7271,7 @@ const MarketData = (() => {
         "y": 122,
         "lat": 902,
         "lng": 435,
-        "description": "Toko Dhira merupakan toko perlengkapan dan aksesoris yang ada di Pasar Gede",
+        "description": "Toko Dhira merupakan toko perlengkapan dan aksesoris yang ada di Pasar Gedhe",
         "image": "https://maps.pasargedesolo.com/storage/stores/FFZfXLyEB4YoWE7PDrAvhbJraZiq5uln.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/FFZfXLyEB4YoWE7PDrAvhbJraZiq5uln_xs.jpeg",
         "images": [
@@ -7304,7 +7304,7 @@ const MarketData = (() => {
         "y": 209,
         "lat": 815,
         "lng": 261,
-        "description": "UD Eka Sari merupakan kios kelontong di Pasar Gede Solo yang menyediakan layanan kursus jahitan dan menerima jahitan serta menjual minuman dan rokok",
+        "description": "UD Eka Sari merupakan kios kelontong di Pasar Gedhe Solo yang menyediakan layanan kursus jahitan dan menerima jahitan serta menjual minuman dan rokok",
         "image": "https://maps.pasargedesolo.com/storage/stores/5hiryQpTZ2PXHRjBej73p4iWKepRBjoB.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/5hiryQpTZ2PXHRjBej73p4iWKepRBjoB_xs.jpg",
         "images": [
@@ -7337,7 +7337,7 @@ const MarketData = (() => {
         "y": 613,
         "lat": 411,
         "lng": 390,
-        "description": "Kios Bu nPonirah adalah salah satu kios sayur yang berada di Pasar Gede yang menjual spesialis bermacam-macam aneka sayuran segar",
+        "description": "Kios Bu nPonirah adalah salah satu kios sayur yang berada di Pasar Gedhe yang menjual spesialis bermacam-macam aneka sayuran segar",
         "image": "https://maps.pasargedesolo.com/storage/stores/evT4oAGHMlmY5Qp08IeSFU3iLwKsb6A2.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/evT4oAGHMlmY5Qp08IeSFU3iLwKsb6A2_xs.jpg",
         "images": [
@@ -7370,7 +7370,7 @@ const MarketData = (() => {
         "y": 726,
         "lat": 298,
         "lng": 595,
-        "description": "Ayam Goreng Mbak Siti merupakan salah satu kios yang ada di Pasar Gede yang menyediakan spesialis ayam goreng dan peyek",
+        "description": "Ayam Goreng Mbak Siti merupakan salah satu kios yang ada di Pasar Gedhe yang menyediakan spesialis ayam goreng dan peyek",
         "image": "https://maps.pasargedesolo.com/storage/stores/EEzQ1vs0mcy3JBQ2GzgKrhDiK4lZeBMV.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/EEzQ1vs0mcy3JBQ2GzgKrhDiK4lZeBMV_xs.jpg",
         "images": [
@@ -7403,7 +7403,7 @@ const MarketData = (() => {
         "y": 701,
         "lat": 323,
         "lng": 674,
-        "description": "Kios Berkat Sesami 1 adalah salah satu kios yang ada di Pasar Gede yang menjual aneka gerabah seperti kendi, ulekan dan tampah",
+        "description": "Kios Berkat Sesami 1 adalah salah satu kios yang ada di Pasar Gedhe yang menjual aneka gerabah seperti kendi, ulekan dan tampah",
         "image": "https://maps.pasargedesolo.com/storage/stores/G1VeqUbXpO8nFbwzDYW6BW1Bdk1OxL3m.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/G1VeqUbXpO8nFbwzDYW6BW1Bdk1OxL3m_xs.jpg",
         "images": [
@@ -7435,7 +7435,7 @@ const MarketData = (() => {
         "y": 641,
         "lat": 383,
         "lng": 594,
-        "description": "Kios Bu Daryanti memiliki dua kios yang berhadapan yang ada di Pasar Gede yang menyediakan berbagai macam sembako, cemilan dan minuman sachet yang lengkap",
+        "description": "Kios Bu Daryanti memiliki dua kios yang berhadapan yang ada di Pasar Gedhe yang menyediakan berbagai macam sembako, cemilan dan minuman sachet yang lengkap",
         "image": "https://maps.pasargedesolo.com/storage/stores/W3nScx8hZHWJIah2o0vrFoQDHGRDtAt7.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/W3nScx8hZHWJIah2o0vrFoQDHGRDtAt7_xs.jpg",
         "images": [
@@ -7468,7 +7468,7 @@ const MarketData = (() => {
         "y": 362,
         "lat": 662,
         "lng": 290,
-        "description": "Kios Gerabatan adalah salah satu kios yang ada di Pasar Gede yang menjual aneka sayur dan jajanan pasar",
+        "description": "Kios Gerabatan adalah salah satu kios yang ada di Pasar Gedhe yang menjual aneka sayur dan jajanan pasar",
         "image": "https://maps.pasargedesolo.com/storage/stores/cPaT1YyGQyISTjH6X60232VavGcaiQ5h.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/cPaT1YyGQyISTjH6X60232VavGcaiQ5h_xs.jpg",
         "images": [
@@ -7501,7 +7501,7 @@ const MarketData = (() => {
         "y": 806,
         "lat": 218,
         "lng": 509,
-        "description": "Oprokan Bu Wahyuni adalah salah satu oprokan yang ada di Pasar Gede yang menjual spesialis rempah-rempah jamu racikan dan teh solo",
+        "description": "Oprokan Bu Wahyuni adalah salah satu oprokan yang ada di Pasar Gedhe yang menjual spesialis rempah-rempah jamu racikan dan teh solo",
         "image": "https://maps.pasargedesolo.com/storage/stores/S5Y5EhBZ80WWFjlhko2IWteOasVHRW6R.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/S5Y5EhBZ80WWFjlhko2IWteOasVHRW6R_xs.jpg",
         "images": [
@@ -7567,7 +7567,7 @@ const MarketData = (() => {
         "y": 498,
         "lat": 526,
         "lng": 421,
-        "description": "Kios Bu Veve adalah salah satu toko yang ada di Pasar Gede yang spesialis menjual aneka kecap dan aneka saus",
+        "description": "Kios Bu Veve adalah salah satu toko yang ada di Pasar Gedhe yang spesialis menjual aneka kecap dan aneka saus",
         "image": "https://maps.pasargedesolo.com/storage/stores/kVOvRhG7zZ3BmhNTSu5uUgluouG9koXw.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/kVOvRhG7zZ3BmhNTSu5uUgluouG9koXw_xs.jpg",
         "images": [
@@ -7601,7 +7601,7 @@ const MarketData = (() => {
         "y": 324,
         "lat": 700,
         "lng": 259,
-        "description": "MD Buah adalah salah satu toko di Pasar Gede yang menjual aneka buah import dan lokal yang menerima pesanan buah secara eceran dan grosir",
+        "description": "MD Buah adalah salah satu toko di Pasar Gedhe yang menjual aneka buah import dan lokal yang menerima pesanan buah secara eceran dan grosir",
         "image": "https://maps.pasargedesolo.com/storage/stores/BGNTvp5NHMRmC5osdN62q3H7yXJ6pxFW.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/BGNTvp5NHMRmC5osdN62q3H7yXJ6pxFW_xs.jpeg",
         "images": [
@@ -7633,7 +7633,7 @@ const MarketData = (() => {
         "y": 640,
         "lat": 384,
         "lng": 762,
-        "description": "Toko Pak Slamet merupakan kios yang ada di Pasar Gede yang menyediakan perlengkapan kemasan",
+        "description": "Toko Pak Slamet merupakan kios yang ada di Pasar Gedhe yang menyediakan perlengkapan kemasan",
         "image": "https://maps.pasargedesolo.com/storage/stores/xvvRxmEjfOYdyKJDksCF4t2UYzTWNWjP.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/xvvRxmEjfOYdyKJDksCF4t2UYzTWNWjP_xs.jpeg",
         "images": [
@@ -7666,7 +7666,7 @@ const MarketData = (() => {
         "y": 639,
         "lat": 385,
         "lng": 735,
-        "description": "Kios Makbenk 1 merupakan kios yang ada di Pasar Gede yang menyediakan spesialis gerabah dan alat kebersihan yang lengkap seperti sapu, tampah, camping, dan alat makan dari rotan atau kayu. Kios Makbenk memiliki 2 kios di sisi depan dan belakang bersebrangan",
+        "description": "Kios Makbenk 1 merupakan kios yang ada di Pasar Gedhe yang menyediakan spesialis gerabah dan alat kebersihan yang lengkap seperti sapu, tampah, camping, dan alat makan dari rotan atau kayu. Kios Makbenk memiliki 2 kios di sisi depan dan belakang bersebrangan",
         "image": "https://maps.pasargedesolo.com/storage/stores/KNoOSwi62mAPKbuSKLqWtKNxfMNl259K.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/KNoOSwi62mAPKbuSKLqWtKNxfMNl259K_xs.jpg",
         "images": [
@@ -7699,7 +7699,7 @@ const MarketData = (() => {
         "y": 779,
         "lat": 245,
         "lng": 409,
-        "description": "Kios Jamu Bu Wahyuni  adalah salah satu kios yang ada di Pasar Gede yang menjual spesialis rempah-rempahan untuk jamu racikan dan minuman jamu untuk berbagai masalah kesehatan",
+        "description": "Kios Jamu Bu Wahyuni  adalah salah satu kios yang ada di Pasar Gedhe yang menjual spesialis rempah-rempahan untuk jamu racikan dan minuman jamu untuk berbagai masalah kesehatan",
         "image": "https://maps.pasargedesolo.com/storage/stores/1lYzhcDDmgPBmVbHFhwQP5nkVS5EobB1.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/1lYzhcDDmgPBmVbHFhwQP5nkVS5EobB1_xs.jpg",
         "images": [
@@ -7732,7 +7732,7 @@ const MarketData = (() => {
         "y": 745,
         "lat": 279,
         "lng": 408,
-        "description": "Kios Jamu Bu Widarsih adalah salah satu kios jamu tradisioanl yang berada di Pasar Gede yang khusus menjual berbagai jenis bahan untuk jamu racikan dan minuman untuk berbagai masalah kesehatan",
+        "description": "Kios Jamu Bu Widarsih adalah salah satu kios jamu tradisioanl yang berada di Pasar Gedhe yang khusus menjual berbagai jenis bahan untuk jamu racikan dan minuman untuk berbagai masalah kesehatan",
         "image": "https://maps.pasargedesolo.com/storage/stores/hoelEjskcdqovhE4KnUKumGG4VFVVzuP.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/hoelEjskcdqovhE4KnUKumGG4VFVVzuP_xs.jpg",
         "images": [
@@ -7765,7 +7765,7 @@ const MarketData = (() => {
         "y": 496,
         "lat": 528,
         "lng": 550,
-        "description": "Tahu Bandung Afif merupakan kios yang ada di Pasar Gede yang menyediakan spesialis tahu",
+        "description": "Tahu Bandung Afif merupakan kios yang ada di Pasar Gedhe yang menyediakan spesialis tahu",
         "image": "https://maps.pasargedesolo.com/storage/stores/pFoKfEhSGyvlGff3l7HKD63jjbNFax5g.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/pFoKfEhSGyvlGff3l7HKD63jjbNFax5g_xs.jpg",
         "images": [
@@ -7797,7 +7797,7 @@ const MarketData = (() => {
         "y": 726,
         "lat": 298,
         "lng": 613,
-        "description": "Ayam Goreng Bu Poppy merupakan salah satu kios los yang ada di Pasar Gede yang menjual spesialis Ayam Goreng dan Kremesan",
+        "description": "Ayam Goreng Bu Poppy merupakan salah satu kios los yang ada di Pasar Gedhe yang menjual spesialis Ayam Goreng dan Kremesan",
         "image": "https://maps.pasargedesolo.com/storage/stores/sLvlnJQqcOxuONetTGcenfXKB06Efb7K.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/sLvlnJQqcOxuONetTGcenfXKB06Efb7K_xs.jpg",
         "images": [
@@ -7830,7 +7830,7 @@ const MarketData = (() => {
         "y": 571,
         "lat": 453,
         "lng": 595,
-        "description": "Kios Bu Catur merupakan salah satu kios yang ada di Pasar Gede yang menjual spesialis bumbu dapur seperti bawang merah, bawang putih, bawang bombai, cabai merah dan cabai hijau",
+        "description": "Kios Bu Catur merupakan salah satu kios yang ada di Pasar Gedhe yang menjual spesialis bumbu dapur seperti bawang merah, bawang putih, bawang bombai, cabai merah dan cabai hijau",
         "image": "https://maps.pasargedesolo.com/storage/stores/kayU6qAP4xm5iZ6zBHuEOaW42SqPuKM2.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/kayU6qAP4xm5iZ6zBHuEOaW42SqPuKM2_xs.jpg",
         "images": [
@@ -7863,7 +7863,7 @@ const MarketData = (() => {
         "y": 640,
         "lat": 384,
         "lng": 664,
-        "description": "Kios Bu Jum Telur merupakan salah satu kios yang ada di Pasar Gede yang menjual spesialis telur asin dan telur jawa",
+        "description": "Kios Bu Jum Telur merupakan salah satu kios yang ada di Pasar Gedhe yang menjual spesialis telur asin dan telur jawa",
         "image": "https://maps.pasargedesolo.com/storage/stores/MX5yKrRNNfCpzQaZmb6VcVbJygcGiW4s.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/MX5yKrRNNfCpzQaZmb6VcVbJygcGiW4s_xs.jpg",
         "images": [
@@ -7896,7 +7896,7 @@ const MarketData = (() => {
         "y": 639,
         "lat": 385,
         "lng": 382,
-        "description": "Kios Bu Yayuk 2 adalah salah satu kios yang ada di Pasar Gede yang menjual spesialis sayur-sayuran seperti sayur selada dan sawi putih dan menyediakan aneka bumbu masa",
+        "description": "Kios Bu Yayuk 2 adalah salah satu kios yang ada di Pasar Gedhe yang menjual spesialis sayur-sayuran seperti sayur selada dan sawi putih dan menyediakan aneka bumbu masa",
         "image": "https://maps.pasargedesolo.com/storage/stores/6PLDjPhRyF0GyMuVJRaPpma3cKj9zleI.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/6PLDjPhRyF0GyMuVJRaPpma3cKj9zleI_xs.jpg",
         "images": [
@@ -7928,7 +7928,7 @@ const MarketData = (() => {
         "y": 552,
         "lat": 472,
         "lng": 577,
-        "description": "Kios Ibu Dal merupakan salah satu kios yang ada di Pasar Gede yang menjual spesialis sambal pecel",
+        "description": "Kios Ibu Dal merupakan salah satu kios yang ada di Pasar Gedhe yang menjual spesialis sambal pecel",
         "image": "https://maps.pasargedesolo.com/storage/stores/XCwTPg1YOd8yyNgzPfWkQqILGLnY13nH.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/XCwTPg1YOd8yyNgzPfWkQqILGLnY13nH_xs.jpg",
         "images": [
@@ -7993,7 +7993,7 @@ const MarketData = (() => {
         "y": 408,
         "lat": 616,
         "lng": 665,
-        "description": "Kios Bu Wiwin merupakan kios yang ada di Pasar Gede dan memiliki 2 kios yang berhadapan yang menyediakan spesialis nangka, pisang, mete, sambal pecel mete, dan sembako",
+        "description": "Kios Bu Wiwin merupakan kios yang ada di Pasar Gedhe dan memiliki 2 kios yang berhadapan yang menyediakan spesialis nangka, pisang, mete, sambal pecel mete, dan sembako",
         "image": "https://maps.pasargedesolo.com/storage/stores/t4iH7a4VFtrdEJMXY60yCMZ9WkG8qV2t.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/t4iH7a4VFtrdEJMXY60yCMZ9WkG8qV2t_xs.jpg",
         "images": [
@@ -8025,7 +8025,7 @@ const MarketData = (() => {
         "y": 514,
         "lat": 510,
         "lng": 619,
-        "description": "Los Bu Sarni merupakan salah satu kios yang ada di Pasar Gede yang menjual beragam tanaman biji rempah seperti sereh, jahe, dan kunyit",
+        "description": "Los Bu Sarni merupakan salah satu kios yang ada di Pasar Gedhe yang menjual beragam tanaman biji rempah seperti sereh, jahe, dan kunyit",
         "image": "https://maps.pasargedesolo.com/storage/stores/eLrLr2LqMDipJASDYVSuGrp9Cja1rp4c.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/eLrLr2LqMDipJASDYVSuGrp9Cja1rp4c_xs.jpg",
         "images": [
@@ -8058,7 +8058,7 @@ const MarketData = (() => {
         "y": 418,
         "lat": 606,
         "lng": 261,
-        "description": "Toko Sabar Subur adalah salah satu toko legendaris yang ada di kawasan Pasar Gede yang dikenal sebagai pusat penjualan berbagai produk roti, kue kering dan perlengkapan memasak serta perlengkapan ulang tahun yang cukup komplit",
+        "description": "Toko Sabar Subur adalah salah satu toko legendaris yang ada di kawasan Pasar Gedhe yang dikenal sebagai pusat penjualan berbagai produk roti, kue kering dan perlengkapan memasak serta perlengkapan ulang tahun yang cukup komplit",
         "image": "https://maps.pasargedesolo.com/storage/stores/jmUcFM4ihssZd6BX8TE1WLBn2WkrQl54.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/jmUcFM4ihssZd6BX8TE1WLBn2WkrQl54_xs.jpeg",
         "images": [
@@ -8091,7 +8091,7 @@ const MarketData = (() => {
         "y": 296,
         "lat": 728,
         "lng": 260,
-        "description": "UD Tanti 1 adalah salah satu kios buah yang berada di kawasan Pasar Gede yang menjual aneka buah-buahan dan menerima pesanan secara grosir",
+        "description": "UD Tanti 1 adalah salah satu kios buah yang berada di kawasan Pasar Gedhe yang menjual aneka buah-buahan dan menerima pesanan secara grosir",
         "image": "https://maps.pasargedesolo.com/storage/stores/Qf8hrpV9mF8kQKRWo9JoNQqPRL6brNx4.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/Qf8hrpV9mF8kQKRWo9JoNQqPRL6brNx4_xs.jpeg",
         "images": [
@@ -8124,7 +8124,7 @@ const MarketData = (() => {
         "y": 637,
         "lat": 387,
         "lng": 262,
-        "description": "Toko Rukun Baru adalah toko yang berada di Pasar Gede yang menjual berbagai kebutuhan packacing yang cukup komplit dan bervariasi",
+        "description": "Toko Rukun Baru adalah toko yang berada di Pasar Gedhe yang menjual berbagai kebutuhan packacing yang cukup komplit dan bervariasi",
         "image": "https://maps.pasargedesolo.com/storage/stores/2sA61wnpsp2ZfL3T38ZmCOVMvOK8af9M.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/2sA61wnpsp2ZfL3T38ZmCOVMvOK8af9M_xs.jpg",
         "images": [
@@ -8157,7 +8157,7 @@ const MarketData = (() => {
         "y": 232,
         "lat": 792,
         "lng": 431,
-        "description": "Oprokan Buah Bu Nanit adalah salah satu oprokan yang berada di Pasar Gede Pintu Utama yang menjual buah seperti pisang dan jambu",
+        "description": "Oprokan Buah Bu Nanit adalah salah satu oprokan yang berada di Pasar Gedhe Pintu Utama yang menjual buah seperti pisang dan jambu",
         "image": "https://maps.pasargedesolo.com/storage/stores/ZlOmW3GmHJEsQneMZTW2jCQbVUL6DtS9.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/ZlOmW3GmHJEsQneMZTW2jCQbVUL6DtS9_xs.jpg",
         "images": [
@@ -8190,7 +8190,7 @@ const MarketData = (() => {
         "y": 552,
         "lat": 472,
         "lng": 646,
-        "description": "Jenang Dodol Bu Murni merupakan kios yang ada di Pasar Gede yang menyediakan spesialis jenang dodol dan wajik",
+        "description": "Jenang Dodol Bu Murni merupakan kios yang ada di Pasar Gedhe yang menyediakan spesialis jenang dodol dan wajik",
         "image": "https://maps.pasargedesolo.com/storage/stores/pw7IAHz4dSR1bQtKTv8rRqgeGOpXv5MW.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/pw7IAHz4dSR1bQtKTv8rRqgeGOpXv5MW_xs.jpg",
         "images": [
@@ -8223,7 +8223,7 @@ const MarketData = (() => {
         "y": 424,
         "lat": 600,
         "lng": 736,
-        "description": "Kios Mbak Rani Sembako merupakan kios yang ada di Pasar Gede yang menjual beragam bahan sembako yang lengkap",
+        "description": "Kios Mbak Rani Sembako merupakan kios yang ada di Pasar Gedhe yang menjual beragam bahan sembako yang lengkap",
         "image": "https://maps.pasargedesolo.com/storage/stores/bW6LjXPnhUqWuhvQvZWjeEKzLZ6Fhgp4.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/bW6LjXPnhUqWuhvQvZWjeEKzLZ6Fhgp4_xs.jpg",
         "images": [
@@ -8256,7 +8256,7 @@ const MarketData = (() => {
         "y": 552,
         "lat": 472,
         "lng": 549,
-        "description": "Kios Ibu Sartini merupakan kios yang berada di Pasar Gede yang menyediakan spesialis jahe, kunyit, serai, daun pandan dan juga racikan teh",
+        "description": "Kios Ibu Sartini merupakan kios yang berada di Pasar Gedhe yang menyediakan spesialis jahe, kunyit, serai, daun pandan dan juga racikan teh",
         "image": "https://maps.pasargedesolo.com/storage/stores/bhpc5hRIYfS8Gvbn8qdQ2aRuLdk0mjKt.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/bhpc5hRIYfS8Gvbn8qdQ2aRuLdk0mjKt_xs.jpg",
         "images": [
@@ -8289,7 +8289,7 @@ const MarketData = (() => {
         "y": 450,
         "lat": 574,
         "lng": 546,
-        "description": "Los Bu Tritunggal merupakan los yang ada di Pasar Gede yang menyediakan khusus buah pepaya dan telur jawa",
+        "description": "Los Bu Tritunggal merupakan los yang ada di Pasar Gedhe yang menyediakan khusus buah pepaya dan telur jawa",
         "image": "https://maps.pasargedesolo.com/storage/stores/reAc9n7h537A8r4g2dOtlMM5Negj8NNW.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/reAc9n7h537A8r4g2dOtlMM5Negj8NNW_xs.jpg",
         "images": [
@@ -8321,7 +8321,7 @@ const MarketData = (() => {
         "y": 388,
         "lat": 636,
         "lng": 618,
-        "description": "Oleh-Oleh Khas Solo Bu Saji adalah kios yang terletak di dalam Pasar Gede Solo, dikenal sebagai salah satu tempat terbaik untuk mencari oleh-oleh khas Solo. Kios ini menawarkan beragam produk tradisional seperti intip madu, karak bawang, bakpia kering, mete goreng, abon halus, lanting, bagelan, roti jadul, serta berbagai camilan khas lainnya.",
+        "description": "Oleh-Oleh Khas Solo Bu Saji adalah kios yang terletak di dalam Pasar Gedhe Solo, dikenal sebagai salah satu tempat terbaik untuk mencari oleh-oleh khas Solo. Kios ini menawarkan beragam produk tradisional seperti intip madu, karak bawang, bakpia kering, mete goreng, abon halus, lanting, bagelan, roti jadul, serta berbagai camilan khas lainnya.",
         "image": "https://maps.pasargedesolo.com/storage/stores/iXsNygOGNpqbiXAiwtIa5TKyH2NDO2WK.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/iXsNygOGNpqbiXAiwtIa5TKyH2NDO2WK_xs.jpg",
         "images": [
@@ -8354,7 +8354,7 @@ const MarketData = (() => {
         "y": 468,
         "lat": 556,
         "lng": 558,
-        "description": "Jamu Bu Fitri merupakan kios yang ada di Pasar Gede yang menyediakan spesialis wedang rempah, bahan wedang rempah, dan lulur",
+        "description": "Jamu Bu Fitri merupakan kios yang ada di Pasar Gedhe yang menyediakan spesialis wedang rempah, bahan wedang rempah, dan lulur",
         "image": "https://maps.pasargedesolo.com/storage/stores/8PewKSFdA0wtSjUvm7wUWvrO6sfEnkfP.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/8PewKSFdA0wtSjUvm7wUWvrO6sfEnkfP_xs.jpg",
         "images": [
@@ -8387,7 +8387,7 @@ const MarketData = (() => {
         "y": 514,
         "lat": 510,
         "lng": 677,
-        "description": "Los Bu Sugianti merupakan los yang ada di Pasar Gede yang menyediakan spesialis menjual labu dan bligo",
+        "description": "Los Bu Sugianti merupakan los yang ada di Pasar Gedhe yang menyediakan spesialis menjual labu dan bligo",
         "image": "https://maps.pasargedesolo.com/storage/stores/m9FkfXWgXH03I7s1VxjhhMOSVyZRixKd.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/m9FkfXWgXH03I7s1VxjhhMOSVyZRixKd_xs.jpg",
         "images": [
@@ -8419,7 +8419,7 @@ const MarketData = (() => {
         "y": 512,
         "lat": 512,
         "lng": 648,
-        "description": "Los Bu Tumini merupakan salah satu los yang ada di Pasar Gede yang menyediakan berbagai macam tanaman biji rempah dan bumbu dapur bubuk seperti merica, pala, dan kunyit",
+        "description": "Los Bu Tumini merupakan salah satu los yang ada di Pasar Gedhe yang menyediakan berbagai macam tanaman biji rempah dan bumbu dapur bubuk seperti merica, pala, dan kunyit",
         "image": "https://maps.pasargedesolo.com/storage/stores/zwWh559QeOaBOnU9jkcSAAnRXtiYhNJX.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/zwWh559QeOaBOnU9jkcSAAnRXtiYhNJX_xs.jpg",
         "images": [
@@ -8517,7 +8517,7 @@ const MarketData = (() => {
         "y": 898,
         "lat": 126,
         "lng": 385,
-        "description": "Toko Bu Nita adalah salah satu toko oleh-oleh yang terletak di Pasar Gede Pintu Utara yang menjual berbagai macam oleh-oleh khas solo seperti rambak dan camilan tradisional lainnya",
+        "description": "Toko Bu Nita adalah salah satu toko oleh-oleh yang terletak di Pasar Gedhe Pintu Utara yang menjual berbagai macam oleh-oleh khas solo seperti rambak dan camilan tradisional lainnya",
         "image": "https://maps.pasargedesolo.com/storage/stores/uCOlIusb7BoXPbFCVkJbZG8LzSgKKFvh.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/uCOlIusb7BoXPbFCVkJbZG8LzSgKKFvh_xs.jpeg",
         "images": [
@@ -8550,7 +8550,7 @@ const MarketData = (() => {
         "y": 465,
         "lat": 559,
         "lng": 421,
-        "description": "Kios Bu Veve adalah salah satu toko yang ada di Pasar Gede yang spesialis menjual aneka kecap dan aneka saus",
+        "description": "Kios Bu Veve adalah salah satu toko yang ada di Pasar Gedhe yang spesialis menjual aneka kecap dan aneka saus",
         "image": "https://maps.pasargedesolo.com/storage/stores/g369c6P6Ny49rUekh6ZLNpUGj6l0yMVw.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/g369c6P6Ny49rUekh6ZLNpUGj6l0yMVw_xs.jpg",
         "images": [
@@ -8614,7 +8614,7 @@ const MarketData = (() => {
         "y": 287,
         "lat": 737,
         "lng": 557,
-        "description": "Kios Telur Mbak Etik adalah salah satu kios yang ada di Pasar Gede yang menjual spesialis telur asin dan telur ayam, selain menyediakan telur asin dan telur ayam juga menyediakan berbagai macam cemilan khas Solo.",
+        "description": "Kios Telur Mbak Etik adalah salah satu kios yang ada di Pasar Gedhe yang menjual spesialis telur asin dan telur ayam, selain menyediakan telur asin dan telur ayam juga menyediakan berbagai macam cemilan khas Solo.",
         "image": "https://maps.pasargedesolo.com/storage/stores/kKOKmZviPzbFCs0ZgJopVO109zjFX9HI.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/kKOKmZviPzbFCs0ZgJopVO109zjFX9HI_xs.jpg",
         "images": [
@@ -8647,7 +8647,7 @@ const MarketData = (() => {
         "y": 286,
         "lat": 738,
         "lng": 580,
-        "description": "Kios Bu Lestari merupakan kios yang ada di Pasar Gede yang menyediakan spesialis bumbu dapur",
+        "description": "Kios Bu Lestari merupakan kios yang ada di Pasar Gedhe yang menyediakan spesialis bumbu dapur",
         "image": "https://maps.pasargedesolo.com/storage/stores/XX4kQhdo2Icf0tlhjWLnQ5vZQ1QkqFzv.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/XX4kQhdo2Icf0tlhjWLnQ5vZQ1QkqFzv_xs.jpg",
         "images": [
@@ -8680,7 +8680,7 @@ const MarketData = (() => {
         "y": 465,
         "lat": 559,
         "lng": 475,
-        "description": "Kios Bu Susi adalah salah satu kios yang ada di Pasar Gede yang menjual khusus makanan ringan seperti arem-arem dan lemper",
+        "description": "Kios Bu Susi adalah salah satu kios yang ada di Pasar Gedhe yang menjual khusus makanan ringan seperti arem-arem dan lemper",
         "image": "https://maps.pasargedesolo.com/storage/stores/uTvYFje8vdH2RLAJvC6l8CsAURPHOq4G.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/uTvYFje8vdH2RLAJvC6l8CsAURPHOq4G_xs.jpg",
         "images": [
@@ -8712,7 +8712,7 @@ const MarketData = (() => {
         "y": 221,
         "lat": 803,
         "lng": 279,
-        "description": "Oprokan Bu Warni merupakan oprokan yang ada di pintu masuk utama Pasar Gede yang menjual spesialis keperluan dapur seperti lesung dan muntu, pisau dengan beragam ukuran dan peniris gorengan",
+        "description": "Oprokan Bu Warni merupakan oprokan yang ada di pintu masuk utama Pasar Gedhe yang menjual spesialis keperluan dapur seperti lesung dan muntu, pisau dengan beragam ukuran dan peniris gorengan",
         "image": "https://maps.pasargedesolo.com/storage/stores/hJOypItRkYX4f1mTVbrW4sLPNYFX2VO3.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/hJOypItRkYX4f1mTVbrW4sLPNYFX2VO3_xs.jpg",
         "images": [
@@ -8749,7 +8749,7 @@ const MarketData = (() => {
         "y": 267,
         "lat": 757,
         "lng": 265,
-        "description": "Warung Babi Mini adalah salah satu destinasi kuliner non halal yang populer di kawasan Pasar Gede yang dikenal dengan sajian olahan masakan babi yang menggugah selera",
+        "description": "Warung Babi Mini adalah salah satu destinasi kuliner non halal yang populer di kawasan Pasar Gedhe yang dikenal dengan sajian olahan masakan babi yang menggugah selera",
         "image": "https://maps.pasargedesolo.com/storage/stores/kj16DnadkhkPMMPcTwvwMtSwynAEabNM.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/kj16DnadkhkPMMPcTwvwMtSwynAEabNM_xs.jpeg",
         "images": [
@@ -8782,7 +8782,7 @@ const MarketData = (() => {
         "y": 477,
         "lat": 547,
         "lng": 259,
-        "description": "Toko KGH adalah salah satu toko yang terkenal di kawasan Pasar Gede sebagai penyedia perlengkapan dan spesialis pernak pernik untuk perayaan imlek dan kebutuhan ritual Thionghoa",
+        "description": "Toko KGH adalah salah satu toko yang terkenal di kawasan Pasar Gedhe sebagai penyedia perlengkapan dan spesialis pernak pernik untuk perayaan imlek dan kebutuhan ritual Thionghoa",
         "image": "https://maps.pasargedesolo.com/storage/stores/S8IkDxJdnR9SuyECqZwfdIkUdFJixBmP.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/S8IkDxJdnR9SuyECqZwfdIkUdFJixBmP_xs.jpeg",
         "images": [
@@ -8815,7 +8815,7 @@ const MarketData = (() => {
         "y": 273,
         "lat": 751,
         "lng": 359,
-        "description": "Kios Oprokan TM Buah adalah salah satu kios oprokan yang ada di Pasar Gede Pintu Utama yang menjual spesialis buah-buahan",
+        "description": "Kios Oprokan TM Buah adalah salah satu kios oprokan yang ada di Pasar Gedhe Pintu Utama yang menjual spesialis buah-buahan",
         "image": "https://maps.pasargedesolo.com/storage/stores/9YSLdjSOtLpjwsDpAUbodusJa2ixbtkX.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/9YSLdjSOtLpjwsDpAUbodusJa2ixbtkX_xs.jpg",
         "images": [
@@ -8848,7 +8848,7 @@ const MarketData = (() => {
         "y": 146,
         "lat": 878,
         "lng": 443,
-        "description": "Hj Yatik JTK/YS Buah adalah salsah satu tenant yang menjual spesialis buah jeruk grosir yang berada di lantai 2 Pasar Gede",
+        "description": "Hj Yatik JTK/YS Buah adalah salsah satu tenant yang menjual spesialis buah jeruk grosir yang berada di lantai 2 Pasar Gedhe",
         "image": "https://maps.pasargedesolo.com/storage/stores/2y0rPE1RILqPVcNuGuoDwJ9G2gEt2FRg.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/2y0rPE1RILqPVcNuGuoDwJ9G2gEt2FRg_xs.jpeg",
         "images": [
@@ -8881,7 +8881,7 @@ const MarketData = (() => {
         "y": 895,
         "lat": 129,
         "lng": 663,
-        "description": "Genduk Buah merupakan kios di Pasar Gede yang menyediakan beragam buah untuk suplier",
+        "description": "Genduk Buah merupakan kios di Pasar Gedhe yang menyediakan beragam buah untuk suplier",
         "image": "https://maps.pasargedesolo.com/storage/stores/uQkstW1gUorAfjJklaqL6i5Sipcd1PZS.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/uQkstW1gUorAfjJklaqL6i5Sipcd1PZS_xs.jpeg",
         "images": [
@@ -8914,7 +8914,7 @@ const MarketData = (() => {
         "y": 391,
         "lat": 633,
         "lng": 361,
-        "description": "Roso Mulyo adalah salah satu kios yang ada di Pasar Gede yang menjual spesialis aneka buah-buahan dan menerima pesanan dalam jumlah yang besar",
+        "description": "Roso Mulyo adalah salah satu kios yang ada di Pasar Gedhe yang menjual spesialis aneka buah-buahan dan menerima pesanan dalam jumlah yang besar",
         "image": "https://maps.pasargedesolo.com/storage/stores/edTl4kLDHBJVsKq4GiAvNlcBBB3rLrTX.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/edTl4kLDHBJVsKq4GiAvNlcBBB3rLrTX_xs.jpg",
         "images": [
@@ -8947,7 +8947,7 @@ const MarketData = (() => {
         "y": 148,
         "lat": 876,
         "lng": 637,
-        "description": "Edi Buah merupakan salah satu kios los yang ada di Pasar Gede yang menyediakan spesialis buah jeruk",
+        "description": "Edi Buah merupakan salah satu kios los yang ada di Pasar Gedhe yang menyediakan spesialis buah jeruk",
         "image": "https://maps.pasargedesolo.com/storage/stores/tSdc0cLAyYXNUBjTG91hxmSJTBNmWTKL.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/tSdc0cLAyYXNUBjTG91hxmSJTBNmWTKL_xs.jpeg",
         "images": [
@@ -8980,7 +8980,7 @@ const MarketData = (() => {
         "y": 790,
         "lat": 234,
         "lng": 360,
-        "description": "Toko Jamu Widodo adalah salah satu kios jamu tradisional yang berada di Pasar Gede yang dikenal menjual spesialis berbagai jenis jamu racikan dan bahan baku untuk membuat jamu",
+        "description": "Toko Jamu Widodo adalah salah satu kios jamu tradisional yang berada di Pasar Gedhe yang dikenal menjual spesialis berbagai jenis jamu racikan dan bahan baku untuk membuat jamu",
         "image": "https://maps.pasargedesolo.com/storage/stores/7yCFUIgQxoxM47sdg2Eej31oGHG2vUgI.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/7yCFUIgQxoxM47sdg2Eej31oGHG2vUgI_xs.jpg",
         "images": [
@@ -9013,7 +9013,7 @@ const MarketData = (() => {
         "y": 697,
         "lat": 327,
         "lng": 733,
-        "description": "Kios Berkat Sesami 2 adalah salah satu kios yang ada di Pasar Gede yang menjual aneka gerabah seperti sapu. tampah, keranjang rotan, dan piring rotan",
+        "description": "Kios Berkat Sesami 2 adalah salah satu kios yang ada di Pasar Gedhe yang menjual aneka gerabah seperti sapu. tampah, keranjang rotan, dan piring rotan",
         "image": "https://maps.pasargedesolo.com/storage/stores/zePJ0H3eKg8sdz7yR0aXArCvcrIqefUA.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/zePJ0H3eKg8sdz7yR0aXArCvcrIqefUA_xs.jpg",
         "images": [
@@ -9046,7 +9046,7 @@ const MarketData = (() => {
         "y": 728,
         "lat": 296,
         "lng": 374,
-        "description": "Toko Mee Lian 2 adalah salah satu toko yang berada di Pasar Gede yang menjual spesialis aneka kecap dan saus dengan pilihan yang banyak dan lengkap",
+        "description": "Toko Mee Lian 2 adalah salah satu toko yang berada di Pasar Gedhe yang menjual spesialis aneka kecap dan saus dengan pilihan yang banyak dan lengkap",
         "image": "https://maps.pasargedesolo.com/storage/stores/7OcJT5MVf9LnvDoKE1qvDLADVlBlF28f.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/7OcJT5MVf9LnvDoKE1qvDLADVlBlF28f_xs.jpg",
         "images": [
@@ -9079,7 +9079,7 @@ const MarketData = (() => {
         "y": 728,
         "lat": 296,
         "lng": 476,
-        "description": "Kios Bu Laminen adalah salah satu kios yang ada di Pasar Gede yang khusus menjual bumbu masak dan bumbu rempah-rempah",
+        "description": "Kios Bu Laminen adalah salah satu kios yang ada di Pasar Gedhe yang khusus menjual bumbu masak dan bumbu rempah-rempah",
         "image": "https://maps.pasargedesolo.com/storage/stores/7OD3nWgdHnSuXWHi9E7wpdaQtW0X1Man.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/7OD3nWgdHnSuXWHi9E7wpdaQtW0X1Man_xs.jpg",
         "images": [
@@ -9112,7 +9112,7 @@ const MarketData = (() => {
         "y": 678,
         "lat": 346,
         "lng": 414,
-        "description": "Kios Bu Yayuk 1 adalah salah satu kios yang ada di Pasar Gede yang menjual spesialis sayur-sayuran seperti sayur selada dan sawi dan menyediakan aneka bumbu masak",
+        "description": "Kios Bu Yayuk 1 adalah salah satu kios yang ada di Pasar Gedhe yang menjual spesialis sayur-sayuran seperti sayur selada dan sawi dan menyediakan aneka bumbu masak",
         "image": "https://maps.pasargedesolo.com/storage/stores/lbbhKvyOecyM3451UyVI8be6M7lunREE.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/lbbhKvyOecyM3451UyVI8be6M7lunREE_xs.jpg",
         "images": [
@@ -9145,7 +9145,7 @@ const MarketData = (() => {
         "y": 124,
         "lat": 900,
         "lng": 357,
-        "description": "Mike Fruit adalah bagian dari Toko Iin Koentjoro yang merupakan kios supplier buah grosir di Pasar Gede yang menjual buah jeruk dan pepaya",
+        "description": "Mike Fruit adalah bagian dari Toko Iin Koentjoro yang merupakan kios supplier buah grosir di Pasar Gedhe yang menjual buah jeruk dan pepaya",
         "image": "https://maps.pasargedesolo.com/storage/stores/SbZLGblhrNS2jEQrPB66UiNB6sHJ3ASM.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/SbZLGblhrNS2jEQrPB66UiNB6sHJ3ASM_xs.jpeg",
         "images": [
@@ -9178,7 +9178,7 @@ const MarketData = (() => {
         "y": 511,
         "lat": 513,
         "lng": 518,
-        "description": "Oprokan Ibu Warsini Sambal Pecel merupakan oprokan yang ada di Pasar Gede yang menjual spesialis sambal pecel, kering tempe dan intip",
+        "description": "Oprokan Ibu Warsini Sambal Pecel merupakan oprokan yang ada di Pasar Gedhe yang menjual spesialis sambal pecel, kering tempe dan intip",
         "image": "https://maps.pasargedesolo.com/storage/stores/PiQfGTknhAuUPkIjxOAubGHvAhyALl0w.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/PiQfGTknhAuUPkIjxOAubGHvAhyALl0w_xs.jpg",
         "images": [
@@ -9211,7 +9211,7 @@ const MarketData = (() => {
         "y": 252,
         "lat": 772,
         "lng": 283,
-        "description": "Kios Oprokan Ibu Yani Icha Snack adalah salah satu kios oprokan yang ada di Pasar Gede Pintu Utama yang menjual snack khas Solo",
+        "description": "Kios Oprokan Ibu Yani Icha Snack adalah salah satu kios oprokan yang ada di Pasar Gedhe Pintu Utama yang menjual snack khas Solo",
         "image": "https://maps.pasargedesolo.com/storage/stores/1lBDyBhnQMyz6eWzlkhXMGeTj1smXdcI.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/1lBDyBhnQMyz6eWzlkhXMGeTj1smXdcI_xs.jpg",
         "images": [
@@ -9276,7 +9276,7 @@ const MarketData = (() => {
         "y": 258,
         "lat": 766,
         "lng": 295,
-        "description": "Oprokan Ibu Tri Suyami adalah salah satu kios oprokan yang ada di Pasar Gede Pintu Utama yang khusus menjual produk khusus telor asin",
+        "description": "Oprokan Ibu Tri Suyami adalah salah satu kios oprokan yang ada di Pasar Gedhe Pintu Utama yang khusus menjual produk khusus telor asin",
         "image": "https://maps.pasargedesolo.com/storage/stores/QENxZQhq62mG3cTw0KbpMA1LCEuE8FZy.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/QENxZQhq62mG3cTw0KbpMA1LCEuE8FZy_xs.jpg",
         "images": [
@@ -9334,7 +9334,7 @@ const MarketData = (() => {
         "y": 216,
         "lat": 808,
         "lng": 534,
-        "description": "Warung Makan Mbak Tariza adalah warung makan spesialisasi masakan rumahan yang berada di Lantai 2 Pasar Gede.",
+        "description": "Warung Makan Mbak Tariza adalah warung makan spesialisasi masakan rumahan yang berada di Lantai 2 Pasar Gedhe.",
         "image": "https://maps.pasargedesolo.com/storage/stores/N0XSPBxI8pCg3mGSfvrF5N2qPdC5sn0u.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/N0XSPBxI8pCg3mGSfvrF5N2qPdC5sn0u_xs.jpeg",
         "images": [
@@ -9366,7 +9366,7 @@ const MarketData = (() => {
         "y": 152,
         "lat": 872,
         "lng": 288,
-        "description": "Los Slamet Ayam merupakan salah satu los yang ada di lantai 2 Pasar Gede yang menjual spesialis ayam kampun dan ayam potong",
+        "description": "Los Slamet Ayam merupakan salah satu los yang ada di lantai 2 Pasar Gedhe yang menjual spesialis ayam kampun dan ayam potong",
         "image": "https://maps.pasargedesolo.com/storage/stores/RNB0sosShePHPioAfCoNWbozNys1LuKW.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/RNB0sosShePHPioAfCoNWbozNys1LuKW_xs.jpg",
         "images": [
@@ -9398,7 +9398,7 @@ const MarketData = (() => {
         "y": 897,
         "lat": 127,
         "lng": 566,
-        "description": "Kios Mbak Rani merupakan kios supplier bunga dekorasi yang ada di Pasar Gede dengan menyediakan beragam bunga krisan dengan berbagai macam warna",
+        "description": "Kios Mbak Rani merupakan kios supplier bunga dekorasi yang ada di Pasar Gedhe dengan menyediakan beragam bunga krisan dengan berbagai macam warna",
         "image": "https://maps.pasargedesolo.com/storage/stores/LdxSMIFZNX0CI3DthBIPvQ5vqEfBDLG8.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/LdxSMIFZNX0CI3DthBIPvQ5vqEfBDLG8_xs.jpg",
         "images": [
@@ -9431,7 +9431,7 @@ const MarketData = (() => {
         "y": 235,
         "lat": 789,
         "lng": 365,
-        "description": "Ayam Kampung Mbak Niken adalah tenant yang menjual ayam kampung dan ayam boiler utuh maupun potong yang berada di lantai 2 Pasar Gede",
+        "description": "Ayam Kampung Mbak Niken adalah tenant yang menjual ayam kampung dan ayam boiler utuh maupun potong yang berada di lantai 2 Pasar Gedhe",
         "image": "https://maps.pasargedesolo.com/storage/stores/6Vyow41xUqGe63dXgJ8rLBQ1fhn5U5AG.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/6Vyow41xUqGe63dXgJ8rLBQ1fhn5U5AG_xs.jpg",
         "images": [
@@ -9464,7 +9464,7 @@ const MarketData = (() => {
         "y": 353,
         "lat": 671,
         "lng": 264,
-        "description": "Los Daging Babi Pak Tomy merupakan salah satu los yang ada di Pasar Gede yang menjual spesialis daging babi dan usus babi",
+        "description": "Los Daging Babi Pak Tomy merupakan salah satu los yang ada di Pasar Gedhe yang menjual spesialis daging babi dan usus babi",
         "image": "https://maps.pasargedesolo.com/storage/stores/9Vm8xavYQCywq663FQU3Gq6Zt04STSI6.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/9Vm8xavYQCywq663FQU3Gq6Zt04STSI6_xs.jpg",
         "images": [
@@ -9497,7 +9497,7 @@ const MarketData = (() => {
         "y": 241,
         "lat": 783,
         "lng": 684,
-        "description": "Mie Ayam Lumayan adalah warung makan spesialisasi mie ayam yang berada di Lantai 2 Pasar Gede.",
+        "description": "Mie Ayam Lumayan adalah warung makan spesialisasi mie ayam yang berada di Lantai 2 Pasar Gedhe.",
         "image": "https://maps.pasargedesolo.com/storage/stores/GeXEXoRIUwdO0MaUDQe2OwSNfPtsRucc.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/GeXEXoRIUwdO0MaUDQe2OwSNfPtsRucc_xs.jpeg",
         "images": [
@@ -9529,7 +9529,7 @@ const MarketData = (() => {
         "y": 164,
         "lat": 860,
         "lng": 273,
-        "description": "Ayam Kampung Hidup Bu Welas adalah tenant yang menerima pesanan dan potong ayam dan ayam kampung di lantai 2 Pasar Gede",
+        "description": "Ayam Kampung Hidup Bu Welas adalah tenant yang menerima pesanan dan potong ayam dan ayam kampung di lantai 2 Pasar Gedhe",
         "image": "https://maps.pasargedesolo.com/storage/stores/z0btOWSbHPcZ8jLMWVaoMDeBh0m04lYR.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/z0btOWSbHPcZ8jLMWVaoMDeBh0m04lYR_xs.jpg",
         "images": [
@@ -9561,7 +9561,7 @@ const MarketData = (() => {
         "y": 714,
         "lat": 310,
         "lng": 647,
-        "description": "Warung Makan Bu Sri adalah warung makan yang menjual spesialis aneka masakan jawa yang berada di Lantai 2 Pasar Gede",
+        "description": "Warung Makan Bu Sri adalah warung makan yang menjual spesialis aneka masakan jawa yang berada di Lantai 2 Pasar Gedhe",
         "image": "https://maps.pasargedesolo.com/storage/stores/euWt937fIOJwdk72xAvZzzyZNiYzp8X3.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/euWt937fIOJwdk72xAvZzzyZNiYzp8X3_xs.jpeg",
         "images": [
@@ -9593,7 +9593,7 @@ const MarketData = (() => {
         "y": 288,
         "lat": 736,
         "lng": 682,
-        "description": "Bakso Daging Sapi Asli Pak Wahyu Juventus adalah warung makan spesialisasi bakso daging sapi asli yang berada di Lantai 2 Pasar Gede.",
+        "description": "Bakso Daging Sapi Asli Pak Wahyu Juventus adalah warung makan spesialisasi bakso daging sapi asli yang berada di Lantai 2 Pasar Gedhe.",
         "image": "https://maps.pasargedesolo.com/storage/stores/gTeAhR3ECidAwvnptFnrEXYzrLa9acka.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/gTeAhR3ECidAwvnptFnrEXYzrLa9acka_xs.jpeg",
         "images": [
@@ -9625,7 +9625,7 @@ const MarketData = (() => {
         "y": 275,
         "lat": 749,
         "lng": 645,
-        "description": "Mie Ayam Lumayan adalah warung makan spesialisasi mie ayam yang berada di Lantai 2 Pasar Gede.",
+        "description": "Mie Ayam Lumayan adalah warung makan spesialisasi mie ayam yang berada di Lantai 2 Pasar Gedhe.",
         "image": "https://maps.pasargedesolo.com/storage/stores/JTwysqn4eri01orEivSBQ0JuryHmjTQJ.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/JTwysqn4eri01orEivSBQ0JuryHmjTQJ_xs.jpeg",
         "images": [
@@ -9658,7 +9658,7 @@ const MarketData = (() => {
         "y": 216,
         "lat": 808,
         "lng": 607,
-        "description": "Warung Makan Mbak Tariza adalah warung makan spesialisasi masakan rumahan yang berada di Lantai 2 Pasar Gede.",
+        "description": "Warung Makan Mbak Tariza adalah warung makan spesialisasi masakan rumahan yang berada di Lantai 2 Pasar Gedhe.",
         "image": "https://maps.pasargedesolo.com/storage/stores/HDNOImzczXMBK0ysJfDSYM7sllxebLid.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/HDNOImzczXMBK0ysJfDSYM7sllxebLid_xs.jpeg",
         "images": [
@@ -9681,7 +9681,7 @@ const MarketData = (() => {
         "buildingId": "pasar-gede",
         "floor": 2,
         "label": "Bakso dan Soto Pasar Gede",
-        "name": "Bakso dan Soto Pasar Gede",
+        "name": "Bakso dan Soto Pasar Gedhe",
         "category": "kuliner",
         "categoryLabel": "Kuliner Legendaris",
         "icon": "🍜",
@@ -9690,7 +9690,7 @@ const MarketData = (() => {
         "y": 184,
         "lat": 840,
         "lng": 521,
-        "description": "Bakso dan Soto Pasar Gede adalah warung makan yang menjual bakso dan Soto yang berada di Lantai 2 Pasar Gede",
+        "description": "Bakso dan Soto Pasar Gedhe adalah warung makan yang menjual bakso dan Soto yang berada di Lantai 2 Pasar Gedhe",
         "image": "https://maps.pasargedesolo.com/storage/stores/9PGJRzsdVIMqqwIoUNxqhmYDMK5tT8YD.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/9PGJRzsdVIMqqwIoUNxqhmYDMK5tT8YD_xs.jpeg",
         "images": [
@@ -9723,7 +9723,7 @@ const MarketData = (() => {
         "y": 274,
         "lat": 750,
         "lng": 363,
-        "description": "Los 1 Cik Ing merupakan salah satu los yang berada di Pasar Gede yang menjual aneka ikan laut dan ikan air tawar",
+        "description": "Los 1 Cik Ing merupakan salah satu los yang berada di Pasar Gedhe yang menjual aneka ikan laut dan ikan air tawar",
         "image": "https://maps.pasargedesolo.com/storage/stores/7tHzRaodfMPauyAO5u1q4ZiiaSazyqkM.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/7tHzRaodfMPauyAO5u1q4ZiiaSazyqkM_xs.jpg",
         "images": [
@@ -9756,7 +9756,7 @@ const MarketData = (() => {
         "y": 354,
         "lat": 670,
         "lng": 364,
-        "description": "Los Daging Babi Pak Wawan merupakan los yang ada di lantai 2 Pasar Gede yang menjual spesialis daging babi",
+        "description": "Los Daging Babi Pak Wawan merupakan los yang ada di lantai 2 Pasar Gedhe yang menjual spesialis daging babi",
         "image": "https://maps.pasargedesolo.com/storage/stores/MoExmCOLcnYTRIkwlkApKQ7AfMrThSWe.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/MoExmCOLcnYTRIkwlkApKQ7AfMrThSWe_xs.jpg",
         "images": [
@@ -9789,7 +9789,7 @@ const MarketData = (() => {
         "y": 817,
         "lat": 207,
         "lng": 609,
-        "description": "Warung Makan Bu Ndari merupakan salah satu warung makan yang ada di dalam Pasar Gede yang menyediakan spesialis masakan babi dan masakan jawa yang setiap hari menunya berbeda",
+        "description": "Warung Makan Bu Ndari merupakan salah satu warung makan yang ada di dalam Pasar Gedhe yang menyediakan spesialis masakan babi dan masakan jawa yang setiap hari menunya berbeda",
         "image": "https://maps.pasargedesolo.com/storage/stores/tYcUJzQLcZ7LC7drDFBGR6w7Dmw42HwJ.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/tYcUJzQLcZ7LC7drDFBGR6w7Dmw42HwJ_xs.jpg",
         "images": [
@@ -9822,7 +9822,7 @@ const MarketData = (() => {
         "y": 276,
         "lat": 748,
         "lng": 263,
-        "description": "Los Elly Ikan Laut adalah supplier udang, cumi, kepiting dan ikan laut selain melayani pembelian grosir juga melayani pembelian kiloan yang berada di lantai 2 Pasar Gede",
+        "description": "Los Elly Ikan Laut adalah supplier udang, cumi, kepiting dan ikan laut selain melayani pembelian grosir juga melayani pembelian kiloan yang berada di lantai 2 Pasar Gedhe",
         "image": "https://maps.pasargedesolo.com/storage/stores/OYMkpdx1HI5zaYB63ql7mXjNBtXtL7aj.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/OYMkpdx1HI5zaYB63ql7mXjNBtXtL7aj_xs.jpg",
         "images": [
@@ -9855,7 +9855,7 @@ const MarketData = (() => {
         "y": 254,
         "lat": 770,
         "lng": 262,
-        "description": "Los 2 Cik Ing merupakan salah satu los yang berada di Pasar Gede yang menjual aneka ikan laut dan ikan air tawar",
+        "description": "Los 2 Cik Ing merupakan salah satu los yang berada di Pasar Gedhe yang menjual aneka ikan laut dan ikan air tawar",
         "image": "https://maps.pasargedesolo.com/storage/stores/QK3gV68BGGBhL2EElkOL9wR61q0nUdV6.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/QK3gV68BGGBhL2EElkOL9wR61q0nUdV6_xs.jpg",
         "images": [
@@ -9888,7 +9888,7 @@ const MarketData = (() => {
         "y": 398,
         "lat": 626,
         "lng": 267,
-        "description": "Los Daging Babi Pak Caidi merupakan salah satu los yang ada di Pasar Gede yang menjual spesialis daging babi dan tulang babi",
+        "description": "Los Daging Babi Pak Caidi merupakan salah satu los yang ada di Pasar Gedhe yang menjual spesialis daging babi dan tulang babi",
         "image": "https://maps.pasargedesolo.com/storage/stores/LgaDHYb65w2TsN5nUHrUmklLNuTWutvo.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/LgaDHYb65w2TsN5nUHrUmklLNuTWutvo_xs.jpg",
         "images": [
@@ -9921,7 +9921,7 @@ const MarketData = (() => {
         "y": 482,
         "lat": 542,
         "lng": 265,
-        "description": "Los Daging Babi Pak Sarjono merupakan salah satu los yang ada di lantai 2 Pasar Gede yang menjual spesialis sosis babi, samcan dan daging babi",
+        "description": "Los Daging Babi Pak Sarjono merupakan salah satu los yang ada di lantai 2 Pasar Gedhe yang menjual spesialis sosis babi, samcan dan daging babi",
         "image": "https://maps.pasargedesolo.com/storage/stores/t1XpXcP7oUrswE50zKPnhE0gfuhuxBfh.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/t1XpXcP7oUrswE50zKPnhE0gfuhuxBfh_xs.jpg",
         "images": [
@@ -9954,7 +9954,7 @@ const MarketData = (() => {
         "y": 293,
         "lat": 731,
         "lng": 362,
-        "description": "Los Mbak Yatmini Ikan Laut merupakan salah satu los yang ada di lantai 2 Pasar Gede yang menjual berbagai macam ikan laut dan ikan air tawar",
+        "description": "Los Mbak Yatmini Ikan Laut merupakan salah satu los yang ada di lantai 2 Pasar Gedhe yang menjual berbagai macam ikan laut dan ikan air tawar",
         "image": "https://maps.pasargedesolo.com/storage/stores/lAgwF1aCFqp1SUD9kh8M969JwiWKmp5g.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/lAgwF1aCFqp1SUD9kh8M969JwiWKmp5g_xs.jpg",
         "images": [
@@ -9986,7 +9986,7 @@ const MarketData = (() => {
         "y": 576,
         "lat": 448,
         "lng": 359,
-        "description": "Los Daging Sapi Bu Sumarni merupakan salah satu los yang berada di lantai 2 Pasar Gede yang menjual spesialis dendeng sapi dan tulang sekengkel",
+        "description": "Los Daging Sapi Bu Sumarni merupakan salah satu los yang berada di lantai 2 Pasar Gedhe yang menjual spesialis dendeng sapi dan tulang sekengkel",
         "image": "https://maps.pasargedesolo.com/storage/stores/SzHreIggV1URThyBKnfVsD9UcMrJjBKG.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/SzHreIggV1URThyBKnfVsD9UcMrJjBKG_xs.jpg",
         "images": [
@@ -10019,7 +10019,7 @@ const MarketData = (() => {
         "y": 390,
         "lat": 634,
         "lng": 360,
-        "description": "Los Daging Babi Pak Paino merupakan salah satu los yang ada di lantai 2 Pasar Gede yang menjual spesialis kaki babi, iga babi, dan daging babi",
+        "description": "Los Daging Babi Pak Paino merupakan salah satu los yang ada di lantai 2 Pasar Gedhe yang menjual spesialis kaki babi, iga babi, dan daging babi",
         "image": "https://maps.pasargedesolo.com/storage/stores/ZwdD6DQyUq4gcP0ATFY463WVG10fUFzX.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/ZwdD6DQyUq4gcP0ATFY463WVG10fUFzX_xs.jpg",
         "images": [
@@ -10052,7 +10052,7 @@ const MarketData = (() => {
         "y": 169,
         "lat": 855,
         "lng": 720,
-        "description": "Fasilitas toilet yang berada di Pasar Gede",
+        "description": "Fasilitas toilet yang berada di Pasar Gedhe",
         "image": null,
         "imageThumb": null,
         "images": [],
@@ -10082,7 +10082,7 @@ const MarketData = (() => {
         "y": 311,
         "lat": 713,
         "lng": 362,
-        "description": "Los Mbak Yatmini Ikan Laut merupakan salah satu los yang ada di lantai 2 Pasar Gede yang menjual berbagai macam ikan laut dan ikan air tawar",
+        "description": "Los Mbak Yatmini Ikan Laut merupakan salah satu los yang ada di lantai 2 Pasar Gedhe yang menjual berbagai macam ikan laut dan ikan air tawar",
         "image": "https://maps.pasargedesolo.com/storage/stores/KX5JnSYICSCUOzrkKrKZlItMJ7Lj6cWm.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/KX5JnSYICSCUOzrkKrKZlItMJ7Lj6cWm_xs.jpg",
         "images": [
@@ -10114,7 +10114,7 @@ const MarketData = (() => {
         "y": 433,
         "lat": 591,
         "lng": 265,
-        "description": "Los Daging Babi Pak Prapto merupakan salah satu los yang ada di Pasar Gede yang menjual spesialis kaki babi, hati babi dan daging babi",
+        "description": "Los Daging Babi Pak Prapto merupakan salah satu los yang ada di Pasar Gedhe yang menjual spesialis kaki babi, hati babi dan daging babi",
         "image": "https://maps.pasargedesolo.com/storage/stores/SYzQTu4eHeXIic4WLc767lqfS583s9mn.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/SYzQTu4eHeXIic4WLc767lqfS583s9mn_xs.jpg",
         "images": [
@@ -10147,7 +10147,7 @@ const MarketData = (() => {
         "y": 782,
         "lat": 242,
         "lng": 708,
-        "description": "Kios Tangga lt 2.1 di Pasar Gede Lantai 2",
+        "description": "Kios Tangga lt 2.1 di Pasar Gedhe Lantai 2",
         "image": null,
         "imageThumb": null,
         "images": [],
@@ -10177,7 +10177,7 @@ const MarketData = (() => {
         "y": 485,
         "lat": 539,
         "lng": 361,
-        "description": "Los Daging Babi Pak Belong merupakan salah satu los yang ada di lantai 2 Pasar Gede yang menjual spesialis kaki babi dan daging babi",
+        "description": "Los Daging Babi Pak Belong merupakan salah satu los yang ada di lantai 2 Pasar Gedhe yang menjual spesialis kaki babi dan daging babi",
         "image": "https://maps.pasargedesolo.com/storage/stores/0VNJgwGZDuTxsxuaap6YuEKDgfOeqw2H.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/0VNJgwGZDuTxsxuaap6YuEKDgfOeqw2H_xs.jpg",
         "images": [
@@ -10210,7 +10210,7 @@ const MarketData = (() => {
         "y": 851,
         "lat": 173,
         "lng": 644,
-        "description": "Kios Tangga lt 2.2 di Pasar Gede Lantai 2",
+        "description": "Kios Tangga lt 2.2 di Pasar Gedhe Lantai 2",
         "image": null,
         "imageThumb": null,
         "images": [],
@@ -10240,7 +10240,7 @@ const MarketData = (() => {
         "y": 232,
         "lat": 792,
         "lng": 641,
-        "description": "Kios Tangga lt 2.3 di Pasar Gede Lantai 2",
+        "description": "Kios Tangga lt 2.3 di Pasar Gedhe Lantai 2",
         "image": null,
         "imageThumb": null,
         "images": [],
@@ -10270,7 +10270,7 @@ const MarketData = (() => {
         "y": 816,
         "lat": 208,
         "lng": 511,
-        "description": "Kios Tangga lt 2.4 di Pasar Gede Lantai 2",
+        "description": "Kios Tangga lt 2.4 di Pasar Gedhe Lantai 2",
         "image": null,
         "imageThumb": null,
         "images": [],
@@ -10300,7 +10300,7 @@ const MarketData = (() => {
         "y": 578,
         "lat": 446,
         "lng": 263,
-        "description": "Los Daging Sapi Bu Yayuk merupakan salah satu los yang ada di lantai 2 Pasar Gede yang menjual spesialis jerohan sapi dan tulang sumsum",
+        "description": "Los Daging Sapi Bu Yayuk merupakan salah satu los yang ada di lantai 2 Pasar Gedhe yang menjual spesialis jerohan sapi dan tulang sumsum",
         "image": "https://maps.pasargedesolo.com/storage/stores/hCHQrPWcR9lQ7ik7hCRBLqUFYZbN00cs.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/hCHQrPWcR9lQ7ik7hCRBLqUFYZbN00cs_xs.jpg",
         "images": [
@@ -10333,7 +10333,7 @@ const MarketData = (() => {
         "y": 390,
         "lat": 634,
         "lng": 642,
-        "description": "Kios Tangga lt 2.5 di Pasar Gede Lantai 2",
+        "description": "Kios Tangga lt 2.5 di Pasar Gedhe Lantai 2",
         "image": null,
         "imageThumb": null,
         "images": [],
@@ -10393,7 +10393,7 @@ const MarketData = (() => {
         "y": 331,
         "lat": 693,
         "lng": 363,
-        "description": "Los Mbak Yatmini Ikan Laut merupakan salah satu los yang ada di lantai 2 Pasar Gede yang menjual berbagai macam ikan laut dan ikan air tawar",
+        "description": "Los Mbak Yatmini Ikan Laut merupakan salah satu los yang ada di lantai 2 Pasar Gedhe yang menjual berbagai macam ikan laut dan ikan air tawar",
         "image": "https://maps.pasargedesolo.com/storage/stores/o9jYWlzQsqw9OYZgdfAeCEGXP6AuNY8Y.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/o9jYWlzQsqw9OYZgdfAeCEGXP6AuNY8Y_xs.jpg",
         "images": [
@@ -10425,7 +10425,7 @@ const MarketData = (() => {
         "y": 435,
         "lat": 589,
         "lng": 360,
-        "description": "Daging Babi Pak Topo merupakan salah satu los yang ada di Pasar Gede yang menjual spesialis Daging Babi dan Lemak Babi",
+        "description": "Daging Babi Pak Topo merupakan salah satu los yang ada di Pasar Gedhe yang menjual spesialis Daging Babi dan Lemak Babi",
         "image": "https://maps.pasargedesolo.com/storage/stores/Hueslo4OA6ORqSGV5zouWKvNPdYv5Cef.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/Hueslo4OA6ORqSGV5zouWKvNPdYv5Cef_xs.jpg",
         "images": [
@@ -10458,7 +10458,7 @@ const MarketData = (() => {
         "y": 220,
         "lat": 804,
         "lng": 497,
-        "description": "Kios Tangga lt 2.6 di Pasar Gede Lantai 2",
+        "description": "Kios Tangga lt 2.6 di Pasar Gedhe Lantai 2",
         "image": null,
         "imageThumb": null,
         "images": [],
@@ -10488,7 +10488,7 @@ const MarketData = (() => {
         "y": 508,
         "lat": 516,
         "lng": 360,
-        "description": "Los Daging Babi Bu Yensen merupakan salah satu los yang ada di Pasar Gede yang menjual spesialis Daging Babi, Kaki Babi, Sawi Asin",
+        "description": "Los Daging Babi Bu Yensen merupakan salah satu los yang ada di Pasar Gedhe yang menjual spesialis Daging Babi, Kaki Babi, Sawi Asin",
         "image": "https://maps.pasargedesolo.com/storage/stores/7XiCD5o4PGUAi4onhwnHYYOEdy8W7MAY.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/7XiCD5o4PGUAi4onhwnHYYOEdy8W7MAY_xs.jpg",
         "images": [
@@ -10521,7 +10521,7 @@ const MarketData = (() => {
         "y": 609,
         "lat": 415,
         "lng": 274,
-        "description": "TWK Tedjo Fruit merupakan salah satu los yang ada di lantai 2 Pasar Gede yang menjual spesialis buah jeruk grosir",
+        "description": "TWK Tedjo Fruit merupakan salah satu los yang ada di lantai 2 Pasar Gedhe yang menjual spesialis buah jeruk grosir",
         "image": "https://maps.pasargedesolo.com/storage/stores/xmv854N1GH3H6i89b3eH55isZNXCPxye.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/xmv854N1GH3H6i89b3eH55isZNXCPxye_xs.jpg",
         "images": [
@@ -10554,7 +10554,7 @@ const MarketData = (() => {
         "y": 603,
         "lat": 421,
         "lng": 358,
-        "description": "Pia-Pia dan Kompia Liling/Yohanes merupakan salah satu makanan legend di Solo yang berada di Pasar Gede yang menjual spesialis kompia dan pia-pia dengan beragam isian",
+        "description": "Pia-Pia dan Kompia Liling/Yohanes merupakan salah satu makanan legend di Solo yang berada di Pasar Gedhe yang menjual spesialis kompia dan pia-pia dengan beragam isian",
         "image": "https://maps.pasargedesolo.com/storage/stores/Oe512LIa47etjWBpsCdYmLskN1WV2A2A.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/Oe512LIa47etjWBpsCdYmLskN1WV2A2A_xs.jpg",
         "images": [
@@ -10587,7 +10587,7 @@ const MarketData = (() => {
         "y": 120,
         "lat": 904,
         "lng": 518,
-        "description": "Kios Gilingan Daging adalah kios yang melayani jasa gilingan daging kasar dan halus yang berada di Lantai 2 Pasar Gede",
+        "description": "Kios Gilingan Daging adalah kios yang melayani jasa gilingan daging kasar dan halus yang berada di Lantai 2 Pasar Gedhe",
         "image": "https://maps.pasargedesolo.com/storage/stores/jaGtKCKr5oE34TGjOZgAaS9yaktbsNJk.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/jaGtKCKr5oE34TGjOZgAaS9yaktbsNJk_xs.jpg",
         "images": [
@@ -10619,7 +10619,7 @@ const MarketData = (() => {
         "y": 293,
         "lat": 731,
         "lng": 264,
-        "description": "Los Elly Ikan Laut adalah supplier udang, cumi, kepiting dan ikan laut selain melayani pembelian grosir juga melayani pembelian kiloan yang berada di lantai 2 Pasar Gede",
+        "description": "Los Elly Ikan Laut adalah supplier udang, cumi, kepiting dan ikan laut selain melayani pembelian grosir juga melayani pembelian kiloan yang berada di lantai 2 Pasar Gedhe",
         "image": "https://maps.pasargedesolo.com/storage/stores/D4DlYLNitgecwXwfO2o1L52erLUXa48s.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/D4DlYLNitgecwXwfO2o1L52erLUXa48s_xs.jpg",
         "images": [
@@ -10652,7 +10652,7 @@ const MarketData = (() => {
         "y": 458,
         "lat": 566,
         "lng": 265,
-        "description": "Los Daging Babi Bu Tatik merupakan salah satu los yang ada di lantai 2 Pasar Gede yang menyediakan spesialis Daging Babi dan Iga Babi",
+        "description": "Los Daging Babi Bu Tatik merupakan salah satu los yang ada di lantai 2 Pasar Gedhe yang menyediakan spesialis Daging Babi dan Iga Babi",
         "image": "https://maps.pasargedesolo.com/storage/stores/F5CEtkjsh3bZkHAq1LtOoNjvwDSJY467.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/F5CEtkjsh3bZkHAq1LtOoNjvwDSJY467_xs.jpg",
         "images": [
@@ -10684,7 +10684,7 @@ const MarketData = (() => {
         "y": 341,
         "lat": 683,
         "lng": 684,
-        "description": "Soto Senggol Bu Tutik adalah warung makan spesialisasi soto yang berada di Lantai 2 Pasar Gede.",
+        "description": "Soto Senggol Bu Tutik adalah warung makan spesialisasi soto yang berada di Lantai 2 Pasar Gedhe.",
         "image": "https://maps.pasargedesolo.com/storage/stores/vBdCJXSk34m0JlJMLuFZSHKB1Aetl5Xm.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/vBdCJXSk34m0JlJMLuFZSHKB1Aetl5Xm_xs.jpg",
         "images": [
@@ -10717,7 +10717,7 @@ const MarketData = (() => {
         "y": 311,
         "lat": 713,
         "lng": 264,
-        "description": "Los Andreas adalah tenant menjual aneka ikan laut, ikan air tawar dan udang yang berada di lantai 2 Pasar Gede",
+        "description": "Los Andreas adalah tenant menjual aneka ikan laut, ikan air tawar dan udang yang berada di lantai 2 Pasar Gedhe",
         "image": "https://maps.pasargedesolo.com/storage/stores/FlqUvmlpuTSmbDxTiaMMCy2fRPs7jbmP.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/FlqUvmlpuTSmbDxTiaMMCy2fRPs7jbmP_xs.jpg",
         "images": [
@@ -10749,7 +10749,7 @@ const MarketData = (() => {
         "y": 329,
         "lat": 695,
         "lng": 264,
-        "description": "Los Andreas adalah tenant menjual aneka ikan laut, ikan air tawar dan udang yang berada di lantai 2 Pasar Gede",
+        "description": "Los Andreas adalah tenant menjual aneka ikan laut, ikan air tawar dan udang yang berada di lantai 2 Pasar Gedhe",
         "image": "https://maps.pasargedesolo.com/storage/stores/umeavEAXLmV6vRe6go4fgc0ZXyBNkHy3.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/umeavEAXLmV6vRe6go4fgc0ZXyBNkHy3_xs.jpg",
         "images": [
@@ -10781,7 +10781,7 @@ const MarketData = (() => {
         "y": 461,
         "lat": 563,
         "lng": 360,
-        "description": "Los Daging Babi Pak Agus merupakan salah satu los yang ada di lantai 2 Pasar Gede yang menjual spesialis Daging Babi",
+        "description": "Los Daging Babi Pak Agus merupakan salah satu los yang ada di lantai 2 Pasar Gedhe yang menjual spesialis Daging Babi",
         "image": "https://maps.pasargedesolo.com/storage/stores/cSWMxUelcfVov4yDxdlxSTCCZleQWuMX.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/cSWMxUelcfVov4yDxdlxSTCCZleQWuMX_xs.jpg",
         "images": [
@@ -10813,7 +10813,7 @@ const MarketData = (() => {
         "y": 897,
         "lat": 127,
         "lng": 478,
-        "description": "Kios Tari Bunga merupakan kios yang ada di Pasar Gede yang menyediakan beragam bunga dengan berbagai macam jenis rangkaian dan jenis bunga",
+        "description": "Kios Tari Bunga merupakan kios yang ada di Pasar Gedhe yang menyediakan beragam bunga dengan berbagai macam jenis rangkaian dan jenis bunga",
         "image": "https://maps.pasargedesolo.com/storage/stores/5g0PxK6AT2FyK66WHR6uTR8JFMo6aTnL.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/5g0PxK6AT2FyK66WHR6uTR8JFMo6aTnL_xs.jpg",
         "images": [
@@ -10846,7 +10846,7 @@ const MarketData = (() => {
         "y": 899,
         "lat": 125,
         "lng": 672,
-        "description": "Kios JR Fresh Fruits merupakan salah satu kios yang ada di lantai 2 Pasar Gede yang menyediakan grosir buah dengan berbagai macam jenis buah dan spesialis buah kesemek",
+        "description": "Kios JR Fresh Fruits merupakan salah satu kios yang ada di lantai 2 Pasar Gedhe yang menyediakan grosir buah dengan berbagai macam jenis buah dan spesialis buah kesemek",
         "image": "https://maps.pasargedesolo.com/storage/stores/a1Z5x2n6n7IoF6Gv2sFpt9UoB00jYeKp.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/a1Z5x2n6n7IoF6Gv2sFpt9UoB00jYeKp_xs.jpg",
         "images": [
@@ -10879,7 +10879,7 @@ const MarketData = (() => {
         "y": 551,
         "lat": 473,
         "lng": 359,
-        "description": "Los Daging Sapi Bu Tatik merupakan salah satu los yang ada di lantai 2 Pasar Gede yang menjual spesialis daging sapi dan iga sapi yang setiap pembelian dibungkus menggunakan daun jati",
+        "description": "Los Daging Sapi Bu Tatik merupakan salah satu los yang ada di lantai 2 Pasar Gedhe yang menjual spesialis daging sapi dan iga sapi yang setiap pembelian dibungkus menggunakan daun jati",
         "image": "https://maps.pasargedesolo.com/storage/stores/woPEMN9GNooOIjIoxRVMi37xCEXDF2Mv.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/woPEMN9GNooOIjIoxRVMi37xCEXDF2Mv_xs.jpg",
         "images": [
@@ -10937,7 +10937,7 @@ const MarketData = (() => {
         "y": 157,
         "lat": 867,
         "lng": 588,
-        "description": "Phe-Te adalah kios penjual buah yang menerima layanan pembuatan hampers buah atau parcel buah di Pasar Gede Barat atau Pasar Buah di Pasar Gede.",
+        "description": "Phe-Te adalah kios penjual buah yang menerima layanan pembuatan hampers buah atau parcel buah di Pasar Gedhe Barat atau Pasar Buah di Pasar Gedhe.",
         "image": "https://maps.pasargedesolo.com/storage/stores/abqsQGfUhTh8KryiPHDEYJRrJ3Fdcl6p.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/abqsQGfUhTh8KryiPHDEYJRrJ3Fdcl6p_xs.jpg",
         "images": [
@@ -10971,7 +10971,7 @@ const MarketData = (() => {
         "y": 184,
         "lat": 840,
         "lng": 343,
-        "description": "Bu Poniyem adalah kios penjual buah di Pasar Gede Barat atau Pasar Buah di Pasar Gede.",
+        "description": "Bu Poniyem adalah kios penjual buah di Pasar Gedhe Barat atau Pasar Buah di Pasar Gedhe.",
         "image": "https://maps.pasargedesolo.com/storage/stores/zjGn0woO5dX3d6n0HxBbi0FGLMOm6UlK.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/zjGn0woO5dX3d6n0HxBbi0FGLMOm6UlK_xs.jpg",
         "images": [
@@ -11004,7 +11004,7 @@ const MarketData = (() => {
         "y": 289,
         "lat": 735,
         "lng": 177,
-        "description": "Mas Wandi adalah kios buah gosir yang berada di Pasar Gede Barat atau Pasar Buah Pasar Gede yang menjual buah musiman seperti jeruk dan mangga",
+        "description": "Mas Wandi adalah kios buah gosir yang berada di Pasar Gedhe Barat atau Pasar Buah Pasar Gedhe yang menjual buah musiman seperti jeruk dan mangga",
         "image": "https://maps.pasargedesolo.com/storage/stores/4QybhqPHaStCe144kf4DEmgMm6GRf2hi.png",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/4QybhqPHaStCe144kf4DEmgMm6GRf2hi_xs.png",
         "images": [
@@ -11042,7 +11042,7 @@ const MarketData = (() => {
         "y": 156,
         "lat": 868,
         "lng": 345,
-        "description": "Paino adalah kios buah di Pasar Gede Barat atau Pasar Buah di Pasar Gede.",
+        "description": "Paino adalah kios buah di Pasar Gedhe Barat atau Pasar Buah di Pasar Gedhe.",
         "image": "https://maps.pasargedesolo.com/storage/stores/mu43IF44TnrnYL8HuCA5x9T0TpnShf3a.png",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/mu43IF44TnrnYL8HuCA5x9T0TpnShf3a_xs.png",
         "images": [
@@ -11074,7 +11074,7 @@ const MarketData = (() => {
         "y": 179,
         "lat": 845,
         "lng": 427,
-        "description": "Mas Wandi adalah kios buah gosir yang berada di Pasar Gede Barat atau Pasar Buah Pasar Gede yang menjual buah musiman seperti jeruk dan mangga",
+        "description": "Mas Wandi adalah kios buah gosir yang berada di Pasar Gedhe Barat atau Pasar Buah Pasar Gedhe yang menjual buah musiman seperti jeruk dan mangga",
         "image": "https://maps.pasargedesolo.com/storage/stores/4QybhqPHaStCe144kf4DEmgMm6GRf2hi.png",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/4QybhqPHaStCe144kf4DEmgMm6GRf2hi_xs.png",
         "images": [
@@ -11108,7 +11108,7 @@ const MarketData = (() => {
         "y": 425,
         "lat": 599,
         "lng": 336,
-        "description": "WD adalah kios buah grosir di Pasar Gede Barat atau Pasar Buah Pasar Gede yang menjual berbagai buah musiman seperti Jeruk Bali",
+        "description": "WD adalah kios buah grosir di Pasar Gedhe Barat atau Pasar Buah Pasar Gedhe yang menjual berbagai buah musiman seperti Jeruk Bali",
         "image": "https://maps.pasargedesolo.com/storage/stores/ceq5oroaEn5dG5Suw3xiQEcQAU5YAx26.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/ceq5oroaEn5dG5Suw3xiQEcQAU5YAx26_xs.jpeg",
         "images": [
@@ -11141,7 +11141,7 @@ const MarketData = (() => {
         "y": 524,
         "lat": 500,
         "lng": 290,
-        "description": "Mangga Segar Pak Gepeng adalah kios buah yang spesialisasi menjual mangga grosir dan ecer di Pasar Gede Barat atau Pasar Buah Pasar Gede.",
+        "description": "Mangga Segar Pak Gepeng adalah kios buah yang spesialisasi menjual mangga grosir dan ecer di Pasar Gedhe Barat atau Pasar Buah Pasar Gedhe.",
         "image": "https://maps.pasargedesolo.com/storage/stores/QWzqTO0TZcKjjQDw9q2Sjd7AVlrTS0aQ.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/QWzqTO0TZcKjjQDw9q2Sjd7AVlrTS0aQ_xs.jpeg",
         "images": [
@@ -11174,7 +11174,7 @@ const MarketData = (() => {
         "y": 499,
         "lat": 525,
         "lng": 227,
-        "description": "Mangga Segar Pak Gepeng adalah kios buah yang spesialisasi menjual mangga grosir dan ecer di Pasar Gede Barat atau Pasar Buah Pasar Gede.",
+        "description": "Mangga Segar Pak Gepeng adalah kios buah yang spesialisasi menjual mangga grosir dan ecer di Pasar Gedhe Barat atau Pasar Buah Pasar Gedhe.",
         "image": "https://maps.pasargedesolo.com/storage/stores/EkzgmsZ2yPcJLSi5m7c8JbEuBAdh0gBo.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/EkzgmsZ2yPcJLSi5m7c8JbEuBAdh0gBo_xs.jpeg",
         "images": [
@@ -11207,7 +11207,7 @@ const MarketData = (() => {
         "y": 499,
         "lat": 525,
         "lng": 341,
-        "description": "Sumber Buah adalah kios penjual buah grosir dan ecer lokal yang berada di Pasar Gede Barat atau Pasar Buah Pasar Gede.",
+        "description": "Sumber Buah adalah kios penjual buah grosir dan ecer lokal yang berada di Pasar Gedhe Barat atau Pasar Buah Pasar Gedhe.",
         "image": "https://maps.pasargedesolo.com/storage/stores/hV2E3RbT4fphXfUEyjt1hkafrQKQPNz1.png",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/hV2E3RbT4fphXfUEyjt1hkafrQKQPNz1_xs.png",
         "images": [
@@ -11239,7 +11239,7 @@ const MarketData = (() => {
         "y": 648,
         "lat": 376,
         "lng": 320,
-        "description": "Mahkota Buah adalah kios penjual buah grosir lokal yang berada di Pasar Gede Barat atau Pasar Buah Pasar Gede.",
+        "description": "Mahkota Buah adalah kios penjual buah grosir lokal yang berada di Pasar Gedhe Barat atau Pasar Buah Pasar Gedhe.",
         "image": "https://maps.pasargedesolo.com/storage/stores/5LVayrEvMFO8oV15ync7EEytccrOMHuv.png",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/5LVayrEvMFO8oV15ync7EEytccrOMHuv_xs.png",
         "images": [
@@ -11272,7 +11272,7 @@ const MarketData = (() => {
         "y": 599,
         "lat": 425,
         "lng": 364,
-        "description": "Mahkota Buah adalah kios penjual buah grosir lokal yang berada di Pasar Gede Barat atau Pasar Buah Pasar Gede.",
+        "description": "Mahkota Buah adalah kios penjual buah grosir lokal yang berada di Pasar Gedhe Barat atau Pasar Buah Pasar Gedhe.",
         "image": "https://maps.pasargedesolo.com/storage/stores/oMYlRg5dxAYTD3sKTjPVPsLMwPIPX9TT.png",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/oMYlRg5dxAYTD3sKTjPVPsLMwPIPX9TT_xs.png",
         "images": [
@@ -11305,7 +11305,7 @@ const MarketData = (() => {
         "y": 573,
         "lat": 451,
         "lng": 316,
-        "description": "Mahkota Buah adalah kios penjual buah grosir lokal yang berada di Pasar Gede Barat atau Pasar Buah Pasar Gede.",
+        "description": "Mahkota Buah adalah kios penjual buah grosir lokal yang berada di Pasar Gedhe Barat atau Pasar Buah Pasar Gedhe.",
         "image": "https://maps.pasargedesolo.com/storage/stores/HgdxFhW2SjTwHkNGq1X4GZ44h3kOqHds.png",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/HgdxFhW2SjTwHkNGq1X4GZ44h3kOqHds_xs.png",
         "images": [
@@ -11338,7 +11338,7 @@ const MarketData = (() => {
         "y": 570,
         "lat": 454,
         "lng": 399,
-        "description": "Mahkota Buah adalah kios penjual buah grosir lokal yang berada di Pasar Gede Barat atau Pasar Buah Pasar Gede.",
+        "description": "Mahkota Buah adalah kios penjual buah grosir lokal yang berada di Pasar Gedhe Barat atau Pasar Buah Pasar Gedhe.",
         "image": "https://maps.pasargedesolo.com/storage/locations/apiyg9bRVEmNFrvuqeGOSTi3HmrcI5hG5zxkXkug.jpg",
         "imageThumb": null,
         "images": [
@@ -11370,7 +11370,7 @@ const MarketData = (() => {
         "y": 497,
         "lat": 527,
         "lng": 292,
-        "description": "Mangga Segar Pak Gepeng adalah kios buah yang spesialisasi menjual mangga grosir dan ecer di Pasar Gede Barat atau Pasar Buah Pasar Gede.",
+        "description": "Mangga Segar Pak Gepeng adalah kios buah yang spesialisasi menjual mangga grosir dan ecer di Pasar Gedhe Barat atau Pasar Buah Pasar Gedhe.",
         "image": "https://maps.pasargedesolo.com/storage/stores/0XblStulMZlGLmV06tUaebUExuIPFcZX.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/0XblStulMZlGLmV06tUaebUExuIPFcZX_xs.jpeg",
         "images": [
@@ -11403,7 +11403,7 @@ const MarketData = (() => {
         "y": 522,
         "lat": 502,
         "lng": 342,
-        "description": "Mangga Segar Pak Gepeng adalah kios buah yang spesialisasi menjual mangga grosir dan ecer di Pasar Gede Barat atau Pasar Buah Pasar Gede.",
+        "description": "Mangga Segar Pak Gepeng adalah kios buah yang spesialisasi menjual mangga grosir dan ecer di Pasar Gedhe Barat atau Pasar Buah Pasar Gedhe.",
         "image": "https://maps.pasargedesolo.com/storage/stores/0pXVQAsJDA4SzAoP45sEZmqHsu71Lk5e.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/0pXVQAsJDA4SzAoP45sEZmqHsu71Lk5e_xs.jpeg",
         "images": [
@@ -11436,7 +11436,7 @@ const MarketData = (() => {
         "y": 671,
         "lat": 353,
         "lng": 368,
-        "description": "Mahkota Buah adalah kios penjual buah grosir lokal yang berada di Pasar Gede Barat atau Pasar Buah Pasar Gede.",
+        "description": "Mahkota Buah adalah kios penjual buah grosir lokal yang berada di Pasar Gedhe Barat atau Pasar Buah Pasar Gedhe.",
         "image": "https://maps.pasargedesolo.com/storage/stores/UThtuD1yC5KVKxHJ7cFtu7RH2IytwVpU.png",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/UThtuD1yC5KVKxHJ7cFtu7RH2IytwVpU_xs.png",
         "images": [
@@ -11469,7 +11469,7 @@ const MarketData = (() => {
         "y": 371,
         "lat": 653,
         "lng": 360,
-        "description": "Pak Ratno adalah kios buah yang menawarkan berbagai macam buah segar lokal dan impor dan melayani pembuatan parsel dengan harga terjangkau di Pasar Gede Barat atau Pasar Buah Pasar Gede.",
+        "description": "Pak Ratno adalah kios buah yang menawarkan berbagai macam buah segar lokal dan impor dan melayani pembuatan parsel dengan harga terjangkau di Pasar Gedhe Barat atau Pasar Buah Pasar Gedhe.",
         "image": "https://maps.pasargedesolo.com/storage/stores/QZVsWAZhQ7BYQx98KYJsKpEguTJuMk6F.png",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/QZVsWAZhQ7BYQx98KYJsKpEguTJuMk6F_xs.png",
         "images": [
@@ -11507,7 +11507,7 @@ const MarketData = (() => {
         "y": 314,
         "lat": 710,
         "lng": 209,
-        "description": "Sumadi Buah Murni adalah kios buah grosir di Pasar Gede Barat atau Pasar Buah Pasar Gede.",
+        "description": "Sumadi Buah Murni adalah kios buah grosir di Pasar Gedhe Barat atau Pasar Buah Pasar Gedhe.",
         "image": "https://maps.pasargedesolo.com/storage/stores/3uLfa7nBroiY6OdLg16E1MIohE6FSba3.png",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/3uLfa7nBroiY6OdLg16E1MIohE6FSba3_xs.png",
         "images": [
@@ -11541,7 +11541,7 @@ const MarketData = (() => {
         "y": 359,
         "lat": 665,
         "lng": 252,
-        "description": "Sumadi Buah Murni adalah kios buah grosir di Pasar Gede Barat atau Pasar Buah Pasar Gede.",
+        "description": "Sumadi Buah Murni adalah kios buah grosir di Pasar Gedhe Barat atau Pasar Buah Pasar Gedhe.",
         "image": "https://maps.pasargedesolo.com/storage/stores/XbuXyAuiCqgNn8vGbOfmuxWQyD4Z6joq.png",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/XbuXyAuiCqgNn8vGbOfmuxWQyD4Z6joq_xs.png",
         "images": [
@@ -11575,7 +11575,7 @@ const MarketData = (() => {
         "y": 357,
         "lat": 667,
         "lng": 312,
-        "description": "Sumadi Buah Murni adalah kios buah grosir di Pasar Gede Barat atau Pasar Buah Pasar Gede.",
+        "description": "Sumadi Buah Murni adalah kios buah grosir di Pasar Gedhe Barat atau Pasar Buah Pasar Gedhe.",
         "image": "https://maps.pasargedesolo.com/storage/stores/IVUr6GyHHQvqepqFY4MDHzbIjotujyl9.png",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/IVUr6GyHHQvqepqFY4MDHzbIjotujyl9_xs.png",
         "images": [
@@ -11609,7 +11609,7 @@ const MarketData = (() => {
         "y": 269,
         "lat": 755,
         "lng": 512,
-        "description": "Mbak Marthi atau Kios Buah Iik Mbak Marthi adalah kios buah lokal dan import yang berada di Pasar Gede Barat atau Pasar Buah Pasar Gede yang menerima layanan pembuatan hampers atau parcel buah",
+        "description": "Mbak Marthi atau Kios Buah Iik Mbak Marthi adalah kios buah lokal dan import yang berada di Pasar Gedhe Barat atau Pasar Buah Pasar Gedhe yang menerima layanan pembuatan hampers atau parcel buah",
         "image": "https://maps.pasargedesolo.com/storage/stores/hOEGI9ZMZylnenp5SAZnxrYzwKf2CGpv.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/hOEGI9ZMZylnenp5SAZnxrYzwKf2CGpv_xs.jpg",
         "images": [
@@ -11643,7 +11643,7 @@ const MarketData = (() => {
         "y": 717,
         "lat": 307,
         "lng": 386,
-        "description": "Mahkota Buah adalah kios penjual buah grosir lokal yang berada di Pasar Gede Barat atau Pasar Buah Pasar Gede.",
+        "description": "Mahkota Buah adalah kios penjual buah grosir lokal yang berada di Pasar Gedhe Barat atau Pasar Buah Pasar Gedhe.",
         "image": "https://maps.pasargedesolo.com/storage/stores/MuEf1tY7aX5rGejZxFsGvGzIWpftWxCt.png",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/MuEf1tY7aX5rGejZxFsGvGzIWpftWxCt_xs.png",
         "images": [
@@ -11708,7 +11708,7 @@ const MarketData = (() => {
         "y": 716,
         "lat": 308,
         "lng": 634,
-        "description": "Kios Buah Bu Parman adalah kios penjual buah grosir dan eceran yang berada di Pasar Gede Barat atau Pasar Buah Pasar Gede.",
+        "description": "Kios Buah Bu Parman adalah kios penjual buah grosir dan eceran yang berada di Pasar Gedhe Barat atau Pasar Buah Pasar Gedhe.",
         "image": "https://maps.pasargedesolo.com/storage/stores/syBljiZnzzkUGPgL8AFPbrEEuXWpFT0M.png",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/syBljiZnzzkUGPgL8AFPbrEEuXWpFT0M_xs.png",
         "images": [
@@ -11740,7 +11740,7 @@ const MarketData = (() => {
         "y": 187,
         "lat": 837,
         "lng": 234,
-        "description": "Berkah Buah adalah kios penjual buah yang menerima pembelian secara grosir dan ecer di Pasar Gede Barat atau Pasar Buah di Pasar Gede.",
+        "description": "Berkah Buah adalah kios penjual buah yang menerima pembelian secara grosir dan ecer di Pasar Gedhe Barat atau Pasar Buah di Pasar Gedhe.",
         "image": "https://maps.pasargedesolo.com/storage/stores/nMIuqN7MNDoZ9bIjEJiHJhUbFRMMRKja.png",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/nMIuqN7MNDoZ9bIjEJiHJhUbFRMMRKja_xs.png",
         "images": [
@@ -11772,7 +11772,7 @@ const MarketData = (() => {
         "y": 160,
         "lat": 864,
         "lng": 725,
-        "description": "Restu Buah adalah kios buah yang menerima layanan pembuatan hampers buah atau parcel buah di Pasar Gede Barat atau Pasar Buah di Pasar Gede.",
+        "description": "Restu Buah adalah kios buah yang menerima layanan pembuatan hampers buah atau parcel buah di Pasar Gedhe Barat atau Pasar Buah di Pasar Gedhe.",
         "image": "https://maps.pasargedesolo.com/storage/stores/KELxKj2a995isZeiE1Wz9XKPFqHETrtb.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/KELxKj2a995isZeiE1Wz9XKPFqHETrtb_xs.jpg",
         "images": [
@@ -11804,7 +11804,7 @@ const MarketData = (() => {
         "y": 236,
         "lat": 788,
         "lng": 812,
-        "description": "Restu Buah adalah kios buah yang menerima layanan pembuatan hampers buah atau parcel buah di Pasar Gede Barat atau Pasar Buah di Pasar Gede.",
+        "description": "Restu Buah adalah kios buah yang menerima layanan pembuatan hampers buah atau parcel buah di Pasar Gedhe Barat atau Pasar Buah di Pasar Gedhe.",
         "image": "https://maps.pasargedesolo.com/storage/stores/LLOzQ4CDPHpGMKgvmvOGMEiTrKMcTxxm.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/LLOzQ4CDPHpGMKgvmvOGMEiTrKMcTxxm_xs.jpg",
         "images": [
@@ -11934,7 +11934,7 @@ const MarketData = (() => {
         "y": 289,
         "lat": 735,
         "lng": 666,
-        "description": "Kios Pisang Mbak Pur adalah kios buah spesialisasi pisang yang berada di Pasar Gede Barat atau Pasar Buah di Pasar Gede.",
+        "description": "Kios Pisang Mbak Pur adalah kios buah spesialisasi pisang yang berada di Pasar Gedhe Barat atau Pasar Buah di Pasar Gedhe.",
         "image": "https://maps.pasargedesolo.com/storage/stores/BtEP8WQ7SybgBEUvWL5fQwV2zoQhzCoM.png",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/BtEP8WQ7SybgBEUvWL5fQwV2zoQhzCoM_xs.png",
         "images": [
@@ -12000,7 +12000,7 @@ const MarketData = (() => {
         "y": 429,
         "lat": 595,
         "lng": 796,
-        "description": "Kios Buah Bu Djurwasih adalah kios yang terletak di Pasar Gede Barat, menjual berbagai macam buah segar lokal",
+        "description": "Kios Buah Bu Djurwasih adalah kios yang terletak di Pasar Gedhe Barat, menjual berbagai macam buah segar lokal",
         "image": "https://maps.pasargedesolo.com/storage/stores/QZYU5mkU5WPU65O6d2flNIQOWVCzoNVb.png",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/QZYU5mkU5WPU65O6d2flNIQOWVCzoNVb_xs.png",
         "images": [
@@ -12033,7 +12033,7 @@ const MarketData = (() => {
         "y": 595,
         "lat": 429,
         "lng": 718,
-        "description": "Kios Buah Bu Parman adalah kios penjual buah grosir dan eceran yang berada di Pasar Gede Barat atau Pasar Buah Pasar Gede.",
+        "description": "Kios Buah Bu Parman adalah kios penjual buah grosir dan eceran yang berada di Pasar Gedhe Barat atau Pasar Buah Pasar Gedhe.",
         "image": "https://maps.pasargedesolo.com/storage/stores/IRW5k2jHngtqfbsWV9lcfcFG7iNIvRlu.png",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/IRW5k2jHngtqfbsWV9lcfcFG7iNIvRlu_xs.png",
         "images": [
@@ -12065,7 +12065,7 @@ const MarketData = (() => {
         "y": 572,
         "lat": 452,
         "lng": 698,
-        "description": "Kios Buah Bu Parman adalah kios penjual buah grosir dan eceran yang berada di Pasar Gede Barat atau Pasar Buah Pasar Gede.",
+        "description": "Kios Buah Bu Parman adalah kios penjual buah grosir dan eceran yang berada di Pasar Gedhe Barat atau Pasar Buah Pasar Gedhe.",
         "image": "https://maps.pasargedesolo.com/storage/stores/gImPYrEOzmeRxBeZYwVy2qt9czigERGu.png",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/gImPYrEOzmeRxBeZYwVy2qt9czigERGu_xs.png",
         "images": [
@@ -12097,7 +12097,7 @@ const MarketData = (() => {
         "y": 455,
         "lat": 569,
         "lng": 815,
-        "description": "Kios Buah Bu Djurwasih adalah kios yang terletak di Pasar Gede Barat, menjual berbagai macam buah segar lokal",
+        "description": "Kios Buah Bu Djurwasih adalah kios yang terletak di Pasar Gedhe Barat, menjual berbagai macam buah segar lokal",
         "image": "https://maps.pasargedesolo.com/storage/stores/Xjh13VIkwC7nRKSb3dBQEXafFNTg17bU.png",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/Xjh13VIkwC7nRKSb3dBQEXafFNTg17bU_xs.png",
         "images": [
@@ -12193,7 +12193,7 @@ const MarketData = (() => {
         "y": 136,
         "lat": 888,
         "lng": 234,
-        "description": "Berkah Buah adalah kios penjual buah yang menerima pembelian secara grosir dan ecer di Pasar Gede Barat atau Pasar Buah di Pasar Gede.",
+        "description": "Berkah Buah adalah kios penjual buah yang menerima pembelian secara grosir dan ecer di Pasar Gedhe Barat atau Pasar Buah di Pasar Gedhe.",
         "image": "https://maps.pasargedesolo.com/storage/stores/vMrwytjdwzCKqpVcuBB8yFNWptnsTAJQ.png",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/vMrwytjdwzCKqpVcuBB8yFNWptnsTAJQ_xs.png",
         "images": [
@@ -12225,7 +12225,7 @@ const MarketData = (() => {
         "y": 150,
         "lat": 874,
         "lng": 311,
-        "description": "Berkah Buah adalah kios penjual buah yang menerima pembelian secara grosir dan ecer di Pasar Gede Barat atau Pasar Buah di Pasar Gede.",
+        "description": "Berkah Buah adalah kios penjual buah yang menerima pembelian secara grosir dan ecer di Pasar Gedhe Barat atau Pasar Buah di Pasar Gedhe.",
         "image": "https://maps.pasargedesolo.com/storage/stores/QiSci1cIjVYN9tgo8gCW0CiGVeF5gp0O.png",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/QiSci1cIjVYN9tgo8gCW0CiGVeF5gp0O_xs.png",
         "images": [
@@ -12257,7 +12257,7 @@ const MarketData = (() => {
         "y": 213,
         "lat": 811,
         "lng": 154,
-        "description": "Fasilitas toilet yang berada di Pasar Gede",
+        "description": "Fasilitas toilet yang berada di Pasar Gedhe",
         "image": null,
         "imageThumb": null,
         "images": [],
@@ -12320,7 +12320,7 @@ const MarketData = (() => {
         "y": 358,
         "lat": 666,
         "lng": 816,
-        "description": "Mbak Parmi adalah kios buah yang menerima layanan pembuatan hampers buah atau parcel buah dan berada di Pasar Gede Barat atau Pasar Buah di Pasar Gede.",
+        "description": "Mbak Parmi adalah kios buah yang menerima layanan pembuatan hampers buah atau parcel buah dan berada di Pasar Gedhe Barat atau Pasar Buah di Pasar Gedhe.",
         "image": "https://maps.pasargedesolo.com/storage/stores/pGEkgwNnsVQgMvh954DZCWHf4NKBoFwL.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/pGEkgwNnsVQgMvh954DZCWHf4NKBoFwL_xs.jpg",
         "images": [
@@ -12352,7 +12352,7 @@ const MarketData = (() => {
         "y": 188,
         "lat": 836,
         "lng": 684,
-        "description": "Kios Mbak Sri-Tami adalah kios penjual buah di Pasar Gede Barat atau Pasar Buah di Pasar Gede.",
+        "description": "Kios Mbak Sri-Tami adalah kios penjual buah di Pasar Gedhe Barat atau Pasar Buah di Pasar Gedhe.",
         "image": "https://maps.pasargedesolo.com/storage/stores/NDNuAe4WtDluTqITGAhvCH6JsURNZoDr.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/NDNuAe4WtDluTqITGAhvCH6JsURNZoDr_xs.jpg",
         "images": [
@@ -13072,7 +13072,7 @@ const MarketData = (() => {
         "y": 359,
         "lat": 665,
         "lng": 186,
-        "description": "Sumadi Buah Murni adalah kios buah grosir di Pasar Gede Barat atau Pasar Buah Pasar Gede.",
+        "description": "Sumadi Buah Murni adalah kios buah grosir di Pasar Gedhe Barat atau Pasar Buah Pasar Gedhe.",
         "image": "https://maps.pasargedesolo.com/storage/stores/U5WXFrw1Jlf5HPaqsKyLDDB7Dl9Kvbph.png",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/U5WXFrw1Jlf5HPaqsKyLDDB7Dl9Kvbph_xs.png",
         "images": [
@@ -13349,7 +13349,7 @@ const MarketData = (() => {
         "y": 289,
         "lat": 735,
         "lng": 253,
-        "description": "Kios Buah Wandi adalah kios buah grosir di Pasar Gede Barat atau Pasar Buah Pasar Gede yang menjual jeruk, mangga, dan jeruk bali",
+        "description": "Kios Buah Wandi adalah kios buah grosir di Pasar Gedhe Barat atau Pasar Buah Pasar Gedhe yang menjual jeruk, mangga, dan jeruk bali",
         "image": "https://maps.pasargedesolo.com/storage/stores/u5LMR2MqeXq6beU4wSmyWNoLZyOErgsJ.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/u5LMR2MqeXq6beU4wSmyWNoLZyOErgsJ_xs.jpeg",
         "images": [
@@ -13383,7 +13383,7 @@ const MarketData = (() => {
         "y": 452,
         "lat": 572,
         "lng": 273,
-        "description": "Pak Daliman adalah Kios penjual buah eceran dan grosir di Pasar Gede Barat atau Pasar Buah Pasar Gede.",
+        "description": "Pak Daliman adalah Kios penjual buah eceran dan grosir di Pasar Gedhe Barat atau Pasar Buah Pasar Gedhe.",
         "image": "https://maps.pasargedesolo.com/storage/stores/8YAZS4wzOaVSGue8ROQZz4YVznnhdYPh.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/8YAZS4wzOaVSGue8ROQZz4YVznnhdYPh_xs.jpeg",
         "images": [
@@ -13536,7 +13536,7 @@ const MarketData = (() => {
         "y": 290,
         "lat": 734,
         "lng": 324,
-        "description": "Kios Buah Wandi adalah kios buah grosir di Pasar Gede Barat atau Pasar Buah Pasar Gede yang menjual jeruk, mangga, dan jeruk bali",
+        "description": "Kios Buah Wandi adalah kios buah grosir di Pasar Gedhe Barat atau Pasar Buah Pasar Gedhe yang menjual jeruk, mangga, dan jeruk bali",
         "image": "https://maps.pasargedesolo.com/storage/stores/3Ky40lNb0lbVsCIdF4Lw4s5lPhVpEX8P.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/3Ky40lNb0lbVsCIdF4Lw4s5lPhVpEX8P_xs.jpeg",
         "images": [
@@ -13569,7 +13569,7 @@ const MarketData = (() => {
         "y": 596,
         "lat": 428,
         "lng": 315,
-        "description": "Mahkota Buah adalah kios penjual buah grosir lokal yang berada di Pasar Gede Barat atau Pasar Buah Pasar Gede.",
+        "description": "Mahkota Buah adalah kios penjual buah grosir lokal yang berada di Pasar Gedhe Barat atau Pasar Buah Pasar Gedhe.",
         "image": "https://maps.pasargedesolo.com/storage/stores/bD1mvKJLTO32VAJ64DIBzGuq6MSscJp8.png",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/bD1mvKJLTO32VAJ64DIBzGuq6MSscJp8_xs.png",
         "images": [
@@ -13602,7 +13602,7 @@ const MarketData = (() => {
         "y": 888,
         "lat": 136,
         "lng": 685,
-        "description": "Kios Buah Bu Parman adalah kios penjual buah grosir dan eceran yang berada di Pasar Gede Barat atau Pasar Buah Pasar Gede.",
+        "description": "Kios Buah Bu Parman adalah kios penjual buah grosir dan eceran yang berada di Pasar Gedhe Barat atau Pasar Buah Pasar Gedhe.",
         "image": "https://maps.pasargedesolo.com/storage/stores/I8d8sm8iKDCFhbZsn0au9O5H6dcjQkCR.png",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/I8d8sm8iKDCFhbZsn0au9O5H6dcjQkCR_xs.png",
         "images": [
@@ -13636,7 +13636,7 @@ const MarketData = (() => {
         "y": 242,
         "lat": 782,
         "lng": 553,
-        "description": "Kios Pisang Mbak Pur adalah kios buah spesialisasi pisang yang berada di Pasar Gede Barat atau Pasar Buah di Pasar Gede.",
+        "description": "Kios Pisang Mbak Pur adalah kios buah spesialisasi pisang yang berada di Pasar Gedhe Barat atau Pasar Buah di Pasar Gedhe.",
         "image": "https://maps.pasargedesolo.com/storage/stores/srOJvbiSqpBhDa14rVOINpqaV3AR42XB.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/srOJvbiSqpBhDa14rVOINpqaV3AR42XB_xs.jpg",
         "images": [
@@ -13659,7 +13659,7 @@ const MarketData = (() => {
         "buildingId": "pasar-buah",
         "floor": 1,
         "label": "Mushola Pasar Gede Barat",
-        "name": "Mushola Pasar Gede Barat",
+        "name": "Mushola Pasar Gedhe Barat",
         "category": "mushola",
         "categoryLabel": "Mushola / Ibadah",
         "icon": "🕌",
@@ -13698,7 +13698,7 @@ const MarketData = (() => {
         "y": 312,
         "lat": 712,
         "lng": 270,
-        "description": "Sumadi Buah Murni adalah kios buah grosir di Pasar Gede Barat atau Pasar Buah Pasar Gede.",
+        "description": "Sumadi Buah Murni adalah kios buah grosir di Pasar Gedhe Barat atau Pasar Buah Pasar Gedhe.",
         "image": "https://maps.pasargedesolo.com/storage/stores/W6dbDhdbCXuL0m6POOlYZbbz6skYyKdt.png",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/W6dbDhdbCXuL0m6POOlYZbbz6skYyKdt_xs.png",
         "images": [
@@ -13732,7 +13732,7 @@ const MarketData = (() => {
         "y": 572,
         "lat": 452,
         "lng": 365,
-        "description": "Mahkota Buah adalah kios penjual buah grosir lokal yang berada di Pasar Gede Barat atau Pasar Buah Pasar Gede.",
+        "description": "Mahkota Buah adalah kios penjual buah grosir lokal yang berada di Pasar Gedhe Barat atau Pasar Buah Pasar Gedhe.",
         "image": "https://maps.pasargedesolo.com/storage/stores/5OYXINDkoizAvBIb5HReYjuJj6NEPOS0.png",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/5OYXINDkoizAvBIb5HReYjuJj6NEPOS0_xs.png",
         "images": [
@@ -13765,7 +13765,7 @@ const MarketData = (() => {
         "y": 674,
         "lat": 350,
         "lng": 322,
-        "description": "Mahkota Buah adalah kios penjual buah grosir lokal yang berada di Pasar Gede Barat atau Pasar Buah Pasar Gede.",
+        "description": "Mahkota Buah adalah kios penjual buah grosir lokal yang berada di Pasar Gedhe Barat atau Pasar Buah Pasar Gedhe.",
         "image": "https://maps.pasargedesolo.com/storage/stores/dYjVj3F3veVHhexmxdAxshMiUKPObUwx.png",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/dYjVj3F3veVHhexmxdAxshMiUKPObUwx_xs.png",
         "images": [
@@ -13864,7 +13864,7 @@ const MarketData = (() => {
         "y": 163,
         "lat": 861,
         "lng": 682,
-        "description": "Phe-Te adalah kios penjual buah yang menerima layanan pembuatan hampers buah atau parcel buah di Pasar Gede Barat atau Pasar Buah di Pasar Gede.",
+        "description": "Phe-Te adalah kios penjual buah yang menerima layanan pembuatan hampers buah atau parcel buah di Pasar Gedhe Barat atau Pasar Buah di Pasar Gedhe.",
         "image": "https://maps.pasargedesolo.com/storage/stores/0PX2QFGZfwkQ9PLfy9G9faVLQaQUzBrd.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/0PX2QFGZfwkQ9PLfy9G9faVLQaQUzBrd_xs.jpg",
         "images": [
@@ -13897,7 +13897,7 @@ const MarketData = (() => {
         "y": 524,
         "lat": 500,
         "lng": 230,
-        "description": "Kios Buah Bu Parman adalah kios penjual buah grosir dan eceran yang berada di Pasar Gede Barat atau Pasar Buah Pasar Gede.",
+        "description": "Kios Buah Bu Parman adalah kios penjual buah grosir dan eceran yang berada di Pasar Gedhe Barat atau Pasar Buah Pasar Gedhe.",
         "image": "https://maps.pasargedesolo.com/storage/stores/kz7FgcyqO4IoW1yCR9uAi14mPBDrK96Z.png",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/kz7FgcyqO4IoW1yCR9uAi14mPBDrK96Z_xs.png",
         "images": [
@@ -13963,7 +13963,7 @@ const MarketData = (() => {
         "y": 572,
         "lat": 452,
         "lng": 475,
-        "description": "Mahkota Buah adalah kios penjual buah grosir lokal yang berada di Pasar Gede Barat atau Pasar Buah Pasar Gede.",
+        "description": "Mahkota Buah adalah kios penjual buah grosir lokal yang berada di Pasar Gedhe Barat atau Pasar Buah Pasar Gedhe.",
         "image": "https://maps.pasargedesolo.com/storage/stores/7QV9YJQfyZMjdHRh6tItX4diid9Ct9St.png",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/7QV9YJQfyZMjdHRh6tItX4diid9Ct9St_xs.png",
         "images": [
@@ -14029,7 +14029,7 @@ const MarketData = (() => {
         "y": 412,
         "lat": 612,
         "lng": 497,
-        "description": "Mbak Karti adalah Kios Buah yang menerima layanan pembuatan hampers buah atau parcel buah dan berada di Pasar Gede Barat atau Pasar Buah Pasar Gede.",
+        "description": "Mbak Karti adalah Kios Buah yang menerima layanan pembuatan hampers buah atau parcel buah dan berada di Pasar Gedhe Barat atau Pasar Buah Pasar Gedhe.",
         "image": "https://maps.pasargedesolo.com/storage/stores/X8wKHoRwuBU22NzsbeH8mrzeQQHO4LZr.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/X8wKHoRwuBU22NzsbeH8mrzeQQHO4LZr_xs.jpeg",
         "images": [
@@ -14062,7 +14062,7 @@ const MarketData = (() => {
         "y": 312,
         "lat": 712,
         "lng": 832,
-        "description": "Min Pisang adalah kios penjual buah spesialisasi pisang yang berada di Pasar Gede Barat atau Pasar Buah di Pasar Gede",
+        "description": "Min Pisang adalah kios penjual buah spesialisasi pisang yang berada di Pasar Gedhe Barat atau Pasar Buah di Pasar Gedhe",
         "image": "https://maps.pasargedesolo.com/storage/stores/uohXBxKPWmq6Gx2u6a6Cozid11wAfpq8.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/uohXBxKPWmq6Gx2u6a6Cozid11wAfpq8_xs.jpg",
         "images": [
@@ -14094,7 +14094,7 @@ const MarketData = (() => {
         "y": 315,
         "lat": 709,
         "lng": 160,
-        "description": "Mas Wandi adalah kios buah gosir yang berada di Pasar Gede Barat atau Pasar Buah Pasar Gede yang menjual buah musiman seperti jeruk dan mangga8j",
+        "description": "Mas Wandi adalah kios buah gosir yang berada di Pasar Gedhe Barat atau Pasar Buah Pasar Gedhe yang menjual buah musiman seperti jeruk dan mangga8j",
         "image": "https://maps.pasargedesolo.com/storage/stores/iwGZGe7JoOqomOm2pU7JaPsM2fJdqVjY.png",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/iwGZGe7JoOqomOm2pU7JaPsM2fJdqVjY_xs.png",
         "images": [
@@ -14128,7 +14128,7 @@ const MarketData = (() => {
         "y": 164,
         "lat": 860,
         "lng": 234,
-        "description": "Pur Sastro adalah kios buah grosir yang berada di Pasar Gede Barat atau Pasar Buah di Pasar Gede yang menjual buah musiman seperti jeruk dan jeruk bali",
+        "description": "Pur Sastro adalah kios buah grosir yang berada di Pasar Gedhe Barat atau Pasar Buah di Pasar Gedhe yang menjual buah musiman seperti jeruk dan jeruk bali",
         "image": "https://maps.pasargedesolo.com/storage/stores/gbD3drP3CrMGjuX7T64dUB1WYZ0s62Ri.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/gbD3drP3CrMGjuX7T64dUB1WYZ0s62Ri_xs.jpeg",
         "images": [
@@ -14196,7 +14196,7 @@ const MarketData = (() => {
         "y": 554,
         "lat": 470,
         "lng": 318,
-        "description": "Brawijaya Steak adalah kedai makanan spesialisasi steak yang berada di Lantai 2 Pasar Gede Barat atau Gedung Pasar Buah di Pasar Gede",
+        "description": "Brawijaya Steak adalah kedai makanan spesialisasi steak yang berada di Lantai 2 Pasar Gedhe Barat atau Gedung Pasar Buah di Pasar Gedhe",
         "image": "https://maps.pasargedesolo.com/storage/stores/x722wXQGmK0rHpQ28C0pe5Mae4hxIvrw.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/x722wXQGmK0rHpQ28C0pe5Mae4hxIvrw_xs.jpeg",
         "images": [
@@ -14228,7 +14228,7 @@ const MarketData = (() => {
         "y": 593,
         "lat": 431,
         "lng": 701,
-        "description": "Mentai Mania adalah kedai modern di lantai 2 Gedung Barat Pasar Gede Solo yang menyajikan berbagai hidangan bergaya Jepang dan Korea, seperti salmon mentai don, tuna mentai rice, dan mozzarella corndog.",
+        "description": "Mentai Mania adalah kedai modern di lantai 2 Gedung Barat Pasar Gedhe Solo yang menyajikan berbagai hidangan bergaya Jepang dan Korea, seperti salmon mentai don, tuna mentai rice, dan mozzarella corndog.",
         "image": "https://maps.pasargedesolo.com/storage/stores/cU1lZMe3vyi7QCdfrNkbiWi1K8C5MnHt.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/cU1lZMe3vyi7QCdfrNkbiWi1K8C5MnHt_xs.jpg",
         "images": [
@@ -14260,7 +14260,7 @@ const MarketData = (() => {
         "y": 145,
         "lat": 879,
         "lng": 765,
-        "description": "Uma Yumcha adalah kedai dimsum di Pasar Gede Solo yang terkenal dengan dimsum jumbo berisi ayam asli dan harga terjangkau.",
+        "description": "Uma Yumcha adalah kedai dimsum di Pasar Gedhe Solo yang terkenal dengan dimsum jumbo berisi ayam asli dan harga terjangkau.",
         "image": "https://maps.pasargedesolo.com/storage/stores/PoxE8JodQyMlsUYnNQ9MpygcqhgsyoVV.png",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/PoxE8JodQyMlsUYnNQ9MpygcqhgsyoVV_xs.png",
         "images": [
@@ -14292,7 +14292,7 @@ const MarketData = (() => {
         "y": 273,
         "lat": 751,
         "lng": 250,
-        "description": "Kedailicious adalah kedai makanan spesial gongso san penyet yang berada di Lantai 2 Pasar Gede Barat atau Gedung Pasar Buah di Pasar Gede",
+        "description": "Kedailicious adalah kedai makanan spesial gongso san penyet yang berada di Lantai 2 Pasar Gedhe Barat atau Gedung Pasar Buah di Pasar Gedhe",
         "image": "https://maps.pasargedesolo.com/storage/stores/WBLXIk8TxgPv7TJKQS3c482tRbQiYny7.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/WBLXIk8TxgPv7TJKQS3c482tRbQiYny7_xs.jpeg",
         "images": [
@@ -14324,7 +14324,7 @@ const MarketData = (() => {
         "y": 286,
         "lat": 738,
         "lng": 219,
-        "description": "Ayam Geprek Kulit Crispy LESTARI adalah warung makanan spesialisasi ayam geprek yang berada di Lantai 2 Pasar Gede Barat atau Gedung Pasar Buah di Pasar Gede",
+        "description": "Ayam Geprek Kulit Crispy LESTARI adalah warung makanan spesialisasi ayam geprek yang berada di Lantai 2 Pasar Gedhe Barat atau Gedung Pasar Buah di Pasar Gedhe",
         "image": "https://maps.pasargedesolo.com/storage/stores/UCqSGyPHoYyZxpxSdt1iJ0IS2l1Pt3hm.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/UCqSGyPHoYyZxpxSdt1iJ0IS2l1Pt3hm_xs.jpeg",
         "images": [
@@ -14357,7 +14357,7 @@ const MarketData = (() => {
         "y": 426,
         "lat": 598,
         "lng": 250,
-        "description": "Kedai Kopi Pak Agus di Pasar Gede Solo adalah tempat ngopi yang menawarkan suasana klasik di lantai dua sisi barat pasar . Dikenal dengan menu andalannya seperti cappuccino, kopi susu gula aren, dan caramel macchiato,",
+        "description": "Kedai Kopi Pak Agus di Pasar Gedhe Solo adalah tempat ngopi yang menawarkan suasana klasik di lantai dua sisi barat pasar . Dikenal dengan menu andalannya seperti cappuccino, kopi susu gula aren, dan caramel macchiato,",
         "image": "https://maps.pasargedesolo.com/storage/stores/wE6qJUAz08ImViWeGszs1hhTxUAYdWjf.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/wE6qJUAz08ImViWeGszs1hhTxUAYdWjf_xs.jpeg",
         "images": [
@@ -14389,7 +14389,7 @@ const MarketData = (() => {
         "y": 179,
         "lat": 845,
         "lng": 231,
-        "description": "WM Supernasi adalah tempat makan baru di lantai 2 Pasar Gede Solo yang menawarkan menu nasi ayam komplit dengan harga terjangkau, sekitar Rp20.000 sudah termasuk es teh. Dengan porsi yang mengenyangkan dan rasa yang lezat, WM Supernasi menjadi pilihan favorit bagi pengunjung pasar yang mencari makan siang praktis dan nikmat",
+        "description": "WM Supernasi adalah tempat makan baru di lantai 2 Pasar Gedhe Solo yang menawarkan menu nasi ayam komplit dengan harga terjangkau, sekitar Rp20.000 sudah termasuk es teh. Dengan porsi yang mengenyangkan dan rasa yang lezat, WM Supernasi menjadi pilihan favorit bagi pengunjung pasar yang mencari makan siang praktis dan nikmat",
         "image": "https://maps.pasargedesolo.com/storage/stores/THMaHlzZlkioO2Qa2adNnklgGVVPrf2Q.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/THMaHlzZlkioO2Qa2adNnklgGVVPrf2Q_xs.jpeg",
         "images": [
@@ -14421,7 +14421,7 @@ const MarketData = (() => {
         "y": 939,
         "lat": 85,
         "lng": 710,
-        "description": "Cuma Jus adalah kedai minuman segar yang berlokasi di lantai 2 Gedung Barat Pasar Gede Solo, menawarkan berbagai jus buah segar dengan konsep modern dan harga terjangkau. Dengan slogan \"100% Fresh Juice\"",
+        "description": "Cuma Jus adalah kedai minuman segar yang berlokasi di lantai 2 Gedung Barat Pasar Gedhe Solo, menawarkan berbagai jus buah segar dengan konsep modern dan harga terjangkau. Dengan slogan \"100% Fresh Juice\"",
         "image": "https://maps.pasargedesolo.com/storage/stores/xIt3yIRc4yrBXjqMeGi5eC733iU2ypFk.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/xIt3yIRc4yrBXjqMeGi5eC733iU2ypFk_xs.jpg",
         "images": [
@@ -14453,7 +14453,7 @@ const MarketData = (() => {
         "y": 599,
         "lat": 425,
         "lng": 729,
-        "description": "Big Size Juice adalah kedai minuman segar yang terletak di lantai 2 Pasar Gede Solo, menawarkan berbagai jus buah murni dalam porsi jumbo yang mengenyangkan. Dengan konsep \"jus sehat dan mengenyangkan,\" mereka menyajikan jus tanpa tambahan gula, air, atau es, memastikan rasa alami dari buah-buahan segar . Beberapa varian populer meliputi Pure Orange (jeruk murni), Immune Booster, dan Manggo Juice, dengan ukuran 600 ml yang cocok untuk dinikmati saat berkeliling pasar",
+        "description": "Big Size Juice adalah kedai minuman segar yang terletak di lantai 2 Pasar Gedhe Solo, menawarkan berbagai jus buah murni dalam porsi jumbo yang mengenyangkan. Dengan konsep \"jus sehat dan mengenyangkan,\" mereka menyajikan jus tanpa tambahan gula, air, atau es, memastikan rasa alami dari buah-buahan segar . Beberapa varian populer meliputi Pure Orange (jeruk murni), Immune Booster, dan Manggo Juice, dengan ukuran 600 ml yang cocok untuk dinikmati saat berkeliling pasar",
         "image": "https://maps.pasargedesolo.com/storage/stores/kQjuVHnGieldSEWPvnGo2MDbl19o59qg.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/kQjuVHnGieldSEWPvnGo2MDbl19o59qg_xs.jpg",
         "images": [
@@ -14485,7 +14485,7 @@ const MarketData = (() => {
         "y": 164,
         "lat": 860,
         "lng": 531,
-        "description": "Nasi Liwet Bu Sri Pasar Gede adalah kuliner legendaris Solo berada di Pasar Gede Barat yang menyajikan nasi gurih dengan ayam suwir, sayur labu, telur, areh, dan sambal, terkenal karena cita rasanya yang autentik dan harganya yang terjangkau.",
+        "description": "Nasi Liwet Bu Sri Pasar Gedhe adalah kuliner legendaris Solo berada di Pasar Gedhe Barat yang menyajikan nasi gurih dengan ayam suwir, sayur labu, telur, areh, dan sambal, terkenal karena cita rasanya yang autentik dan harganya yang terjangkau.",
         "image": "https://maps.pasargedesolo.com/storage/stores/kbD3l4jvCzgm1d7UCDLTJTlR5pXL2KIq.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/kbD3l4jvCzgm1d7UCDLTJTlR5pXL2KIq_xs.jpeg",
         "images": [
@@ -14517,7 +14517,7 @@ const MarketData = (() => {
         "y": 162,
         "lat": 862,
         "lng": 450,
-        "description": "Kedai Mini 2 adalah kedai makanan non-halal spesialisasi babi yang berada di Lantai 2 Pasar Gede Barat atau Gedung Pasar Buah di Pasar Gede",
+        "description": "Kedai Mini 2 adalah kedai makanan non-halal spesialisasi babi yang berada di Lantai 2 Pasar Gedhe Barat atau Gedung Pasar Buah di Pasar Gedhe",
         "image": "https://maps.pasargedesolo.com/storage/stores/jlWklvfGR3FAcxAQtFrxgkypogk0GLke.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/jlWklvfGR3FAcxAQtFrxgkypogk0GLke_xs.jpg",
         "images": [
@@ -14550,7 +14550,7 @@ const MarketData = (() => {
         "y": 163,
         "lat": 861,
         "lng": 293,
-        "description": "Teh Tarik 3 Raja adalah kedai minuman spesialisasi teh tarik yang berada di Lantai 2 Pasar Gede Barat atau Gedung Pasar Buah di Pasar Gede yang tempatnya jadi satu dengan Dee Pastelin.",
+        "description": "Teh Tarik 3 Raja adalah kedai minuman spesialisasi teh tarik yang berada di Lantai 2 Pasar Gedhe Barat atau Gedung Pasar Buah di Pasar Gedhe yang tempatnya jadi satu dengan Dee Pastelin.",
         "image": "https://maps.pasargedesolo.com/storage/stores/3jVxasZlYTJcC24gOiRvcVbC2DVYsL78.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/3jVxasZlYTJcC24gOiRvcVbC2DVYsL78_xs.jpeg",
         "images": [
@@ -14642,7 +14642,7 @@ const MarketData = (() => {
         "y": 586,
         "lat": 438,
         "lng": 679,
-        "description": "Warung Makan Seafood Sido Laras merupakan salah satu warung makan yang ada di Pasar Gede",
+        "description": "Warung Makan Seafood Sido Laras merupakan salah satu warung makan yang ada di Pasar Gedhe",
         "image": "https://maps.pasargedesolo.com/storage/stores/CZQVcU1wP3BteP4r9DBU8ZalEWWLd17S.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/CZQVcU1wP3BteP4r9DBU8ZalEWWLd17S_xs.jpg",
         "images": [
@@ -14734,7 +14734,7 @@ const MarketData = (() => {
         "y": 668,
         "lat": 356,
         "lng": 306,
-        "description": "Tama Kitchen adalah kedai makanan yang berada di Lantai 2 Pasar Gede Barat atau Gedung Pasar Buah di Pasar Gede.",
+        "description": "Tama Kitchen adalah kedai makanan yang berada di Lantai 2 Pasar Gedhe Barat atau Gedung Pasar Buah di Pasar Gedhe.",
         "image": "https://maps.pasargedesolo.com/storage/stores/ID4mL5tSeAhKBVyr973E6kBnleCU82fR.png",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/ID4mL5tSeAhKBVyr973E6kBnleCU82fR_xs.png",
         "images": [
@@ -14767,7 +14767,7 @@ const MarketData = (() => {
         "y": 163,
         "lat": 861,
         "lng": 307,
-        "description": "Dee Pastelin adalah kedai makanan oleh-oleh spesial Solo yaitu home made pastel premium yang berada di Lantai 2 Pasar Gede Barat atau Gedung Pasar Buah di Pasar Gede",
+        "description": "Dee Pastelin adalah kedai makanan oleh-oleh spesial Solo yaitu home made pastel premium yang berada di Lantai 2 Pasar Gedhe Barat atau Gedung Pasar Buah di Pasar Gedhe",
         "image": "https://maps.pasargedesolo.com/storage/stores/I9IDLJ5driqqLQVoYAfx1S9WiGk4GeUJ.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/I9IDLJ5driqqLQVoYAfx1S9WiGk4GeUJ_xs.jpeg",
         "images": [
@@ -14864,7 +14864,7 @@ const MarketData = (() => {
         "y": 633,
         "lat": 391,
         "lng": 680,
-        "description": "Selat Steak PXD merupakan salah satu tempat makan spesial selat steak yang ada di Pasar Gede",
+        "description": "Selat Steak PXD merupakan salah satu tempat makan spesial selat steak yang ada di Pasar Gedhe",
         "image": "https://maps.pasargedesolo.com/storage/stores/F9ZcCqwAgATDV8OPjyY6qTMyxprJ2Xnw.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/F9ZcCqwAgATDV8OPjyY6qTMyxprJ2Xnw_xs.jpg",
         "images": [
@@ -14896,7 +14896,7 @@ const MarketData = (() => {
         "y": 376,
         "lat": 648,
         "lng": 777,
-        "description": "The French Press (TFP) adalah warung kopi unik di lantai 2 Pasar Gede Solo yang menyajikan hidangan ala Barat seperti buttermilk fried chicken, mac & cheese, dan Mexican beef casserole dalam suasana pasar tradisional. Dengan konsep \"Menu of the Day\", TFP menawarkan variasi menu harian yang membuat pengunjung selalu memiliki alasan untuk kembali.",
+        "description": "The French Press (TFP) adalah warung kopi unik di lantai 2 Pasar Gedhe Solo yang menyajikan hidangan ala Barat seperti buttermilk fried chicken, mac & cheese, dan Mexican beef casserole dalam suasana pasar tradisional. Dengan konsep \"Menu of the Day\", TFP menawarkan variasi menu harian yang membuat pengunjung selalu memiliki alasan untuk kembali.",
         "image": "https://maps.pasargedesolo.com/storage/stores/JKf7MGkTYVF6Nf7tng7F6fL1R0rPUZoH.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/JKf7MGkTYVF6Nf7tng7F6fL1R0rPUZoH_xs.jpg",
         "images": [
@@ -14928,7 +14928,7 @@ const MarketData = (() => {
         "y": 113,
         "lat": 911,
         "lng": 682,
-        "description": "Kopi Labuan Hati adalah kedai kopi modern yang terletak di lantai 2 Pasar Gede Solo, menawarkan berbagai minuman kopi, non-kopi, serta menu makanan seperti rice bowl dan camilan ringan. Dengan pilihan menu seperti Es Kopi Suren, Kopsu Mangga, Soda Gembira Spesial, dan Cumi Jlitheng, tempat ini menjadi favorit bagi pengunjung pasar yang mencari suasana santai dengan harga terjangkau.",
+        "description": "Kopi Labuan Hati adalah kedai kopi modern yang terletak di lantai 2 Pasar Gedhe Solo, menawarkan berbagai minuman kopi, non-kopi, serta menu makanan seperti rice bowl dan camilan ringan. Dengan pilihan menu seperti Es Kopi Suren, Kopsu Mangga, Soda Gembira Spesial, dan Cumi Jlitheng, tempat ini menjadi favorit bagi pengunjung pasar yang mencari suasana santai dengan harga terjangkau.",
         "image": "https://maps.pasargedesolo.com/storage/stores/eOaZ4hBYTgaa2nvVAeJO8xF94oClp64U.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/eOaZ4hBYTgaa2nvVAeJO8xF94oClp64U_xs.jpg",
         "images": [
@@ -14960,7 +14960,7 @@ const MarketData = (() => {
         "y": 641,
         "lat": 383,
         "lng": 539,
-        "description": "Lembah manah adalah kedai makanan spesialisasi geprek dan penyetan yang berada di Lantai 2 Pasar Gede Barat  atau Gedung Pasar Buah di Pasar Gede",
+        "description": "Lembah manah adalah kedai makanan spesialisasi geprek dan penyetan yang berada di Lantai 2 Pasar Gedhe Barat  atau Gedung Pasar Buah di Pasar Gedhe",
         "image": "https://maps.pasargedesolo.com/storage/stores/niw3g0qKeVT0VP9HaSx8ZmQ75hyQe7sf.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/niw3g0qKeVT0VP9HaSx8ZmQ75hyQe7sf_xs.jpeg",
         "images": [
@@ -14992,7 +14992,7 @@ const MarketData = (() => {
         "y": 178,
         "lat": 846,
         "lng": 704,
-        "description": "Minoom Ahh adalah kedai minuman kekinian yang terletak di lantai 2 Pasar Gede Solo, Blok B12, tepat di belakang Dimsum Uma Yumcha. Kedai ini menawarkan berbagai pilihan minuman segar seperti milk tea, yakult jelly, brown sugar boba, dan kopi, dengan harga terjangkau",
+        "description": "Minoom Ahh adalah kedai minuman kekinian yang terletak di lantai 2 Pasar Gedhe Solo, Blok B12, tepat di belakang Dimsum Uma Yumcha. Kedai ini menawarkan berbagai pilihan minuman segar seperti milk tea, yakult jelly, brown sugar boba, dan kopi, dengan harga terjangkau",
         "image": "https://maps.pasargedesolo.com/storage/stores/7WnaN8qs5EWZ6k7Yz7yl3psjTmAiuKXs.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/7WnaN8qs5EWZ6k7Yz7yl3psjTmAiuKXs_xs.jpg",
         "images": [
@@ -15024,7 +15024,7 @@ const MarketData = (() => {
         "y": 125,
         "lat": 899,
         "lng": 238,
-        "description": "Mie Pinangsia Pasar Gede adalah warung bakmi legendaris yang terletak di lantai 2 Pasar Gede Solo, terkenal dengan sajian mie tipis kenyal dan pangsit rebus yang gurih. Menu andalannya meliputi mie kuah, mie pangsit, dan kwetiau dengan topping daging cincang, bakso, serta pangsit isi babi, menjadikannya favorit bagi pecinta kuliner non-halal.",
+        "description": "Mie Pinangsia Pasar Gedhe adalah warung bakmi legendaris yang terletak di lantai 2 Pasar Gedhe Solo, terkenal dengan sajian mie tipis kenyal dan pangsit rebus yang gurih. Menu andalannya meliputi mie kuah, mie pangsit, dan kwetiau dengan topping daging cincang, bakso, serta pangsit isi babi, menjadikannya favorit bagi pecinta kuliner non-halal.",
         "image": "https://maps.pasargedesolo.com/storage/stores/eTvpmgim9Q7IaRTI3rp6JOhIEWChuWoP.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/eTvpmgim9Q7IaRTI3rp6JOhIEWChuWoP_xs.jpg",
         "images": [
@@ -15088,7 +15088,7 @@ const MarketData = (() => {
         "y": 644,
         "lat": 380,
         "lng": 720,
-        "description": "Rujak Mood adalah kedai kuliner di lantai 2 Pasar Gede Solo yang menyajikan berbagai hidangan segar dan unik, seperti somtam (salad pepaya ala Thailand), asinan, rujak Bangkok, dan minuman seperti Thai tea.",
+        "description": "Rujak Mood adalah kedai kuliner di lantai 2 Pasar Gedhe Solo yang menyajikan berbagai hidangan segar dan unik, seperti somtam (salad pepaya ala Thailand), asinan, rujak Bangkok, dan minuman seperti Thai tea.",
         "image": "https://maps.pasargedesolo.com/storage/stores/eHRLmxjMNXSE7yEfVGcgPeICEM9NfRUY.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/eHRLmxjMNXSE7yEfVGcgPeICEM9NfRUY_xs.jpg",
         "images": [
@@ -15122,7 +15122,7 @@ const MarketData = (() => {
         "y": 641,
         "lat": 383,
         "lng": 315,
-        "description": "Gongso 92 adalah kedai makanan spesialisasi gongso yang berada di lantai 2 Pasar Gede Barat atau Pasar Buah di Pasar Gede",
+        "description": "Gongso 92 adalah kedai makanan spesialisasi gongso yang berada di lantai 2 Pasar Gedhe Barat atau Pasar Buah di Pasar Gedhe",
         "image": "https://maps.pasargedesolo.com/storage/stores/FBk8gYkIMq0SbtDMdDNS8yW1MOua1aMS.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/FBk8gYkIMq0SbtDMdDNS8yW1MOua1aMS_xs.jpeg",
         "images": [
@@ -15154,7 +15154,7 @@ const MarketData = (() => {
         "y": 118,
         "lat": 906,
         "lng": 404,
-        "description": "Meurdue Chocolate & Coffee adalah kafe modern yang terletak di ujung Pasar Gede Barat Solo. Kafe ini menyajikan berbagai minuman cokelat dan kopi, serta aneka makanan ringan dalam suasana yang nyaman dan estetik.",
+        "description": "Meurdue Chocolate & Coffee adalah kafe modern yang terletak di ujung Pasar Gedhe Barat Solo. Kafe ini menyajikan berbagai minuman cokelat dan kopi, serta aneka makanan ringan dalam suasana yang nyaman dan estetik.",
         "image": "https://maps.pasargedesolo.com/storage/stores/9bal7Tljg4rY63UzVu6GqxDaWXLG6Y8Y.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/9bal7Tljg4rY63UzVu6GqxDaWXLG6Y8Y_xs.jpg",
         "images": [
@@ -15187,7 +15187,7 @@ const MarketData = (() => {
         "y": 802,
         "lat": 222,
         "lng": 671,
-        "description": "Fasilitas toilet yang berada di Pasar Gede",
+        "description": "Fasilitas toilet yang berada di Pasar Gedhe",
         "image": null,
         "imageThumb": null,
         "images": [],
@@ -15217,7 +15217,7 @@ const MarketData = (() => {
         "y": 632,
         "lat": 392,
         "lng": 351,
-        "description": "Lele Melet dan Nasi Bakar Le JM adalah warung makan di lantai 2 Pasar Gede Solo yang terkenal dengan sajian lele goreng pedas dan sambal khas. Menu andalannya mencakup lele melet, kulit crispy, dan sambal bawang, yang disajikan bersama nasi dan minuman seperti es lemon tea",
+        "description": "Lele Melet dan Nasi Bakar Le JM adalah warung makan di lantai 2 Pasar Gedhe Solo yang terkenal dengan sajian lele goreng pedas dan sambal khas. Menu andalannya mencakup lele melet, kulit crispy, dan sambal bawang, yang disajikan bersama nasi dan minuman seperti es lemon tea",
         "image": "https://maps.pasargedesolo.com/storage/stores/LoBtJtxKl6EIwX8AbPfUmD7pfwmxyocP.png",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/LoBtJtxKl6EIwX8AbPfUmD7pfwmxyocP_xs.png",
         "images": [
@@ -15249,7 +15249,7 @@ const MarketData = (() => {
         "y": 561,
         "lat": 463,
         "lng": 737,
-        "description": "Dimsum Jhian Cook adalah kedai dimsum halal yang terletak di lantai 2 sisi selatan Pasar Gede Solo, dekat dengan Cendono Wanggi. Kedai ini menawarkan berbagai pilihan dimsum yang lezat dan terjangkau, menjadikannya favorit di kalangan pengunjung pasar.",
+        "description": "Dimsum Jhian Cook adalah kedai dimsum halal yang terletak di lantai 2 sisi selatan Pasar Gedhe Solo, dekat dengan Cendono Wanggi. Kedai ini menawarkan berbagai pilihan dimsum yang lezat dan terjangkau, menjadikannya favorit di kalangan pengunjung pasar.",
         "image": "https://maps.pasargedesolo.com/storage/stores/YoYOzIBqgSY8l9vlLSX7BkD5Pe9zGVvG.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/YoYOzIBqgSY8l9vlLSX7BkD5Pe9zGVvG_xs.jpg",
         "images": [
@@ -15281,7 +15281,7 @@ const MarketData = (() => {
         "y": 663,
         "lat": 361,
         "lng": 310,
-        "description": "Geprek Lovers by Tama Kitchen kedai makanan spesialisasi olahan ayam geprek yang berada di Lantai 2 Pasar Gede Barat atau Gedung Pasar Buah di Pasar Gede",
+        "description": "Geprek Lovers by Tama Kitchen kedai makanan spesialisasi olahan ayam geprek yang berada di Lantai 2 Pasar Gedhe Barat atau Gedung Pasar Buah di Pasar Gedhe",
         "image": "https://maps.pasargedesolo.com/storage/stores/M4pXtjaBl63lvke2iC6hHGescvDn9V3L.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/M4pXtjaBl63lvke2iC6hHGescvDn9V3L_xs.jpeg",
         "images": [
@@ -15314,7 +15314,7 @@ const MarketData = (() => {
         "y": 465,
         "lat": 559,
         "lng": 293,
-        "description": "Box2Box Photo Box adalah layanan photobooth kreatif yang hadir di berbagai lokasi strategis di Solo, seperti di Pasar Gede. Mereka menawarkan pengalaman berfoto dengan konsep unik dan estetik, termasuk photobox bertema retro, kereta api, dan bahkan bus . Dengan harga terjangkau, mulai dari Rp10.000, Box2Box menjadi pilihan populer bagi warga Solo dan wisatawan untuk mengabadikan momen spesial",
+        "description": "Box2Box Photo Box adalah layanan photobooth kreatif yang hadir di berbagai lokasi strategis di Solo, seperti di Pasar Gedhe. Mereka menawarkan pengalaman berfoto dengan konsep unik dan estetik, termasuk photobox bertema retro, kereta api, dan bahkan bus . Dengan harga terjangkau, mulai dari Rp10.000, Box2Box menjadi pilihan populer bagi warga Solo dan wisatawan untuk mengabadikan momen spesial",
         "image": "https://maps.pasargedesolo.com/storage/stores/Gi6PeWBBjn4wUBrL1zVcUwDorrR0ZupY.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/Gi6PeWBBjn4wUBrL1zVcUwDorrR0ZupY_xs.jpeg",
         "images": [
@@ -15347,7 +15347,7 @@ const MarketData = (() => {
         "y": 199,
         "lat": 825,
         "lng": 243,
-        "description": "Warung Makan Bu Tapruk adalah warung legendaris di Pasar Gede Solo yang terkenal dengan nasi tumpang khas Jawa, sajian nasi dengan sambal tempe bosok dan sayur daun singkong, yang tetap digemari karena rasa autentik dan harga terjangkau.",
+        "description": "Warung Makan Bu Tapruk adalah warung legendaris di Pasar Gedhe Solo yang terkenal dengan nasi tumpang khas Jawa, sajian nasi dengan sambal tempe bosok dan sayur daun singkong, yang tetap digemari karena rasa autentik dan harga terjangkau.",
         "image": "https://maps.pasargedesolo.com/storage/stores/38O8fR3JFUbHoN7XIh44wgM7vJb0WTJg.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/38O8fR3JFUbHoN7XIh44wgM7vJb0WTJg_xs.jpeg",
         "images": [
@@ -15379,7 +15379,7 @@ const MarketData = (() => {
         "y": 162,
         "lat": 862,
         "lng": 372,
-        "description": "Kedai Nyah T3ll On adalah kedai makanan yang berada di Lantai 2 Pasar Gede Barat atau Gedung Pasar Buah di Pasar Gede",
+        "description": "Kedai Nyah T3ll On adalah kedai makanan yang berada di Lantai 2 Pasar Gedhe Barat atau Gedung Pasar Buah di Pasar Gedhe",
         "image": "https://maps.pasargedesolo.com/storage/stores/Mdfp9Aeban3N790hr2ZWeGN6jEoBv96q.jpeg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/Mdfp9Aeban3N790hr2ZWeGN6jEoBv96q_xs.jpeg",
         "images": [
@@ -15443,7 +15443,7 @@ const MarketData = (() => {
         "y": 115,
         "lat": 909,
         "lng": 563,
-        "description": "Kedai Mini 2 adalah kedai makanan non-halal spesialisasi babi yang berada di Lantai 2 Pasar Gede Barat atau Gedung Pasar Buah di Pasar Gede",
+        "description": "Kedai Mini 2 adalah kedai makanan non-halal spesialisasi babi yang berada di Lantai 2 Pasar Gedhe Barat atau Gedung Pasar Buah di Pasar Gedhe",
         "image": "https://maps.pasargedesolo.com/storage/stores/jlWklvfGR3FAcxAQtFrxgkypogk0GLke.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/jlWklvfGR3FAcxAQtFrxgkypogk0GLke_xs.jpg",
         "images": [
@@ -15508,7 +15508,7 @@ const MarketData = (() => {
         "y": 852,
         "lat": 172,
         "lng": 711,
-        "description": "Kedai Njonja adalah kedai yang menjual aneka menu seperti toast, rice box, dan Mie Bangladesh, serta menjadi tempat nongkrong dengan nuansa santai di lantai 2 Pasar Gede Solo.",
+        "description": "Kedai Njonja adalah kedai yang menjual aneka menu seperti toast, rice box, dan Mie Bangladesh, serta menjadi tempat nongkrong dengan nuansa santai di lantai 2 Pasar Gedhe Solo.",
         "image": "https://maps.pasargedesolo.com/storage/stores/Iyp5yqGuaB4lvoiREdmOq4RoxBtRghCZ.jpg",
         "imageThumb": "https://maps.pasargedesolo.com/storage/stores/Iyp5yqGuaB4lvoiREdmOq4RoxBtRghCZ_xs.jpg",
         "images": [

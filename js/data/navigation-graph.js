@@ -622,7 +622,7 @@ const NavigationGraph = (() => {
   "n_9eec53f2-48e7-47e5-abf0-6bfc5402aa18": {
     "id": "n_9eec53f2-48e7-47e5-abf0-6bfc5402aa18",
     "stallId": "9eec53f2-48e7-47e5-abf0-6bfc5402aa18",
-    "name": "Soto Pasar Gede Bu Harini",
+    "name": "Soto Pasar Gedhe Bu Harini",
     "buildingId": "pasar-gede",
     "floor": 1,
     "x": 738,
@@ -847,7 +847,7 @@ const NavigationGraph = (() => {
   "n_9eec62fb-8144-47d6-8b90-867b515c7a31": {
     "id": "n_9eec62fb-8144-47d6-8b90-867b515c7a31",
     "stallId": "9eec62fb-8144-47d6-8b90-867b515c7a31",
-    "name": "Bidin Los Buah Pasar Gede",
+    "name": "Bidin Los Buah Pasar Gedhe",
     "buildingId": "pasar-gede",
     "floor": 1,
     "x": 337,
@@ -1042,7 +1042,7 @@ const NavigationGraph = (() => {
   "n_9ef1fa2f-d41d-4b16-a2bd-9e66dedeffc9": {
     "id": "n_9ef1fa2f-d41d-4b16-a2bd-9e66dedeffc9",
     "stallId": "9ef1fa2f-d41d-4b16-a2bd-9e66dedeffc9",
-    "name": "Toilet Pasar Gede 2",
+    "name": "Toilet Pasar Gedhe 2",
     "buildingId": "pasar-gede",
     "floor": 1,
     "x": 293,
@@ -1057,7 +1057,7 @@ const NavigationGraph = (() => {
   "n_9ef1fce8-7b05-4c21-a8af-2f9c82b48bf2": {
     "id": "n_9ef1fce8-7b05-4c21-a8af-2f9c82b48bf2",
     "stallId": "9ef1fce8-7b05-4c21-a8af-2f9c82b48bf2",
-    "name": "Toilet Pasar Gede 3",
+    "name": "Toilet Pasar Gedhe 3",
     "buildingId": "pasar-gede",
     "floor": 1,
     "x": 744,
@@ -1072,7 +1072,7 @@ const NavigationGraph = (() => {
   "n_9ef1fd45-298d-4a38-a597-4e68ce0cbfbf": {
     "id": "n_9ef1fd45-298d-4a38-a597-4e68ce0cbfbf",
     "stallId": "9ef1fd45-298d-4a38-a597-4e68ce0cbfbf",
-    "name": "Toilet Pasar Gede 4",
+    "name": "Toilet Pasar Gedhe 4",
     "buildingId": "pasar-gede",
     "floor": 1,
     "x": 739,
@@ -1087,7 +1087,7 @@ const NavigationGraph = (() => {
   "n_9ef1f9c2-66ee-4880-9c25-906d6018af72": {
     "id": "n_9ef1f9c2-66ee-4880-9c25-906d6018af72",
     "stallId": "9ef1f9c2-66ee-4880-9c25-906d6018af72",
-    "name": "Toilet Pasar Gede 1",
+    "name": "Toilet Pasar Gedhe 1",
     "buildingId": "pasar-gede",
     "floor": 1,
     "x": 293,
@@ -2227,7 +2227,7 @@ const NavigationGraph = (() => {
   "n_9f0e8d43-d4ad-4c21-88ae-573266307668": {
     "id": "n_9f0e8d43-d4ad-4c21-88ae-573266307668",
     "stallId": "9f0e8d43-d4ad-4c21-88ae-573266307668",
-    "name": "Jadah Bakar Tasik Pasar Gede",
+    "name": "Jadah Bakar Tasik Pasar Gedhe",
     "buildingId": "pasar-gede",
     "floor": 1,
     "x": 254,
@@ -4342,7 +4342,7 @@ const NavigationGraph = (() => {
   "n_9eec6cd2-5803-4835-b361-d22831c4c613": {
     "id": "n_9eec6cd2-5803-4835-b361-d22831c4c613",
     "stallId": "9eec6cd2-5803-4835-b361-d22831c4c613",
-    "name": "Bakso dan Soto Pasar Gede",
+    "name": "Bakso dan Soto Pasar Gedhe",
     "buildingId": "pasar-gede",
     "floor": 2,
     "x": 521,
@@ -6202,7 +6202,7 @@ const NavigationGraph = (() => {
   "n_9ef60cc7-3a6f-4da3-8d7d-860ae546bf6a": {
     "id": "n_9ef60cc7-3a6f-4da3-8d7d-860ae546bf6a",
     "stallId": "9ef60cc7-3a6f-4da3-8d7d-860ae546bf6a",
-    "name": "Mushola Pasar Gede Barat",
+    "name": "Mushola Pasar Gedhe Barat",
     "buildingId": "pasar-buah",
     "floor": 1,
     "x": 507,

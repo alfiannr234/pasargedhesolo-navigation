@@ -339,7 +339,7 @@ const MarketMap = (() => {
      */
     function updateUIIndicators() {
         const bldInfo = MarketData.getBuildingInfo(currentBuilding);
-        const bldName = bldInfo ? bldInfo.name : 'Pasar Gede';
+        const bldName = bldInfo ? bldInfo.name : 'Pasar Gedhe';
 
         const headerSubtitle = document.getElementById('headerSubtitle');
         if (headerSubtitle) {

@@ -7,7 +7,7 @@ Aplikasi web pemetaan indoor dan navigasi interaktif untuk **Pasar Gedhe Hardjon
 ## 🌟 Fitur Utama
 
 ### 1. Peta Denah Detail & Vektor Realistis (2 Gedung & 4 Lantai)
-- **Gedung Pasar Gede (Utama):**
+- **Gedung Pasar Gedhe (Utama):**
   - **Lantai 1:** Sentra pasar basah, sayuran segar, bumbu/rempah, sembako, bunga tabur, dan oleh-oleh.
   - **Lantai 2:** Sentra kuliner legendaris Solo, daging sapi/unggas, dan area makan.
 - **Gedung Pasar Buah (Timur):**
@@ -26,7 +26,7 @@ Aplikasi web pemetaan indoor dan navigasi interaktif untuk **Pasar Gedhe Hardjon
 - **Filter Cepat Multi-Kriteria:**
   - **Pencarian Teks Langsung:** Filter instan berdasarkan nama toko atau produk.
   - **Filter Kategori & Lantai:** Dropdown pemilihan kategori dan lantai (Lantai 1 / Lantai 2).
-  - **Bilah Abjad A-Z (10 Kolom):** Memilih kios berdasarkan huruf awal nama (tombol `All` dan `A` s/d `Z`) persis seperti pada aplikasi resmi Pasar Gede.
+  - **Bilah Abjad A-Z (10 Kolom):** Memilih kios berdasarkan huruf awal nama (tombol `All` dan `A` s/d `Z`) persis seperti pada aplikasi resmi Pasar Gedhe.
 - **Integrasi Peta & Detail:** Mengetuk kartu kios akan langsung mengarahkan tampilan denah ke posisi kios tersebut dengan penanda berkedip (*pulsing highlight*), serta membuka panel detail kios lengkap dengan tombol *"Navigasi dari sini"* dan *"Navigasi ke sini"*.
 
 ### 4. Navigasi Rute Pop-up (Top-Center Floating Modal)
@@ -78,8 +78,8 @@ Maps Navigation Pasar Gedhe/
 │
 ├── assets/                         # Aset statis aplikasi
 │   ├── svg/                        # Berkas denah lantai format SVG
-│   │   ├── pasar_gede_lt1.svg      # Denah Pasar Gede Lantai 1
-│   │   ├── pasar_gede_lt2.svg      # Denah Pasar Gede Lantai 2
+│   │   ├── pasar_gede_lt1.svg      # Denah Pasar Gedhe Lantai 1
+│   │   ├── pasar_gede_lt2.svg      # Denah Pasar Gedhe Lantai 2
 │   │   ├── pasar_buah_lt1.svg      # Denah Pasar Buah Lantai 1
 │   │   └── pasar_buah_lt2.svg      # Denah Pasar Buah Lantai 2
 │   └── walkable/                   # Mask raster koridor jalan kaki untuk navigasi presisi

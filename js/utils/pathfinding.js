@@ -358,7 +358,7 @@ const Pathfinding = (() => {
             totalDistance = calculateDistance(leg1Coords) + 30 + calculateDistance(leg3Coords);
 
             // Assemble steps
-            const targetBldName = endNode.buildingId === 'pasar-buah' ? 'Pasar Buah (Timur)' : 'Pasar Gede (Utama)';
+            const targetBldName = endNode.buildingId === 'pasar-buah' ? 'Pasar Buah (Timur)' : 'Pasar Gedhe (Utama)';
             const steps1 = generateCorridorSteps(leg1Coords, startNode, { name: cw.exit.name }, mode, false);
             const cwStep = {
                 type: 'building-change',
@@ -445,13 +445,13 @@ const Pathfinding = (() => {
     function getBuildingCrosswalk(fromBld, toBld) {
         if (fromBld === 'pasar-gede') {
             return {
-                exit: { name: 'Pintu Samping Pasar Gede', x: 525, y: 907 },
+                exit: { name: 'Pintu Samping Pasar Gedhe', x: 525, y: 907 },
                 entry: { name: 'Pintu Depan Pasar Buah', x: 391, y: 906 }
             };
         } else {
             return {
                 exit: { name: 'Pintu Depan Pasar Buah', x: 391, y: 906 },
-                entry: { name: 'Pintu Samping Pasar Gede', x: 525, y: 907 }
+                entry: { name: 'Pintu Samping Pasar Gedhe', x: 525, y: 907 }
             };
         }
     }

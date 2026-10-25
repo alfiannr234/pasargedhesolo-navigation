@@ -260,7 +260,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             tableBody.innerHTML = pageItems.map(s => {
                 const img = s.imageThumb || s.image;
                 const cat = categories[s.category] || { name: s.categoryLabel || 'Kios', icon: s.icon || '🏪', color: s.color || '#C0392B' };
-                const bld = s.buildingId === 'pasar-buah' ? 'Pasar Buah' : 'Pasar Gede';
+                const bld = s.buildingId === 'pasar-buah' ? 'Pasar Buah' : 'Pasar Gedhe';
                 const isStar = Boolean(s.isLegendary);
 
                 return `

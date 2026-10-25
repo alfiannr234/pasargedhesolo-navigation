@@ -147,7 +147,7 @@ const DetailPanel = (() => {
         html += `
             <div class="detail-info-row">
                 <span class="detail-info-label">Lokasi</span>
-                <span class="detail-info-value">${bldInfo ? bldInfo.name : 'Pasar Gede'} · Lantai ${stall.floor}</span>
+                <span class="detail-info-value">${bldInfo ? bldInfo.name : 'Pasar Gedhe'} · Lantai ${stall.floor}</span>
             </div>
         `;
 
