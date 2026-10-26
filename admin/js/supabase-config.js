@@ -578,18 +578,21 @@ const DB = (() => {
             return currentUser;
         }
 
-        // Demo login fallback
-        if (email === 'admin@pasargedesolo.com' && password === 'admin123') {
-            currentUser = {
-                email: email,
-                id: 'demo-admin-id',
-                role: 'admin'
-            };
-            localStorage.setItem(AUTH_KEY, JSON.stringify(currentUser));
-            return currentUser;
+        // Offline development fallback (only active when Supabase cloud is unavailable)
+        if (!isSupabaseReady) {
+            if (email === 'admin@pasargedesolo.com' && password === 'admin123') {
+                currentUser = {
+                    email: email,
+                    id: 'demo-admin-id',
+                    role: 'admin'
+                };
+                localStorage.setItem(AUTH_KEY, JSON.stringify(currentUser));
+                return currentUser;
+            }
+            throw new Error('Mode Offline: Gunakan akun demo lokal admin@pasargedesolo.com / admin123');
         }
 
-        throw new Error('Email atau password salah! Gunakan akun demo: admin@pasargedesolo.com / admin123');
+        throw new Error('Email atau password salah.');
     }
 
     /**

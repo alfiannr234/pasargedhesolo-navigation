@@ -16,7 +16,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <!-- Clickjacking Defense -->
+    <script>
+        if (window.top !== window.self) {
+            window.top.location = window.self.location;
+        }
+    </script>
+    <!-- Lucide Icons (Pinned for Supply Chain Security) -->
+    <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/sidebar.css">
@@ -49,7 +56,7 @@
         <div class="header-center">
             <div class="search-container" id="searchContainer">
                 <i data-lucide="search" class="search-icon" aria-hidden="true"></i>
-                <input type="search" id="searchInput" class="search-input" placeholder="Cari kios, kuliner, pedagang..."
+                <input type="search" id="searchInput" class="search-input" maxlength="100" placeholder="Cari kios, kuliner, pedagang..."
                     aria-label="Cari di peta" autocomplete="off">
                 <button type="button" class="search-clear-btn" id="searchClearBtn" aria-label="Hapus pencarian"
                     style="display:none;">
@@ -205,7 +212,7 @@
                         Titik Awal (Dari)
                     </label>
                     <div class="nav-input-wrapper">
-                        <input type="text" id="navFrom" class="nav-input" placeholder="Pilih atau cari kios awal..."
+                        <input type="text" id="navFrom" class="nav-input" maxlength="100" placeholder="Pilih atau cari kios awal..."
                             aria-label="Titik awal navigasi" autocomplete="off">
                         <button class="nav-locate-btn" id="navLocateFrom" aria-label="Pilih di peta"
                             title="Pilih titik di peta">
@@ -225,7 +232,7 @@
                         Tujuan (Ke)
                     </label>
                     <div class="nav-input-wrapper">
-                        <input type="text" id="navTo" class="nav-input" placeholder="Pilih atau cari kios tujuan..."
+                        <input type="text" id="navTo" class="nav-input" maxlength="100" placeholder="Pilih atau cari kios tujuan..."
                             aria-label="Tujuan navigasi" autocomplete="off">
                         <button class="nav-locate-btn" id="navLocateTo" aria-label="Pilih di peta"
                             title="Pilih titik di peta">
@@ -365,7 +372,7 @@
                 <!-- Search Input -->
                 <div class="directory-search-wrapper">
                     <i data-lucide="search" class="directory-search-icon" aria-hidden="true"></i>
-                    <input type="text" id="directorySearchInput" class="directory-search-input" placeholder="Search..."
+                    <input type="text" id="directorySearchInput" class="directory-search-input" maxlength="100" placeholder="Search..."
                         autocomplete="off">
                     <button type="button" class="directory-search-clear" id="directorySearchClear"
                         aria-label="Hapus teks" style="display:none;">
@@ -528,7 +535,11 @@
     <script src="js/components/detail-panel.js"></script>
 
     <!-- Supabase JS Client & Unified DB (Real-time dynamic sync with Admin CMS) -->
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <!-- Security & Sanitization Helpers -->
+    <script src="js/utils/security.js"></script>
+
+    <!-- Supabase JS Client & Unified DB (Pinned Version for Security) -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.48.1/dist/umd/supabase.min.js"></script>
     <script src="admin/js/supabase-config.js"></script>
 
     <script src="js/map.js"></script>

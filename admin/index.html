@@ -8,6 +8,11 @@
 
     <!-- Auto-redirect to trailing slash if opened as /admin (fixes relative path resolution) -->
     <script>
+        // Clickjacking Defense
+        if (window.top !== window.self) {
+            window.top.location = window.self.location;
+        }
+
         (function () {
             var p = window.location.pathname;
             if (!p.endsWith('/') && !p.endsWith('.html')) {
@@ -26,11 +31,15 @@
     <link rel="stylesheet" href="css/admin.css"
         onerror="if(!this.dataset.retried){this.dataset.retried='1';this.href='admin/css/admin.css';}">
 
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <!-- Lucide Icons (Pinned for Supply Chain Security) -->
+    <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
 
-    <!-- Supabase JS Client (100% Free Database, Auth, Free 1GB Storage & Realtime) -->
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <!-- Security & Sanitization Helpers -->
+    <script src="../js/utils/security.js"
+        onerror="if(!this.dataset.retried){this.dataset.retried='1';this.src='js/utils/security.js';}"></script>
+
+    <!-- Supabase JS Client (Pinned Version for Security) -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.48.1/dist/umd/supabase.min.js"></script>
 
     <!-- Master Seed Data from Public App -->
     <script src="../js/data/market-data.js"
@@ -161,7 +170,7 @@
             <!-- Filter Toolbar -->
             <div class="table-filter-bar">
                 <div class="filter-search">
-                    <input type="text" id="tableSearchInput" placeholder="Cari nama kios, produk, atau deskripsi">
+                    <input type="text" id="tableSearchInput" maxlength="100" placeholder="Cari nama kios, produk, atau deskripsi">
                 </div>
 
                 <select id="filterBuilding" class="filter-select" aria-label="Filter Gedung">
@@ -244,7 +253,7 @@
                     <!-- Basic Info -->
                     <div class="form-group">
                         <label for="formStallName" class="form-label">Nama Kios / Toko *</label>
-                        <input type="text" id="formStallName" class="form-input"
+                        <input type="text" id="formStallName" class="form-input" maxlength="120"
                             placeholder="Contoh: Dawet Telasih Bu Dermi" required>
                     </div>
 
@@ -400,12 +409,12 @@
                         <div class="form-grid-3">
                             <div class="form-group">
                                 <label for="catFormName" class="form-label">Nama Kategori *</label>
-                                <input type="text" id="catFormName" class="form-input"
+                                <input type="text" id="catFormName" class="form-input" maxlength="80"
                                     placeholder="Contoh: Kopi & Angkringan" required>
                             </div>
                             <div class="form-group">
                                 <label for="catFormId" class="form-label">ID *</label>
-                                <input type="text" id="catFormId" class="form-input" placeholder="contoh: kopi"
+                                <input type="text" id="catFormId" class="form-input" maxlength="40" placeholder="contoh: kopi"
                                     required>
                             </div>
                             <div class="form-group">

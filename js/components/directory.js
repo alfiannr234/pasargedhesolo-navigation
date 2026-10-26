@@ -169,11 +169,13 @@ const Directory = (() => {
         const categories = MarketData.getCategories();
         const usedCategories = new Set(allStalls.map(s => (s.category || '').toLowerCase()).filter(Boolean));
 
+        const esc = typeof escapeHTML === 'function' ? escapeHTML : str => str;
+        const escAttr = typeof sanitizeAttr === 'function' ? sanitizeAttr : esc;
         let optionsHtml = '<option value="all">Kategori: Semua</option>';
         for (const [key, cat] of Object.entries(categories)) {
             const catId = (cat.id || key).toLowerCase();
             if (usedCategories.has(catId) || usedCategories.has(key.toLowerCase())) {
-                optionsHtml += `<option value="${catId}">${cat.name}</option>`;
+                optionsHtml += `<option value="${escAttr(catId)}">${esc(cat.name)}</option>`;
             }
         }
 
@@ -242,29 +244,32 @@ const Directory = (() => {
         gridContainerEl.style.display = 'grid';
         if (emptyStateEl) emptyStateEl.style.display = 'none';
 
+        const esc = typeof escapeHTML === 'function' ? escapeHTML : str => str;
+        const escAttr = typeof sanitizeAttr === 'function' ? sanitizeAttr : esc;
+
         gridContainerEl.innerHTML = filtered.map(stall => {
             const imageSrc = stall.imageThumb || stall.image;
-            const bldShort = stall.buildingId === 'pasar-buah' ? 'P. Buah' : 'P. Gede';
+            const bldShort = stall.buildingId === 'pasar-buah' ? 'P. Buah' : 'P. Gedhe';
             const initialColor = stall.color || '#C0392B';
             const icon = stall.icon || '🏪';
 
             return `
-                <div class="directory-card" data-stall-id="${stall.id}" tabindex="0" role="button" aria-label="${stall.name}, ${bldShort} Lantai ${stall.floor}">
+                <div class="directory-card" data-stall-id="${escAttr(stall.id)}" tabindex="0" role="button" aria-label="${escAttr(stall.name)}, ${bldShort} Lantai ${stall.floor}">
                     <div class="directory-thumb-wrap">
                         ${imageSrc ? `
-                            <img src="${imageSrc}" alt="${stall.name}" loading="lazy" class="directory-thumb-img" onerror="this.style.display='none'; if(this.nextElementSibling) this.nextElementSibling.style.display='flex';" />
-                            <div class="directory-thumb-fallback" style="display:none; background:${initialColor};">
-                                <span>${icon}</span>
+                            <img src="${escAttr(imageSrc)}" alt="${escAttr(stall.name)}" loading="lazy" class="directory-thumb-img" onerror="this.style.display='none'; if(this.nextElementSibling) this.nextElementSibling.style.display='flex';" />
+                            <div class="directory-thumb-fallback" style="display:none; background:${escAttr(initialColor)};">
+                                <span>${esc(icon)}</span>
                             </div>
                         ` : `
-                            <div class="directory-thumb-fallback" style="background:${initialColor};">
-                                <span>${icon}</span>
+                            <div class="directory-thumb-fallback" style="background:${escAttr(initialColor)};">
+                                <span>${esc(icon)}</span>
                             </div>
                         `}
                         <span class="directory-floor-badge">${stall.floor}</span>
                     </div>
                     <div class="directory-info">
-                        <span class="directory-stall-name" title="${stall.name}">${stall.name}</span>
+                        <span class="directory-stall-name" title="${escAttr(stall.name)}">${esc(stall.name)}</span>
                         <span class="directory-stall-sub">${bldShort}</span>
                     </div>
                 </div>

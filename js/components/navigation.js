@@ -51,6 +51,9 @@ const Navigation = (() => {
                     return;
                 }
 
+                const esc = typeof escapeHTML === 'function' ? escapeHTML : str => str;
+                const escAttr = typeof sanitizeAttr === 'function' ? sanitizeAttr : esc;
+
                 suggestions.innerHTML = filtered.map(loc => {
                     let emoji = '📍';
                     if (loc.type === 'entrance') emoji = '🚪';
@@ -63,9 +66,9 @@ const Navigation = (() => {
                     else if (loc.name.toLowerCase().includes('buah')) emoji = '🍎';
 
                     return `
-                        <div class="nav-suggestion-item" data-node-id="${loc.nodeId}" role="option">
+                        <div class="nav-suggestion-item" data-node-id="${escAttr(loc.nodeId)}" role="option">
                             <span class="nav-suggestion-emoji">${emoji}</span>
-                            <span>${loc.name} (Lt.${loc.floor})</span>
+                            <span>${esc(loc.name)} (Lt.${loc.floor})</span>
                         </div>
                     `;
                 }).join('');
@@ -553,18 +556,21 @@ const Navigation = (() => {
             }
 
             if (steps.length > 0) {
+                const esc = typeof escapeHTML === 'function' ? escapeHTML : str => str;
+                const escAttr = typeof sanitizeAttr === 'function' ? sanitizeAttr : esc;
+
                 stepsList.innerHTML = steps.map((step, idx) => {
                     const badgeHtml = step.badge 
-                        ? `<span class="step-badge ${step.badge.class || ''}">${step.badge.text}</span>` 
+                        ? `<span class="step-badge ${escAttr(step.badge.class || '')}">${esc(step.badge.text)}</span>` 
                         : '';
                     return `
                         <div class="route-step-item" data-step-index="${idx}" tabindex="0" role="listitem">
-                            <span class="step-icon" aria-hidden="true">${step.icon || '📍'}</span>
+                            <span class="step-icon" aria-hidden="true">${esc(step.icon || '📍')}</span>
                             <div class="step-content">
-                                <span class="step-text">${step.text} ${badgeHtml}</span>
-                                ${step.detail ? `<span class="step-detail">${step.detail}</span>` : ''}
+                                <span class="step-text">${esc(step.text)} ${badgeHtml}</span>
+                                ${step.detail ? `<span class="step-detail">${esc(step.detail)}</span>` : ''}
                             </div>
-                            <button type="button" class="btn-step-speak" data-step-index="${idx}" title="Dengarkan langkah ini" aria-label="Dengarkan: ${step.text}">
+                            <button type="button" class="btn-step-speak" data-step-index="${idx}" title="Dengarkan langkah ini" aria-label="Dengarkan: ${escAttr(step.text)}">
                                 🔊
                             </button>
                         </div>

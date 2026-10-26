@@ -199,10 +199,13 @@ document.addEventListener('DOMContentLoaded', async () => {
             return (a.name || '').localeCompare(b.name || '');
         });
 
+        const esc = typeof Security !== 'undefined' ? Security.escapeHTML : str => (str == null ? '' : String(str));
+        const escAttr = typeof Security !== 'undefined' ? Security.sanitizeAttr : esc;
+
         let opts = '<option value="all">Kategori: Semua</option>';
         catList.forEach(cat => {
             const catId = (cat.id || '').toLowerCase();
-            opts += `<option value="${catId}">${cat.icon || ''} ${cat.name}</option>`;
+            opts += `<option value="${escAttr(catId)}">${esc(cat.icon || '')} ${esc(cat.name)}</option>`;
         });
         if (selectCategory) selectCategory.innerHTML = opts;
 
@@ -210,7 +213,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         let formOpts = '';
         catList.forEach(cat => {
             const catId = (cat.id || '').toLowerCase();
-            formOpts += `<option value="${catId}">${cat.icon || ''} ${cat.name}${cat.is_facility || cat.isFacility ? ' (Fasilitas)' : ''}</option>`;
+            formOpts += `<option value="${escAttr(catId)}">${esc(cat.icon || '')} ${esc(cat.name)}${cat.is_facility || cat.isFacility ? ' (Fasilitas)' : ''}</option>`;
         });
         if (fCategory) fCategory.innerHTML = formOpts;
     }
@@ -248,6 +251,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         const startIdx = (currentPage - 1) * pageSize;
         const pageItems = filtered.slice(startIdx, startIdx + pageSize);
 
+        const esc = typeof Security !== 'undefined' ? Security.escapeHTML : str => (str == null ? '' : String(str));
+        const escAttr = typeof Security !== 'undefined' ? Security.sanitizeAttr : esc;
+
         if (pageItems.length === 0) {
             tableBody.innerHTML = `
                 <tr>
@@ -259,38 +265,40 @@ document.addEventListener('DOMContentLoaded', async () => {
         } else {
             tableBody.innerHTML = pageItems.map(s => {
                 const img = s.imageThumb || s.image;
-                const cat = categories[s.category] || { name: s.categoryLabel || 'Kios', icon: s.icon || '🏪', color: s.color || '#C0392B' };
+                const cat = (Object.hasOwn ? Object.hasOwn(categories, s.category) : categories.hasOwnProperty(s.category))
+                    ? categories[s.category]
+                    : { name: s.categoryLabel || 'Kios', icon: s.icon || '🏪', color: s.color || '#C0392B' };
                 const bld = s.buildingId === 'pasar-buah' ? 'Pasar Buah' : 'Pasar Gedhe';
                 const isStar = Boolean(s.isLegendary);
 
                 return `
-                    <tr data-id="${s.id}">
+                    <tr data-id="${escAttr(s.id)}">
                         <td>
                             ${img ? `
-                                <img src="${img}" alt="${s.name}" class="stall-thumb" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-                                <div class="stall-thumb-fallback" style="display:none; background:${cat.color};">
-                                    <span>${cat.icon}</span>
+                                <img src="${escAttr(img)}" alt="${escAttr(s.name)}" class="stall-thumb" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                                <div class="stall-thumb-fallback" style="display:none; background:${escAttr(cat.color)};">
+                                    <span>${esc(cat.icon)}</span>
                                 </div>
                             ` : `
-                                <div class="stall-thumb-fallback" style="background:${cat.color};">
-                                    <span>${cat.icon}</span>
+                                <div class="stall-thumb-fallback" style="background:${escAttr(cat.color)};">
+                                    <span>${esc(cat.icon)}</span>
                                 </div>
                             `}
                         </td>
                         <td>
                             <div class="stall-name-cell">
                                 <span class="stall-name-title">
-                                    <button type="button" class="btn-star-toggle" data-id="${s.id}" title="${isStar ? 'Hapus status Bintang Legendaris' : 'Jadikan Kios Bintang Legendaris'}" style="background:none; border:none; padding:0; cursor:pointer; font-size:1.1rem; line-height:1; vertical-align:middle; margin-right:4px;">
+                                    <button type="button" class="btn-star-toggle" data-id="${escAttr(s.id)}" title="${isStar ? 'Hapus status Bintang Legendaris' : 'Jadikan Kios Bintang Legendaris'}" style="background:none; border:none; padding:0; cursor:pointer; font-size:1.1rem; line-height:1; vertical-align:middle; margin-right:4px;">
                                         ${isStar ? '⭐' : '<span style="opacity:0.25; filter:grayscale(1);">☆</span>'}
                                     </button>
-                                    ${s.name}
+                                    ${esc(s.name)}
                                 </span>
-                                <span class="stall-name-desc">${s.description || 'Tidak ada deskripsi'}</span>
+                                <span class="stall-name-desc">${esc(s.description || 'Tidak ada deskripsi')}</span>
                             </div>
                         </td>
                         <td>
-                            <span class="category-tag" style="background:${cat.color}20; color:${cat.color};">
-                                ${cat.icon} ${cat.name}
+                            <span class="category-tag" style="background:${escAttr(cat.color)}20; color:${escAttr(cat.color)};">
+                                ${esc(cat.icon)} ${esc(cat.name)}
                             </span>
                         </td>
                         <td>
@@ -304,14 +312,14 @@ document.addEventListener('DOMContentLoaded', async () => {
                         </td>
                         <td>
                             <div class="action-buttons">
-                                <button class="btn-icon-action btn-star-action" title="${isStar ? 'Hapus Bintang Legendaris' : 'Beri Bintang Legendaris'}" data-id="${s.id}">${isStar ? '⭐' : '☆'}</button>
-                                <button class="btn-icon-action btn-edit" title="Edit Data Kios" data-id="${s.id}">
+                                <button class="btn-icon-action btn-star-action" title="${isStar ? 'Hapus Bintang Legendaris' : 'Beri Bintang Legendaris'}" data-id="${escAttr(s.id)}">${isStar ? '⭐' : '☆'}</button>
+                                <button class="btn-icon-action btn-edit" title="Edit Data Kios" data-id="${escAttr(s.id)}">
                                     <i data-lucide="pencil" aria-hidden="true"></i>
                                 </button>
-                                <button class="btn-icon-action btn-pick-pos" title="Atur Posisi di Denah" data-id="${s.id}">
+                                <button class="btn-icon-action btn-pick-pos" title="Atur Posisi di Denah" data-id="${escAttr(s.id)}">
                                     <i data-lucide="map-pin" aria-hidden="true"></i>
                                 </button>
-                                <button class="btn-icon-action delete btn-delete" title="Hapus Kios" data-id="${s.id}">
+                                <button class="btn-icon-action delete btn-delete" title="Hapus Kios" data-id="${escAttr(s.id)}">
                                     <i data-lucide="trash-2" aria-hidden="true"></i>
                                 </button>
                             </div>
@@ -749,6 +757,9 @@ document.addEventListener('DOMContentLoaded', async () => {
             return;
         }
 
+        const esc = typeof Security !== 'undefined' ? Security.escapeHTML : str => (str == null ? '' : String(str));
+        const escAttr = typeof Security !== 'undefined' ? Security.sanitizeAttr : esc;
+
         categoryTableBody.innerHTML = catList.map(cat => {
             const catId = (cat.id || '').toLowerCase();
             const isFac = Boolean(cat.is_facility || cat.isFacility);
@@ -757,13 +768,13 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             return `
                 <tr>
-                    <td style="font-size: 1.25rem; text-align: center;">${cat.icon || '📍'}</td>
-                    <td><strong>${cat.name}</strong></td>
-                    <td><code>${cat.id}</code></td>
+                    <td style="font-size: 1.25rem; text-align: center;">${esc(cat.icon || '📍')}</td>
+                    <td><strong>${esc(cat.name)}</strong></td>
+                    <td><code>${esc(cat.id)}</code></td>
                     <td>
                         <span class="cat-color-badge">
-                            <span class="color-dot" style="background:${cat.color || '#C0392B'};"></span>
-                            ${cat.color || '#C0392B'}
+                            <span class="color-dot" style="background:${escAttr(cat.color || '#C0392B')};"></span>
+                            ${esc(cat.color || '#C0392B')}
                         </span>
                     </td>
                     <td>
@@ -777,11 +788,11 @@ document.addEventListener('DOMContentLoaded', async () => {
                         </span>
                     </td>
                     <td>
-                        <button type="button" class="btn-cat-action btn-edit-cat" data-cat-id="${cat.id}" title="Edit Kategori">
+                        <button type="button" class="btn-cat-action btn-edit-cat" data-cat-id="${escAttr(cat.id)}" title="Edit Kategori">
                             <i data-lucide="pencil" aria-hidden="true"></i>
                             <span>Edit</span>
                         </button>
-                        <button type="button" class="btn-cat-action delete btn-delete-cat" data-cat-id="${cat.id}" title="Hapus Kategori">
+                        <button type="button" class="btn-cat-action delete btn-delete-cat" data-cat-id="${escAttr(cat.id)}" title="Hapus Kategori">
                             <i data-lucide="trash-2" aria-hidden="true"></i>
                         </button>
                     </td>
@@ -952,12 +963,21 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
     }
 
-    // Toast Notification Utility
+    // Toast Notification Utility (XSS-safe text node insertion)
     function showToast(message, type = 'info') {
         if (!toastContainer) return;
         const toast = document.createElement('div');
         toast.className = `toast ${type}`;
-        toast.innerHTML = `<span>${type === 'success' ? '✅' : type === 'error' ? '❌' : 'ℹ️'}</span> <span>${message}</span>`;
+        
+        const iconSpan = document.createElement('span');
+        iconSpan.textContent = type === 'success' ? '✅' : type === 'error' ? '❌' : 'ℹ️';
+        
+        const msgSpan = document.createElement('span');
+        msgSpan.textContent = message;
+
+        toast.appendChild(iconSpan);
+        toast.appendChild(document.createTextNode(' '));
+        toast.appendChild(msgSpan);
         toastContainer.appendChild(toast);
 
         setTimeout(() => {

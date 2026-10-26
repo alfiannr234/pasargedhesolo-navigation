@@ -87,13 +87,16 @@ const DetailPanel = (() => {
 
         title.textContent = stall.name;
 
+        const esc = typeof escapeHTML === 'function' ? escapeHTML : str => str;
+        const escAttr = typeof sanitizeAttr === 'function' ? sanitizeAttr : esc;
+
         let html = '';
 
         // Stall photo if available
         if (stall.image) {
             html += `
                 <div class="detail-img-wrapper">
-                    <img src="${stall.image}" alt="${stall.name}" class="detail-img" onerror="this.parentElement.style.display='none'">
+                    <img src="${escAttr(stall.image)}" alt="${escAttr(stall.name)}" class="detail-img" onerror="this.parentElement.style.display='none'">
                 </div>
             `;
         }
@@ -101,15 +104,15 @@ const DetailPanel = (() => {
         // Category badge
         html += `
             <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 14px;">
-                <span style="font-size: 1.5rem;">${category.icon}</span>
+                <span style="font-size: 1.5rem;">${esc(category.icon)}</span>
                 <span style="
                     padding: 4px 12px;
                     border-radius: 20px;
                     font-size: 0.75rem;
                     font-weight: 700;
-                    background: ${category.color}22;
-                    color: ${category.color};
-                ">${category.name}</span>
+                    background: ${escAttr(category.color)}22;
+                    color: ${escAttr(category.color)};
+                ">${esc(category.name)}</span>
             </div>
         `;
 
@@ -137,7 +140,7 @@ const DetailPanel = (() => {
             html += `
                 <div class="detail-info-row">
                     <span class="detail-info-label">Deskripsi</span>
-                    <span class="detail-info-value">${stall.description}</span>
+                    <span class="detail-info-value">${esc(stall.description)}</span>
                 </div>
             `;
         }
@@ -147,7 +150,7 @@ const DetailPanel = (() => {
         html += `
             <div class="detail-info-row">
                 <span class="detail-info-label">Lokasi</span>
-                <span class="detail-info-value">${bldInfo ? bldInfo.name : 'Pasar Gedhe'} · Lantai ${stall.floor}</span>
+                <span class="detail-info-value">${esc(bldInfo ? bldInfo.name : 'Pasar Gedhe')} · Lantai ${stall.floor}</span>
             </div>
         `;
 
@@ -156,7 +159,7 @@ const DetailPanel = (() => {
             html += `
                 <div class="detail-info-row">
                     <span class="detail-info-label">Kisaran Harga</span>
-                    <span class="detail-info-value">${stall.priceRange}</span>
+                    <span class="detail-info-value">${esc(stall.priceRange)}</span>
                 </div>
             `;
         }
@@ -177,7 +180,7 @@ const DetailPanel = (() => {
         if (stall.rampGrade) {
             html += `
                 <div class="ramp-info" style="margin-top: 10px;">
-                    ♿ Kemiringan ramp: ${stall.rampGrade} (Lebar: ${stall.rampWidth || '1.8m'})
+                    ♿ Kemiringan ramp: ${esc(stall.rampGrade)} (Lebar: ${esc(stall.rampWidth || '1.8m')})
                 </div>
             `;
         }

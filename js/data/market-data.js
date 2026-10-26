@@ -15630,7 +15630,8 @@ const MarketData = (() => {
                 const newCategories = { ...data.categories };
                 list.forEach(c => {
                     if (!c || !c.id) return;
-                    const id = String(c.id).toLowerCase();
+                    const id = String(c.id).toLowerCase().trim();
+                    if (id === '__proto__' || id === 'constructor' || id === 'prototype') return;
                     newCategories[id] = {
                         id: id,
                         name: c.name || id,

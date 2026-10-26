@@ -82,7 +82,7 @@ const Search = (() => {
     }
 
     function handleSearch(query, resultsContainer) {
-        const cleanQuery = query.trim();
+        const cleanQuery = query.trim().slice(0, 100);
         if (cleanQuery.length < 1) {
             resultsContainer.classList.remove('active');
             return;
@@ -105,27 +105,31 @@ const Search = (() => {
         }
 
         const categories = MarketData.getCategories();
+        const esc = typeof escapeHTML === 'function' ? escapeHTML : str => str;
+        const escAttr = typeof sanitizeAttr === 'function' ? sanitizeAttr : esc;
 
         resultsContainer.innerHTML = results.map(stall => {
-            const category = categories[stall.category] || {
-                name: stall.categoryLabel || 'Kios',
-                icon: stall.icon || '📍',
-                color: stall.color || '#C0392B'
-            };
+            const category = (Object.hasOwn ? Object.hasOwn(categories, stall.category) : categories.hasOwnProperty(stall.category))
+                ? categories[stall.category]
+                : {
+                    name: stall.categoryLabel || 'Kios',
+                    icon: stall.icon || '📍',
+                    color: stall.color || '#C0392B'
+                };
             const bldName = stall.buildingId === 'pasar-buah' ? 'Pasar Buah' : 'Pasar Gedhe';
 
             return `
                 <div class="search-result-item" 
-                     data-id="${stall.id}" 
+                     data-id="${escAttr(stall.id)}" 
                      tabindex="0" 
                      role="option"
-                     aria-label="${stall.name}, ${category.name}, ${bldName} Lantai ${stall.floor}">
-                    <div class="search-result-icon" style="background: ${category.color}22; color: ${category.color};">
-                        <span>${category.icon}</span>
+                     aria-label="${escAttr(stall.name)}, ${escAttr(category.name)}, ${bldName} Lantai ${stall.floor}">
+                    <div class="search-result-icon" style="background: ${escAttr(category.color)}22; color: ${escAttr(category.color)};">
+                        <span>${esc(category.icon)}</span>
                     </div>
                     <div class="search-result-info">
                         <span class="search-result-name">${highlightMatch(stall.name, cleanQuery)}</span>
-                        <span class="search-result-category">${category.name} · ${bldName} Lt.${stall.floor}</span>
+                        <span class="search-result-category">${esc(category.name)} · ${bldName} Lt.${stall.floor}</span>
                     </div>
                 </div>
             `;
@@ -142,9 +146,17 @@ const Search = (() => {
     }
 
     function highlightMatch(text, query) {
-        const escaped = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-        const regex = new RegExp(`(${escaped})`, 'gi');
-        return text.replace(regex, '<strong>$1</strong>');
+        const esc = typeof escapeHTML === 'function' ? escapeHTML : str => str;
+        const safeText = esc(text);
+        if (!query) return safeText;
+        const escaped = query.slice(0, 100).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        const safeEscaped = esc(escaped);
+        try {
+            const regex = new RegExp(`(${safeEscaped})`, 'gi');
+            return safeText.replace(regex, '<strong>$1</strong>');
+        } catch (e) {
+            return safeText;
+        }
     }
 
     function selectResult(id) {

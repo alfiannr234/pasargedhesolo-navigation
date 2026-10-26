@@ -22,10 +22,10 @@ DROP POLICY IF EXISTS "Akses baca kios untuk publik" ON public.stalls;
 CREATE POLICY "Akses baca kios untuk publik" ON public.stalls 
     FOR SELECT USING (true);
 
--- Izinkan admin menyimpan, memperbarui, atau menghapus kios
+-- Izinkan HANYA akun admin yang terotentikasi untuk menyimpan, memperbarui, atau menghapus kios
 DROP POLICY IF EXISTS "Akses kelola kios untuk admin" ON public.stalls;
 CREATE POLICY "Akses kelola kios untuk admin" ON public.stalls 
-    FOR ALL USING (true) WITH CHECK (true);
+    FOR ALL TO authenticated USING (true) WITH CHECK (true);
 
 -- 3. Aktifkan Realtime agar peta pengunjung terupdate otomatis saat kios ditambah
 ALTER PUBLICATION supabase_realtime ADD TABLE public.stalls;
@@ -35,22 +35,24 @@ INSERT INTO storage.buckets (id, name, public)
 VALUES ('stall-photos', 'stall-photos', true)
 ON CONFLICT (id) DO NOTHING;
 
--- Kebijakan Akses Storage
+-- Kebijakan Akses Storage:
+-- Publik boleh melihat foto
 DROP POLICY IF EXISTS "Akses lihat foto untuk publik" ON storage.objects;
 CREATE POLICY "Akses lihat foto untuk publik" ON storage.objects 
     FOR SELECT USING (bucket_id = 'stall-photos');
 
+-- Hanya admin terotentikasi yang boleh upload, update, dan hapus foto
 DROP POLICY IF EXISTS "Akses upload foto kios" ON storage.objects;
 CREATE POLICY "Akses upload foto kios" ON storage.objects 
-    FOR INSERT WITH CHECK (bucket_id = 'stall-photos');
+    FOR INSERT TO authenticated WITH CHECK (bucket_id = 'stall-photos');
 
 DROP POLICY IF EXISTS "Akses update foto kios" ON storage.objects;
 CREATE POLICY "Akses update foto kios" ON storage.objects 
-    FOR UPDATE USING (bucket_id = 'stall-photos');
+    FOR UPDATE TO authenticated USING (bucket_id = 'stall-photos');
 
 DROP POLICY IF EXISTS "Akses hapus foto kios" ON storage.objects;
 CREATE POLICY "Akses hapus foto kios" ON storage.objects 
-    FOR DELETE USING (bucket_id = 'stall-photos');
+    FOR DELETE TO authenticated USING (bucket_id = 'stall-photos');
 
 -- =========================================================================
 -- 5. Buat Tabel Kategori Komoditas (Categories) Dinamis
@@ -73,10 +75,10 @@ DROP POLICY IF EXISTS "Akses baca kategori untuk publik" ON public.categories;
 CREATE POLICY "Akses baca kategori untuk publik" ON public.categories 
     FOR SELECT USING (true);
 
--- Izinkan admin menyimpan, memperbarui, atau menghapus kategori
+-- Izinkan HANYA akun admin yang terotentikasi untuk menyimpan, memperbarui, atau menghapus kategori
 DROP POLICY IF EXISTS "Akses kelola kategori untuk admin" ON public.categories;
 CREATE POLICY "Akses kelola kategori untuk admin" ON public.categories 
-    FOR ALL USING (true) WITH CHECK (true);
+    FOR ALL TO authenticated USING (true) WITH CHECK (true);
 
 -- Aktifkan Realtime untuk tabel categories
 ALTER PUBLICATION supabase_realtime ADD TABLE public.categories;
