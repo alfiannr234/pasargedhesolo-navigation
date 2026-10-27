@@ -15588,12 +15588,11 @@ const MarketData = (() => {
     }
 
     function getAllStalls(bldId) {
-        if (bldId) {
-            return [...(data.stalls[bldId + '-1'] || []), ...(data.stalls[bldId + '-2'] || [])];
-        }
         const all = [];
         for (const key in data.stalls) {
-            all.push(...data.stalls[key]);
+            if (!bldId || key.startsWith(bldId + '-')) {
+                all.push(...data.stalls[key]);
+            }
         }
         return all;
     }
@@ -15650,6 +15649,74 @@ const MarketData = (() => {
         return false;
     }
 
+    function syncStalls(dynamicList) {
+        if (!Array.isArray(dynamicList) || dynamicList.length === 0) return false;
+        try {
+            const newStalls = {
+                'pasar-gede-1': [],
+                'pasar-gede-2': [],
+                'pasar-buah-1': [],
+                'pasar-buah-2': []
+            };
+            dynamicList.forEach(s => {
+                const bld = s.buildingId || 'pasar-gede';
+                const flr = s.floor || 1;
+                const key = bld + '-' + flr;
+                if (!newStalls[key]) newStalls[key] = [];
+
+                if (s.lat === undefined && s.y !== undefined) {
+                    s.lat = 1024 - s.y;
+                }
+                if (s.lng === undefined && s.x !== undefined) {
+                    s.lng = s.x;
+                }
+                if (s.category) {
+                    s.category = s.category.toLowerCase();
+                }
+
+                newStalls[key].push(s);
+
+                // Register into NavigationGraph dynamically
+                if (typeof NavigationGraph !== 'undefined' && NavigationGraph.nodes) {
+                    const nId = s.nodeId || ('n_' + s.id);
+                    if (!NavigationGraph.nodes[nId]) {
+                        NavigationGraph.nodes[nId] = {
+                            id: nId,
+                            stallId: s.id,
+                            name: s.name,
+                            buildingId: bld,
+                            floor: flr,
+                            x: s.lng !== undefined ? s.lng : (s.x || 500),
+                            y: s.lat !== undefined ? s.lat : (1024 - (s.y || 500)),
+                            realX: s.x || 500,
+                            realY: s.y || 500,
+                            type: 'stall',
+                            category: s.category || 'kuliner',
+                            accessible: s.accessible !== false,
+                            hasTactile: false
+                        };
+                    } else {
+                        const node = NavigationGraph.nodes[nId];
+                        node.name = s.name;
+                        node.buildingId = bld;
+                        node.floor = flr;
+                        node.category = s.category || 'kuliner';
+                        node.accessible = s.accessible !== false;
+                        if (s.lng !== undefined) node.x = s.lng;
+                        if (s.lat !== undefined) node.y = s.lat;
+                        if (s.x !== undefined) node.realX = s.x;
+                        if (s.y !== undefined) node.realY = s.y;
+                    }
+                }
+            });
+            data.stalls = newStalls;
+            return true;
+        } catch (e) {
+            console.warn('Could not sync dynamic stalls:', e);
+        }
+        return false;
+    }
+
     function syncWithDynamicStorage() {
         try {
             // 1. Sync dynamic categories
@@ -15661,64 +15728,16 @@ const MarketData = (() => {
                         syncCategories(parsedCats);
                     } catch (e) {}
                 }
-            }
 
-            // 2. Sync dynamic stalls
-            const raw = typeof localStorage !== 'undefined' ? localStorage.getItem('pasargede_dynamic_stalls') : null;
-            if (raw) {
-                const dynamicList = JSON.parse(raw);
-                if (Array.isArray(dynamicList) && dynamicList.length > 0) {
-                    const newStalls = {
-                        'pasar-gede-1': [],
-                        'pasar-gede-2': [],
-                        'pasar-buah-1': [],
-                        'pasar-buah-2': []
-                    };
-                    dynamicList.forEach(s => {
-                        const key = (s.buildingId || 'pasar-gede') + '-' + (s.floor || 1);
-                        if (!newStalls[key]) newStalls[key] = [];
-
-                        // Normalize coordinates and category
-                        if (s.lat === undefined && s.y !== undefined) {
-                            s.lat = 1024 - s.y;
-                        }
-                        if (s.lng === undefined && s.x !== undefined) {
-                            s.lng = s.x;
-                        }
-                        if (s.category) {
-                            s.category = s.category.toLowerCase();
-                        }
-
-                        newStalls[key].push(s);
-
-                        // Register into NavigationGraph if available
-                        if (typeof NavigationGraph !== 'undefined' && NavigationGraph.nodes) {
-                            const nId = s.nodeId || ('n_' + s.id);
-                            if (!NavigationGraph.nodes[nId]) {
-                                NavigationGraph.nodes[nId] = {
-                                    id: nId,
-                                    stallId: s.id,
-                                    name: s.name,
-                                    buildingId: s.buildingId || 'pasar-gede',
-                                    floor: s.floor || 1,
-                                    x: s.lng !== undefined ? s.lng : (s.x || 500),
-                                    y: s.lat !== undefined ? s.lat : (1024 - (s.y || 500)),
-                                    realX: s.x || 500,
-                                    realY: s.y || 500,
-                                    type: 'stall',
-                                    category: s.category || 'kuliner',
-                                    accessible: s.accessible !== false,
-                                    hasTactile: false
-                                };
-                            }
-                        }
-                    });
-                    data.stalls = newStalls;
-                    return true;
+                // 2. Sync dynamic stalls
+                const raw = localStorage.getItem('pasargede_dynamic_stalls');
+                if (raw) {
+                    const dynamicList = JSON.parse(raw);
+                    return syncStalls(dynamicList);
                 }
             }
         } catch (e) {
-            console.warn('Could not sync dynamic stalls:', e);
+            console.warn('Could not sync dynamic storage:', e);
         }
         return false;
     }
@@ -15741,6 +15760,8 @@ const MarketData = (() => {
         searchStalls,
         getCategoryCount,
         syncCategories,
+        syncStalls,
+        loadDynamicStalls: syncStalls,
         syncWithDynamicStorage
     };
 })();

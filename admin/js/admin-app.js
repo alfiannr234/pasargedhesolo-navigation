@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             e.preventDefault();
             try {
                 await DB.login(loginEmail.value.trim(), loginPassword.value.trim());
-                showToast('Login berhasil! Selamat datang di Admin Portal.', 'success');
+                showToast('Login berhasil!', 'success');
                 showDashboard();
             } catch (err) {
                 showToast(err.message, 'error');
@@ -175,6 +175,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
         }
         populateCategoryOptions();
+        populateBuildingOptions();
         updateStats();
         renderTable();
     }
@@ -218,6 +219,32 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (fCategory) fCategory.innerHTML = formOpts;
     }
 
+    function populateBuildingOptions() {
+        if (typeof MarketData === 'undefined' || typeof MarketData.getBuildings !== 'function') return;
+        const blds = MarketData.getBuildings() || [];
+        if (blds.length === 0) return;
+
+        const esc = typeof Security !== 'undefined' ? Security.escapeHTML : str => (str == null ? '' : String(str));
+        const escAttr = typeof Security !== 'undefined' ? Security.sanitizeAttr : esc;
+
+        if (selectBuilding) {
+            let filterHtml = '<option value="all">Gedung: Semua</option>';
+            blds.forEach(b => {
+                filterHtml += `<option value="${escAttr(b.id)}">${esc(b.name)}</option>`;
+            });
+            selectBuilding.innerHTML = filterHtml;
+            selectBuilding.value = filterBuilding;
+        }
+
+        if (fBuilding) {
+            let formHtml = '';
+            blds.forEach(b => {
+                formHtml += `<option value="${escAttr(b.id)}">${esc(b.name)}</option>`;
+            });
+            fBuilding.innerHTML = formHtml;
+        }
+    }
+
     // 4. Filter & Pagination
     function getFilteredStalls() {
         const q = searchQuery.toLowerCase();
@@ -258,7 +285,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             tableBody.innerHTML = `
                 <tr>
                     <td colspan="7" style="text-align: center; padding: 40px; color: var(--gray-400);">
-                        Tidak ada kios yang cocok dengan filter pencarian.
+                        Tidak ada kios yang cocok.
                     </td>
                 </tr>
             `;
@@ -355,7 +382,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             btn.addEventListener('click', () => confirmDeleteStall(btn.dataset.id));
         });
 
-        // Initialize Lucide icons on newly rendered table rows
         if (typeof lucide !== 'undefined') {
             lucide.createIcons();
         }
@@ -371,7 +397,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         try {
             await DB.saveStall(stall);
             if (typeof window !== 'undefined') {
-                window.dispatchEvent(new Event('pasargede_data_updated'));
+                window.dispatchEvent(new Event('pasargedhe_data_updated'));
             }
             await loadDashboardData();
         } catch (err) {
@@ -725,7 +751,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         catFormTitle.textContent = `Edit Kategori: ${cat.name}`;
         catFormName.value = cat.name || '';
         catFormId.value = cat.id || '';
-        catFormId.readOnly = true; // Lock ID during edit to avoid broken references
+        catFormId.readOnly = true;
         catFormIcon.value = cat.icon || '📍';
         catFormColor.value = cat.color || '#C0392B';
         catFormColorHex.value = (cat.color || '#C0392B').toUpperCase();
@@ -968,10 +994,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (!toastContainer) return;
         const toast = document.createElement('div');
         toast.className = `toast ${type}`;
-        
+
         const iconSpan = document.createElement('span');
         iconSpan.textContent = type === 'success' ? '✅' : type === 'error' ? '❌' : 'ℹ️';
-        
+
         const msgSpan = document.createElement('span');
         msgSpan.textContent = message;
 

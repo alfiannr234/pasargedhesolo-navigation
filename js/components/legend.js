@@ -5,9 +5,9 @@
 
 const Legend = (() => {
     let activeCategories = new Set([
-        'buah', 'kuliner', 'camilan', 'sayur', 'sembako', 'jamu', 
-        'daging_unggas', 'daging_sapi', 'seafood', 'perkakas', 
-        'kerajinan', 'tekstil', 'telur', 'service', 'fashion', 
+        'buah', 'kuliner', 'camilan', 'sayur', 'sembako', 'jamu',
+        'daging_unggas', 'daging_sapi', 'seafood', 'perkakas',
+        'kerajinan', 'tekstil', 'telur', 'service', 'fashion',
         'entertainment', 'bunga', 'toilet', 'pintu', 'tangga', 'ramp'
     ]);
     let onToggleCallback = null;
@@ -30,34 +30,34 @@ const Legend = (() => {
      */
     function render(container, floor, buildingId) {
         if (!container) return;
-        
+
         currentFloor = floor || currentFloor;
         currentBuilding = buildingId || currentBuilding;
-        
+
         container.innerHTML = '';
-        
+
         // Actions (Select all / Deselect all)
         const actionsDiv = document.createElement('div');
         actionsDiv.className = 'legend-actions';
-        
+
         const selectAllBtn = document.createElement('button');
         selectAllBtn.className = 'legend-action-btn';
         selectAllBtn.textContent = 'Pilih Semua';
         selectAllBtn.setAttribute('aria-label', 'Tampilkan semua kategori pada peta');
         selectAllBtn.addEventListener('click', () => toggleAll(true, currentFloor, currentBuilding));
-        
+
         const deselectAllBtn = document.createElement('button');
         deselectAllBtn.className = 'legend-action-btn';
         deselectAllBtn.textContent = 'Sembunyikan Semua';
         deselectAllBtn.setAttribute('aria-label', 'Sembunyikan semua kategori pada peta');
         deselectAllBtn.addEventListener('click', () => toggleAll(false, currentFloor, currentBuilding));
-        
+
         actionsDiv.appendChild(selectAllBtn);
         actionsDiv.appendChild(deselectAllBtn);
         container.appendChild(actionsDiv);
 
         const floorCategories = MarketData.getCategoriesForFloor(currentFloor, currentBuilding);
-        
+
         const stallCats = [];
         const facilityCats = [];
 
@@ -77,7 +77,7 @@ const Legend = (() => {
                 addLegendItem(container, key, cat, currentFloor, currentBuilding);
             });
         }
-        
+
         // Group 2: Fasilitas & Akses
         if (facilityCats.length > 0) {
             addGroupTitle(container, 'Fasilitas & Aksesibilitas');
@@ -163,9 +163,9 @@ const Legend = (() => {
         } else {
             activeCategories.add(key);
         }
-        
+
         updateVisuals();
-        
+
         const isNowActive = activeCategories.has(key);
         if (onToggleCallback) {
             onToggleCallback(key, isNowActive, activeCategories);
@@ -184,20 +184,20 @@ const Legend = (() => {
         const fl = floor || currentFloor;
         const bld = buildingId || currentBuilding;
         const floorCategories = MarketData.getCategoriesForFloor(fl, bld);
-        
+
         if (state) {
             Object.keys(floorCategories).forEach(key => activeCategories.add(key));
         } else {
             activeCategories.clear();
         }
-        
+
         updateVisuals();
-        
+
         if (onToggleCallback) {
             onToggleCallback(null, state, activeCategories);
         }
 
-        A11y.announce(state ? 'Semua kategori ditampilkan pada denah' : 'Semua kategori disembunyikan');
+        A11y.announce(state ? 'Semua kategori ditampilkan' : 'Semua kategori disembunyikan');
     }
 
     /**

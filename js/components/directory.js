@@ -59,8 +59,9 @@ const Directory = (() => {
         // Setup Alphabet Bar
         renderAlphabetBar();
 
-        // Populate Category Dropdown
+        // Populate Category & Building Dropdown
         populateCategories();
+        populateBuildings();
 
         // Event listeners
         if (backBtn) backBtn.addEventListener('click', close);
@@ -158,9 +159,26 @@ const Directory = (() => {
             return (a.name || '').localeCompare(b.name || '');
         });
         populateCategories();
+        populateBuildings();
+        if (countBadgeEl) {
+            countBadgeEl.textContent = `${allStalls.length} Kios`;
+        }
         if (isOpen()) {
             renderGrid();
         }
+    }
+
+    function populateBuildings() {
+        if (!buildingSelectEl || typeof MarketData.getBuildings !== 'function') return;
+        const buildings = MarketData.getBuildings() || [];
+        const esc = typeof escapeHTML === 'function' ? escapeHTML : str => str;
+        const escAttr = typeof sanitizeAttr === 'function' ? sanitizeAttr : esc;
+        let bldHtml = '<option value="all">Gedung: Semua</option>';
+        buildings.forEach(b => {
+            bldHtml += `<option value="${escAttr(b.id)}">${esc(b.name)}</option>`;
+        });
+        buildingSelectEl.innerHTML = bldHtml;
+        buildingSelectEl.value = selectedBuilding;
     }
 
     function populateCategories() {

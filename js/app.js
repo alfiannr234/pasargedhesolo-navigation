@@ -283,23 +283,46 @@ document.addEventListener('DOMContentLoaded', () => {
     // Supabase real-time listener if DB is available
     if (typeof DB !== 'undefined') {
         DB.init().then(async () => {
-            // Load and sync dynamic categories from Supabase / LocalStorage
+            // 1. Fetch dynamic categories & stalls in parallel from Supabase / LocalStorage
             try {
-                const cats = await DB.getAllCategories();
+                const [cats, stalls] = await Promise.all([
+                    DB.getAllCategories(),
+                    DB.getAllStalls()
+                ]);
+
+                let changed = false;
                 if (cats && cats.length > 0) {
                     MarketData.syncCategories(cats);
+                    changed = true;
+                }
+                if (stalls && stalls.length > 0) {
+                    MarketData.syncStalls(stalls);
+                    changed = true;
+                }
+
+                if (changed) {
+                    MarketMap.reloadFloor();
                     Legend.refresh();
+                    if (typeof Directory !== 'undefined' && Directory.refreshData) {
+                        Directory.refreshData();
+                    }
                 }
             } catch (err) {
-                console.warn('Could not load categories:', err);
+                console.warn('Could not load initial dynamic data from DB:', err);
             }
 
+            // 2. Real-time stall updates
             if (typeof DB.onStallsChange === 'function') {
-                DB.onStallsChange(() => {
+                DB.onStallsChange((newStalls) => {
+                    console.log('⚡ Realtime stalls update from server');
+                    if (newStalls && newStalls.length > 0) {
+                        MarketData.syncStalls(newStalls);
+                    }
                     syncAndRefreshMap();
                 });
             }
 
+            // 3. Real-time category updates
             if (typeof DB.onCategoriesChange === 'function') {
                 DB.onCategoriesChange((cats) => {
                     console.log('🔄 Kategori dinamis diperbarui dari server:', cats);
@@ -307,6 +330,9 @@ document.addEventListener('DOMContentLoaded', () => {
                         MarketData.syncCategories(cats);
                         MarketMap.reloadFloor();
                         Legend.refresh();
+                        if (typeof Directory !== 'undefined' && Directory.refreshData) {
+                            Directory.refreshData();
+                        }
                     }
                 });
             }

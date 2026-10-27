@@ -152,9 +152,10 @@ const MarketMap = (() => {
             });
 
             // Tooltip on hover
+            const esc = typeof escapeHTML === 'function' ? escapeHTML : str => str;
             marker.bindTooltip(`
-                <strong>${stall.name}</strong><br>
-                <small style="color:${category.color || '#C0392B'}; font-weight:600;">${category.name || stall.categoryLabel || 'Kios'}</small>
+                <strong>${esc(stall.name)}</strong><br>
+                <small style="color:${esc(category.color || '#C0392B')}; font-weight:600;">${esc(category.name || stall.categoryLabel || 'Kios')}</small>
             `, {
                 direction: 'top',
                 offset: [0, -14],

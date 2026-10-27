@@ -52,7 +52,7 @@ const DetailPanel = (() => {
                         const targetNodeId = stall.nodeId || stall.id;
                         Navigation.setDestination(targetNodeId, stall.name);
                         close();
-                        A11y.announce(`Tujuan disetel ke ${stall.name}. Silakan tentukan titik awal di panel navigasi.`);
+                        A11y.announce(`Tujuan disetel ke ${stall.name}. Silakan tentukan titik awal.`);
                     }
                 }
             });
@@ -100,7 +100,7 @@ const DetailPanel = (() => {
                 </div>
             `;
         }
-        
+
         // Category badge
         html += `
             <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 14px;">
@@ -169,9 +169,9 @@ const DetailPanel = (() => {
             <div class="detail-info-row">
                 <span class="detail-info-label">Aksesibilitas</span>
                 <span class="detail-info-value">
-                    ${stall.accessible !== false ? '✅ Aksesibel kursi roda (jalur landai)' : '⚠️ Tangga saja (tidak ramah kursi roda)'}
-                    ${stall.hasRamp ? '<br>♿ Tersedia fasilitas ramp' : ''}
-                    ${stall.hasTactile ? '<br>⠿ Tersedia ubin pemandu taktil' : ''}
+                    ${stall.accessible !== false ? 'Jalur landai' : 'Tangga saja'}
+                    ${stall.hasRamp ? '<br>Tersedia fasilitas ramp' : ''}
+                    ${stall.hasTactile ? '<br>Tersedia ubin pemandu taktil' : ''}
                 </span>
             </div>
         `;
@@ -180,7 +180,7 @@ const DetailPanel = (() => {
         if (stall.rampGrade) {
             html += `
                 <div class="ramp-info" style="margin-top: 10px;">
-                    ♿ Kemiringan ramp: ${esc(stall.rampGrade)} (Lebar: ${esc(stall.rampWidth || '1.8m')})
+                    Kemiringan ramp: ${esc(stall.rampGrade)} (Lebar: ${esc(stall.rampWidth || '1.8m')})
                 </div>
             `;
         }
