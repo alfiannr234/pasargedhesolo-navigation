@@ -44,6 +44,9 @@
     <!-- Master Seed Data from Public App -->
     <script src="../js/data/market-data.js"
         onerror="if(!this.dataset.retried){this.dataset.retried='1';this.src='js/data/market-data.js';}"></script>
+    <!-- App Icons Utility -->
+    <script src="../js/utils/icons.js"
+        onerror="if(!this.dataset.retried){this.dataset.retried='1';this.src='../js/utils/icons.js';}"></script>
     <!-- Supabase Config & Unified DB -->
     <script src="js/supabase-config.js"
         onerror="if(!this.dataset.retried){this.dataset.retried='1';this.src='admin/js/supabase-config.js';}"></script>
@@ -95,12 +98,15 @@
             <!-- Link back to public map -->
             <a href="../index.html" target="_blank" class="btn-open-map"
                 title="Buka website peta pengunjung di tab baru">
+                <i data-lucide="external-link" aria-hidden="true"></i>
                 <span>Lihat Peta Pengunjung</span>
-                <span>↗</span>
             </a>
 
             <!-- Logout -->
-            <button type="button" class="btn-logout" id="btnLogout">Keluar</button>
+            <button type="button" class="btn-logout" id="btnLogout">
+                <i data-lucide="log-out" aria-hidden="true"></i>
+                <span>Keluar</span>
+            </button>
         </div>
     </header>
 
@@ -110,7 +116,9 @@
         <!-- Stats Overview Cards -->
         <section class="stats-grid" aria-label="Statistik Pasar">
             <div class="stat-card">
-                <div class="stat-icon red">🏪</div>
+                <div class="stat-icon red">
+                    <i data-lucide="store" aria-hidden="true"></i>
+                </div>
                 <div class="stat-details">
                     <span class="stat-value" id="statTotal">0</span>
                     <span class="stat-label">Total Kios Terdaftar</span>
@@ -118,7 +126,9 @@
             </div>
 
             <div class="stat-card">
-                <div class="stat-icon green">📸</div>
+                <div class="stat-icon green">
+                    <i data-lucide="camera" aria-hidden="true"></i>
+                </div>
                 <div class="stat-details">
                     <span class="stat-value" id="statPhotos">0</span>
                     <span class="stat-label">Kios Memiliki Foto</span>
@@ -126,7 +136,9 @@
             </div>
 
             <div class="stat-card">
-                <div class="stat-icon blue">🏛️</div>
+                <div class="stat-icon blue">
+                    <i data-lucide="landmark" aria-hidden="true"></i>
+                </div>
                 <div class="stat-details">
                     <span class="stat-value" id="statPasarGede">0</span>
                     <span class="stat-label">Pasar Gedhe (Utama)</span>
@@ -134,7 +146,9 @@
             </div>
 
             <div class="stat-card">
-                <div class="stat-icon orange">🍎</div>
+                <div class="stat-icon orange">
+                    <i data-lucide="apple" aria-hidden="true"></i>
+                </div>
                 <div class="stat-details">
                     <span class="stat-value" id="statPasarBuah">0</span>
                     <span class="stat-label">Pasar Buah (Timur)</span>
@@ -151,17 +165,21 @@
                 <div class="table-actions">
                     <button type="button" class="btn-action-secondary" id="btnManageCategories"
                         title="Kelola master kategori komoditas, ikon emoji, dan warna pin">
+                        <i data-lucide="tags" aria-hidden="true"></i>
                         <span>Kelola Kategori</span>
                     </button>
                     <button type="button" class="btn-action-secondary" id="btnSeedData"
                         title="Import ulang seluruh data kios resmi Pasar Gedhe">
+                        <i data-lucide="refresh-cw" aria-hidden="true"></i>
                         <span>Sinkronkan Data Awal</span>
                     </button>
                     <button type="button" class="btn-action-secondary" id="btnExportData"
                         title="Download backup data format JSON">
+                        <i data-lucide="download" aria-hidden="true"></i>
                         <span>Export JSON</span>
                     </button>
                     <button type="button" class="btn-action-primary" id="btnAddStall">
+                        <i data-lucide="plus" aria-hidden="true"></i>
                         <span>Tambah Kios Baru</span>
                     </button>
                 </div>
@@ -170,7 +188,8 @@
             <!-- Filter Toolbar -->
             <div class="table-filter-bar">
                 <div class="filter-search">
-                    <input type="text" id="tableSearchInput" maxlength="100" placeholder="Cari nama kios, produk, atau deskripsi">
+                    <input type="text" id="tableSearchInput" maxlength="100"
+                        placeholder="Cari nama kios, produk, atau deskripsi">
                 </div>
 
                 <select id="filterBuilding" class="filter-select" aria-label="Filter Gedung">
@@ -316,6 +335,7 @@
                             <label class="form-label" style="opacity: 0;">Picker</label>
                             <button type="button" class="btn-action-secondary" id="btnPickCoords"
                                 style="width: 100%; justify-content: center;">
+                                <i data-lucide="map-pin" aria-hidden="true"></i>
                                 <span>Pilih Posisi di Denah</span>
                             </button>
                         </div>
@@ -351,7 +371,7 @@
                 <div class="modal-footer">
                     <button type="button" class="btn-action-secondary" id="btnCancelStall">Batal</button>
                     <button type="submit" class="btn-action-primary" id="btnSaveStall">
-                        <span>💾</span>
+                        <i data-lucide="save" aria-hidden="true"></i>
                         <span>Simpan Data Kios</span>
                     </button>
                 </div>
@@ -392,8 +412,7 @@
         <div class="modal-card modal-category-card">
             <div class="modal-header">
                 <div>
-                    <h3 id="categoryModalTitle">Kelola Kategori Komoditas</h3>
-                    <p class="modal-subtitle">Atur nama kategori, emoji ikon, dan warna penanda pin peta</p>
+                    <h3 id="categoryModalTitle">Kelola Kategori</h3>
                 </div>
                 <button type="button" class="modal-close-btn" id="categoryModalClose">&times;</button>
             </div>
@@ -402,77 +421,122 @@
                 <!-- Form: Tambah / Edit Kategori -->
                 <div class="category-form-card">
                     <h4 class="category-form-title" id="catFormTitle">Tambah Kategori Baru</h4>
+
                     <form id="categoryForm">
                         <input type="hidden" id="catFormOriginalId" value="">
                         <input type="hidden" id="catFormMode" value="create">
+                        <input type="hidden" id="catFormIcon" value="Apple">
 
-                        <div class="form-grid-3">
+                        <!-- Basic Information -->
+                        <div class="form-grid-2">
                             <div class="form-group">
                                 <label for="catFormName" class="form-label">Nama Kategori *</label>
                                 <input type="text" id="catFormName" class="form-input" maxlength="80"
-                                    placeholder="Contoh: Kopi & Angkringan" required>
+                                    placeholder="Contoh: Kopi & Angkringan" required autocomplete="off">
                             </div>
                             <div class="form-group">
-                                <label for="catFormId" class="form-label">ID *</label>
-                                <input type="text" id="catFormId" class="form-input" maxlength="40" placeholder="contoh: kopi"
-                                    required>
-                            </div>
-                            <div class="form-group">
-                                <label for="catFormIcon" class="form-label">Ikon Emoji *</label>
-                                <input type="text" id="catFormIcon" class="form-input" placeholder="☕" maxlength="4"
-                                    value="🍎" required>
+                                <label for="catFormId" class="form-label">ID Kategori *</label>
+                                <input type="text" id="catFormId" class="form-input" maxlength="40"
+                                    placeholder="contoh: kopi_angkringan" required autocomplete="off">
                             </div>
                         </div>
 
-                        <!-- Quick Emoji Presets -->
-                        <div class="cat-emoji-presets">
-                            <span class="cat-preset-label">Pilih Emoji Cepat:</span>
-                            <div class="cat-preset-grid" id="catEmojiPresets">
-                                <button type="button" class="btn-preset-emoji" data-emoji="🍜">🍜</button>
-                                <button type="button" class="btn-preset-emoji" data-emoji="🍎">🍎</button>
-                                <button type="button" class="btn-preset-emoji" data-emoji="☕">☕</button>
-                                <button type="button" class="btn-preset-emoji" data-emoji="🥬">🥬</button>
-                                <button type="button" class="btn-preset-emoji" data-emoji="🎁">🎁</button>
-                                <button type="button" class="btn-preset-emoji" data-emoji="👕">👕</button>
-                                <button type="button" class="btn-preset-emoji" data-emoji="🧵">🧵</button>
-                                <button type="button" class="btn-preset-emoji" data-emoji="🥩">🥩</button>
-                                <button type="button" class="btn-preset-emoji" data-emoji="🌾">🌾</button>
-                                <button type="button" class="btn-preset-emoji" data-emoji="🍵">🍵</button>
-                                <button type="button" class="btn-preset-emoji" data-emoji="🍳">🍳</button>
-                                <button type="button" class="btn-preset-emoji" data-emoji="🥚">🥚</button>
-                                <button type="button" class="btn-preset-emoji" data-emoji="🌸">🌸</button>
-                                <button type="button" class="btn-preset-emoji" data-emoji="🛠️">🛠️</button>
-                                <button type="button" class="btn-preset-emoji" data-emoji="👜">👜</button>
-                                <button type="button" class="btn-preset-emoji" data-emoji="🏪">🏪</button>
-                                <button type="button" class="btn-preset-emoji" data-emoji="🕌">🕌</button>
-                                <button type="button" class="btn-preset-emoji" data-emoji="🚻">🚻</button>
-                            </div>
+                        <div class="form-group cat-checkbox-wrap">
+                            <label class="checkbox-label" for="catFormFacility">
+                                <input type="checkbox" id="catFormFacility">
+                                <span>Tandai sebagai Fasilitas Umum (Toilet, Tangga, Mushola, dll)</span>
+                            </label>
                         </div>
 
-                        <div class="form-grid-2">
-                            <div class="form-group">
-                                <label for="catFormColor" class="form-label">Warna Pin Peta</label>
-                                <div class="color-picker-wrapper">
-                                    <input type="color" id="catFormColor" class="color-input" value="#E74C3C">
-                                    <input type="text" id="catFormColorHex" class="form-input form-input-hex"
-                                        value="#E74C3C" maxlength="7">
+                        <!-- 2. Searchable Icon Picker (Vectors only, NO emoji/PNG) -->
+                        <div class="cat-icon-picker-section">
+                            <div class="cat-section-header">
+                                <div class="cat-section-title-wrap">
+                                    <label class="form-label" style="margin-bottom:0;">Pilih Ikon Vektor Kategori
+                                        *</label>
+                                </div>
+                                <div class="cat-selected-icon-pill">
+                                    <span class="cat-pill-label">Ikon Terpilih:</span>
+                                    <div class="cat-selected-icon-badge" id="catSelectedIconBadge"></div>
+                                    <strong id="catSelectedIconName">Apple</strong>
                                 </div>
                             </div>
 
-                            <div class="form-group cat-checkbox-group">
-                                <label class="checkbox-label" for="catFormFacility">
-                                    <input type="checkbox" id="catFormFacility">
-                                    <span>Tandai sebagai Fasilitas Umum</span>
-                                </label>
+                            <!-- Search Toolbar & Group Tabs -->
+                            <div class="cat-icon-toolbar">
+                                <div class="cat-icon-search-box">
+                                    <i data-lucide="search" aria-hidden="true" class="cat-search-icon"></i>
+                                    <input type="text" id="catIconSearchInput" class="form-input cat-search-input"
+                                        placeholder="Cari ikon... (contoh: apple, soto, kopi, baju, jamu, obral)">
+                                    <button type="button" class="cat-search-clear" id="catIconSearchClear"
+                                        style="display:none;" title="Bersihkan pencarian">&times;</button>
+                                </div>
+                                <div class="cat-group-tabs" id="catGroupTabs">
+                                    <button type="button" class="cat-group-tab active" data-group="all">Semua</button>
+                                    <button type="button" class="cat-group-tab" data-group="makanan">Makanan &
+                                        Minuman</button>
+                                    <button type="button" class="cat-group-tab" data-group="bahan_pokok">Bahan
+                                        Pokok</button>
+                                    <button type="button" class="cat-group-tab" data-group="pakaian">Pakaian &
+                                        Kerajinan</button>
+                                    <button type="button" class="cat-group-tab" data-group="jasa">Jasa &
+                                        Perkakas</button>
+                                    <button type="button" class="cat-group-tab" data-group="fasilitas">Fasilitas &
+                                        Akses</button>
+                                </div>
+                            </div>
+
+                            <!-- Icon Grid -->
+                            <div class="cat-icon-grid" id="catIconGrid" role="radiogroup"
+                                aria-label="Pilih ikon kategori">
+                                <!-- Populated dynamically by JS -->
+                            </div>
+                            <div class="cat-icon-empty" id="catIconEmpty" style="display: none;">
+                                <i data-lucide="search-x" aria-hidden="true"></i>
+                                <span>Tidak ada ikon yang cocok dengan kata kunci pencarian.</span>
                             </div>
                         </div>
 
+                        <!-- 3. Accessible Color Palette Picker -->
+                        <div class="cat-color-palette-section">
+                            <div class="cat-section-header">
+                                <div class="cat-section-title-wrap">
+                                    <label class="form-label" style="margin-bottom:0;">Palet Warna Latar Kategori
+                                        *</label>
+                                    <small class="cat-section-sub">12 swatch warna kontras tinggi terhadap ikon putih
+                                        (bebas warna pucat/krem)</small>
+                                </div>
+                            </div>
+
+                            <!-- 12 Swatches Grid -->
+                            <div class="cat-swatches-grid" id="catColorSwatches" role="radiogroup"
+                                aria-label="Pilih warna latar kategori">
+                                <!-- Populated dynamically with duplicate usage detection -->
+                            </div>
+
+                            <!-- Custom Hex & Native Color Sync -->
+                            <div class="cat-custom-color-row">
+                                <div class="cat-color-hex-group">
+                                    <span class="cat-custom-color-label">Atau sesuaikan HEX:</span>
+                                    <div class="color-picker-wrapper">
+                                        <input type="color" id="catFormColor" class="color-input" value="#C0392B"
+                                            title="Pilih warna kustom">
+                                        <input type="text" id="catFormColorHex" class="form-input form-input-hex"
+                                            value="#C0392B" maxlength="7" placeholder="#C0392B">
+                                    </div>
+                                </div>
+                                <div class="cat-color-status-msg" id="catColorStatusMsg"></div>
+                            </div>
+                        </div>
+
+                        <!-- Submit / Reset Actions -->
                         <div class="category-form-actions">
                             <button type="button" class="btn-action-secondary" id="btnResetCatForm"
                                 style="display:none;">
                                 Batal Edit
                             </button>
                             <button type="submit" class="btn-action-primary" id="btnSaveCategory">
+                                <i data-lucide="save" aria-hidden="true"></i>
                                 <span>Simpan Kategori</span>
                             </button>
                         </div>
@@ -480,10 +544,9 @@
                 </div>
 
                 <!-- Daftar Kategori Aktif -->
-                <div class="category-list-wrapper">
+                <div class="category-list-wrapper" id="categoryListWrapper">
                     <div class="category-list-header">
-                        <h4>Daftar Kategori Komoditas (<span id="catListCount">0</span>)</h4>
-                        <small>Kategori langsung tersinkronisasi ke formulir kios dan legenda peta publik</small>
+                        <h4>Daftar Kategori (<span id="catListCount">0</span>)</h4>
                     </div>
 
                     <div class="table-responsive">
@@ -512,7 +575,10 @@
             </div>
 
             <div class="modal-footer">
-                <button type="button" class="btn-secondary" id="categoryModalDone">Selesai</button>
+                <button type="button" class="btn-action-secondary" id="categoryModalDone">
+                    <i data-lucide="check" aria-hidden="true"></i>
+                    <span>Selesai</span>
+                </button>
             </div>
         </div>
     </div>

@@ -129,11 +129,12 @@ const Pathfinding = (() => {
      */
     function findCorridorLeg(x1, y1, x2, y2, floorKey, bldId, floorNum) {
         const grid = getGrid(floorKey);
+        const isPb = (bldId === 'pasar-buah');
         if (!grid) {
             // Fallback direct line if grid not loaded
             return [
-                { x: x1, y: y1, lat: 1024 - y1, lng: x1, floor: floorNum, buildingId: bldId },
-                { x: x2, y: y2, lat: 1024 - y2, lng: x2, floor: floorNum, buildingId: bldId }
+                { x: x1, y: y1, lat: isPb ? y1 : (1024 - y1), lng: x1, floor: floorNum, buildingId: bldId },
+                { x: x2, y: y2, lat: isPb ? y2 : (1024 - y2), lng: x2, floor: floorNum, buildingId: bldId }
             ];
         }
 
@@ -215,10 +216,11 @@ const Pathfinding = (() => {
                 const prev = finalCoords[finalCoords.length - 1];
                 if (Math.hypot(x - prev.x, y - prev.y) < 1.5) return;
             }
+            const isPbLeg = (bldId === 'pasar-buah');
             finalCoords.push({
                 x,
                 y,
-                lat: 1024 - y,
+                lat: isPbLeg ? y : (1024 - y),
                 lng: x,
                 floor: floorNum,
                 buildingId: bldId
@@ -267,12 +269,14 @@ const Pathfinding = (() => {
         if (!startNode || !endNode) return null;
 
         // Origin stall doorway
+        const isStartPb = (startNode.buildingId === 'pasar-buah');
         const sX = (startNode.entries && startNode.entries[0]) ? startNode.entries[0].x : (startNode.realX !== undefined ? startNode.realX : startNode.x);
-        const sY = (startNode.entries && startNode.entries[0]) ? startNode.entries[0].y : (startNode.realY !== undefined ? startNode.realY : (1024 - startNode.y));
+        const sY = (startNode.entries && startNode.entries[0]) ? startNode.entries[0].y : (startNode.realY !== undefined ? startNode.realY : (isStartPb ? startNode.y : (1024 - startNode.y)));
 
         // Destination stall doorway
+        const isEndPb = (endNode.buildingId === 'pasar-buah');
         const eX = (endNode.entries && endNode.entries[0]) ? endNode.entries[0].x : (endNode.realX !== undefined ? endNode.realX : endNode.x);
-        const eY = (endNode.entries && endNode.entries[0]) ? endNode.entries[0].y : (endNode.realY !== undefined ? endNode.realY : (1024 - endNode.y));
+        const eY = (endNode.entries && endNode.entries[0]) ? endNode.entries[0].y : (endNode.realY !== undefined ? endNode.realY : (isEndPb ? endNode.y : (1024 - endNode.y)));
 
         let coordinates = [];
         let steps = [];
@@ -312,8 +316,8 @@ const Pathfinding = (() => {
                 detail: trans.isRamp ? 'Kemiringan 6-7%, lebar 1.8m dilengkapi handrail pengaman' : 'Gunakan pegangan tangga dan berhati-hati',
                 floor: endNode.floor,
                 nodeId: trans.t2NodeId,
-                coord: { x: trans.t1.x, y: trans.t1.y, lat: 1024 - trans.t1.y, lng: trans.t1.x, floor: startNode.floor, buildingId: startNode.buildingId },
-                coordDest: { x: trans.t2.x, y: trans.t2.y, lat: 1024 - trans.t2.y, lng: trans.t2.x, floor: endNode.floor, buildingId: endNode.buildingId },
+                coord: { x: trans.t1.x, y: trans.t1.y, lat: isStartPb ? trans.t1.y : (1024 - trans.t1.y), lng: trans.t1.x, floor: startNode.floor, buildingId: startNode.buildingId },
+                coordDest: { x: trans.t2.x, y: trans.t2.y, lat: isEndPb ? trans.t2.y : (1024 - trans.t2.y), lng: trans.t2.x, floor: endNode.floor, buildingId: endNode.buildingId },
                 badge: trans.isRamp ? { type: 'wheelchair', text: 'Ramah Kursi Roda ♿' } : null,
                 audioDescription: `${endNode.floor > startNode.floor ? 'Naik' : 'Turun'} melalui ${trans.name} menuju Lantai ${endNode.floor}.`
             };
@@ -366,8 +370,8 @@ const Pathfinding = (() => {
                 text: `Menyeberang Jl. Urip Sumoharjo menuju ${targetBldName}`,
                 detail: 'Gunakan jalur penyeberangan zebra cross dengan ubin pemandu taktil',
                 floor: 1,
-                coord: { x: cw.exit.x, y: cw.exit.y, lat: 1024 - cw.exit.y, lng: cw.exit.x, floor: 1, buildingId: startNode.buildingId },
-                coordDest: { x: cw.entry.x, y: cw.entry.y, lat: 1024 - cw.entry.y, lng: cw.entry.x, floor: 1, buildingId: endNode.buildingId },
+                coord: { x: cw.exit.x, y: cw.exit.y, lat: isStartPb ? cw.exit.y : (1024 - cw.exit.y), lng: cw.exit.x, floor: 1, buildingId: startNode.buildingId },
+                coordDest: { x: cw.entry.x, y: cw.entry.y, lat: isEndPb ? cw.entry.y : (1024 - cw.entry.y), lng: cw.entry.x, floor: 1, buildingId: endNode.buildingId },
                 badge: mode === 'wheelchair' ? { type: 'wheelchair', text: 'Zebra Cross Aksesibel ♿' } :
                        mode === 'blind' ? { type: 'blind', text: 'Ubin Pemandu Taktil ⠿' } : null,
                 audioDescription: `Menyeberangi Jalan Urip Sumoharjo melalui zebra cross menuju ${targetBldName}. Pastikan jalan aman sebelum menyeberang.`

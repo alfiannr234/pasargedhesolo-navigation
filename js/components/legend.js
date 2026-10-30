@@ -113,18 +113,25 @@ const Legend = (() => {
         toggle.className = 'legend-toggle';
         item.appendChild(toggle);
 
-        // Color box
-        const color = document.createElement('div');
-        color.className = 'legend-color';
-        color.style.backgroundColor = category.color || '#C0392B';
-        item.appendChild(color);
+        // Badge icon (matching map marker style)
+        const isFacility = Boolean(category.isFacility || (typeof AppIcons !== 'undefined' && AppIcons.isFacility(key)));
+        const badge = document.createElement('div');
+        const safeColor = String(category.color || '#C0392B').replace(/[^#a-zA-Z0-9(),. -]/g, '');
 
-        // Icon
-        const icon = document.createElement('span');
-        icon.className = 'legend-icon';
-        icon.textContent = category.icon || '📍';
-        icon.setAttribute('aria-hidden', 'true');
-        item.appendChild(icon);
+        if (isFacility) {
+            badge.className = 'legend-badge facility-badge';
+            badge.style.borderColor = safeColor;
+            badge.innerHTML = `<span aria-hidden="true">${category.icon || '📍'}</span>`;
+        } else {
+            badge.className = 'legend-badge';
+            badge.style.backgroundColor = safeColor;
+            if (typeof AppIcons !== 'undefined') {
+                badge.innerHTML = AppIcons.getCategorySvg(category.icon || key, { size: 14, stroke: '#FFFFFF', strokeWidth: 2 });
+            } else {
+                badge.innerHTML = `<span aria-hidden="true">${category.icon || '📍'}</span>`;
+            }
+        }
+        item.appendChild(badge);
 
         // Label
         const label = document.createElement('span');

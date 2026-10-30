@@ -71,6 +71,12 @@ const DetailPanel = (() => {
         if (!stall) return;
 
         currentStallId = stallId;
+
+        // Ensure stall is highlighted & active on the map
+        if (typeof MarketMap !== 'undefined' && MarketMap.highlightStall) {
+            MarketMap.highlightStall(stall);
+        }
+
         const categories = MarketData.getCategories();
         const category = categories[stall.category] || {
             name: stall.categoryLabel || 'Kios',
@@ -101,10 +107,17 @@ const DetailPanel = (() => {
             `;
         }
 
-        // Category badge
+        // Category badge with matching vector icon
+        const catKey = (stall.category || '').toLowerCase();
+        const isFacility = Boolean(stall.isFacility || category.isFacility || (typeof AppIcons !== 'undefined' && AppIcons.isFacility(catKey)));
+        let iconMarkup = `<span style="font-size: 1.5rem;">${esc(category.icon)}</span>`;
+        if (!isFacility && typeof AppIcons !== 'undefined') {
+            iconMarkup = `<span class="legend-badge" style="background:${escAttr(category.color || '#C0392B')}; width:28px; height:28px; border-radius:7px; border:2px solid #FFF; display:inline-flex; align-items:center; justify-content:center; box-shadow:0 2px 6px rgba(0,0,0,0.2);">${AppIcons.getCategorySvg(catKey, { size: 16, stroke: '#FFFFFF' })}</span>`;
+        }
+
         html += `
             <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 14px;">
-                <span style="font-size: 1.5rem;">${esc(category.icon)}</span>
+                ${iconMarkup}
                 <span style="
                     padding: 4px 12px;
                     border-radius: 20px;

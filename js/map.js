@@ -13,6 +13,10 @@ const MarketMap = (() => {
     let routeLayer = null;
     let highlightLayer = null;
     let markersByCategory = {}; // { categoryId: [L.marker, ...] }
+    let markersByStallId = {};  // { stallId / nodeId: L.marker }
+    let selectedMarker = null;
+    let routeOriginMarker = null;
+    let routeDestinationMarker = null;
 
     // Map bounds in Leaflet CRS.Simple (0,0 to 1024,1024 matching the SVG viewBox)
     const bounds = [[0, 0], [1024, 1024]];
@@ -72,6 +76,25 @@ const MarketMap = (() => {
         });
 
         setupMapControls();
+
+        // Responsive zoom scaling for small kiosk booths
+        function updateZoomClasses() {
+            const z = map.getZoom();
+            const container = document.getElementById('map-container');
+            if (!container) return;
+            if (z < -0.2) {
+                container.classList.add('map-zoom-low');
+            } else {
+                container.classList.remove('map-zoom-low');
+            }
+            if (z > 1.2) {
+                container.classList.add('map-zoom-high');
+            } else {
+                container.classList.remove('map-zoom-high');
+            }
+        }
+        map.on('zoomend', updateZoomClasses);
+        updateZoomClasses();
     }
 
     /**
@@ -121,6 +144,10 @@ const MarketMap = (() => {
         // 2. Clear previous markers
         markersLayer.clearLayers();
         markersByCategory = {};
+        markersByStallId = {};
+        selectedMarker = null;
+        routeOriginMarker = null;
+        routeDestinationMarker = null;
 
         // 3. Render stall/kios icons from real data
         const stalls = MarketData.getFloorStalls(floorNum, buildingId);
@@ -140,7 +167,8 @@ const MarketMap = (() => {
             }
 
             // Ensure coordinates exist and fallback safely
-            const stallLat = stall.lat !== undefined ? stall.lat : (1024 - (stall.y || 500));
+            const isPb = (stall.buildingId === 'pasar-buah' || currentBuilding === 'pasar-buah');
+            const stallLat = stall.lat !== undefined ? stall.lat : (isPb ? (stall.y || 500) : (1024 - (stall.y || 500)));
             const stallLng = stall.lng !== undefined ? stall.lng : (stall.x || 500);
 
             // Create custom icon
@@ -174,8 +202,12 @@ const MarketMap = (() => {
                 }
             });
 
-            // Store marker in category array
+            // Store marker in category and ID lookups
             markersByCategory[catId].push(marker);
+            markersByStallId[stall.id] = marker;
+            if (stall.nodeId) {
+                markersByStallId[stall.nodeId] = marker;
+            }
 
             // Add to map if category is currently checked in legend
             if (Legend.isCategoryActive(catId) || Legend.isCategoryActive(stall.category)) {
@@ -194,22 +226,54 @@ const MarketMap = (() => {
     }
 
     /**
-     * Create custom pin marker icon with category emoji and colors
+     * Create custom pin marker icon:
+     * - Kios: White vector SVG flat icon on category color background, squircle badge with 2px white stroke
+     * - Facility: Unchanged circular white badge with colored border and symbol
      */
     function createStallMarkerIcon(stall, category) {
         const isLegendary = stall.isLegendary;
-        const color = category.color || '#C0392B';
-        const iconEmoji = category.icon || '📍';
+        const color = category.color || stall.color || '#C0392B';
+        const safeColor = String(color).replace(/[^#a-zA-Z0-9(),. -]/g, '');
+        const isFacility = Boolean(stall.isFacility || category.isFacility || category.is_facility);
+        const isCompact = Boolean(stall.isCompact);
+
+        // Facility markers: keep unchanged circular white badge
+        if (isFacility) {
+            const iconEmoji = category.icon || stall.icon || '📍';
+            return L.divIcon({
+                className: 'stall-map-marker facility-marker-wrapper',
+                html: `
+                    <div class="stall-marker-inner facility-marker" style="border-color: ${safeColor};">
+                        <span>${iconEmoji}</span>
+                    </div>
+                `,
+                iconSize: [30, 30],
+                iconAnchor: [15, 15]
+            });
+        }
+
+        // Kios markers: flat pure white SVG icon on dynamic category color background
+        const catKey = (category.id || stall.category || '').toLowerCase();
+        const iconSize = isCompact ? 12 : 15;
+        const badgeSize = isCompact ? 20 : 28;
+        const anchor = badgeSize / 2;
+
+        let iconSvg = '';
+        if (typeof AppIcons !== 'undefined') {
+            iconSvg = AppIcons.getCategorySvg(category.icon || catKey, { size: iconSize, stroke: '#FFFFFF', strokeWidth: isCompact ? 2.2 : 2 });
+        } else {
+            iconSvg = `<span>${category.icon || stall.icon || '📍'}</span>`;
+        }
 
         return L.divIcon({
-            className: 'stall-map-marker',
+            className: `stall-map-marker kiosk-marker-wrapper ${isCompact ? 'compact-wrapper' : ''}`,
             html: `
-                <div class="stall-marker-inner ${isLegendary ? 'legendary' : ''}" style="border-color: ${color};">
-                    <span>${iconEmoji}</span>
+                <div class="stall-marker-inner kiosk-marker ${isCompact ? 'compact' : ''} ${isLegendary ? 'legendary' : ''}" style="background-color: ${safeColor};" data-stall-id="${stall.id}">
+                    ${iconSvg}
                 </div>
             `,
-            iconSize: [30, 30],
-            iconAnchor: [15, 15]
+            iconSize: [badgeSize, badgeSize],
+            iconAnchor: [anchor, anchor]
         });
     }
 
@@ -371,10 +435,13 @@ const MarketMap = (() => {
         routeLayer = L.layerGroup().addTo(map);
 
         // Helper to convert coordinate object to Leaflet [lat, lng]
-        const toLatLng = (c) => [
-            c.lat !== undefined ? c.lat : (1024 - c.y),
-            c.lng !== undefined ? c.lng : c.x
-        ];
+        const toLatLng = (c) => {
+            const isPb = (c.buildingId === 'pasar-buah' || currentBuilding === 'pasar-buah');
+            return [
+                c.lat !== undefined ? c.lat : (isPb ? c.y : (1024 - c.y)),
+                c.lng !== undefined ? c.lng : c.x
+            ];
+        };
 
         // Coordinates matching current building and floor
         const floorCoords = route.coordinates.filter(c => c.floor === currentFloor && (!c.buildingId || c.buildingId === currentBuilding));
@@ -477,6 +544,26 @@ const MarketMap = (() => {
 
             map.fitBounds(activeLine.getBounds(), { padding: [60, 60] });
         }
+
+        // Highlight route start & end kiosk markers if on current floor
+        if (route.startNode && route.startNode.id) {
+            const startId = route.startNode.id;
+            const startStallId = startId.startsWith('n_') ? startId.slice(2) : startId;
+            const startMarker = markersByStallId[startId] || markersByStallId[startStallId];
+            if (startMarker && startMarker._icon) {
+                startMarker._icon.classList.add('is-route-origin');
+                routeOriginMarker = startMarker;
+            }
+        }
+        if (route.endNode && route.endNode.id) {
+            const endId = route.endNode.id;
+            const endStallId = endId.startsWith('n_') ? endId.slice(2) : endId;
+            const endMarker = markersByStallId[endId] || markersByStallId[endStallId];
+            if (endMarker && endMarker._icon) {
+                endMarker._icon.classList.add('is-route-destination');
+                routeDestinationMarker = endMarker;
+            }
+        }
     }
 
     function clearRoute() {
@@ -484,6 +571,41 @@ const MarketMap = (() => {
             map.removeLayer(routeLayer);
             routeLayer = null;
         }
+        if (routeOriginMarker && routeOriginMarker._icon) {
+            routeOriginMarker._icon.classList.remove('is-route-origin');
+        }
+        if (routeDestinationMarker && routeDestinationMarker._icon) {
+            routeDestinationMarker._icon.classList.remove('is-route-destination');
+        }
+        routeOriginMarker = null;
+        routeDestinationMarker = null;
+    }
+
+    /**
+     * Set active selected stall marker (outline/glow and scale)
+     */
+    function setSelectedStall(stallId) {
+        if (selectedMarker && selectedMarker._icon) {
+            selectedMarker._icon.classList.remove('is-selected');
+        }
+        selectedMarker = null;
+        if (!stallId) return;
+
+        const targetId = String(stallId);
+        const marker = markersByStallId[targetId] ||
+            (targetId.startsWith('n_') ? markersByStallId[targetId.slice(2)] : markersByStallId['n_' + targetId]);
+
+        if (marker && marker._icon) {
+            marker._icon.classList.add('is-selected');
+            selectedMarker = marker;
+        }
+    }
+
+    function clearSelectedStall() {
+        if (selectedMarker && selectedMarker._icon) {
+            selectedMarker._icon.classList.remove('is-selected');
+        }
+        selectedMarker = null;
     }
 
     /**
@@ -494,10 +616,11 @@ const MarketMap = (() => {
             map.removeLayer(highlightLayer);
             highlightLayer = null;
         }
+        clearSelectedStall();
     }
 
     /**
-     * Highlight specific stall with pulsing marker
+     * Highlight specific stall with pulsing marker & active glow state
      */
     function highlightStall(stall) {
         if (!stall) return;
@@ -513,7 +636,11 @@ const MarketMap = (() => {
         // Remove previous highlight
         clearHighlight();
 
-        const lat = stall.lat !== undefined ? stall.lat : (1024 - (stall.y || 500));
+        // Apply active selected state on kiosk marker
+        setSelectedStall(stall.id);
+
+        const isPb = (stall.buildingId === 'pasar-buah' || currentBuilding === 'pasar-buah');
+        const lat = stall.lat !== undefined ? stall.lat : (isPb ? (stall.y || 500) : (1024 - (stall.y || 500)));
         const lng = stall.lng !== undefined ? stall.lng : (stall.x || 500);
         const latlng = L.latLng(lat, lng);
 
@@ -578,6 +705,8 @@ const MarketMap = (() => {
         clearRoute,
         highlightStall,
         clearHighlight,
+        setSelectedStall,
+        clearSelectedStall,
         getCurrentBuilding,
         getCurrentFloor,
         getMap

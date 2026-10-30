@@ -102,6 +102,18 @@ document.addEventListener('DOMContentLoaded', async () => {
     const btnResetCatForm = document.getElementById('btnResetCatForm');
     const catListCount = document.getElementById('catListCount');
     const categoryTableBody = document.getElementById('categoryTableBody');
+    const categoryListWrapper = document.getElementById('categoryListWrapper');
+
+    // Category Icon Picker & Palette Elements
+    const catSelectedIconBadge = document.getElementById('catSelectedIconBadge');
+    const catSelectedIconName = document.getElementById('catSelectedIconName');
+    const catIconSearchInput = document.getElementById('catIconSearchInput');
+    const catIconSearchClear = document.getElementById('catIconSearchClear');
+    const catGroupTabs = document.getElementById('catGroupTabs');
+    const catIconGrid = document.getElementById('catIconGrid');
+    const catIconEmpty = document.getElementById('catIconEmpty');
+    const catColorSwatches = document.getElementById('catColorSwatches');
+    const catColorStatusMsg = document.getElementById('catColorStatusMsg');
 
     // Toast Container
     const toastContainer = document.getElementById('toastContainer');
@@ -178,6 +190,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         populateBuildingOptions();
         updateStats();
         renderTable();
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
     }
 
     function updateStats() {
@@ -298,17 +313,27 @@ document.addEventListener('DOMContentLoaded', async () => {
                 const bld = s.buildingId === 'pasar-buah' ? 'Pasar Buah' : 'Pasar Gedhe';
                 const isStar = Boolean(s.isLegendary);
 
+                const catId = (s.category || '').toLowerCase();
+                const isFac = Boolean(s.isFacility || cat.is_facility || cat.isFacility || (typeof AppIcons !== 'undefined' && AppIcons.isFacility(catId)));
+                const catColor = cat.color || '#C0392B';
+                const safeCatColor = String(catColor).replace(/[^#a-zA-Z0-9(),. -]/g, '');
+
+                let badgeIconSvg = '';
+                if (typeof AppIcons !== 'undefined' && !isFac) {
+                    badgeIconSvg = AppIcons.getCategorySvg(cat.icon || catId, { size: 12, stroke: '#FFFFFF', strokeWidth: 2.2 });
+                }
+
                 return `
                     <tr data-id="${escAttr(s.id)}">
                         <td>
                             ${img ? `
                                 <img src="${escAttr(img)}" alt="${escAttr(s.name)}" class="stall-thumb" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-                                <div class="stall-thumb-fallback" style="display:none; background:${escAttr(cat.color)};">
-                                    <span>${esc(cat.icon)}</span>
+                                <div class="stall-thumb-fallback" style="display:none; background:${safeCatColor}; border-radius:7px;">
+                                    ${isFac ? `<span>${esc(cat.icon || '📍')}</span>` : (badgeIconSvg ? AppIcons.getCategorySvg(cat.icon || catId, { size: 20, stroke: '#FFFFFF', strokeWidth: 2 }) : `<span>${esc(cat.icon || '🏪')}</span>`)}
                                 </div>
                             ` : `
-                                <div class="stall-thumb-fallback" style="background:${escAttr(cat.color)};">
-                                    <span>${esc(cat.icon)}</span>
+                                <div class="stall-thumb-fallback" style="background:${safeCatColor}; border-radius:7px;">
+                                    ${isFac ? `<span>${esc(cat.icon || '📍')}</span>` : (badgeIconSvg ? AppIcons.getCategorySvg(cat.icon || catId, { size: 20, stroke: '#FFFFFF', strokeWidth: 2 }) : `<span>${esc(cat.icon || '🏪')}</span>`)}
                                 </div>
                             `}
                         </td>
@@ -324,8 +349,11 @@ document.addEventListener('DOMContentLoaded', async () => {
                             </div>
                         </td>
                         <td>
-                            <span class="category-tag" style="background:${escAttr(cat.color)}20; color:${escAttr(cat.color)};">
-                                ${esc(cat.icon)} ${esc(cat.name)}
+                            <span class="category-tag" style="background:${safeCatColor}18; color:${safeCatColor}; border:1px solid ${safeCatColor}33;">
+                                <span class="category-mini-badge ${isFac ? 'facility' : ''}" style="background:${isFac ? '#FFFFFF' : safeCatColor}; ${isFac ? `border-color:${safeCatColor}; color:${safeCatColor};` : ''}">
+                                    ${isFac ? `<span>${esc(cat.icon || '📍')}</span>` : (badgeIconSvg || `<span>${esc(cat.icon || '🏪')}</span>`)}
+                                </span>
+                                ${esc(cat.name)}
                             </span>
                         </td>
                         <td>
@@ -577,7 +605,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     x: posX,
                     y: posY,
                     lng: posX,
-                    lat: 1024 - posY,
+                    lat: fBuilding.value === 'pasar-buah' ? posY : (1024 - posY),
                     accessible: fAccessible.checked,
                     isLegendary: Boolean(fLegendary && fLegendary.checked)
                 };
@@ -613,13 +641,83 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
 
-    // 6. Visual Map Coordinate Picker
+    // 6. Visual Map Coordinate Picker with Centroid Snapping
+    const floorShapesCache = {};
+    let currentFloorShapes = [];
+
+    async function loadFloorShapes(svgUrl) {
+        if (floorShapesCache[svgUrl]) {
+            currentFloorShapes = floorShapesCache[svgUrl];
+            return;
+        }
+        try {
+            const res = await fetch(svgUrl);
+            const svg = await res.text();
+            const shapes = [];
+
+            const rectRegex = /<rect[^>]+x="([^"]+)"[^>]+y="([^"]+)"[^>]+width="([^"]+)"[^>]+height="([^"]+)"/g;
+            let m;
+            while ((m = rectRegex.exec(svg)) !== null) {
+                const x = parseFloat(m[1]), y = parseFloat(m[2]), w = parseFloat(m[3]), h = parseFloat(m[4]);
+                shapes.push({
+                    cx: Math.round(x + w / 2),
+                    cy: Math.round(y + h / 2),
+                    w, h, area: w * h,
+                    contains: (px, py) => px >= x && px <= x + w && py >= y && py <= y + h
+                });
+            }
+
+            const polyRegex = /<polygon[^>]+points="([^"]+)"/g;
+            while ((m = polyRegex.exec(svg)) !== null) {
+                const pts = m[1].trim().split(/\s+/).map(p => {
+                    const [px, py] = p.split(',').map(Number);
+                    return { x: px, y: py };
+                }).filter(p => !isNaN(p.x) && !isNaN(p.y));
+
+                if (pts.length >= 3) {
+                    let signedArea = 0, cx = 0, cy = 0;
+                    for (let i = 0; i < pts.length; i++) {
+                        const p1 = pts[i], p2 = pts[(i + 1) % pts.length];
+                        const a = p1.x * p2.y - p2.x * p1.y;
+                        signedArea += a;
+                        cx += (p1.x + p2.x) * a;
+                        cy += (p1.y + p2.y) * a;
+                    }
+                    signedArea *= 0.5;
+                    if (Math.abs(signedArea) > 0.001) {
+                        cx = cx / (6 * signedArea);
+                        cy = cy / (6 * signedArea);
+                    } else {
+                        cx = pts.reduce((s, p) => s + p.x, 0) / pts.length;
+                        cy = pts.reduce((s, p) => s + p.y, 0) / pts.length;
+                    }
+                    const xs = pts.map(p => p.x), ys = pts.map(p => p.y);
+                    const minX = Math.min(...xs), maxX = Math.max(...xs);
+                    const minY = Math.min(...ys), maxY = Math.max(...ys);
+
+                    shapes.push({
+                        cx: Math.round(cx),
+                        cy: Math.round(cy),
+                        w: maxX - minX, h: maxY - minY, area: Math.abs(signedArea),
+                        contains: (px, py) => px >= minX && px <= maxX && py >= minY && py <= maxY
+                    });
+                }
+            }
+
+            floorShapesCache[svgUrl] = shapes.filter(s => s.area < 25000 && Math.min(s.w, s.h) >= 4);
+            currentFloorShapes = floorShapesCache[svgUrl];
+        } catch (e) {
+            console.warn('Could not load floor shapes for snapping:', e);
+            currentFloorShapes = [];
+        }
+    }
+
     function openMapPickerForStall(id) {
         openEditStall(id);
         openMapPicker();
     }
 
-    function openMapPicker() {
+    async function openMapPicker() {
         const bld = fBuilding.value || 'pasar-gede';
         const flr = fFloor.value || 1;
 
@@ -629,14 +727,20 @@ document.addEventListener('DOMContentLoaded', async () => {
             `../assets/svg/pasar_gede_lt${flr}.svg`;
 
         mapPickerImg.src = svgPath;
+        const isPb = (bld === 'pasar-buah');
+        const rawY = parseInt(fY.value, 10) || 512;
         tempPickerX = parseInt(fX.value, 10) || 512;
-        tempPickerY = parseInt(fY.value, 10) || 512;
+        // In Pasar Buah, Y is Cartesian from bottom, while visual SVG picker Y is from top
+        tempPickerY = isPb ? (1024 - rawY) : rawY;
 
         updatePickerPinPosition();
         mapPickerModal.style.display = 'flex';
+
+        // Preload booth shapes for centroid snapping
+        await loadFloorShapes(svgPath);
     }
 
-    function updatePickerPinPosition() {
+    function updatePickerPinPosition(isSnapped = false) {
         if (!mapPickerPin || !mapPickerImg) return;
         const percentX = (tempPickerX / 1024) * 100;
         const percentY = (tempPickerY / 1024) * 100;
@@ -644,15 +748,40 @@ document.addEventListener('DOMContentLoaded', async () => {
         mapPickerPin.style.left = `${percentX}%`;
         mapPickerPin.style.top = `${percentY}%`;
 
+        // Update visual badge icon to match selected category
+        const catId = (fCategory.value || '').toLowerCase();
+        const cat = (Object.hasOwn ? Object.hasOwn(categories, catId) : categories.hasOwnProperty(catId))
+            ? categories[catId]
+            : { color: '#C0392B', icon: '📍' };
+        const isFac = Boolean(cat.is_facility || cat.isFacility || (typeof AppIcons !== 'undefined' && AppIcons.isFacility(catId)));
+        const catColor = cat.color || '#C0392B';
+
+        if (isFac) {
+            mapPickerPin.className = 'picker-pin facility';
+            mapPickerPin.style.borderColor = catColor;
+            mapPickerPin.innerHTML = `<span style="font-size:0.85rem;">${cat.icon || '📍'}</span>`;
+        } else {
+            mapPickerPin.className = 'picker-pin';
+            mapPickerPin.style.backgroundColor = catColor;
+            if (typeof AppIcons !== 'undefined') {
+                mapPickerPin.innerHTML = AppIcons.getCategorySvg(cat.icon || catId, { size: 15, stroke: '#FFFFFF', strokeWidth: 2 });
+            } else {
+                mapPickerPin.innerHTML = `<span style="font-size:0.85rem;">${cat.icon || '📍'}</span>`;
+            }
+        }
+
         if (mapPickerCoordsText) {
-            mapPickerCoordsText.textContent = `Koordinat: X = ${tempPickerX}, Y = ${tempPickerY}`;
+            const isPb = (fBuilding.value === 'pasar-buah');
+            const displayY = isPb ? (1024 - tempPickerY) : tempPickerY;
+            const snapBadge = isSnapped ? `<span style="display:inline-block; margin-left:8px; padding:2px 8px; border-radius:10px; background:#E8F8F5; color:#1E8449; font-size:0.72rem; font-weight:700;">✓ Titik Tengah Petak (Centroid)</span>` : '';
+            mapPickerCoordsText.innerHTML = `Koordinat: X = ${tempPickerX}, Y = ${displayY}${snapBadge}`;
         }
     }
 
     if (btnPickCoords) btnPickCoords.addEventListener('click', openMapPicker);
     if (mapPickerClose) mapPickerClose.addEventListener('click', () => mapPickerModal.style.display = 'none');
 
-    // Click on Map image to place pin
+    // Click on Map image to place pin with automatic centroid snapping
     if (mapPickerContainer) {
         mapPickerContainer.addEventListener('click', (e) => {
             const rect = mapPickerImg.getBoundingClientRect();
@@ -660,19 +789,43 @@ document.addEventListener('DOMContentLoaded', async () => {
             const clickY = e.clientY - rect.top;
 
             if (clickX >= 0 && clickX <= rect.width && clickY >= 0 && clickY <= rect.height) {
-                tempPickerX = Math.round((clickX / rect.width) * 1024);
-                tempPickerY = Math.round((clickY / rect.height) * 1024);
-                updatePickerPinPosition();
+                let clickedX = Math.round((clickX / rect.width) * 1024);
+                let clickedY = Math.round((clickY / rect.height) * 1024);
+                let isSnapped = false;
+
+                // Snap to nearest booth shape centroid if close (< 30px) and not holding Shift
+                if (!e.shiftKey && currentFloorShapes && currentFloorShapes.length > 0) {
+                    const inside = currentFloorShapes.filter(sh => sh.contains(clickedX, clickedY)).sort((a, b) => a.area - b.area);
+                    if (inside.length > 0) {
+                        clickedX = inside[0].cx;
+                        clickedY = inside[0].cy;
+                        isSnapped = true;
+                    } else {
+                        const nearest = currentFloorShapes
+                            .map(sh => ({ sh, d: Math.hypot(clickedX - sh.cx, clickedY - sh.cy) }))
+                            .sort((a, b) => a.d - b.d)[0];
+                        if (nearest && nearest.d <= 30) {
+                            clickedX = nearest.sh.cx;
+                            clickedY = nearest.sh.cy;
+                            isSnapped = true;
+                        }
+                    }
+                }
+
+                tempPickerX = clickedX;
+                tempPickerY = clickedY;
+                updatePickerPinPosition(isSnapped);
             }
         });
     }
 
     if (btnConfirmCoords) {
         btnConfirmCoords.addEventListener('click', () => {
+            const isPb = (fBuilding.value === 'pasar-buah');
             fX.value = tempPickerX;
-            fY.value = tempPickerY;
+            fY.value = isPb ? (1024 - tempPickerY) : tempPickerY;
             mapPickerModal.style.display = 'none';
-            showToast(`Koordinat diperbarui ke (${tempPickerX}, ${tempPickerY})`, 'success');
+            showToast(`Koordinat diperbarui ke (${fX.value}, ${fY.value})`, 'success');
         });
     }
 
@@ -716,13 +869,276 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     // ============================================
-    // 9. Category Management Controller
+    // 9. Category Management Controller & Utilities
     // ============================================
+
+    // 12 Accessible High-Contrast Color Swatches (> 3.8:1 contrast against pure white #FFFFFF)
+    const ACCESSIBLE_PALETTES = [
+        { hex: '#C0392B', name: 'Merah Cabe' },
+        { hex: '#D35400', name: 'Oranye Bata' },
+        { hex: '#B9770E', name: 'Kuning Kunyit Tua' },
+        { hex: '#1E8449', name: 'Hijau Daun Tua' },
+        { hex: '#16A085', name: 'Hijau Toska Tua' },
+        { hex: '#2471A3', name: 'Biru Samudra' },
+        { hex: '#1B4F72', name: 'Biru Navy Gelap' },
+        { hex: '#7D3C98', name: 'Ungu Anggur' },
+        { hex: '#512E5F', name: 'Plum Gelap' },
+        { hex: '#AD1457', name: 'Magenta Beri' },
+        { hex: '#6D4C41', name: 'Cokelat Tanah' },
+        { hex: '#37474F', name: 'Abu Slate Gelap' }
+    ];
+
+    // Market Vector Icons Catalog (Lucide 0.460.0 verified) grouped by market requirements
+    const MARKET_ICON_CATALOG = [
+        // 1. Makanan & Minuman
+        { name: 'UtensilsCrossed', label: 'Kuliner / Resto', group: 'makanan', keywords: 'makanan kuliner garpu sendok warung makan resto utensils' },
+        { name: 'Utensils', label: 'Alat Makan', group: 'makanan', keywords: 'alat makan sendok garpu piring dine food' },
+        { name: 'Soup', label: 'Sup & Soto', group: 'makanan', keywords: 'sup soto bakso mie kuah ramen mangkok bowl hot soup' },
+        { name: 'Coffee', label: 'Kopi & Teh', group: 'makanan', keywords: 'kopi teh cafe wedang minuman hangat coffee cup' },
+        { name: 'Cookie', label: 'Kue & Snack', group: 'makanan', keywords: 'kue camilan biskuit snack cookies roti jajanan pasar' },
+        { name: 'Cake', label: 'Bolu & Tart', group: 'makanan', keywords: 'kue tart bolu bakery pastry manis cake' },
+        { name: 'IceCream2', label: 'Es Krim & Dawet', group: 'makanan', keywords: 'es krim dawet gelato dingin segar ice cream' },
+        { name: 'CupSoda', label: 'Minuman Segar', group: 'makanan', keywords: 'es teh jus boba sirup soda drink cup' },
+        { name: 'Beer', label: 'Jamu Botol', group: 'makanan', keywords: 'jamu botol tradisional herbal minuman beverage beer' },
+        { name: 'Drumstick', label: 'Daging Ayam', group: 'makanan', keywords: 'ayam unggas bebek paha fried chicken daging butcher drumstick' },
+        { name: 'Beef', label: 'Daging Sapi', group: 'makanan', keywords: 'daging sapi kambing meat steak empal butcher beef' },
+        { name: 'Fish', label: 'Ikan & Seafood', group: 'makanan', keywords: 'ikan lele nila gurame laut seafood udang cumi fish' },
+        { name: 'Egg', label: 'Telur', group: 'makanan', keywords: 'telur ayam bebek asin egg breakfast' },
+        { name: 'Pizza', label: 'Pizza & Roti', group: 'makanan', keywords: 'pizza roti gurih pie slice' },
+        { name: 'Sandwich', label: 'Roti Lapis', group: 'makanan', keywords: 'sandwich burger roti bakar lapis sarapan' },
+        { name: 'Candy', label: 'Permen Manisan', group: 'makanan', keywords: 'permen manisan coklat gula candy sweet' },
+
+        // 2. Bahan Pokok & Hasil Bumi
+        { name: 'Apple', label: 'Buah Segar', group: 'bahan_pokok', keywords: 'buah apel segar apple fruit pasar buah' },
+        { name: 'Carrot', label: 'Sayur Mayur', group: 'bahan_pokok', keywords: 'sayur wortel kangkung bayam sayuran vegetable carrot' },
+        { name: 'Wheat', label: 'Beras & Sembako', group: 'bahan_pokok', keywords: 'beras gandum sembako padi terigu ketan grain wheat' },
+        { name: 'Citrus', label: 'Jeruk / Sitrus', group: 'bahan_pokok', keywords: 'jeruk lemon nipis purut buah citrus orange' },
+        { name: 'Cherry', label: 'Ceri / Buah', group: 'bahan_pokok', keywords: 'ceri buah berry fruit cherry manis' },
+        { name: 'Banana', label: 'Pisang', group: 'bahan_pokok', keywords: 'pisang raja kepok ambon buah banana' },
+        { name: 'Grape', label: 'Anggur', group: 'bahan_pokok', keywords: 'anggur buah kismis grape wine segar' },
+        { name: 'Leaf', label: 'Bumbu Daun', group: 'bahan_pokok', keywords: 'daun salam kemangi herbal jamu bumbu rempah leaf' },
+        { name: 'Sprout', label: 'Bibit & Tunas', group: 'bahan_pokok', keywords: 'tunas bibit toge kecambah benih tanaman sprout' },
+        { name: 'Milk', label: 'Susu Murni', group: 'bahan_pokok', keywords: 'susu murni dairy segar kambing milk' },
+        { name: 'Salad', label: 'Lalapan Sayur', group: 'bahan_pokok', keywords: 'lalapan sayur selada segar salad sayur' },
+        { name: 'Boxes', label: 'Grosir Karung', group: 'bahan_pokok', keywords: 'grosir dus kardus karung gudang boxes' },
+        { name: 'Package', label: 'Paket Sembako', group: 'bahan_pokok', keywords: 'paket bingkisan sembako kardus hampers package' },
+
+        // 3. Pakaian & Kerajinan
+        { name: 'Shirt', label: 'Batik & Busana', group: 'pakaian', keywords: 'baju batik pakaian kemeja lurik daster celana shirt fashion' },
+        { name: 'Scissors', label: 'Jahit / Permak', group: 'pakaian', keywords: 'jahit gunting potong tailor kain benang konveksi scissors' },
+        { name: 'Palette', label: 'Kerajinan Seni', group: 'pakaian', keywords: 'kerajinan lukis souvenir batik cap seni kayu craft palette' },
+        { name: 'ShoppingBag', label: 'Tas & Aksesoris', group: 'pakaian', keywords: 'tas belanja tas rajut tas kulit dompet bag tote' },
+        { name: 'Tag', label: 'Obral & Diskon', group: 'pakaian', keywords: 'tag harga diskon obral promo baju price' },
+        { name: 'Footprints', label: 'Sandal & Sepatu', group: 'pakaian', keywords: 'sandal selop sepatu kulit alas kaki footwear shoe' },
+        { name: 'Sparkles', label: 'Perhiasan Emas', group: 'pakaian', keywords: 'perhiasan emas perak mutiara aksesoris cenderamata sparkles' },
+        { name: 'Watch', label: 'Jam Tangan', group: 'pakaian', keywords: 'jam tangan arloji aksesoris waktu watch' },
+        { name: 'Glasses', label: 'Kacamata', group: 'pakaian', keywords: 'kacamata frame optik lensa baca glasses' },
+        { name: 'Crown', label: 'Busana Adat', group: 'pakaian', keywords: 'mahkota pengantin adat beskap blangkon kebaya crown' },
+        { name: 'Gem', label: 'Batu Akik / Mulia', group: 'pakaian', keywords: 'akik batu mulia permata cincin giok gem diamond' },
+        { name: 'Umbrella', label: 'Payung & Jas Hujan', group: 'pakaian', keywords: 'payung hujan jas tradisional kertas umbrella' },
+
+        // 4. Jasa & Perkakas
+        { name: 'CookingPot', label: 'Perkakas Dapur', group: 'jasa', keywords: 'panci wajan cobek dandang dapur alat masak pot cooking' },
+        { name: 'Wrench', label: 'Bengkel / Servis', group: 'jasa', keywords: 'servis bengkel reparasi kunci pas teknisi perkakas wrench' },
+        { name: 'Hammer', label: 'Pertukangan', group: 'jasa', keywords: 'palu paku kayu bangunan tukang perkakas hammer' },
+        { name: 'Flame', label: 'Pandai Besi / Gas', group: 'jasa', keywords: 'api kompor gas elpiji pandai besi arang las flame' },
+        { name: 'Scale', label: 'Timbangan', group: 'jasa', keywords: 'timbangan dacin ukur gram kiloan scale' },
+        { name: 'ShieldCheck', label: 'Keamanan / Garansi', group: 'jasa', keywords: 'satpam aman garansi jaminan pos jaga shield check' },
+        { name: 'Receipt', label: 'Kasir / Struk', group: 'jasa', keywords: 'nota struk kwitansi pos pembayaran bayar receipt' },
+        { name: 'Store', label: 'Kios Kelontong', group: 'jasa', keywords: 'kios toko warung kelontong serba ada store' },
+        { name: 'Clock', label: 'Servis Jam', group: 'jasa', keywords: 'servis jam baterai arloji reparasi clock time' },
+        { name: 'Settings', label: 'Suku Cadang', group: 'jasa', keywords: 'onderdil suku cadang mesin selep gerigi gear settings' },
+        { name: 'Truck', label: 'Angkutan Barang', group: 'jasa', keywords: 'ekspedisi angkut pikap gerobak antar barang delivery truck' },
+        { name: 'Sparkle', label: 'Binatu / Laundry', group: 'jasa', keywords: 'laundry cuci setrika bersih sabun wangi sparkle' },
+
+        // 5. Fasilitas & Akses
+        { name: 'CircleUser', label: 'Toilet / WC', group: 'fasilitas', keywords: 'toilet wc kamar mandi rest room urinoir user circleuser' },
+        { name: 'DoorOpen', label: 'Pintu Masuk / Keluar', group: 'fasilitas', keywords: 'pintu gerbang masuk keluar gapura lobby entrance exit door' },
+        { name: 'Accessibility', label: 'Ramp Kursi Roda', group: 'fasilitas', keywords: 'ramp kursi roda difabel disabilitas akses lansia accessibility' },
+        { name: 'Moon', label: 'Mushola', group: 'fasilitas', keywords: 'mushola sholat kiblat wudhu sajadah ibadah masjid moon' },
+        { name: 'Baby', label: 'Ruang Laktasi', group: 'fasilitas', keywords: 'laktasi menyusui bayi ibu balita popok baby' },
+        { name: 'HelpCircle', label: 'Pusat Informasi', group: 'fasilitas', keywords: 'informasi pos bantuan tanya panduan cs help helpcircle' },
+        { name: 'Info', label: 'Papan Info', group: 'fasilitas', keywords: 'papan informasi denah direktori pengumuman info' },
+        { name: 'Phone', label: 'Pos Telepon / Aduan', group: 'fasilitas', keywords: 'telepon darurat pos aduan hotline call phone' },
+        { name: 'Shield', label: 'Pos Keamanan', group: 'fasilitas', keywords: 'satpam pos jaga pos polisi keamanan security shield' },
+        { name: 'HeartPulse', label: 'Pos P3K Medis', group: 'fasilitas', keywords: 'p3k pos kesehatan medis darurat obat dokter klinik heartpulse' },
+        { name: 'Smile', label: 'Area Anak', group: 'fasilitas', keywords: 'ramah anak arena bermain anak santai kids smile' }
+    ];
+
+    let currentIconGroup = 'all';
+    let iconSearchDebounceTimer = null;
+
+    /**
+     * Updates selected icon display and form card active color
+     */
+    function updateLivePreview() {
+        const iconName = catFormIcon ? (catFormIcon.value.trim() || 'Apple') : 'Apple';
+        const color = catFormColor ? (catFormColor.value.trim() || '#C0392B') : '#C0392B';
+        const safeColor = color.replace(/[^#a-zA-Z0-9(),. -]/g, '');
+
+        // Set CSS custom property on category form card for reactive active glowing state
+        const formCard = document.querySelector('.category-form-card');
+        if (formCard) {
+            formCard.style.setProperty('--cat-active-color', safeColor);
+        }
+
+        // Selected Icon Pill in Icon Picker Header
+        if (catSelectedIconBadge && catSelectedIconName && typeof AppIcons !== 'undefined') {
+            catSelectedIconBadge.style.backgroundColor = safeColor;
+            catSelectedIconBadge.innerHTML = AppIcons.getCategorySvg(iconName, { size: 13, stroke: '#FFFFFF', strokeWidth: 2 });
+            catSelectedIconName.textContent = iconName;
+        }
+    }
+
+    /**
+     * Renders the 12 accessible color swatches with duplicate detection indicators
+     */
+    function renderColorSwatches() {
+        if (!catColorSwatches) return;
+        const currentColor = (catFormColor ? catFormColor.value : '#C0392B').trim().toUpperCase();
+        const currentEditingId = (catFormMode.value === 'edit' && catFormOriginalId.value)
+            ? catFormOriginalId.value.toLowerCase()
+            : null;
+
+        // Build map of colors currently in use by other categories
+        const usedColorMap = {};
+        Object.values(categories).forEach(cat => {
+            if (currentEditingId && (cat.id || '').toLowerCase() === currentEditingId) return;
+            if (cat.color) {
+                const hex = cat.color.trim().toUpperCase();
+                usedColorMap[hex] = cat.name || cat.id;
+            }
+        });
+
+        const esc = typeof Security !== 'undefined' ? Security.escapeHTML : str => (str == null ? '' : String(str));
+        const escAttr = typeof Security !== 'undefined' ? Security.sanitizeAttr : esc;
+
+        catColorSwatches.innerHTML = ACCESSIBLE_PALETTES.map(p => {
+            const hex = p.hex.toUpperCase();
+            const isSelected = hex === currentColor;
+            const usedBy = usedColorMap[hex];
+            const tooltip = usedBy
+                ? `${p.name} (${hex}) — Telah digunakan oleh kategori: ${usedBy}`
+                : `${p.name} (${hex}) — Rasio kontras tinggi`;
+
+            return `
+                <button type="button" 
+                    class="cat-swatch-btn ${isSelected ? 'active' : ''}" 
+                    data-hex="${escAttr(hex)}" 
+                    style="background-color: ${escAttr(hex)};" 
+                    title="${escAttr(tooltip)}" 
+                    role="radio" 
+                    aria-checked="${isSelected}">
+                    <svg class="cat-swatch-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    ${usedBy ? `<span class="cat-swatch-used-dot" title="Digunakan oleh: ${escAttr(usedBy)}">⚠️</span>` : ''}
+                </button>
+            `;
+        }).join('');
+
+        // Wire swatch click listeners
+        catColorSwatches.querySelectorAll('.cat-swatch-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const hex = btn.dataset.hex;
+                if (!hex) return;
+                if (catFormColor) catFormColor.value = hex;
+                if (catFormColorHex) catFormColorHex.value = hex;
+                renderColorSwatches();
+                updateLivePreview();
+            });
+        });
+
+        // Update status warning message
+        if (catColorStatusMsg) {
+            const usedBy = usedColorMap[currentColor];
+            if (usedBy) {
+                catColorStatusMsg.className = 'cat-color-status-msg duplicate-warn';
+                catColorStatusMsg.innerHTML = `Warna dipakai oleh kategori: <strong>${esc(usedBy)}</strong>`;
+            } else {
+                catColorStatusMsg.className = 'cat-color-status-msg';
+            }
+        }
+    }
+
+    /**
+     * Renders the searchable vector icon grid
+     */
+    function renderIconGrid(searchQuery = '', groupFilter = 'all') {
+        if (!catIconGrid) return;
+        const q = (searchQuery || '').toLowerCase().trim();
+        const currentIcon = (catFormIcon ? catFormIcon.value : 'Apple').trim().toLowerCase();
+
+        const filtered = MARKET_ICON_CATALOG.filter(item => {
+            const matchGroup = (!groupFilter || groupFilter === 'all' || item.group === groupFilter);
+            if (!matchGroup) return false;
+            if (!q) return true;
+            return item.name.toLowerCase().includes(q) ||
+                item.label.toLowerCase().includes(q) ||
+                item.keywords.toLowerCase().includes(q);
+        });
+
+        if (catIconEmpty) {
+            catIconEmpty.style.display = filtered.length === 0 ? 'flex' : 'none';
+        }
+
+        const esc = typeof Security !== 'undefined' ? Security.escapeHTML : str => (str == null ? '' : String(str));
+        const escAttr = typeof Security !== 'undefined' ? Security.sanitizeAttr : esc;
+
+        catIconGrid.innerHTML = filtered.map(item => {
+            const isActive = item.name.toLowerCase() === currentIcon;
+            const svg = typeof AppIcons !== 'undefined'
+                ? AppIcons.getCategorySvg(item.name, { size: 17, stroke: '#FFFFFF', strokeWidth: 2 })
+                : '';
+
+            return `
+                <div class="cat-icon-card ${isActive ? 'active' : ''}" 
+                    data-icon-name="${escAttr(item.name)}" 
+                    role="radio" 
+                    aria-checked="${isActive}" 
+                    tabindex="0" 
+                    title="${escAttr(item.label)} (${item.name})">
+                    <div class="cat-icon-art">
+                        ${svg}
+                    </div>
+                    <span class="cat-icon-label">${esc(item.label)}</span>
+                </div>
+            `;
+        }).join('');
+
+        // Wire click and keyboard events on icon cards
+        catIconGrid.querySelectorAll('.cat-icon-card').forEach(card => {
+            const selectCard = () => {
+                const iconName = card.dataset.iconName;
+                if (!iconName) return;
+                if (catFormIcon) catFormIcon.value = iconName;
+                catIconGrid.querySelectorAll('.cat-icon-card').forEach(c => {
+                    c.classList.remove('active');
+                    c.setAttribute('aria-checked', 'false');
+                });
+                card.classList.add('active');
+                card.setAttribute('aria-checked', 'true');
+                updateLivePreview();
+            };
+
+            card.addEventListener('click', selectCard);
+            card.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    selectCard();
+                }
+            });
+        });
+    }
+
     function openCategoryModal() {
         if (!categoryModal) return;
         resetCategoryForm();
         renderCategoryTable();
         categoryModal.style.display = 'flex';
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
     }
 
     function closeCategoryModal() {
@@ -740,9 +1156,35 @@ document.addEventListener('DOMContentLoaded', async () => {
         btnSaveCategory.querySelector('span').textContent = 'Simpan Kategori';
         btnResetCatForm.style.display = 'none';
         catFormId.readOnly = false;
-        catFormIcon.value = '🍎';
-        catFormColor.value = '#E74C3C';
-        catFormColorHex.value = '#E74C3C';
+        catFormIcon.value = 'Apple';
+        catFormColor.value = '#C0392B';
+        catFormColorHex.value = '#C0392B';
+        catFormFacility.checked = false;
+
+        // Show category list in create mode
+        if (categoryListWrapper) {
+            categoryListWrapper.style.display = '';
+        }
+
+        if (catIconSearchInput) {
+            catIconSearchInput.value = '';
+        }
+        if (catIconSearchClear) {
+            catIconSearchClear.style.display = 'none';
+        }
+        currentIconGroup = 'all';
+        if (catGroupTabs) {
+            catGroupTabs.querySelectorAll('.cat-group-tab').forEach(t => {
+                t.classList.toggle('active', t.dataset.group === 'all');
+            });
+        }
+
+        renderColorSwatches();
+        renderIconGrid('', 'all');
+        updateLivePreview();
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
     }
 
     function populateEditCategory(cat) {
@@ -752,12 +1194,36 @@ document.addEventListener('DOMContentLoaded', async () => {
         catFormName.value = cat.name || '';
         catFormId.value = cat.id || '';
         catFormId.readOnly = true;
-        catFormIcon.value = cat.icon || '📍';
-        catFormColor.value = cat.color || '#C0392B';
-        catFormColorHex.value = (cat.color || '#C0392B').toUpperCase();
+
+        // Hide category list in edit mode
+        if (categoryListWrapper) {
+            categoryListWrapper.style.display = 'none';
+        }
+
+        const catModalBody = document.querySelector('.category-modal-body');
+        if (catModalBody) {
+            catModalBody.scrollTop = 0;
+        }
+
+        const resolvedIcon = typeof AppIcons !== 'undefined'
+            ? AppIcons.getCategoryIconName(cat.icon || cat.id)
+            : (cat.icon || 'Apple');
+        catFormIcon.value = resolvedIcon;
+
+        const catColor = (cat.color || '#C0392B').trim();
+        catFormColor.value = catColor;
+        catFormColorHex.value = catColor.toUpperCase();
         catFormFacility.checked = Boolean(cat.is_facility || cat.isFacility);
+
         btnSaveCategory.querySelector('span').textContent = 'Perbarui Kategori';
         btnResetCatForm.style.display = 'inline-block';
+
+        renderColorSwatches();
+        renderIconGrid(catIconSearchInput ? catIconSearchInput.value : '', currentIconGroup);
+        updateLivePreview();
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
         catFormName.focus();
     }
 
@@ -788,19 +1254,25 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         categoryTableBody.innerHTML = catList.map(cat => {
             const catId = (cat.id || '').toLowerCase();
-            const isFac = Boolean(cat.is_facility || cat.isFacility);
+            const isFac = Boolean(cat.is_facility || cat.isFacility || (typeof AppIcons !== 'undefined' && AppIcons.isFacility(catId)));
+            const catColor = cat.color || '#C0392B';
+            const safeCatColor = String(catColor).replace(/[^#a-zA-Z0-9(),. -]/g, '');
             // Count how many stalls currently use this category
             const count = stalls.filter(s => (s.category || '').toLowerCase() === catId).length;
 
             return `
                 <tr>
-                    <td style="font-size: 1.25rem; text-align: center;">${esc(cat.icon || '📍')}</td>
+                    <td style="text-align: center;">
+                        <span class="admin-cat-preview-badge ${isFac ? 'facility' : ''}" style="background:${isFac ? '#FFFFFF' : safeCatColor}; border-color:${safeCatColor};">
+                            ${isFac ? `<span style="font-size:0.9rem;">${esc(cat.icon || '📍')}</span>` : (typeof AppIcons !== 'undefined' ? AppIcons.getCategorySvg(catId, { size: 14, stroke: '#FFFFFF', strokeWidth: 2 }) : `<span style="font-size:0.9rem;">${esc(cat.icon || '📍')}</span>`)}
+                        </span>
+                    </td>
                     <td><strong>${esc(cat.name)}</strong></td>
                     <td><code>${esc(cat.id)}</code></td>
                     <td>
                         <span class="cat-color-badge">
-                            <span class="color-dot" style="background:${escAttr(cat.color || '#C0392B')};"></span>
-                            ${esc(cat.color || '#C0392B')}
+                            <span class="color-dot" style="background:${safeCatColor};"></span>
+                            ${esc(catColor)}
                         </span>
                     </td>
                     <td>
@@ -890,40 +1362,80 @@ document.addEventListener('DOMContentLoaded', async () => {
         btnResetCatForm.addEventListener('click', resetCategoryForm);
     }
 
-    // Auto-fill ID from Name on create mode
-    if (catFormName && catFormId) {
+    // Live preview sync on Name and ID
+    if (catFormName) {
         catFormName.addEventListener('input', () => {
-            if (catFormMode.value === 'create') {
+            if (catFormId && catFormMode.value === 'create') {
                 catFormId.value = catFormName.value
                     .toLowerCase()
                     .trim()
                     .replace(/\s+/g, '_')
                     .replace(/[^a-z0-9_-]/g, '');
             }
+            updateLivePreview();
         });
     }
 
-    // Color picker & Hex text sync
+    if (catFormFacility) {
+        catFormFacility.addEventListener('change', () => {
+            updateLivePreview();
+        });
+    }
+
+    // Color picker & Hex text sync + live preview updates
     if (catFormColor && catFormColorHex) {
         catFormColor.addEventListener('input', () => {
             catFormColorHex.value = catFormColor.value.toUpperCase();
+            renderColorSwatches();
+            updateLivePreview();
         });
         catFormColorHex.addEventListener('input', () => {
             const hex = catFormColorHex.value.trim();
             if (/^#[0-9A-Fa-f]{6}$/.test(hex)) {
                 catFormColor.value = hex;
+                renderColorSwatches();
+                updateLivePreview();
             }
         });
     }
 
-    // Quick emoji preset buttons
-    document.querySelectorAll('.btn-preset-emoji').forEach(btn => {
-        btn.addEventListener('click', () => {
-            if (catFormIcon) {
-                catFormIcon.value = btn.dataset.emoji || '📍';
+    // Searchable Icon Picker: Search filtering with debounce
+    if (catIconSearchInput) {
+        catIconSearchInput.addEventListener('input', () => {
+            const val = catIconSearchInput.value;
+            if (catIconSearchClear) {
+                catIconSearchClear.style.display = val.trim() ? 'block' : 'none';
             }
+            clearTimeout(iconSearchDebounceTimer);
+            iconSearchDebounceTimer = setTimeout(() => {
+                renderIconGrid(val, currentIconGroup);
+            }, 120);
         });
-    });
+    }
+
+    if (catIconSearchClear) {
+        catIconSearchClear.addEventListener('click', () => {
+            if (catIconSearchInput) {
+                catIconSearchInput.value = '';
+                catIconSearchInput.focus();
+            }
+            catIconSearchClear.style.display = 'none';
+            renderIconGrid('', currentIconGroup);
+        });
+    }
+
+    // Searchable Icon Picker: Category Group Tabs
+    if (catGroupTabs) {
+        catGroupTabs.querySelectorAll('.cat-group-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                catGroupTabs.querySelectorAll('.cat-group-tab').forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                currentIconGroup = tab.dataset.group || 'all';
+                const currentSearch = catIconSearchInput ? catIconSearchInput.value : '';
+                renderIconGrid(currentSearch, currentIconGroup);
+            });
+        });
+    }
 
     // Category Form Submit (Create / Update)
     if (categoryForm) {
@@ -931,8 +1443,8 @@ document.addEventListener('DOMContentLoaded', async () => {
             e.preventDefault();
             const name = catFormName.value.trim();
             const id = (catFormId.value || name).toLowerCase().trim().replace(/\s+/g, '_').replace(/[^a-z0-9_-]/g, '');
-            const icon = catFormIcon.value.trim() || '📍';
-            const color = catFormColor.value || '#C0392B';
+            const icon = (catFormIcon.value || 'Apple').trim();
+            const color = (catFormColor.value || '#C0392B').trim();
             const isFacility = catFormFacility.checked;
 
             if (!name || !id) {
@@ -963,7 +1475,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 renderCategoryTable();
                 renderTable();
                 resetCategoryForm();
-                showToast(`Kategori "${name}" ${icon} berhasil disimpan!`, 'success');
+                showToast(`Kategori "${name}" berhasil disimpan!`, 'success');
             } catch (err) {
                 showToast('Gagal menyimpan kategori: ' + err.message, 'error');
             }

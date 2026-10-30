@@ -43,7 +43,7 @@ const market = {
     buildings: [
         {
             id: 'pasar-gede',
-            name: 'Pasar Gede (Utama)',
+            name: 'Pasar Gedhe (Utama)',
             description: 'Bangunan utama pasar bersejarah di pusat Kota Solo. Lantai 1 untuk kebutuhan pangan harian dan oleh-oleh; Lantai 2 untuk sentra kuliner legendaris dan daging.',
             floors: [
                 {
@@ -129,9 +129,11 @@ for (const [key, filename] of Object.entries(layoutFiles)) {
             x: s.location_x,
             y: s.location_y,
             // Invert Y for Leaflet if coordinate space is 1024x1024
-            lat: 1024 - s.location_y,
+            // For Pasar Gedhe, s.location_y is in SVG coords, so Leaflet lat is 1024 - s.location_y
+            // For Pasar Buah, s.location_y is Cartesian from bottom, so Leaflet lat is s.location_y
+            lat: bldId === 'pasar-buah' ? s.location_y : (1024 - s.location_y),
             lng: s.location_x,
-            description: s.store && s.store.description ? s.store.description : `Kios ${s.label} di ${bldId === 'pasar-gede' ? 'Pasar Gede' : 'Pasar Buah'} Lantai ${floorNumStr}`,
+            description: s.store && s.store.description ? s.store.description : `Kios ${s.label} di ${bldId === 'pasar-gede' ? 'Pasar Gedhe' : 'Pasar Buah'} Lantai ${floorNumStr}`,
             image: s.store && s.store.image ? s.store.image : null,
             imageThumb: s.store && s.store.image_thumb ? s.store.image_thumb : null,
             images: s.store && s.store.images ? s.store.images : [],

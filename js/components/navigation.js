@@ -346,6 +346,9 @@ const Navigation = (() => {
             fromInput.value = name;
         }
         fromNodeId = nodeId;
+        if (typeof MarketMap !== 'undefined' && MarketMap.setSelectedStall) {
+            MarketMap.setSelectedStall(nodeId);
+        }
         updateGoButton();
         openRoutePopup();
 
@@ -365,6 +368,9 @@ const Navigation = (() => {
             toInput.value = name;
         }
         toNodeId = nodeId;
+        if (typeof MarketMap !== 'undefined' && MarketMap.setSelectedStall) {
+            MarketMap.setSelectedStall(nodeId);
+        }
         updateGoButton();
         openRoutePopup();
 

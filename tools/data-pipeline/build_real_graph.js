@@ -217,17 +217,29 @@ const pbStairs1 = Object.values(nodes).filter(n => n.buildingId === 'pasar-buah'
 const pbStairs2 = Object.values(nodes).filter(n => n.buildingId === 'pasar-buah' && n.floor === 2 && n.type === 'stairs');
 
 if (pbStairs1.length > 0 && pbStairs2.length > 0) {
-    pbStairs1.forEach((s1, idx) => {
-        const s2 = pbStairs2[idx % pbStairs2.length];
-        edges.push({
-            from: s1.id,
-            to: s2.id,
-            distance: 25,
-            accessible: false,
-            isFloorTransition: true,
-            transitionType: 'stairs',
-            width: 1.5
+    pbStairs1.forEach(s1 => {
+        let bestS2 = null;
+        let minDist = Infinity;
+        pbStairs2.forEach(s2 => {
+            const dx = s1.x - s2.x;
+            const dy = s1.y - s2.y;
+            const d = Math.sqrt(dx * dx + dy * dy);
+            if (d < minDist) {
+                minDist = d;
+                bestS2 = s2;
+            }
         });
+        if (bestS2) {
+            edges.push({
+                from: s1.id,
+                to: bestS2.id,
+                distance: 25,
+                accessible: false,
+                isFloorTransition: true,
+                transitionType: 'stairs',
+                width: 1.5
+            });
+        }
     });
 }
 

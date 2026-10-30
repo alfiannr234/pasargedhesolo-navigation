@@ -37,15 +37,39 @@
 }
 
 .legend-color {
-    width: 14px;
-    height: 14px;
-    border-radius: 4px;
+    display: none;
+}
+
+.legend-badge {
+    width: 26px;
+    height: 26px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-shrink: 0;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.22);
+    border: 1.5px solid #FFFFFF;
     transition: transform var(--transition-fast);
 }
 
-.legend-item:hover .legend-color {
+.legend-badge svg {
+    display: block;
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+    stroke: #FFFFFF;
+}
+
+.legend-badge.facility-badge {
+    border-radius: 50%;
+    background: #FFFFFF !important;
+    border: 2px solid #C0392B;
+    font-size: 0.85rem;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.16);
+}
+
+.legend-item:hover .legend-badge {
     transform: scale(1.15);
 }
 
