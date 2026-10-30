@@ -126,7 +126,7 @@ const Legend = (() => {
             badge.className = 'legend-badge';
             badge.style.backgroundColor = safeColor;
             if (typeof AppIcons !== 'undefined') {
-                badge.innerHTML = AppIcons.getCategorySvg(category.icon || key, { size: 14, stroke: '#FFFFFF', strokeWidth: 2 });
+                badge.innerHTML = AppIcons.getCategorySvg(category || key, { size: 14, stroke: '#FFFFFF', strokeWidth: 2 });
             } else {
                 badge.innerHTML = `<span aria-hidden="true">${category.icon || '📍'}</span>`;
             }

@@ -178,12 +178,22 @@ document.addEventListener('DOMContentLoaded', async () => {
                     MarketData.syncCategories(rawCats);
                 }
             } else if (typeof MarketData !== 'undefined') {
-                categories = MarketData.getCategories();
+                const mdCats = MarketData.getCategories();
+                for (const [key, c] of Object.entries(mdCats)) {
+                    const id = (c.id || key).toLowerCase();
+                    categories[id] = { ...c, id: id };
+                    categories[key] = categories[id];
+                }
             }
         } catch (e) {
             console.warn('Could not load categories:', e);
             if (typeof MarketData !== 'undefined') {
-                categories = MarketData.getCategories();
+                const mdCats = MarketData.getCategories();
+                for (const [key, c] of Object.entries(mdCats)) {
+                    const id = (c.id || key).toLowerCase();
+                    categories[id] = { ...c, id: id };
+                    categories[key] = categories[id];
+                }
             }
         }
         populateCategoryOptions();
@@ -307,20 +317,22 @@ document.addEventListener('DOMContentLoaded', async () => {
         } else {
             tableBody.innerHTML = pageItems.map(s => {
                 const img = s.imageThumb || s.image;
+                const catId = (s.category || '').toLowerCase();
                 const cat = (Object.hasOwn ? Object.hasOwn(categories, s.category) : categories.hasOwnProperty(s.category))
                     ? categories[s.category]
-                    : { name: s.categoryLabel || 'Kios', icon: s.icon || '🏪', color: s.color || '#C0392B' };
+                    : (categories[catId] ||
+                       (typeof MarketData !== 'undefined' ? MarketData.getCategory(catId) : null) ||
+                       { id: catId, name: s.categoryLabel || 'Kios', icon: s.icon || 'Store', color: s.color || '#C0392B' });
                 const bld = s.buildingId === 'pasar-buah' ? 'Pasar Buah' : 'Pasar Gedhe';
                 const isStar = Boolean(s.isLegendary);
 
-                const catId = (s.category || '').toLowerCase();
                 const isFac = Boolean(s.isFacility || cat.is_facility || cat.isFacility || (typeof AppIcons !== 'undefined' && AppIcons.isFacility(catId)));
                 const catColor = cat.color || '#C0392B';
                 const safeCatColor = String(catColor).replace(/[^#a-zA-Z0-9(),. -]/g, '');
 
                 let badgeIconSvg = '';
                 if (typeof AppIcons !== 'undefined' && !isFac) {
-                    badgeIconSvg = AppIcons.getCategorySvg(cat.icon || catId, { size: 12, stroke: '#FFFFFF', strokeWidth: 2.2 });
+                    badgeIconSvg = AppIcons.getCategorySvg(cat, { size: 12, stroke: '#FFFFFF', strokeWidth: 2.2 });
                 }
 
                 return `
@@ -329,11 +341,11 @@ document.addEventListener('DOMContentLoaded', async () => {
                             ${img ? `
                                 <img src="${escAttr(img)}" alt="${escAttr(s.name)}" class="stall-thumb" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
                                 <div class="stall-thumb-fallback" style="display:none; background:${safeCatColor}; border-radius:7px;">
-                                    ${isFac ? `<span>${esc(cat.icon || '📍')}</span>` : (badgeIconSvg ? AppIcons.getCategorySvg(cat.icon || catId, { size: 20, stroke: '#FFFFFF', strokeWidth: 2 }) : `<span>${esc(cat.icon || '🏪')}</span>`)}
+                                    ${isFac ? `<span>${esc(cat.icon || '📍')}</span>` : (badgeIconSvg ? AppIcons.getCategorySvg(cat, { size: 20, stroke: '#FFFFFF', strokeWidth: 2 }) : `<span>${esc(cat.icon || '🏪')}</span>`)}
                                 </div>
                             ` : `
                                 <div class="stall-thumb-fallback" style="background:${safeCatColor}; border-radius:7px;">
-                                    ${isFac ? `<span>${esc(cat.icon || '📍')}</span>` : (badgeIconSvg ? AppIcons.getCategorySvg(cat.icon || catId, { size: 20, stroke: '#FFFFFF', strokeWidth: 2 }) : `<span>${esc(cat.icon || '🏪')}</span>`)}
+                                    ${isFac ? `<span>${esc(cat.icon || '📍')}</span>` : (badgeIconSvg ? AppIcons.getCategorySvg(cat, { size: 20, stroke: '#FFFFFF', strokeWidth: 2 }) : `<span>${esc(cat.icon || '🏪')}</span>`)}
                                 </div>
                             `}
                         </td>
@@ -764,7 +776,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             mapPickerPin.className = 'picker-pin';
             mapPickerPin.style.backgroundColor = catColor;
             if (typeof AppIcons !== 'undefined') {
-                mapPickerPin.innerHTML = AppIcons.getCategorySvg(cat.icon || catId, { size: 15, stroke: '#FFFFFF', strokeWidth: 2 });
+                mapPickerPin.innerHTML = AppIcons.getCategorySvg(cat, { size: 15, stroke: '#FFFFFF', strokeWidth: 2 });
             } else {
                 mapPickerPin.innerHTML = `<span style="font-size:0.85rem;">${cat.icon || '📍'}</span>`;
             }
@@ -1264,7 +1276,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 <tr>
                     <td style="text-align: center;">
                         <span class="admin-cat-preview-badge ${isFac ? 'facility' : ''}" style="background:${isFac ? '#FFFFFF' : safeCatColor}; border-color:${safeCatColor};">
-                            ${isFac ? `<span style="font-size:0.9rem;">${esc(cat.icon || '📍')}</span>` : (typeof AppIcons !== 'undefined' ? AppIcons.getCategorySvg(catId, { size: 14, stroke: '#FFFFFF', strokeWidth: 2 }) : `<span style="font-size:0.9rem;">${esc(cat.icon || '📍')}</span>`)}
+                            ${isFac ? `<span style="font-size:0.9rem;">${esc(cat.icon || '📍')}</span>` : (typeof AppIcons !== 'undefined' ? AppIcons.getCategorySvg(cat, { size: 14, stroke: '#FFFFFF', strokeWidth: 2 }) : `<span style="font-size:0.9rem;">${esc(cat.icon || '📍')}</span>`)}
                         </span>
                     </td>
                     <td><strong>${esc(cat.name)}</strong></td>

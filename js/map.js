@@ -260,7 +260,7 @@ const MarketMap = (() => {
 
         let iconSvg = '';
         if (typeof AppIcons !== 'undefined') {
-            iconSvg = AppIcons.getCategorySvg(category.icon || catKey, { size: iconSize, stroke: '#FFFFFF', strokeWidth: isCompact ? 2.2 : 2 });
+            iconSvg = AppIcons.getCategorySvg(category || catKey, { size: iconSize, stroke: '#FFFFFF', strokeWidth: isCompact ? 2.2 : 2 });
         } else {
             iconSvg = `<span>${category.icon || stall.icon || '📍'}</span>`;
         }
