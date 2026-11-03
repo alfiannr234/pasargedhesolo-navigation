@@ -11,6 +11,7 @@ const MarketMap = (() => {
     let svgOverlay = null;
     let markersLayer = null;
     let routeLayer = null;
+    let stepHighlightLayer = null;
     let highlightLayer = null;
     let markersByCategory = {}; // { categoryId: [L.marker, ...] }
     let markersByStallId = {};  // { stallId / nodeId: L.marker }
@@ -571,6 +572,7 @@ const MarketMap = (() => {
             map.removeLayer(routeLayer);
             routeLayer = null;
         }
+        clearStepHighlight();
         if (routeOriginMarker && routeOriginMarker._icon) {
             routeOriginMarker._icon.classList.remove('is-route-origin');
         }
@@ -656,6 +658,64 @@ const MarketMap = (() => {
         map.setView(latlng, 1.25, { animate: true });
     }
 
+    /**
+     * Clear active step highlight beacon
+     */
+    function clearStepHighlight() {
+        if (stepHighlightLayer && map) {
+            map.removeLayer(stepHighlightLayer);
+            stepHighlightLayer = null;
+        }
+    }
+
+    /**
+     * Highlight specific route step location with pulsing beacon & camera pan
+     */
+    function highlightRouteStep(step) {
+        if (!step || !map) return;
+        clearStepHighlight();
+
+        const stepFloor = step.floor || currentFloor;
+        const stepBld = (step.coord && step.coord.buildingId) || currentBuilding;
+
+        if (stepBld !== currentBuilding) {
+            switchBuilding(stepBld);
+        }
+        if (stepFloor !== currentFloor) {
+            switchFloor(stepFloor);
+        }
+
+        if (step.coord) {
+            const isPb = (stepBld === 'pasar-buah' || currentBuilding === 'pasar-buah');
+            const lat = step.coord.lat !== undefined ? step.coord.lat : (isPb ? step.coord.y : (1024 - step.coord.y));
+            const lng = step.coord.lng !== undefined ? step.coord.lng : step.coord.x;
+            const latlng = L.latLng(lat, lng);
+
+            stepHighlightLayer = L.layerGroup().addTo(map);
+
+            // Outer pulsing ring
+            L.circleMarker(latlng, {
+                radius: 20,
+                color: '#C0392B',
+                weight: 3,
+                fillColor: '#FFCDD2',
+                fillOpacity: 0.65,
+                className: 'pulse'
+            }).addTo(stepHighlightLayer);
+
+            // Center core pin dot
+            L.circleMarker(latlng, {
+                radius: 6.5,
+                color: '#FFFFFF',
+                weight: 2,
+                fillColor: '#C0392B',
+                fillOpacity: 1
+            }).addTo(stepHighlightLayer);
+
+            map.panTo(latlng, { animate: true, duration: 0.5 });
+        }
+    }
+
     function setupMapControls() {
         const zoomInBtn = document.getElementById('zoomIn');
         const zoomOutBtn = document.getElementById('zoomOut');
@@ -703,6 +763,8 @@ const MarketMap = (() => {
         refreshCategoryVisibility,
         drawRoute,
         clearRoute,
+        highlightRouteStep,
+        clearStepHighlight,
         highlightStall,
         clearHighlight,
         setSelectedStall,

@@ -157,6 +157,46 @@
             <div id="map-container" class="map-container" tabindex="0" role="application"
                 aria-label="Peta interaktif Pasar Gedhe Solo"></div>
 
+            <!-- Turn-by-Turn Navigation HUD (Floating Top-Center over Map) -->
+            <div class="route-step-hud" id="routeStepHud" role="region" aria-label="Petunjuk Navigasi Rute" style="display: none;">
+                <div class="route-hud-header">
+                    <div class="route-hud-title-wrap">
+                        <span class="route-hud-badge" id="routeHudStepBadge">Langkah 1 dari 4</span>
+                        <span class="route-hud-floor" id="routeHudFloorBadge">Lantai 1</span>
+                    </div>
+                    <div class="route-hud-actions">
+                        <button type="button" class="btn-hud-icon btn-hud-audio" id="btnRouteHudAudio" title="Dengarkan petunjuk langkah ini" aria-label="Putar panduan suara langkah ini">
+                            <i data-lucide="volume-2" aria-hidden="true"></i>
+                        </button>
+                        <button type="button" class="btn-hud-icon btn-hud-close" id="btnRouteHudClose" title="Tutup navigasi rute" aria-label="Tutup navigasi rute">
+                            <i data-lucide="x" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="route-hud-body">
+                    <div class="route-hud-icon-wrap" id="routeHudIconWrap">
+                        <span class="route-hud-icon" id="routeHudIcon">🟢</span>
+                    </div>
+                    <div class="route-hud-instruction">
+                        <h4 class="route-hud-main-text" id="routeHudMainText">Mulai dari Kios</h4>
+                        <p class="route-hud-sub-text" id="routeHudSubText">Ikuti koridor jalan</p>
+                    </div>
+                </div>
+
+                <div class="route-hud-footer">
+                    <button type="button" class="route-hud-nav-btn prev" id="btnRouteHudPrev" aria-label="Langkah sebelumnya" title="Langkah sebelumnya">
+                        <i data-lucide="chevron-left" aria-hidden="true"></i>
+                        <span>Sebelumnya</span>
+                    </button>
+                    <div class="route-hud-dots" id="routeHudDots" aria-hidden="true"></div>
+                    <button type="button" class="route-hud-nav-btn next" id="btnRouteHudNext" aria-label="Langkah selanjutnya" title="Langkah selanjutnya">
+                        <span>Selanjutnya</span>
+                        <i data-lucide="chevron-right" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+
             <!-- Map Controls -->
             <div class="map-controls">
                 <button class="map-ctrl-btn" id="zoomIn" aria-label="Perbesar peta" title="Perbesar">

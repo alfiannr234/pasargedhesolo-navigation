@@ -226,6 +226,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (infoModal) infoModal.style.display = 'none';
             if (Directory.isOpen()) Directory.close();
             Navigation.closeRoutePopup();
+            if (typeof Navigation.closeStepHud === 'function') Navigation.closeStepHud();
             DetailPanel.close();
         }
     });

@@ -6,6 +6,7 @@
 const Navigation = (() => {
     let currentRoute = null;
     let currentMode = 'normal';
+    let currentStepIndex = 0;
     let selectingFor = null; // 'from' or 'to'
     let fromNodeId = null;
     let toNodeId = null;
@@ -23,6 +24,7 @@ const Navigation = (() => {
         setupRouteMode();
         setupButtons();
         setupAudioControls();
+        setupRouteHudControls();
     }
 
     function setupInputAutocomplete(inputId, suggestionsId, type) {
@@ -428,7 +430,11 @@ const Navigation = (() => {
             onRouteFoundCallback(route);
         }
 
-        A11y.speakRouteSummary(route);
+        // Return to map view by closing the route modal
+        closeRoutePopup();
+
+        // Launch Top-Center Turn-by-Turn HUD Card on the map (speaks Step 1 directly, skips distance/time summary)
+        showStepHud(route, 0);
     }
 
     function setupAudioControls() {
@@ -598,6 +604,7 @@ const Navigation = (() => {
                             highlightStepItem(idx);
                             A11y.speakStep(step, {
                                 force: true,
+                                stepNumber: idx + 1,
                                 onEnd: () => {
                                     highlightStepItem(-1);
                                 }
@@ -630,6 +637,8 @@ const Navigation = (() => {
         fromNodeId = null;
         toNodeId = null;
 
+        closeStepHud();
+
         if (typeof A11y !== 'undefined' && A11y.isSpeaking()) {
             A11y.stopSpeaking();
             resetAudioButton();
@@ -656,6 +665,221 @@ const Navigation = (() => {
         A11y.announce('Rute telah dihapus');
     }
 
+    // ============================================
+    // TOP-CENTER TURN-BY-TURN HUD CONTROLLER
+    // ============================================
+
+    function setupRouteHudControls() {
+        const btnPrev = document.getElementById('btnRouteHudPrev');
+        const btnNext = document.getElementById('btnRouteHudNext');
+        const btnClose = document.getElementById('btnRouteHudClose');
+        const btnAudio = document.getElementById('btnRouteHudAudio');
+
+        if (btnPrev) {
+            btnPrev.addEventListener('click', (e) => {
+                e.stopPropagation();
+                if (!currentRoute || !currentRoute.steps) return;
+                if (currentStepIndex > 0) {
+                    updateStepHud(currentStepIndex - 1, true);
+                }
+            });
+        }
+
+        if (btnNext) {
+            btnNext.addEventListener('click', (e) => {
+                e.stopPropagation();
+                if (!currentRoute || !currentRoute.steps) return;
+                if (currentStepIndex < currentRoute.steps.length - 1) {
+                    updateStepHud(currentStepIndex + 1, true);
+                } else {
+                    // Last step finished -> close HUD and clear route
+                    closeStepHud();
+                    clearRoute();
+                    if (typeof A11y !== 'undefined') {
+                        A11y.announce('Anda telah tiba di tujuan. Rute navigasi selesai.');
+                    }
+                }
+            });
+        }
+
+        if (btnClose) {
+            btnClose.addEventListener('click', (e) => {
+                e.stopPropagation();
+                closeStepHud();
+                clearRoute();
+            });
+        }
+
+        if (btnAudio) {
+            btnAudio.addEventListener('click', (e) => {
+                e.stopPropagation();
+                if (typeof A11y === 'undefined') return;
+                if (A11y.isSpeaking()) {
+                    A11y.stopSpeaking();
+                    btnAudio.classList.remove('speaking');
+                } else if (currentRoute && currentRoute.steps && currentRoute.steps[currentStepIndex]) {
+                    btnAudio.classList.add('speaking');
+                    A11y.speakStep(currentRoute.steps[currentStepIndex], {
+                        force: true,
+                        stepNumber: currentStepIndex + 1,
+                        onStart: () => btnAudio.classList.add('speaking'),
+                        onEnd: () => btnAudio.classList.remove('speaking')
+                    });
+                }
+            });
+        }
+
+        // Keyboard arrow navigation when HUD is open
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+            const hud = document.getElementById('routeStepHud');
+            if (!hud || hud.style.display === 'none' || !currentRoute || !currentRoute.steps) return;
+
+            if (e.key === 'ArrowLeft') {
+                if (currentStepIndex > 0) {
+                    e.preventDefault();
+                    updateStepHud(currentStepIndex - 1, true);
+                }
+            } else if (e.key === 'ArrowRight') {
+                if (currentStepIndex < currentRoute.steps.length - 1) {
+                    e.preventDefault();
+                    updateStepHud(currentStepIndex + 1, true);
+                }
+            } else if (e.key === 'Escape') {
+                e.preventDefault();
+                closeStepHud();
+                clearRoute();
+            }
+        });
+    }
+
+    function showStepHud(route, stepIdx = 0) {
+        if (!route || !route.steps || route.steps.length === 0) return;
+        currentRoute = route;
+        currentStepIndex = stepIdx;
+
+        const hud = document.getElementById('routeStepHud');
+        if (hud) {
+            hud.style.display = 'flex';
+        }
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
+
+        updateStepHud(currentStepIndex, true);
+    }
+
+    function closeStepHud() {
+        const hud = document.getElementById('routeStepHud');
+        if (hud) {
+            hud.style.display = 'none';
+        }
+        const btnAudio = document.getElementById('btnRouteHudAudio');
+        if (btnAudio) {
+            btnAudio.classList.remove('speaking');
+        }
+        if (typeof A11y !== 'undefined') {
+            A11y.stopSpeaking();
+        }
+        if (typeof MarketMap !== 'undefined' && MarketMap.clearStepHighlight) {
+            MarketMap.clearStepHighlight();
+        }
+    }
+
+    function isStepHudOpen() {
+        const hud = document.getElementById('routeStepHud');
+        return hud && hud.style.display !== 'none';
+    }
+
+    function updateStepHud(stepIdx, shouldSpeak = true) {
+        if (!currentRoute || !currentRoute.steps || currentRoute.steps.length === 0) return;
+
+        const steps = currentRoute.steps;
+        currentStepIndex = Math.max(0, Math.min(stepIdx, steps.length - 1));
+        const step = steps[currentStepIndex];
+
+        const badgeEl = document.getElementById('routeHudStepBadge');
+        const floorEl = document.getElementById('routeHudFloorBadge');
+        const iconEl = document.getElementById('routeHudIcon');
+        const mainTextEl = document.getElementById('routeHudMainText');
+        const subTextEl = document.getElementById('routeHudSubText');
+        const btnPrev = document.getElementById('btnRouteHudPrev');
+        const btnNext = document.getElementById('btnRouteHudNext');
+        const btnAudio = document.getElementById('btnRouteHudAudio');
+        const dotsEl = document.getElementById('routeHudDots');
+
+        if (badgeEl) badgeEl.textContent = `Langkah ${currentStepIndex + 1} dari ${steps.length}`;
+        if (floorEl) floorEl.textContent = `Lantai ${step.floor || 1}`;
+        if (iconEl) iconEl.textContent = step.icon || '📍';
+        if (mainTextEl) mainTextEl.textContent = step.text || '';
+        
+        let subText = step.detail || '';
+        if (step.badge && step.badge.text) {
+            subText = subText ? `${subText} · ${step.badge.text}` : step.badge.text;
+        }
+        if (subTextEl) subTextEl.textContent = subText;
+
+        if (btnPrev) {
+            btnPrev.disabled = (currentStepIndex === 0);
+        }
+
+        if (btnNext) {
+            if (currentStepIndex === steps.length - 1) {
+                btnNext.innerHTML = '<span>Selesai</span> <i data-lucide="check" aria-hidden="true"></i>';
+                btnNext.classList.add('finish-btn');
+                btnNext.setAttribute('title', 'Selesaikan rute navigasi');
+            } else {
+                btnNext.innerHTML = '<span>Selanjutnya</span> <i data-lucide="chevron-right" aria-hidden="true"></i>';
+                btnNext.classList.remove('finish-btn');
+                btnNext.setAttribute('title', 'Langkah selanjutnya');
+            }
+        }
+
+        // Render progress dots
+        if (dotsEl) {
+            dotsEl.innerHTML = steps.map((s, idx) => `
+                <span class="route-hud-dot ${idx === currentStepIndex ? 'active' : ''}" 
+                    data-step-index="${idx}" 
+                    title="Lompat ke langkah ${idx + 1}: ${s.text}"></span>
+            `).join('');
+
+            dotsEl.querySelectorAll('.route-hud-dot').forEach(dot => {
+                dot.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const idx = parseInt(dot.dataset.stepIndex, 10);
+                    if (!isNaN(idx)) {
+                        updateStepHud(idx, true);
+                    }
+                });
+            });
+        }
+
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
+
+        // Sync with Map camera and highlight beacon
+        if (typeof MarketMap !== 'undefined' && MarketMap.highlightRouteStep) {
+            MarketMap.highlightRouteStep(step);
+        }
+
+        // Play audio if enabled
+        if (shouldSpeak && typeof A11y !== 'undefined') {
+            A11y.stopSpeaking();
+            if (btnAudio) btnAudio.classList.add('speaking');
+            A11y.speakStep(step, {
+                force: true,
+                stepNumber: currentStepIndex + 1,
+                onStart: () => {
+                    if (btnAudio) btnAudio.classList.add('speaking');
+                },
+                onEnd: () => {
+                    if (btnAudio) btnAudio.classList.remove('speaking');
+                }
+            });
+        }
+    }
+
     function getSelectingFor() {
         return selectingFor;
     }
@@ -674,6 +898,10 @@ const Navigation = (() => {
         closeRoutePopup,
         toggleRoutePopup,
         isPopupOpen,
+        showStepHud,
+        closeStepHud,
+        isStepHudOpen,
+        updateStepHud,
         setOrigin,
         setDestination,
         setLocationFromMap,
