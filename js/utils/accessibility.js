@@ -18,41 +18,66 @@ const A11y = (() => {
 
     let cachedVoice = null;
     let currentUtterance = null;
+    let currentAudio = null;
     let isPlayingSequence = false;
+
+    // Number word mapper for natural conversational Indonesian
+    const INDONESIAN_NUMBERS = [
+        'nol', 'satu', 'dua', 'tiga', 'empat', 'lima', 'enam', 'tujuh', 'delapan', 'sembilan', 'sepuluh',
+        'sebelas', 'dua belas', 'tiga belas', 'empat belas', 'lima belas', 'enam belas', 'tujuh belas', 'delapan belas', 'sembilan belas', 'dua puluh'
+    ];
+
+    function numberToIndonesian(num) {
+        const n = parseInt(num, 10);
+        if (!isNaN(n) && n >= 0 && n < INDONESIAN_NUMBERS.length) {
+            return INDONESIAN_NUMBERS[n];
+        }
+        return String(num);
+    }
 
     /**
      * Locate the most natural, human-sounding Indonesian voice available
-     * Prioritizes Neural/Natural voices (Edge/Windows 11) and Google voices
+     * Prioritizes Neural/Natural voices (Edge/Windows 11), Google voices, and Malay fallback
      */
     function getBestIndonesianVoice() {
         if (!speechSynthesis) return null;
         const voices = speechSynthesis.getVoices();
         if (!voices || voices.length === 0) return null;
 
+        // 1. Direct Indonesian language tag match (id-ID, id, in-ID, in)
         const idVoices = voices.filter(v => {
-            const lang = (v.lang || '').toLowerCase().replace('_', '-');
-            return lang.startsWith('id') || lang.startsWith('in');
+            const lang = (v.lang || '').toLowerCase().replace(/_/g, '-');
+            return lang === 'id-id' || lang === 'id' || lang.startsWith('id-') || lang.startsWith('in-');
         });
 
-        if (idVoices.length === 0) {
-            const namedVoice = voices.find(v => (v.name || '').toLowerCase().includes('indonesia'));
-            if (namedVoice) return namedVoice;
-            return null;
-        }
+        // 2. Name contains 'indonesia' or 'bahasa'
+        const namedVoices = voices.filter(v => {
+            const name = (v.name || '').toLowerCase();
+            return name.includes('indonesia') || name.includes('bahasa indonesia');
+        });
 
-        // 1. Natural / Neural Indonesian voices (Edge & Windows 11)
-        const naturalVoice = idVoices.find(v => {
+        // 3. Fallback to Malay (Bahasa Melayu / ms-MY), phonetically almost identical
+        const malayVoices = voices.filter(v => {
+            const lang = (v.lang || '').toLowerCase().replace(/_/g, '-');
+            const name = (v.name || '').toLowerCase();
+            return lang.startsWith('ms') || name.includes('melayu') || name.includes('malay');
+        });
+
+        const candidates = [...idVoices, ...namedVoices, ...malayVoices];
+        if (candidates.length === 0) return null;
+
+        // Priority 1: Natural / Neural Indonesian voices (Edge & Windows 11)
+        const naturalVoice = candidates.find(v => {
             const name = (v.name || '').toLowerCase();
             return name.includes('natural') || name.includes('online') || name.includes('gadis') || name.includes('ardi');
         });
         if (naturalVoice) return naturalVoice;
 
-        // 2. Google Indonesian voices (Chrome / Android)
-        const googleVoice = idVoices.find(v => (v.name || '').toLowerCase().includes('google'));
+        // Priority 2: Google Indonesian voices (Chrome / Android)
+        const googleVoice = candidates.find(v => (v.name || '').toLowerCase().includes('google'));
         if (googleVoice) return googleVoice;
 
-        // 3. Fallback to any detected Indonesian voice
-        return idVoices[0];
+        return candidates[0];
     }
 
     /**
@@ -78,23 +103,43 @@ const A11y = (() => {
 
     /**
      * Clean and format Indonesian spoken text for maximum phonetic clarity
-     * Expands shorthand notations (Lt.1, ~2 mnt, 50m, P. Gede) into clear conversational phrases
+     * Strips emojis, expands shorthand notations into conversational phrasing,
+     * and translates English technical terms into natural Indonesian.
      */
     function cleanIndonesianSpokenText(text) {
         if (!text) return '';
         let spoken = String(text);
 
-        // Floor expansions
-        spoken = spoken.replace(/Lt\.?\s*1\b/gi, 'Lantai satu');
-        spoken = spoken.replace(/Lt\.?\s*2\b/gi, 'Lantai dua');
-        spoken = spoken.replace(/Lt\.?\s*([0-9]+)/gi, 'Lantai $1');
+        // 1. Strip all emoji characters and unicode symbols that TTS engines read aloud as English phrases
+        spoken = spoken.replace(/[\u{1F300}-\u{1F9FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}\u{1F100}-\u{1F1FF}\u{1F200}-\u{1F2FF}\u{2B50}\u{2800}-\u{28FF}\u{200D}\u{FE0F}]/gu, '');
 
-        // Distance & time expansions
+        // 2. Floor expansions
+        spoken = spoken.replace(/\bLt\.?\s*1\b/gi, 'Lantai satu');
+        spoken = spoken.replace(/\bLt\.?\s*2\b/gi, 'Lantai dua');
+        spoken = spoken.replace(/\bLt\.?\s*([0-9]+)\b/gi, 'Lantai $1');
+        spoken = spoken.replace(/\bLantai\s*1\b/gi, 'Lantai satu');
+        spoken = spoken.replace(/\bLantai\s*2\b/gi, 'Lantai dua');
+        spoken = spoken.replace(/\bLantai\s*3\b/gi, 'Lantai tiga');
+
+        // 3. Numbers & numbering
+        spoken = spoken.replace(/\bNo\.?\s*([0-9]+)\b/gi, 'Nomor $1');
+
+        // 4. Distance & time expansions
+        spoken = spoken.replace(/~?\s*1\s*mnt\b/gi, 'sekitar satu menit');
+        spoken = spoken.replace(/~?\s*2\s*mnt\b/gi, 'sekitar dua menit');
         spoken = spoken.replace(/~?\s*([0-9]+)\s*mnt\b/gi, 'sekitar $1 menit');
         spoken = spoken.replace(/([0-9]+)\s*m\b/gi, '$1 meter');
         spoken = spoken.replace(/([0-9]+)m\b/gi, '$1 meter');
 
-        // Proper noun expansions
+        // 5. English technical terms & foreign words to natural Indonesian
+        spoken = spoken.replace(/\bhandrail\b/gi, 'pegangan tangan');
+        spoken = spoken.replace(/\bzebra cross\b/gi, 'penyeberangan jalan');
+        spoken = spoken.replace(/\bramp\b/gi, 'jalur landai');
+        spoken = spoken.replace(/\baccessibility\b/gi, 'akses ramah difabel');
+        spoken = spoken.replace(/\baccessible\b/gi, 'ramah difabel');
+        spoken = spoken.replace(/\bwaypoint\b/gi, 'titik lintasan');
+
+        // 6. Proper nouns and market terms
         spoken = spoken.replace(/\bToilet\s*\/\s*WC\b/gi, 'Toilet');
         spoken = spoken.replace(/\bWC\s*\/\s*Toilet\b/gi, 'Toilet');
         spoken = spoken.replace(/\bP\.\s*Gedhe\b/gi, 'Pasar Gedhe');
@@ -106,12 +151,13 @@ const A11y = (() => {
         spoken = spoken.replace(/\bJl\.\b/gi, 'Jalan');
         spoken = spoken.replace(/\bKios\s*No\.?\s*/gi, 'Kios nomor ');
 
-        // Directional transitions
-        spoken = spoken.replace(/->|→/g, ' menuju ke ');
+        // 7. Directional transitions, symbols, punctuation
+        spoken = spoken.replace(/->|→|—/g, ' menuju ke ');
         spoken = spoken.replace(/[()]/g, ', ');
         spoken = spoken.replace(/\//g, ' atau ');
+        spoken = spoken.replace(/%/g, ' persen');
 
-        // Clean up punctuation pauses
+        // 8. Natural breathing pauses & clean up
         spoken = spoken.replace(/,\s*,+/g, ',');
         spoken = spoken.replace(/,\s*\./g, '.');
         spoken = spoken.replace(/\.\s*,/g, '.');
@@ -157,31 +203,76 @@ const A11y = (() => {
     }
 
     /**
-     * Speak text aloud using Web Speech API with natural Indonesian phrasing
+     * Play online native Indonesian audio via Google TTS (crystal-clear native Indonesian speaker)
      */
-    function speak(text, options = {}) {
-        if (!speechSynthesis) return;
-        
-        // Respect audio toggle unless forced
-        if (!audioEnabled && options.force !== true) return;
+    function playOnlineTts(cleanText, options = {}) {
+        if (typeof Audio === 'undefined') return false;
+        if (!cleanText || cleanText.length > 200) return false;
+
+        try {
+            if (currentAudio) {
+                currentAudio.pause();
+                currentAudio.src = '';
+                currentAudio = null;
+            }
+
+            const url = `https://translate.google.com/translate_tts?ie=UTF-8&tl=id&client=tw-ob&q=${encodeURIComponent(cleanText)}`;
+            const audio = new Audio(url);
+            audio.playbackRate = options.playbackRate || 0.95; // Calm, clear, natural pace
+
+            currentAudio = audio;
+
+            audio.onplay = () => {
+                if (typeof options.onStart === 'function') options.onStart();
+            };
+
+            audio.onended = () => {
+                if (currentAudio === audio) currentAudio = null;
+                if (typeof options.onEnd === 'function') options.onEnd();
+            };
+
+            audio.onerror = () => {
+                if (currentAudio === audio) currentAudio = null;
+                // Seamlessly fallback to Web Speech API
+                speakWithWebSpeech(cleanText, options);
+            };
+
+            const playPromise = audio.play();
+            if (playPromise !== undefined) {
+                playPromise.catch(() => {
+                    if (currentAudio === audio) currentAudio = null;
+                    speakWithWebSpeech(cleanText, options);
+                });
+            }
+
+            return true;
+        } catch (e) {
+            return false;
+        }
+    }
+
+    /**
+     * Fallback speech using local Web Speech API with tuned rate and pitch
+     */
+    function speakWithWebSpeech(cleanText, options = {}) {
+        if (!speechSynthesis) {
+            if (typeof options.onEnd === 'function') options.onEnd();
+            return;
+        }
 
         try {
             speechSynthesis.cancel();
-            
-            const cleanText = cleanIndonesianSpokenText(text);
-            if (!cleanText) return;
 
             const utterance = new SpeechSynthesisUtterance(cleanText);
             utterance.lang = 'id-ID';
-            utterance.rate = options.rate || 0.92; // Slightly measured rate for maximum intelligibility
+            // Pacing: 0.82 (calm, measured tempo for crystal clear Indonesian articulation)
+            utterance.rate = options.rate || 0.82;
             utterance.pitch = options.pitch || 1.0;
             utterance.volume = options.volume !== undefined ? options.volume : 1.0;
-            
-            if (!cachedVoice) {
-                cachedVoice = getBestIndonesianVoice();
-            }
-            if (cachedVoice) {
-                utterance.voice = cachedVoice;
+
+            const voice = getBestIndonesianVoice();
+            if (voice) {
+                utterance.voice = voice;
             }
 
             utterance.onstart = () => {
@@ -199,7 +290,6 @@ const A11y = (() => {
                 if (typeof options.onEnd === 'function') options.onEnd();
             };
 
-            // Store active reference to avoid Chrome GC bug
             currentUtterance = utterance;
             speechSynthesis.speak(utterance);
         } catch (err) {
@@ -209,10 +299,42 @@ const A11y = (() => {
     }
 
     /**
+     * Primary speak function: selects optimal audio engine
+     */
+    function speak(text, options = {}) {
+        // Respect audio toggle unless forced
+        if (!audioEnabled && options.force !== true) return;
+
+        const cleanText = cleanIndonesianSpokenText(text);
+        if (!cleanText) {
+            if (typeof options.onEnd === 'function') options.onEnd();
+            return;
+        }
+
+        stopSpeaking();
+
+        // 1. Try online high-definition native Indonesian audio first
+        if (typeof navigator === 'undefined' || navigator.onLine !== false) {
+            const started = playOnlineTts(cleanText, options);
+            if (started) return;
+        }
+
+        // 2. Fallback to local Web Speech API
+        speakWithWebSpeech(cleanText, options);
+    }
+
+    /**
      * Stop ongoing speech and cancel sequential guidance
      */
     function stopSpeaking() {
         isPlayingSequence = false;
+        if (currentAudio) {
+            try {
+                currentAudio.pause();
+                currentAudio.src = '';
+            } catch (err) {}
+            currentAudio = null;
+        }
         if (speechSynthesis) {
             try {
                 speechSynthesis.cancel();
@@ -222,10 +344,10 @@ const A11y = (() => {
     }
 
     /**
-     * Check if speech synthesis is currently active
+     * Check if speech synthesis or audio is currently active
      */
     function isSpeaking() {
-        return !!(speechSynthesis && (speechSynthesis.speaking || currentUtterance || isPlayingSequence));
+        return !!(isPlayingSequence || currentAudio || (speechSynthesis && (speechSynthesis.speaking || currentUtterance)));
     }
 
     /**
@@ -265,42 +387,39 @@ const A11y = (() => {
     }
 
     /**
-     * Speak navigation step with rich context
+     * Speak navigation step with rich Indonesian context (prefers audioDescription, strips emojis)
      */
     function speakStep(step, options = {}) {
         if (!step) return;
         if (!audioEnabled && options.force !== true) return;
         
         let text = step.audioDescription || step.text;
-        if (step.detail) {
+        if (!step.audioDescription && step.detail) {
             text += `. ${step.detail}`;
-        }
-        if (step.badge && step.badge.text) {
-            text += `. ${step.badge.text}`;
         }
         speak(text, options);
     }
 
     /**
-     * Speak route summary overview
+     * Speak route summary overview with natural conversational phrasing
      */
     function speakRouteSummary(route, options = {}) {
         if (!route) return;
         if (!audioEnabled && options.force !== true) return;
         
         const floorText = route.isMultiFloor 
-            ? `Rute berpindah lantai dari Lantai ${route.floors[0]} ke Lantai ${route.floors[route.floors.length - 1]}.` 
-            : `Rute berada di Lantai ${route.floors[0]}.`;
+            ? `Rute berpindah dari Lantai ${numberToIndonesian(route.floors[0])} menuju Lantai ${numberToIndonesian(route.floors[route.floors.length - 1])}.` 
+            : `Rute berada di Lantai ${numberToIndonesian(route.floors[0])}.`;
             
-        const text = `Rute ditemukan. Jarak tempuh sekitar ${route.totalDistance} meter, estimasi waktu ${route.estimatedTime} menit. ${floorText}`;
+        const text = `Rute navigasi ditemukan. Jarak tempuh sekitar ${route.totalDistance} meter, estimasi waktu ${route.estimatedTime} menit. ${floorText}`;
         speak(text, options);
     }
 
     /**
-     * Play full sequential turn-by-turn route guidance
+     * Play full sequential turn-by-turn route guidance with natural pacing and Indonesian intonation
      */
     function playFullRouteGuidance(route, callbacks = {}) {
-        if (!speechSynthesis || !route) return;
+        if (!route) return;
 
         stopSpeaking();
         isPlayingSequence = true;
@@ -308,8 +427,8 @@ const A11y = (() => {
         if (typeof callbacks.onStart === 'function') callbacks.onStart();
 
         const floorText = route.isMultiFloor 
-            ? `Rute berpindah lantai dari Lantai ${route.floors[0]} ke Lantai ${route.floors[route.floors.length - 1]}.` 
-            : `Rute berada di Lantai ${route.floors[0]}.`;
+            ? `Rute berpindah dari Lantai ${numberToIndonesian(route.floors[0])} menuju Lantai ${numberToIndonesian(route.floors[route.floors.length - 1])}.` 
+            : `Rute berada di Lantai ${numberToIndonesian(route.floors[0])}.`;
 
         const introText = `Rute navigasi Pasar Gedhe ditemukan. Total jarak tempuh sekitar ${route.totalDistance} meter, estimasi waktu ${route.estimatedTime} menit. ${floorText}`;
 
@@ -322,15 +441,10 @@ const A11y = (() => {
         }];
 
         steps.forEach((step, idx) => {
-            let stepText = `Langkah ${idx + 1}: ${step.text}`;
-            if (step.detail) {
-                stepText += `. ${step.detail}`;
-            }
-            if (step.badge && step.badge.text) {
-                stepText += `. Perhatian, ${step.badge.text}`;
-            }
+            const stepNum = numberToIndonesian(idx + 1);
+            const stepBody = step.audioDescription || step.text;
             sequenceList.push({
-                text: stepText,
+                text: `Langkah ${stepNum}. ${stepBody}`,
                 stepIndex: idx
             });
         });
@@ -351,7 +465,8 @@ const A11y = (() => {
 
             speak(item.text, {
                 force: true, // User triggered action
-                rate: 0.92,
+                rate: 0.82,  // Measured, articulate tempo
+                playbackRate: 0.95,
                 pitch: 1.0,
                 onEnd: () => {
                     if (!isPlayingSequence) return;
@@ -360,7 +475,7 @@ const A11y = (() => {
                         if (isPlayingSequence) {
                             playNext();
                         }
-                    }, 400); // 400ms natural breathing pause
+                    }, 850); // 850ms natural breathing pause between steps
                 },
                 onError: () => {
                     isPlayingSequence = false;

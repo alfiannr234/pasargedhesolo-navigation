@@ -246,6 +246,11 @@ const Navigation = (() => {
         }
         suggestionsFrom?.classList.remove('active');
         suggestionsTo?.classList.remove('active');
+
+        if (typeof A11y !== 'undefined' && A11y.isSpeaking()) {
+            A11y.stopSpeaking();
+            resetAudioButton();
+        }
     }
 
     function toggleRoutePopup() {
@@ -625,8 +630,10 @@ const Navigation = (() => {
         fromNodeId = null;
         toNodeId = null;
 
-        A11y.stopSpeaking();
-        resetAudioButton();
+        if (typeof A11y !== 'undefined' && A11y.isSpeaking()) {
+            A11y.stopSpeaking();
+            resetAudioButton();
+        }
 
         const fromInput = document.getElementById('navFrom');
         const toInput = document.getElementById('navTo');

@@ -313,13 +313,13 @@ const Pathfinding = (() => {
                 type: 'floor-change',
                 icon: trans.isRamp ? '♿' : '🪜',
                 text: `${endNode.floor > startNode.floor ? 'Naik' : 'Turun'} melalui ${trans.name} ke Lantai ${endNode.floor}`,
-                detail: trans.isRamp ? 'Kemiringan 6-7%, lebar 1.8m dilengkapi handrail pengaman' : 'Gunakan pegangan tangga dan berhati-hati',
+                detail: trans.isRamp ? 'Kemiringan 6-7%, lebar 1.8 meter dilengkapi pegangan tangan pengaman' : 'Gunakan pegangan tangga dan berhati-hati',
                 floor: endNode.floor,
                 nodeId: trans.t2NodeId,
                 coord: { x: trans.t1.x, y: trans.t1.y, lat: isStartPb ? trans.t1.y : (1024 - trans.t1.y), lng: trans.t1.x, floor: startNode.floor, buildingId: startNode.buildingId },
                 coordDest: { x: trans.t2.x, y: trans.t2.y, lat: isEndPb ? trans.t2.y : (1024 - trans.t2.y), lng: trans.t2.x, floor: endNode.floor, buildingId: endNode.buildingId },
                 badge: trans.isRamp ? { type: 'wheelchair', text: 'Ramah Kursi Roda ♿' } : null,
-                audioDescription: `${endNode.floor > startNode.floor ? 'Naik' : 'Turun'} melalui ${trans.name} menuju Lantai ${endNode.floor}.`
+                audioDescription: `${endNode.floor > startNode.floor ? 'Naik' : 'Turun'} melalui ${trans.name} menuju Lantai ${endNode.floor}. ${trans.isRamp ? 'Gunakan jalur landai dengan pegangan tangan pengaman.' : 'Gunakan pegangan tangga dan berhati-hati.'}`
             };
             const steps2 = generateCorridorSteps(leg2, { name: trans.name }, endNode, mode, true, true);
 
@@ -368,13 +368,13 @@ const Pathfinding = (() => {
                 type: 'building-change',
                 icon: '🚶',
                 text: `Menyeberang Jl. Urip Sumoharjo menuju ${targetBldName}`,
-                detail: 'Gunakan jalur penyeberangan zebra cross dengan ubin pemandu taktil',
+                detail: 'Gunakan jalur penyeberangan jalan dengan ubin pemandu taktil',
                 floor: 1,
                 coord: { x: cw.exit.x, y: cw.exit.y, lat: isStartPb ? cw.exit.y : (1024 - cw.exit.y), lng: cw.exit.x, floor: 1, buildingId: startNode.buildingId },
                 coordDest: { x: cw.entry.x, y: cw.entry.y, lat: isEndPb ? cw.entry.y : (1024 - cw.entry.y), lng: cw.entry.x, floor: 1, buildingId: endNode.buildingId },
-                badge: mode === 'wheelchair' ? { type: 'wheelchair', text: 'Zebra Cross Aksesibel ♿' } :
+                badge: mode === 'wheelchair' ? { type: 'wheelchair', text: 'Penyeberangan Aksesibel ♿' } :
                        mode === 'blind' ? { type: 'blind', text: 'Ubin Pemandu Taktil ⠿' } : null,
-                audioDescription: `Menyeberangi Jalan Urip Sumoharjo melalui zebra cross menuju ${targetBldName}. Pastikan jalan aman sebelum menyeberang.`
+                audioDescription: `Menyeberangi Jalan Urip Sumoharjo melalui jalur penyeberangan jalan menuju ${targetBldName}. Pastikan lalu lintas jalan aman sebelum menyeberang.`
             };
             const steps2 = generateCorridorSteps(leg3Coords, { name: cw.entry.name }, endNode, mode, true, true);
 

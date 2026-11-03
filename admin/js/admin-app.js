@@ -1074,12 +1074,64 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     /**
+     * Map of icons currently in use by categories, keyed by lowercase icon name.
+     * Excludes currentEditingId if provided (allowing an edited category to retain its own icon).
+     */
+    function getUsedIconMap(currentEditingId = null) {
+        const seenCatIds = new Set();
+        const used = {};
+        const currentIdNormalized = currentEditingId ? String(currentEditingId).toLowerCase().trim() : null;
+
+        Object.values(categories).forEach(cat => {
+            if (!cat) return;
+            const catId = (cat.id || '').toLowerCase().trim();
+            if (!catId || seenCatIds.has(catId)) return;
+            seenCatIds.add(catId);
+
+            // In edit mode, allow keeping current category's own icon
+            if (currentIdNormalized && catId === currentIdNormalized) return;
+
+            let iconName = '';
+            if (cat.icon && typeof cat.icon === 'string' && cat.icon.trim()) {
+                if (typeof AppIcons !== 'undefined' && typeof AppIcons.getCategoryIconName === 'function') {
+                    iconName = AppIcons.getCategoryIconName(cat);
+                } else {
+                    iconName = cat.icon.trim();
+                }
+            } else if (cat.id) {
+                if (typeof AppIcons !== 'undefined' && typeof AppIcons.getCategoryIconName === 'function') {
+                    iconName = AppIcons.getCategoryIconName(cat.id);
+                }
+            }
+
+            if (iconName) {
+                used[iconName.toLowerCase()] = cat.name || cat.id;
+            }
+        });
+        return used;
+    }
+
+    /**
+     * Returns the first available (unused) icon from the catalog.
+     */
+    function getFirstAvailableIcon(currentEditingId = null) {
+        const used = getUsedIconMap(currentEditingId);
+        const available = MARKET_ICON_CATALOG.find(item => !used[item.name.toLowerCase()]);
+        return available ? available.name : 'Utensils';
+    }
+
+    /**
      * Renders the searchable vector icon grid
      */
     function renderIconGrid(searchQuery = '', groupFilter = 'all') {
         if (!catIconGrid) return;
         const q = (searchQuery || '').toLowerCase().trim();
         const currentIcon = (catFormIcon ? catFormIcon.value : 'Apple').trim().toLowerCase();
+        const currentEditingId = (catFormMode && catFormMode.value === 'edit' && catFormOriginalId && catFormOriginalId.value)
+            ? catFormOriginalId.value.toLowerCase().trim()
+            : null;
+
+        const usedIconMap = getUsedIconMap(currentEditingId);
 
         const filtered = MARKET_ICON_CATALOG.filter(item => {
             const matchGroup = (!groupFilter || groupFilter === 'all' || item.group === groupFilter);
@@ -1098,22 +1150,33 @@ document.addEventListener('DOMContentLoaded', async () => {
         const escAttr = typeof Security !== 'undefined' ? Security.sanitizeAttr : esc;
 
         catIconGrid.innerHTML = filtered.map(item => {
-            const isActive = item.name.toLowerCase() === currentIcon;
+            const itemLower = item.name.toLowerCase();
+            const isActive = itemLower === currentIcon;
+            const usedBy = usedIconMap[itemLower];
+            const isDisabled = Boolean(usedBy);
+
             const svg = typeof AppIcons !== 'undefined'
                 ? AppIcons.getCategorySvg(item.name, { size: 17, stroke: '#FFFFFF', strokeWidth: 2 })
                 : '';
 
+            const tooltip = isDisabled
+                ? `${escAttr(item.label)} (${item.name}) — Sudah digunakan oleh kategori: ${escAttr(usedBy)}`
+                : `${escAttr(item.label)} (${item.name})`;
+
             return `
-                <div class="cat-icon-card ${isActive ? 'active' : ''}" 
+                <div class="cat-icon-card ${isActive ? 'active' : ''} ${isDisabled ? 'disabled' : ''}" 
                     data-icon-name="${escAttr(item.name)}" 
+                    data-disabled="${isDisabled ? '1' : '0'}"
                     role="radio" 
                     aria-checked="${isActive}" 
-                    tabindex="0" 
-                    title="${escAttr(item.label)} (${item.name})">
+                    aria-disabled="${isDisabled ? 'true' : 'false'}"
+                    tabindex="${isDisabled ? '-1' : '0'}" 
+                    title="${tooltip}">
                     <div class="cat-icon-art">
                         ${svg}
                     </div>
                     <span class="cat-icon-label">${esc(item.label)}</span>
+                    ${isDisabled ? `<span class="cat-icon-used-tag">Terpakai</span>` : ''}
                 </div>
             `;
         }).join('');
@@ -1121,6 +1184,14 @@ document.addEventListener('DOMContentLoaded', async () => {
         // Wire click and keyboard events on icon cards
         catIconGrid.querySelectorAll('.cat-icon-card').forEach(card => {
             const selectCard = () => {
+                if (card.classList.contains('disabled') || card.dataset.disabled === '1') {
+                    const iconName = card.dataset.iconName || '';
+                    const usedBy = usedIconMap[iconName.toLowerCase()];
+                    if (usedBy) {
+                        showToast(`Ikon "${iconName}" sudah digunakan oleh kategori "${usedBy}".`, 'warning');
+                    }
+                    return;
+                }
                 const iconName = card.dataset.iconName;
                 if (!iconName) return;
                 if (catFormIcon) catFormIcon.value = iconName;
@@ -1168,7 +1239,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         btnSaveCategory.querySelector('span').textContent = 'Simpan Kategori';
         btnResetCatForm.style.display = 'none';
         catFormId.readOnly = false;
-        catFormIcon.value = 'Apple';
+        const defaultIcon = getFirstAvailableIcon(null);
+        catFormIcon.value = defaultIcon;
         catFormColor.value = '#C0392B';
         catFormColorHex.value = '#C0392B';
         catFormFacility.checked = false;
@@ -1461,6 +1533,17 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             if (!name || !id) {
                 showToast('Nama atau ID kategori belum diisi!', 'error');
+                return;
+            }
+
+            // Check if icon is already used by another category
+            const currentEditingId = (catFormMode && catFormMode.value === 'edit' && catFormOriginalId.value)
+                ? catFormOriginalId.value.toLowerCase().trim()
+                : null;
+            const usedIconMap = getUsedIconMap(currentEditingId);
+            const chosenIconLower = icon.toLowerCase();
+            if (usedIconMap[chosenIconLower]) {
+                showToast(`Ikon "${icon}" sudah digunakan oleh kategori "${usedIconMap[chosenIconLower]}". Silakan pilih ikon lain.`, 'error');
                 return;
             }
 
