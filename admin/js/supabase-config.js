@@ -345,6 +345,26 @@ const DB = (() => {
     }
 
     /**
+     * Normalize Pasar Gedhe Utama vertical orientation (v2: flipped top-to-bottom)
+     */
+    function normalizeStallOrientation(s) {
+        if (!s || (s.buildingId || 'pasar-gede') === 'pasar-buah') return s;
+        if (s.orientationVersion === 2) return s;
+        const copy = { ...s };
+        if (copy.y !== undefined) copy.y = 1024 - copy.y;
+        if (copy.lat !== undefined) {
+            copy.lat = 1024 - copy.lat;
+        } else if (copy.y !== undefined) {
+            copy.lat = 1024 - copy.y;
+        }
+        if (Array.isArray(copy.entries)) {
+            copy.entries = copy.entries.map(e => ({ ...e, y: e.y !== undefined ? (1024 - e.y) : e.y }));
+        }
+        copy.orientationVersion = 2;
+        return copy;
+    }
+
+    /**
      * Get all stalls (Supabase or LocalStorage)
      */
     async function getAllStalls() {
@@ -356,7 +376,7 @@ const DB = (() => {
                     .order('name', { ascending: true });
 
                 if (!error && Array.isArray(data) && data.length > 0) {
-                    const stalls = data.map(row => ({
+                    const stalls = data.map(row => normalizeStallOrientation({
                         ...(row.data || {}),
                         id: row.id,
                         name: row.name,
@@ -379,7 +399,19 @@ const DB = (() => {
         if (local) {
             try {
                 const parsed = JSON.parse(local);
-                if (Array.isArray(parsed) && parsed.length > 0) return parsed;
+                if (Array.isArray(parsed) && parsed.length > 0) {
+                    let needsSave = false;
+                    const normalized = parsed.map(s => {
+                        if ((s.buildingId || 'pasar-gede') !== 'pasar-buah' && s.orientationVersion !== 2) {
+                            needsSave = true;
+                        }
+                        return normalizeStallOrientation(s);
+                    });
+                    if (needsSave) {
+                        localStorage.setItem(STORAGE_KEY, JSON.stringify(normalized));
+                    }
+                    return normalized;
+                }
             } catch (e) {
                 console.warn(e);
             }
@@ -402,6 +434,7 @@ const DB = (() => {
             nodeId: stallData.nodeId || ('n_' + id),
             category: (stallData.category || 'kuliner').toLowerCase(),
             isLegendary: Boolean(stallData.isLegendary),
+            orientationVersion: 2,
             updatedAt: new Date().toISOString()
         };
 

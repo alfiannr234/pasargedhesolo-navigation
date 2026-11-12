@@ -619,7 +619,8 @@ document.addEventListener('DOMContentLoaded', async () => {
                     lng: posX,
                     lat: fBuilding.value === 'pasar-buah' ? posY : (1024 - posY),
                     accessible: fAccessible.checked,
-                    isLegendary: Boolean(fLegendary && fLegendary.checked)
+                    isLegendary: Boolean(fLegendary && fLegendary.checked),
+                    orientationVersion: 2
                 };
 
                 await DB.saveStall(stallData);
@@ -665,12 +666,14 @@ document.addEventListener('DOMContentLoaded', async () => {
         try {
             const res = await fetch(svgUrl);
             const svg = await res.text();
+            const isFlippedY = svg.includes('data-flip-y="true"');
             const shapes = [];
 
             const rectRegex = /<rect[^>]+x="([^"]+)"[^>]+y="([^"]+)"[^>]+width="([^"]+)"[^>]+height="([^"]+)"/g;
             let m;
             while ((m = rectRegex.exec(svg)) !== null) {
-                const x = parseFloat(m[1]), y = parseFloat(m[2]), w = parseFloat(m[3]), h = parseFloat(m[4]);
+                const x = parseFloat(m[1]), rawY = parseFloat(m[2]), w = parseFloat(m[3]), h = parseFloat(m[4]);
+                const y = isFlippedY ? (1024 - rawY - h) : rawY;
                 shapes.push({
                     cx: Math.round(x + w / 2),
                     cy: Math.round(y + h / 2),
@@ -683,7 +686,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             while ((m = polyRegex.exec(svg)) !== null) {
                 const pts = m[1].trim().split(/\s+/).map(p => {
                     const [px, py] = p.split(',').map(Number);
-                    return { x: px, y: py };
+                    return { x: px, y: isFlippedY ? (1024 - py) : py };
                 }).filter(p => !isNaN(p.x) && !isNaN(p.y));
 
                 if (pts.length >= 3) {

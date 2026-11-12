@@ -417,8 +417,8 @@ const Pathfinding = (() => {
                     name: 'Ramp Aksesibel Barat',
                     isRamp: true,
                     transitionDist: 25,
-                    t1: { x: 320, y: 280 },
-                    t2: { x: 320, y: 280 },
+                    t1: { x: 320, y: 744 },
+                    t2: { x: 320, y: 744 },
                     t2NodeId: 'n_ramp_pg_barat_2'
                 };
             }
@@ -426,8 +426,8 @@ const Pathfinding = (() => {
                 name: 'Tangga Utama',
                 isRamp: false,
                 transitionDist: 15,
-                t1: { x: 332, y: 273 },
-                t2: { x: 708, y: 782 },
+                t1: { x: 332, y: 751 },
+                t2: { x: 708, y: 242 },
                 t2NodeId: 'n_9ef496b3-91cb-4db9-ac96-c746921e122b'
             };
         } else {
@@ -449,13 +449,13 @@ const Pathfinding = (() => {
     function getBuildingCrosswalk(fromBld, toBld) {
         if (fromBld === 'pasar-gede') {
             return {
-                exit: { name: 'Pintu Samping Pasar Gedhe', x: 525, y: 907 },
+                exit: { name: 'Pintu Samping Pasar Gedhe', x: 525, y: 117 },
                 entry: { name: 'Pintu Depan Pasar Buah', x: 391, y: 906 }
             };
         } else {
             return {
                 exit: { name: 'Pintu Depan Pasar Buah', x: 391, y: 906 },
-                entry: { name: 'Pintu Samping Pasar Gedhe', x: 525, y: 907 }
+                entry: { name: 'Pintu Samping Pasar Gedhe', x: 525, y: 117 }
             };
         }
     }
