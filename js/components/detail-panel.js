@@ -77,9 +77,10 @@ const DetailPanel = (() => {
             MarketMap.highlightStall(stall);
         }
 
+        const categories = (MarketData.getCategories ? MarketData.getCategories() : null) || {};
         const catKey = (stall.category || '').toLowerCase();
         const category = (MarketData.getCategory ? MarketData.getCategory(stall.category) : null) || 
-            (categories ? (categories[stall.category] || categories[catKey]) : null) || {
+            categories[stall.category] || categories[catKey] || {
             name: stall.categoryLabel || 'Kios',
             icon: stall.icon || '📍',
             color: stall.color || '#C0392B'
@@ -109,7 +110,6 @@ const DetailPanel = (() => {
         }
 
         // Category badge with matching vector icon
-        const catKey = (stall.category || '').toLowerCase();
         const isFacility = Boolean(stall.isFacility || category.isFacility || (typeof AppIcons !== 'undefined' && AppIcons.isFacility(catKey)));
         let iconMarkup = `<span style="font-size: 1.5rem;">${esc(category.icon)}</span>`;
         if (!isFacility && typeof AppIcons !== 'undefined') {
