@@ -77,8 +77,9 @@ const DetailPanel = (() => {
             MarketMap.highlightStall(stall);
         }
 
-        const categories = MarketData.getCategories();
-        const category = categories[stall.category] || {
+        const catKey = (stall.category || '').toLowerCase();
+        const category = (MarketData.getCategory ? MarketData.getCategory(stall.category) : null) || 
+            (categories ? (categories[stall.category] || categories[catKey]) : null) || {
             name: stall.categoryLabel || 'Kios',
             icon: stall.icon || '📍',
             color: stall.color || '#C0392B'

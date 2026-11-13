@@ -16354,10 +16354,16 @@ const MarketData = (() => {
     function getCategory(catIdOrName) {
         if (!catIdOrName) return null;
         const target = String(catIdOrName).toLowerCase().trim();
+        if (data.categories[target]) {
+            return data.categories[target];
+        }
+        for (const cat of Object.values(data.categories)) {
+            if (cat && cat.id && String(cat.id).toLowerCase().trim() === target) {
+                return cat;
+            }
+        }
         for (const [key, cat] of Object.entries(data.categories)) {
-            if ((cat.id && cat.id.toLowerCase() === target) || 
-                key.toLowerCase() === target || 
-                (cat.name && cat.name.toLowerCase() === target)) {
+            if (key.toLowerCase() === target || (cat && cat.name && String(cat.name).toLowerCase().trim() === target)) {
                 return cat;
             }
         }
@@ -16430,6 +16436,14 @@ const MarketData = (() => {
                     if (!c || !c.id) return;
                     const id = String(c.id).toLowerCase().trim();
                     if (id === '__proto__' || id === 'constructor' || id === 'prototype') return;
+
+                    // Remove any old/stale keys with matching ID (regardless of casing)
+                    for (const k of Object.keys(newCategories)) {
+                        if (k.toLowerCase() === id || (newCategories[k] && newCategories[k].id && String(newCategories[k].id).toLowerCase() === id)) {
+                            delete newCategories[k];
+                        }
+                    }
+
                     newCategories[id] = {
                         id: id,
                         name: c.name || id,
@@ -16440,6 +16454,22 @@ const MarketData = (() => {
                     };
                 });
                 data.categories = newCategories;
+
+                // Dynamically update in-memory stalls' categoryLabel, color, icon
+                for (const k in data.stalls) {
+                    if (Array.isArray(data.stalls[k])) {
+                        data.stalls[k].forEach(s => {
+                            if (s && s.category) {
+                                const catObj = newCategories[String(s.category).toLowerCase().trim()];
+                                if (catObj) {
+                                    s.categoryLabel = catObj.name;
+                                    if (catObj.color) s.color = catObj.color;
+                                    if (catObj.icon) s.icon = catObj.icon;
+                                }
+                            }
+                        });
+                    }
+                }
                 return true;
             }
         } catch (e) {
@@ -16491,7 +16521,13 @@ const MarketData = (() => {
                     s.lng = s.x;
                 }
                 if (s.category) {
-                    s.category = s.category.toLowerCase();
+                    s.category = s.category.toLowerCase().trim();
+                    const catObj = getCategory(s.category);
+                    if (catObj && catObj.name) {
+                        s.categoryLabel = catObj.name;
+                        if (catObj.color) s.color = catObj.color;
+                        if (catObj.icon) s.icon = catObj.icon;
+                    }
                 }
 
                 newStalls[key].push(s);

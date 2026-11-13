@@ -181,7 +181,7 @@ const MarketMap = (() => {
         stalls.forEach(stall => {
             const catId = (stall.category || '').toLowerCase();
             const category = (MarketData.getCategory ? MarketData.getCategory(stall.category) : null) || 
-                MarketData.getCategories()[stall.category] || {
+                (MarketData.getCategories ? (MarketData.getCategories()[catId] || MarketData.getCategories()[stall.category]) : null) || {
                 id: catId || 'kios',
                 name: stall.categoryLabel || 'Kios',
                 icon: stall.icon || '📍',
@@ -205,12 +205,18 @@ const MarketMap = (() => {
                 keyboard: true
             });
 
-            // Tooltip on hover
-            const esc = typeof escapeHTML === 'function' ? escapeHTML : str => str;
-            marker.bindTooltip(`
-                <strong>${esc(stall.name)}</strong><br>
-                <small style="color:${esc(category.color || '#C0392B')}; font-weight:600;">${esc(category.name || stall.categoryLabel || 'Kios')}</small>
-            `, {
+            // Tooltip on hover (dynamic callback ensures 100% real-time category name & color on every hover)
+            marker.bindTooltip(() => {
+                const esc = typeof escapeHTML === 'function' ? escapeHTML : str => (str || '');
+                const curCat = (MarketData.getCategory ? MarketData.getCategory(stall.category) : null) ||
+                    (MarketData.getCategories ? (MarketData.getCategories()[(stall.category || '').toLowerCase()] || MarketData.getCategories()[stall.category]) : null);
+                const cName = (curCat && curCat.name) ? curCat.name : (stall.categoryLabel || 'Kios');
+                const cColor = (curCat && curCat.color) ? curCat.color : (stall.color || '#C0392B');
+                return `
+                    <strong>${esc(stall.name)}</strong><br>
+                    <small style="color:${esc(cColor)}; font-weight:600;">${esc(cName)}</small>
+                `;
+            }, {
                 direction: 'top',
                 offset: [0, -14],
                 className: 'custom-map-tooltip'

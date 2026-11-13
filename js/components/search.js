@@ -109,9 +109,9 @@ const Search = (() => {
         const escAttr = typeof sanitizeAttr === 'function' ? sanitizeAttr : esc;
 
         resultsContainer.innerHTML = results.map(stall => {
-            const category = (Object.hasOwn ? Object.hasOwn(categories, stall.category) : categories.hasOwnProperty(stall.category))
-                ? categories[stall.category]
-                : {
+            const catKey = (stall.category || '').toLowerCase();
+            const category = (MarketData.getCategory ? MarketData.getCategory(stall.category) : null) ||
+                (categories ? (categories[stall.category] || categories[catKey]) : null) || {
                     name: stall.categoryLabel || 'Kios',
                     icon: stall.icon || '📍',
                     color: stall.color || '#C0392B'
