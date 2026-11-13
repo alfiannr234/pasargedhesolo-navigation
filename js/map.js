@@ -46,6 +46,9 @@ const MarketMap = (() => {
             maxZoom: 3,
             zoomDelta: 0.5,
             zoomSnap: 0.25,
+            wheelPxPerZoomLevel: 120, // Smoother scroll wheel speed (prevents erratic micro-zoom churn)
+            wheelDebounceTime: 70,    // Debounce rapid wheel events into single smooth zoom animation
+            bounceAtZoomLimits: false,// Disable edge bounce jank on mobile pinch
             attributionControl: false,
             zoomControl: false
         });
@@ -78,23 +81,45 @@ const MarketMap = (() => {
 
         setupMapControls();
 
-        // Responsive zoom scaling for small kiosk booths
+        // Performance: Pause marker transitions and hover hit-testing during zoom gestures
+        let zoomEndTimer = null;
+        map.on('zoomstart', () => {
+            container.classList.add('is-zooming');
+        });
+        map.on('zoomend', () => {
+            clearTimeout(zoomEndTimer);
+            zoomEndTimer = setTimeout(() => {
+                container.classList.remove('is-zooming');
+            }, 60);
+            updateZoomClasses();
+        });
+
+        // Touch gesture optimization for mobile pinch-to-zoom
+        container.addEventListener('touchstart', (e) => {
+            if (e.touches && e.touches.length >= 2) {
+                container.classList.add('is-zooming');
+            }
+        }, { passive: true });
+        container.addEventListener('touchend', (e) => {
+            if (!e.touches || e.touches.length < 2) {
+                setTimeout(() => {
+                    if (!map._animatingZoom) {
+                        container.classList.remove('is-zooming');
+                    }
+                }, 80);
+            }
+        }, { passive: true });
+
+        // Responsive zoom scaling for small kiosk booths (memoized to avoid redundant reflows)
+        let currentZoomState = '';
         function updateZoomClasses() {
             const z = map.getZoom();
-            const container = document.getElementById('map-container');
             if (!container) return;
-            if (z < -0.2) {
-                container.classList.add('map-zoom-low');
-            } else {
-                container.classList.remove('map-zoom-low');
-            }
-            if (z > 1.2) {
-                container.classList.add('map-zoom-high');
-            } else {
-                container.classList.remove('map-zoom-high');
-            }
+            const targetState = z < -0.2 ? 'low' : 'normal';
+            if (targetState === currentZoomState) return;
+            currentZoomState = targetState;
+            container.classList.toggle('map-zoom-low', targetState === 'low');
         }
-        map.on('zoomend', updateZoomClasses);
         updateZoomClasses();
     }
 
