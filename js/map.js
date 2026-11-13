@@ -18,6 +18,49 @@ const MarketMap = (() => {
     let selectedMarker = null;
     let routeOriginMarker = null;
     let routeDestinationMarker = null;
+    let isPointerDown = false;
+    let activeTooltipMarker = null;
+
+    /**
+     * Close all active non-permanent tooltips across the map and markers
+     */
+    function closeAllTooltips() {
+        if (activeTooltipMarker && activeTooltipMarker.closeTooltip) {
+            try {
+                activeTooltipMarker.closeTooltip();
+            } catch (err) {}
+        }
+        activeTooltipMarker = null;
+
+        const closeLayerTooltip = (layer) => {
+            if (!layer || typeof layer.closeTooltip !== 'function') return;
+            const tt = typeof layer.getTooltip === 'function' ? layer.getTooltip() : layer._tooltip;
+            if (!tt || (tt.options && tt.options.permanent)) return;
+            try {
+                layer.closeTooltip();
+            } catch (err) {}
+        };
+
+        if (markersLayer) {
+            markersLayer.eachLayer(closeLayerTooltip);
+        }
+        if (map) {
+            map.eachLayer(layer => {
+                closeLayerTooltip(layer);
+                if (layer && layer.eachLayer && layer !== markersLayer) {
+                    try { layer.eachLayer(closeLayerTooltip); } catch (e) {}
+                }
+            });
+
+            // Immediately wipe any non-permanent custom tooltips from the tooltip pane DOM
+            if (map._panes && map._panes.tooltipPane) {
+                const lingeringTooltips = map._panes.tooltipPane.querySelectorAll('.custom-map-tooltip');
+                lingeringTooltips.forEach(el => {
+                    try { el.remove(); } catch (e) {}
+                });
+            }
+        }
+    }
 
     // Map bounds in Leaflet CRS.Simple (0,0 to 1024,1024 matching the SVG viewBox)
     const bounds = [[0, 0], [1024, 1024]];
@@ -65,6 +108,7 @@ const MarketMap = (() => {
 
         // Click handler on map canvas
         map.on('click', (e) => {
+            closeAllTooltips();
             const selecting = Navigation.getSelectingFor();
             if (selecting) {
                 // Find nearest node
@@ -81,10 +125,54 @@ const MarketMap = (() => {
 
         setupMapControls();
 
+        // Pointer, dragging & touch gesture handlers to eliminate stuck tooltips
+        const setPointerDown = () => {
+            isPointerDown = true;
+            closeAllTooltips();
+        };
+
+        const setPointerUp = () => {
+            isPointerDown = false;
+        };
+
+        container.addEventListener('mousedown', setPointerDown, { passive: true });
+        container.addEventListener('touchstart', setPointerDown, { passive: true });
+        window.addEventListener('mouseup', setPointerUp, { passive: true });
+        window.addEventListener('touchend', setPointerUp, { passive: true });
+        window.addEventListener('touchcancel', () => {
+            isPointerDown = false;
+            closeAllTooltips();
+        }, { passive: true });
+        container.addEventListener('mouseleave', () => {
+            closeAllTooltips();
+        }, { passive: true });
+
+        container.addEventListener('mousemove', (e) => {
+            if (e.buttons > 0 && !isPointerDown) {
+                isPointerDown = true;
+                closeAllTooltips();
+            } else if (e.buttons === 0 && isPointerDown) {
+                isPointerDown = false;
+            }
+        }, { passive: true });
+
+        // Map movement/drag events: close tooltips and toggle .is-panning class
+        map.on('dragstart movestart', () => {
+            container.classList.add('is-panning');
+            closeAllTooltips();
+        });
+        map.on('drag', () => {
+            closeAllTooltips();
+        });
+        map.on('dragend moveend', () => {
+            container.classList.remove('is-panning');
+        });
+
         // Performance: Pause marker transitions and hover hit-testing during zoom gestures
         let zoomEndTimer = null;
         map.on('zoomstart', () => {
             container.classList.add('is-zooming');
+            closeAllTooltips();
         });
         map.on('zoomend', () => {
             clearTimeout(zoomEndTimer);
@@ -168,6 +256,7 @@ const MarketMap = (() => {
         }
 
         // 2. Clear previous markers
+        closeAllTooltips();
         markersLayer.clearLayers();
         markersByCategory = {};
         markersByStallId = {};
@@ -222,9 +311,73 @@ const MarketMap = (() => {
                 className: 'custom-map-tooltip'
             });
 
+            // Prevent tooltips from popping up or remaining open while dragging, holding click, or moving
+            const origOpenTooltip = marker.openTooltip.bind(marker);
+            marker.openTooltip = function () {
+                const isDragging = Boolean(map && map.dragging && typeof map.dragging.moving === 'function' && map.dragging.moving());
+                if (isPointerDown || isDragging) {
+                    return this;
+                }
+                if (activeTooltipMarker && activeTooltipMarker !== marker && activeTooltipMarker.closeTooltip) {
+                    try {
+                        activeTooltipMarker.closeTooltip();
+                    } catch (err) {}
+                }
+                if (map && map._panes && map._panes.tooltipPane) {
+                    const lingering = map._panes.tooltipPane.querySelectorAll('.custom-map-tooltip');
+                    lingering.forEach(el => {
+                        try { el.remove(); } catch (e) {}
+                    });
+                }
+                activeTooltipMarker = marker;
+                return origOpenTooltip.apply(this, arguments);
+            };
+
+            marker.on('tooltipopen', (e) => {
+                const orig = e.originalEvent;
+                const isButtonsDown = orig && (orig.buttons > 0 || orig.which > 0);
+                const isDragging = Boolean(map && map.dragging && typeof map.dragging.moving === 'function' && map.dragging.moving());
+                if (isPointerDown || isButtonsDown || isDragging) {
+                    marker.closeTooltip();
+                    if (map && map._panes && map._panes.tooltipPane) {
+                        const lingering = map._panes.tooltipPane.querySelectorAll('.custom-map-tooltip');
+                        lingering.forEach(el => {
+                            try { el.remove(); } catch (e) {}
+                        });
+                    }
+                    return;
+                }
+                if (activeTooltipMarker && activeTooltipMarker !== marker && activeTooltipMarker.closeTooltip) {
+                    try {
+                        activeTooltipMarker.closeTooltip();
+                    } catch (err) {}
+                }
+                if (map && map._panes && map._panes.tooltipPane) {
+                    const lingering = map._panes.tooltipPane.querySelectorAll('.custom-map-tooltip');
+                    lingering.forEach(el => {
+                        if (marker._tooltip && marker._tooltip._container === el) return;
+                        try { el.remove(); } catch (e) {}
+                    });
+                }
+                activeTooltipMarker = marker;
+            });
+
+            marker.on('tooltipclose', () => {
+                if (activeTooltipMarker === marker) {
+                    activeTooltipMarker = null;
+                }
+            });
+
+            marker.on('mousedown touchstart', () => {
+                isPointerDown = true;
+                marker.closeTooltip();
+                closeAllTooltips();
+            });
+
             // Click interaction
             marker.on('click', (e) => {
                 L.DomEvent.stopPropagation(e);
+                closeAllTooltips();
                 const selecting = Navigation.getSelectingFor();
                 if (selecting) {
                     Navigation.setLocationFromMap(stall.nodeId || stall.id, stall.name);
@@ -599,6 +752,7 @@ const MarketMap = (() => {
     }
 
     function clearRoute() {
+        closeAllTooltips();
         if (routeLayer) {
             map.removeLayer(routeLayer);
             routeLayer = null;
@@ -645,6 +799,7 @@ const MarketMap = (() => {
      * Clear active highlight marker
      */
     function clearHighlight() {
+        closeAllTooltips();
         if (highlightLayer) {
             map.removeLayer(highlightLayer);
             highlightLayer = null;

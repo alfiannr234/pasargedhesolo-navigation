@@ -844,6 +844,31 @@ body {
     transform: translateZ(0);
 }
 
+/* 6. Tooltip Styling & Drag Suppression */
+.custom-map-tooltip,
+.leaflet-tooltip {
+    pointer-events: none !important;
+    user-select: none !important;
+}
+
+.custom-map-tooltip {
+    font-family: inherit;
+    font-size: 12px;
+    line-height: 1.35;
+    background: rgba(255, 255, 255, 0.96) !important;
+    color: #1E293B !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.08) !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    padding: 6px 10px !important;
+    white-space: nowrap;
+}
+
+#map-container.is-panning .leaflet-tooltip-pane,
+#map-container.is-zooming .leaflet-tooltip-pane {
+    display: none !important;
+}
+
 /* Modals */
 .modal-overlay {
     position: fixed;

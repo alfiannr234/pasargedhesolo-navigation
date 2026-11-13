@@ -558,8 +558,10 @@ const A11y = (() => {
      * Feature description generator for screen reader announcements
      */
     function getFeatureDescription(properties) {
-        const category = MarketData.categories[properties.category];
-        let desc = `${properties.name}`;
+        if (!properties) return '';
+        const category = (MarketData.getCategory ? MarketData.getCategory(properties.category) : null) ||
+            (MarketData.getCategories ? MarketData.getCategories()[properties.category] : null);
+        let desc = `${properties.name || ''}`;
         
         if (category) {
             desc += `, kategori ${category.name}`;
